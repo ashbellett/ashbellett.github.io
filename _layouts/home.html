@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+
+    {%- if site.set-theory.size > 0 -%}
+
+      <h2 class="post-list-heading">Set Theory</h2>
+
+        <ul class="post-list">
+          {%- for post in site.set-theory -%}
+          <li>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+              {{ post.description }}
+          </li>
+          {%- endfor -%}
+        </ul>
+
+    {%- endif -%}
+
+    {%- if site.real-analysis.size > 0 -%}
+
+      <h2 class="post-list-heading">Real Analysis</h2>
+
+        <ul class="post-list">
+          {%- for post in site.real-analysis -%}
+          <li>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+              {{ post.description }}
+          </li>
+          {%- endfor -%}
+        </ul>
+
+    {%- endif -%}
+
+    {%- if site.linear-algebra.size > 0 -%}
+
+      <h2 class="post-list-heading">Linear Algebra</h2>
+
+        <ul class="post-list">
+          {%- for post in site.linear-algebra -%}
+          <li>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+              {{ post.description }}
+          </li>
+          {%- endfor -%}
+        </ul>
+
+    {%- endif -%}
+
+</div>

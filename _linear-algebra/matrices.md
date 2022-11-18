@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  "Code snippet"
-tags: "python"
+category: "Linear Algebra"
+title:  "Matrices"
+tags: ["linear algebra", "matrix"]
+description: "A multi-dimensional data structure"
 ---
+
+Below is some Python code
 
 {% highlight python %}
 import math

@@ -1,0 +1,10 @@
+title: Ash Bellett
+email: ash.bellett.ab@gmail.com
+description: Ash Bellett's personal website
+baseurl: ""
+url: ""
+twitter_username: ashbellett
+github_username:  ashbellett
+theme: minima
+plugins:
+  - jekyll-feed

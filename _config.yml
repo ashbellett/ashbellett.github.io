@@ -1,10 +1,16 @@
-title: Ash Bellett
-email: ash.bellett.ab@gmail.com
-description: Ash Bellett's personal website
-baseurl: ""
-url: ""
-twitter_username: ashbellett
-github_username:  ashbellett
-theme: minima
+title:  Ash Bellett
+author: Ash Bellett
+email:  ash.bellett.ab@gmail.com
+
+twitter_username:   ashbellett
+github_username:    ashbellett
+linkedin_username:  ashbellett
+
+baseurl:  ""
+url:      "ashbellett.com"
+
+theme:  minima
+
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

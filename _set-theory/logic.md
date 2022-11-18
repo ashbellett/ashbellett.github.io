@@ -6,6 +6,12 @@ tags: ["set theory", "logic"]
 description: "The formal language of mathematics"
 ---
 
+Below is some block mathematics.
+
+$$ \int_0^\infty x\psi(x) dx = 1 $$
+
+Here is some inline mathematics $$ \int_0^\infty \psi f(x) dx = 1 $$
+
 Below is some Python code
 
 {% highlight python %}
@@ -20,4 +26,5 @@ class Point:
 
   def distance(self) -> float:
     math.sqrt(x*x + y*y + z*z)
+    
 {% endhighlight %}

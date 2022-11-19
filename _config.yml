@@ -4,10 +4,6 @@ author:
   name:  Ash Bellett
   email: ash.bellett.ab@gmail.com
 
-twitter_username:  ashbellett
-github_username:   ashbellett
-linkedin_username: ashbellett
-
 include: [_pages]
 baseurl: ""
 url:     "ashbellett.com"
@@ -38,11 +34,22 @@ collections:
       - eigenvalues-eigenvectors.md
       - singular-value-decomposition.md
 
-social:
-  - { platform: github }
-  - { platform: linkedin }
-  - { platform: twitter }
-  - { platform: youtube }
+socials:
+  - {
+    platform: github,
+    username: ashbellett,
+    url: github.com/ashbellett
+  }
+  - {
+    platform: linkedin,
+    username: ashbellett,
+    url: linkedin.com/in/ashbellett
+  }
+  - {
+    platform: twitter,
+    username: ashbellett,
+    url: twitter.com/ashbellett
+  }
 
 plugins:
   - jekyll-seo-tag

@@ -31,6 +31,17 @@ $lm-table-header-bg-color: lighten($lm-brand-color, 43%) !default;
 $lm-table-header-border:   lighten($lm-brand-color, 37%) !default;
 $lm-table-border-color:    $lm-border-color-01 !default;
 
+.profile {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand {
+  height: 2rem;
+  width: 2rem;
+}
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
 // ----------------------------------------------------------------------------

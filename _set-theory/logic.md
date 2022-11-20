@@ -6,25 +6,16 @@ tags: ["set theory", "logic"]
 description: "The formal language of mathematics"
 ---
 
-Below is some block mathematics.
+A **logical statement** $$X$$ is a statement that is either true or false.
 
-$$ \int_0^\infty x\psi(x) dx = 1 $$
+A statement $$X$$ is **necessary** for a statement $$Y$$, $$X \Longleftarrow Y$$, if $$X$$ is required to be true for $$Y$$ to be true. Neccessity does not guarantee that $$Y$$ is true even if $$X$$ is true. Neccessary conditions are expressed as "$$X$$ if $$Y$$".
 
-Here is some inline mathematics $$ \int_0^\infty \psi f(x) dx = 1 $$
+A statement $$X$$ is **sufficient** for a statement $$Y$$, $$X \Longrightarrow Y$$, if $$X$$ being true guarantees that $$Y$$ is true. Sufficiency does not imply that $$X$$ is necessary for $$Y$$. Sufficient conditions are expressed as "$$X$$ only if $$Y$$".
 
-Below is some Python code
+If a statement $$X$$ is both necessary and sufficient for a statement $$Y$$, $$X \Longleftrightarrow Y$$, then these statements are **logically equivalent**. Equivalent conditions are expressed as "$$X$$ if and only if $$Y$$".
 
-{% highlight python %}
-import math
+The **negation** statement "$$X$$ is false" is true if and only if $$X$$ is false; otherwise the statement is false.
 
-class Point:
+The **conjunction** statement "$$X$$ and $$Y$$" is true if and only if the statements $$X$$ and $$Y$$ are both true; otherwise the statement is false.
 
-  def __init__(self, x: float, y: float, z: float):
-    self.x = x
-    self.y = y
-    self.z = z
-
-  def distance(self) -> float:
-    math.sqrt(x*x + y*y + z*z)
-    
-{% endhighlight %}
+The **disjunction** statement "$$X$$ or $$Y$$" is true if either statement $$X$$ or $$Y$$ is true or both are true; otherwise the statement is false.

@@ -15,7 +15,8 @@ layout: default
       <h2 class="post-list-heading">Set Theory</h2>
 
         <ul class="post-list">
-          {%- for post in site.set-theory -%}
+          {% assign posts = site.set-theory | sort: "order" %}
+          {%- for post in posts -%}
           <li>
             <h3>
               <a class="post-link" href="{{ post.url | relative_url }}">

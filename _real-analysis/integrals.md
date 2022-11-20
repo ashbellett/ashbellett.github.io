@@ -6,18 +6,4 @@ tags: ["real analysis", "integral"]
 description: "The space under a function"
 ---
 
-Below is some Python code
-
-{% highlight python %}
-import math
-
-class Point:
-
-  def __init__(self, x: float, y: float, z: float):
-    self.x = x
-    self.y = y
-    self.z = z
-
-  def distance(self) -> float:
-    math.sqrt(x*x + y*y + z*z)
-{% endhighlight %}
+Let $$I=\left[a,b\right]\subset \mathbb{R}$$ be a closed interval. A **partition** of $$I$$ is a finite set of closed intervals contained in $$I$$ such that every $$i \in I$$ lies in exactly one of the closed intervals.

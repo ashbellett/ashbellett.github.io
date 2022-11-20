@@ -3,33 +3,23 @@
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        {%- if site.author %}
         <ul class="contact-list">
-          {% if site.author.name -%}
           <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
           <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-        {%- endif %}
-      </div>
-      <div class="footer-col">
-        {% if site.description -%}
-        <p>{{ site.description | escape }}</p>
-        {% endif -%}
-        <div class="social-links">
-          <ul class="social-media-list">
-            {%- for social in site.socials -%}
+          {%- for social in site.socials -%}
             <li>
-              <a rel="me" href="{{ social.url }}" target="_blank"
-                title="{{ social.username }}">
+              <a
+                rel="me" href="{{ social.url }}"
+                target="_blank"
+                title="{{ social.username }}"
+              >
                 <img class="svg-icon grey" src="{{ '/assets/svg/#.svg' | replace: '#', social.platform }}" />
                 {{ social.username }}
               </a>
             </li>
-            {%- endfor -%}
-          </ul>
-        </div>
+          {%- endfor -%}
+        </ul>
       </div>
+    </div>
+  </div>
 </footer>

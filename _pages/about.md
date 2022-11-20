@@ -33,7 +33,7 @@ Data Science & Machine Learning\
 
 ![monash] **Monash University**
 
-Bachelor of Engineering\
+Bachelor of Engineering (with Honours)\
 Electrical & Computer Systems\
 2013 - 2017
 

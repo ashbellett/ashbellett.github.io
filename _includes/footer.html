@@ -9,11 +9,15 @@
           {%- for social in site.socials -%}
             <li>
               <a
-                rel="me" href="{{ social.url }}"
+                rel="me"
+                href="//{{ social.url }}"
                 target="_blank"
                 title="{{ social.username }}"
               >
-                <img class="svg-icon grey" src="{{ '/assets/svg/#.svg' | replace: '#', social.platform }}" />
+                <img
+                  class="svg-icon grey"
+                  src="{{ '/assets/svg/#.svg' | replace: '#', social.platform }}"
+                />
                 {{ social.username }}
               </a>
             </li>

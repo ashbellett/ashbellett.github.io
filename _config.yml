@@ -51,6 +51,8 @@ socials:
     url: twitter.com/ashbellett
   }
 
+analytics: G-XFWQPSWM13
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

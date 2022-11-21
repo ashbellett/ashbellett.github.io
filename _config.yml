@@ -33,6 +33,15 @@ collections:
       - determinants.md
       - eigenvalues-eigenvectors.md
       - matrix-decompositions.md
+  probability-theory:
+    output: true
+    permalink: /:collection/:path
+  statistics:
+    output: true
+    permalink: /:collection/:path
+  optimisation:
+    output: true
+    permalink: /:collection/:path
 
 socials:
   - {

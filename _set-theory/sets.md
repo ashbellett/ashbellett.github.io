@@ -44,6 +44,10 @@ The **Cartesian product** of sets $$X$$ and $$Y$$, $$X \times Y$$ is the set of 
 
 $$X \times Y := \{(x,y) : x \in X \ \mathrm{and} \ y \in Y\} $$
 
+Let $$X$$ be a set. The **power set** $$\mathcal{P}(X)$$ is the set of all subsets of $$X$$.
+
+$$\mathcal{P}(X) := \{A : A \subseteq X \}$$
+
 A set $$X$$ has **cardinality** $$n \in \mathbb{N}$$ if and only if it has equal cardinality with $$ \{i \in \mathbb{N} : i < n\} $$. $$X$$ has $$n$$ elements if and only if it has cardinality $$n$$.
 
 A set $$X$$ is **finite** if and only if it has cardinality $$n \in \mathbb{N}$$. Otherwise, the set is **infinite**.

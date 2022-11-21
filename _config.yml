@@ -32,7 +32,7 @@ collections:
       - matrices.md
       - determinants.md
       - eigenvalues-eigenvectors.md
-      - singular-value-decomposition.md
+      - matrix-decompositions.md
 
 socials:
   - {

@@ -1,9 +1,9 @@
 ---
 layout: post
 category: "Linear Algebra"
-title:  "Singular Value Decomposition"
-tags: ["linear algebra", "singular value decomposition"]
-description: "A fundamental decomposition of non-square matrices"
+title:  "Matrix Decompositions"
+tags: ["linear algebra", "matrix decomposition"]
+description: "Fundamental decompositions of square and non-square matrices"
 ---
 
 Below is some Python code

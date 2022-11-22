@@ -12,9 +12,9 @@ layout: default
 
     {%- if site.set-theory.size > 0 -%}
 
-      <h2 class="post-list-heading">Set Theory</h2>
+      <h2 class="post-list-heading collapsible-header">Set Theory</h2>
 
-        <ul class="post-list">
+        <ul class="post-list collapsible-content">
           {% assign posts = site.set-theory | sort: "order" %}
           {%- for post in posts -%}
           <li>
@@ -32,9 +32,9 @@ layout: default
 
     {%- if site.real-analysis.size > 0 -%}
 
-      <h2 class="post-list-heading">Real Analysis</h2>
+      <h2 class="post-list-heading collapsible-header">Real Analysis</h2>
 
-        <ul class="post-list">
+        <ul class="post-list collapsible-content">
           {%- for post in site.real-analysis -%}
           <li>
             <h3>
@@ -51,9 +51,9 @@ layout: default
 
     {%- if site.linear-algebra.size > 0 -%}
 
-      <h2 class="post-list-heading">Linear Algebra</h2>
+      <h2 class="post-list-heading collapsible-header">Linear Algebra</h2>
 
-        <ul class="post-list">
+        <ul class="post-list collapsible-content">
           {%- for post in site.linear-algebra -%}
           <li>
             <h3>
@@ -69,3 +69,47 @@ layout: default
     {%- endif -%}
 
 </div>
+
+<style>
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .collapsible-header:hover {
+    color: grey;
+    cursor: pointer;
+  }
+
+  .collapsible-header.active {
+    color: grey;
+  }
+
+  .collapsible-header:before {
+    content: '⮞ ';
+    color: grey;
+  }
+
+  .collapsible-header.active:before {
+    content: '⮟ ';
+    color: grey;
+  }
+
+</style>
+
+<script>
+  const collapsible = document.getElementsByClassName("collapsible-header");
+
+  for (let index = 0; index < collapsible.length; index++) {
+    collapsible[index].addEventListener("click", function() {
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>

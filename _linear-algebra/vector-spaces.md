@@ -3,7 +3,7 @@ layout: post
 category: "Linear Algebra"
 title:  "Vector Spaces"
 tags: ["linear algebra", "vector space"]
-description: "Fundamental spaces supporting addition and multiplication of elements"
+description: "Spaces supporting addition and scalar multiplication of elements"
 ---
 
 A **binary operation** is a function $$\mathbb{X} \times \mathbb{X} \rightarrow \mathbb{X}$$ which maps ordered pairs of elements from $$\mathbb{X}$$ to other elements of $$\mathbb{X}$$.

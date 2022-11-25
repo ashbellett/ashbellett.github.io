@@ -3,7 +3,7 @@ layout: post
 category: "Set Theory"
 title:  "Functions"
 tags: ["set theory", "function"]
-description: "A mapping from one set to another"
+description: "Mappings between sets"
 ---
 
 Let $$X$$ and $$Y$$ be sets and $$P(x,y)$$ be a predicte depending on $$x \in X$$ and $$y \in Y$$ such that $$\forall x \in X$$ there is exactly one $$y \in Y$$ for which $$P(x,y)$$ is true. A **function** $$f : X \rightarrow Y$$ defined by $$P(x,y)$$ maps any input $$x \in X$$ to an output $$f(x) \in Y$$.

@@ -3,7 +3,7 @@ layout: post
 category: "Linear Algebra"
 title:  "Matrices"
 tags: ["linear algebra", "matrix"]
-description: "A multi-dimensional data structure"
+description: "Multi-dimensional data structures"
 ---
 
 Below is some Python code

@@ -3,7 +3,7 @@ layout: post
 category: "Set Theory"
 title:  "Sets"
 tags: ["set theory", "set"]
-description: "A collection of elements"
+description: "Collections of elements"
 ---
 
 An **object** $$x$$ is any abstract entity that can be formally defined and assigned to a variable.

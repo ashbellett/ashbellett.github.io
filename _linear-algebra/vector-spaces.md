@@ -3,7 +3,7 @@ layout: post
 category: "Linear Algebra"
 title:  "Vector Spaces"
 tags: ["linear algebra", "vector space"]
-description: "A fundamental linear algebra structure"
+description: "A fundamental space supporting addition and multiplication of elements"
 ---
 
 A **binary operation** is a function $$\mathbb{X} \times \mathbb{X} \rightarrow \mathbb{X}$$ which maps ordered pairs of elements from $$\mathbb{X}$$ to other elements of $$\mathbb{X}$$.
@@ -25,5 +25,14 @@ The set $$\mathcal{V}$$ over the field $$\mathbb{F}$$ is a **vector space** if $
 - Scalar multiplicative identity: $$\exists \, 1 \in \mathbb{F} : 1\cdot\underline{u}=\underline{u}$$
 - Additive inverse: $$\exists \, {-}\underline{u} \in \mathcal{V} : \underline{u}+({-}\underline{u})=\underline{0}$$.
 
-Generally $$\mathcal{V}=\mathbb{R}^n$$ where $$v_1,...v_n \in \mathbb{R}$$ or $$\mathcal{V}=\mathbb{C}^n$$ where $$v_1,...v_n \in \mathbb{C}$$ for the set of $$n$$-tuples $$\underline{v}=(v_1,...,v_n)$$. Any element $$\underline{v} \in \mathcal{V}$$ is a **vector**.
+Generally $$\mathcal{V}=\mathbb{R}^n$$ where $$v_1,\ldots v_n \in \mathbb{R}$$ or $$\mathcal{V}=\mathbb{C}^n$$ where $$v_1,\ldots v_n \in \mathbb{C}$$ for the set of $$n$$-tuples $$\underline{v}=(v_1,\ldots,v_n)$$. Any element $$\underline{v} \in \mathcal{V}$$ is a **vector**.
 
+Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$. A **subspace** $$\mathcal{U}$$ of $$\mathcal{V}$$ is a subset $$\mathcal{U} \subseteq \mathcal{V}$$ that is itself a vector space. $$\mathcal{U}$$ can be a subset of $$\mathcal{V}$$ and not a subspace if it does not satisfy all vector space axioms.
+
+Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$ and $$U$$ be a subset of $$\mathcal{V}$$. The vectors $$\underline{u} \in U$$ are **linearly dependent** if at least one vector $$\underline{u}_k$$ can be written as a linear combination of the other vectors. In other words, for some $$k, 1 \leq k \leq n$$ there exists a set of scalars $$\alpha_1,\ldots,\alpha_{k-1}, \alpha_{k+1},\ldots,\alpha_n$$ such that
+
+$$\underline{u}_k = \sum_{i=1, i\neq k}^n \alpha_i\underline{u}_i$$
+
+If there are no linearly dependent vectors in $$U$$ then its vectors are **linearly independent**. Equivalently, the vectors in $$U$$ are linearly independent if and only if the solution to $$\alpha_1\underline{u}_1+\ldots+\alpha_n\underline{u}_n=\underline{0}$$ is the trivial solution $$\alpha_1=\ldots=\alpha_n=0$$. $$U$$ is said to be linearly dependent if every finite subset of $$U$$ is linearly independent.
+
+Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$ and $$U$$ be a subset of $$\mathcal{V}$$. $$U$$ is said to **span** $$\mathcal{V}$$ if all vectors in $$\mathcal{V}$$ can be expressed as a linear combination of vectors in $$U$$. $$U$$ is said to be a **basis** of $$\mathcal{V}$$ if $$U$$ spans $$\mathcal{V}$$ and the vectors in $$U$$ are linearly independent. The **dimension** of $$\mathcal{V}$$ is the number of vectors in its basis. Every vector space that can be spanned has a basis and all bases for a given vector space have the same number of vectors. Hence, the dimension of a vector space is uniquely defined.

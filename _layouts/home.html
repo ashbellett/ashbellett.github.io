@@ -12,7 +12,9 @@ layout: default
 
     {%- if site.set-theory.size > 0 -%}
 
-      <h2 class="post-list-heading collapsible-header">Set Theory</h2>
+      <a class="post-link collapsible-header">
+        <h2 class="post-list-heading">Set Theory</h2>
+      </a>
 
         <ul class="post-list collapsible-content">
           {% assign posts = site.set-theory | sort: "order" %}
@@ -32,7 +34,9 @@ layout: default
 
     {%- if site.real-analysis.size > 0 -%}
 
-      <h2 class="post-list-heading collapsible-header">Real Analysis</h2>
+      <a class="post-link collapsible-header">
+        <h2 class="post-list-heading">Real Analysis</h2>
+      </a>
 
         <ul class="post-list collapsible-content">
           {%- for post in site.real-analysis -%}
@@ -51,7 +55,9 @@ layout: default
 
     {%- if site.linear-algebra.size > 0 -%}
 
-      <h2 class="post-list-heading collapsible-header">Linear Algebra</h2>
+      <a class="post-link collapsible-header">
+        <h2 class="post-list-heading">Linear Algebra</h2>
+      </a>
 
         <ul class="post-list collapsible-content">
           {%- for post in site.linear-algebra -%}
@@ -78,11 +84,11 @@ layout: default
   }
 
   .collapsible-header:hover {
-    color: grey;
+    /*color: grey;*/
     cursor: pointer;
   }
 
-  .collapsible-header.active {
+  /* .collapsible-header.active {
     color: grey;
   }
 
@@ -98,7 +104,7 @@ layout: default
     width: 1rem;
     height: 1rem;
     color: grey;
-  }
+  } */
 
 </style>
 

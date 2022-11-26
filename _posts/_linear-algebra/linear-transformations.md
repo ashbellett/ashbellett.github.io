@@ -26,6 +26,6 @@ The **nullity** of $$T$$ is the dimension of the kernel of $$T$$:
 
 $$\mathrm{null} \, T := \mathrm{dim}(\mathrm{ker} \, T)$$
 
-The **rank-nullity theorem** states that the dimension of $$\mathcal{U}$$ is the sum of the rank and nullity of $$T$$:
+The **rank-nullity theorem** states that the dimension of $$\mathcal{U}$$ is the sum of the rank and nullity of $$T$$ if $$\mathcal{U}$$ is finite dimensional:
 
 $$\mathrm{dim}(\mathcal{U}) = \mathrm{rank}\, T + \mathrm{null} \, T$$

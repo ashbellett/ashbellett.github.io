@@ -6,7 +6,7 @@ tags: ["linear algebra", "inner product space"]
 description: "Vector spaces with additional structure"
 ---
 
-Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$. A **bilinear form** on $$\mathcal{V}$$ is a function of pairs of vectors from $$\mathcal{V}$$ to $$\mathbb{F}$$, written $$\langle \cdot, \cdot \rangle : \mathcal{V}\times\mathcal{V} \rightarrow \mathbb{F}$$ and satisfies the bilinear form axioms:
+Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$. A **bilinear form** on $$\mathcal{V}$$ is a function from pairs of vectors in $$\mathcal{V}$$ to $$\mathbb{F}$$ written $$\langle \cdot, \cdot \rangle : \mathcal{V}\times\mathcal{V} \rightarrow \mathbb{F}$$ and satisfies the bilinear form axioms:
 - $$\langle \lambda\underline{v}_1+\mu\underline{v}_2, \underline{v}_3 \rangle = \lambda\langle \underline{v}_1, \underline{v}_3 \rangle + \mu\langle \underline{v}_2, \underline{v}_3 \rangle \,\, \forall \, \underline{v}_1, \underline{v}_2, \underline{v}_3 \in \mathcal{V}$$ and $$\forall \, \lambda, \mu \in \mathbb{F}$$;
 - $$\langle \underline{v}_1, \lambda\underline{v}_2+\mu\underline{v}_3 \rangle = \lambda\langle \underline{v}_1, \underline{v}_2 \rangle + \mu\langle \underline{v}_1, \underline{v}_3 \rangle \,\, \forall \, \underline{v}_1, \underline{v}_2, \underline{v}_3 \in \mathcal{V}$$ and $$\forall \, \lambda, \mu \in \mathbb{F}$$.
 
@@ -20,7 +20,7 @@ Let $$\mathcal{V}$$ be an inner product space over the field $$\mathbb{F}$$ and 
 
 $$\|\underline{v}\|:=\sqrt{\langle \underline{v},\underline{v} \rangle} \in \mathbb{R}$$
 
-The **angle** $$\theta$$ between two vectors $$\underline{u},\underline{v} \in \mathcal{V}$$ is defined as:
+The **angle** $$\theta$$ between two vectors $$\underline{u},\underline{v} \in \mathcal{V}$$ is defined as the inverse cosine of the quotient of the inner product of the two vectors and the product of their norms:
 
 $$\theta:=\cos^{-1}\left(\frac{\langle \underline{u},\underline{v} \rangle}{\|\underline{u}\|\|\underline{v}\|}\right) \in [0, \pi]$$
 

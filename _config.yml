@@ -5,6 +5,7 @@ author:
   email: ash.bellett.ab@gmail.com
 
 include: [_pages]
+collections_dir: _posts
 baseurl: ""
 url:     "ashbellett.com"
 

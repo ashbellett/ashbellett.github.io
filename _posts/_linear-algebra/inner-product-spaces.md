@@ -33,3 +33,5 @@ The **Cauchy-Schwarz inequality** states that for an inner product space $$\math
 $$|\langle\underline{v}_1,\underline{v}_2\rangle|\leq\|\underline{v}_1\|\|\underline{v}_2\|$$
 
 with equality if and only if $$\underline{v}_1$$ and $$\underline{v}_2$$ are linearly dependent.
+
+Gram-Schmidt orthonormalisation

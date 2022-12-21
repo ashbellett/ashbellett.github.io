@@ -12,8 +12,11 @@ Data scientist and software engineer with 5 years of experience analysing, build
 
 ![deloitte] **Deloitte**
 
+Manager, Data Science & Engineering
+Jan 2023 - present
+
 Senior Data Scientist\
-Jan 2021 - present
+Jan 2021 - Dec 2022
 
 ![ibm] **IBM**
 

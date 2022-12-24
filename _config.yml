@@ -10,21 +10,25 @@ baseurl: ""
 url:     "ashbellett.com"
 
 collections:
-  set-theory:
+  sets:
     output: true
     permalink: /:collection/:path
     order:
       - logic.md
       - sets.md
       - functions.md
-  real-analysis:
+  analysis:
     output: true
     permalink: /:collection/:path
     order:
+      - real-numbers.md
+      - sequences.md
       - limits.md
+      - series.md
+      - continuity.md
       - derivatives.md
       - integrals.md
-  linear-algebra:
+  algebra:
     output: true
     permalink: /:collection/:path
     order:
@@ -35,15 +39,35 @@ collections:
       - determinants.md
       - eigenvalues-eigenvectors.md
       - matrix-decompositions.md
-  probability-theory:
+  probability:
     output: true
     permalink: /:collection/:path
+    order:
+      - probability-spaces.md
+      - probability-forms.md
+      - random-variables.md
+      - distributions.md
+      - moments.md
+      - limit-theorems.md
+      - concentration-bounds.md
+      - probabilistic-convergence.md
+      - stochastic-processes.md
   statistics:
     output: true
     permalink: /:collection/:path
+    order:
+      - samples.md
+      - estimators.md
+      - point-estimation.md
+      - interval-estimation.md
+      - hypothesis-testing.md
   optimisation:
     output: true
     permalink: /:collection/:path
+    order:
+      - convexity.md
+      - unconstrained-optimisation.md
+      - constrained-optimisation.md
 
 socials:
   - {

@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Linear Algebra"
+category: "Algebra"
 title:  "Eigenvalues and Eigenvectors"
-tags: ["linear algebra", "eigenvalue", "eigenvector"]
+tags: ["algebra", "eigenvalue", "eigenvector"]
 description: "A fundamental decomposition of square matrices"
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Set Theory"
+category: "Sets"
 title:  "Functions"
-tags: ["set theory", "function"]
+tags: ["sets", "function"]
 description: "Mappings between sets"
 ---
 

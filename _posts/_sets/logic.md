@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Set Theory"
+category: "Sets"
 title:  "Logic"
-tags: ["set theory", "logic"]
+tags: ["sets", "logic"]
 description: "The formal language of mathematics"
 ---
 

@@ -4,75 +4,138 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
 
 
-    {%- if site.set-theory.size > 0 -%}
+  {%- if site.sets.size > 0 -%}
 
-      <a class="post-link collapsible-header">
-        <h2 class="post-list-heading">Set Theory</h2>
-      </a>
+  <a class="post-link collapsible-header">
+    <h2 class="post-list-heading">Sets</h2>
+  </a>
 
-        <ul class="post-list collapsible-content">
-          {% assign posts = site.set-theory | sort: "order" %}
-          {%- for post in posts -%}
-          <li>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-              {{ post.description }}
-          </li>
-          {%- endfor -%}
-        </ul>
+  <ul class="post-list collapsible-content">
+    {% assign posts = site.sets | sort: "order" %}
+    {%- for post in posts -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {{ post.description }}
+    </li>
+    {%- endfor -%}
+  </ul>
 
-    {%- endif -%}
+  {%- endif -%}
 
-    {%- if site.real-analysis.size > 0 -%}
+  {%- if site.analysis.size > 0 -%}
 
-      <a class="post-link collapsible-header">
-        <h2 class="post-list-heading">Real Analysis</h2>
-      </a>
+  <a class="post-link collapsible-header">
+    <h2 class="post-list-heading">Analysis</h2>
+  </a>
 
-        <ul class="post-list collapsible-content">
-          {%- for post in site.real-analysis -%}
-          <li>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-              {{ post.description }}
-          </li>
-          {%- endfor -%}
-        </ul>
+  <ul class="post-list collapsible-content">
+    {%- for post in site.analysis -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {{ post.description }}
+    </li>
+    {%- endfor -%}
+  </ul>
 
-    {%- endif -%}
+  {%- endif -%}
 
-    {%- if site.linear-algebra.size > 0 -%}
+  {%- if site.algebra.size > 0 -%}
 
-      <a class="post-link collapsible-header">
-        <h2 class="post-list-heading">Linear Algebra</h2>
-      </a>
+  <a class="post-link collapsible-header">
+    <h2 class="post-list-heading">Algebra</h2>
+  </a>
 
-        <ul class="post-list collapsible-content">
-          {%- for post in site.linear-algebra -%}
-          <li>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-              {{ post.description }}
-          </li>
-          {%- endfor -%}
-        </ul>
+  <ul class="post-list collapsible-content">
+    {%- for post in site.algebra -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {{ post.description }}
+    </li>
+    {%- endfor -%}
+  </ul>
 
-    {%- endif -%}
+  {%- endif -%}
+
+  {%- if site.probability.size > 0 -%}
+
+  <a class="post-link collapsible-header">
+    <h2 class="post-list-heading">Probability</h2>
+  </a>
+
+  <ul class="post-list collapsible-content">
+    {%- for post in site.probability -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {{ post.description }}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  {%- endif -%}
+
+  {%- if site.statistics.size > 0 -%}
+
+  <a class="post-link collapsible-header">
+    <h2 class="post-list-heading">Statistics</h2>
+  </a>
+
+  <ul class="post-list collapsible-content">
+    {%- for post in site.statistics -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {{ post.description }}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  {%- endif -%}
+
+  {%- if site.optimisation.size > 0 -%}
+
+  <a class="post-link collapsible-header">
+    <h2 class="post-list-heading">Optimisation</h2>
+  </a>
+
+  <ul class="post-list collapsible-content">
+    {%- for post in site.optimisation -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {{ post.description }}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  {%- endif -%}
 
 </div>
 
@@ -105,14 +168,13 @@ layout: default
     height: 1rem;
     color: grey;
   } */
-
 </style>
 
 <script>
   const collapsible = document.getElementsByClassName("collapsible-header");
 
   for (let index = 0; index < collapsible.length; index++) {
-    collapsible[index].addEventListener("click", function() {
+    collapsible[index].addEventListener("click", function () {
       this.classList.toggle("active");
       let content = this.nextElementSibling;
       if (content.style.maxHeight) {

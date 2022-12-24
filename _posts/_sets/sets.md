@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Set Theory"
+category: "Sets"
 title:  "Sets"
-tags: ["set theory", "set"]
+tags: ["sets", "set"]
 description: "Collections of elements"
 ---
 

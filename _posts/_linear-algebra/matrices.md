@@ -84,7 +84,7 @@ For a matrix to be multiplied with itself it must be square. Let $$A \in \mathbb
 
 The **identity matrix** $$I_n$$ of order $$n$$ is a square matrix with diagonal elements equal to one and zero otherwise. For a non-square matrix $$A\in\mathbb{F}^{\,n\times p}$$ there are two matrices that act as identity matrices for matrix multiplication: $$I_n$$ and $$I_p$$. They satisfy $$I_n A = AI_p = A$$. For a square matrix $$B\in\mathbb{F}^{\,p\times p}$$, $$B^0=I_p$$.
 
-A **diagonal matrix** is a square matrix where non-diagonal elements are zero, a **null matrix** is a matrix where all elements are zero, a **symmetric matrix** is a matrix where elements $$a_{ij}$$ indexed by the positional indices $$i,j$$ satisfy $$a_{ij} = a_{ji}$$, an **upper triangular matrix** is a matrix where elements satisfy $$a_{ij} = 0\,\,\forall\,i>j$$ and a **lower triangular matrix** is a matrix where elements satisfy $$a_{ij} = 0\,\,\forall\,i<j$$.
+A **diagonal matrix** is a square matrix where non-diagonal elements are zero, a **null matrix** is a matrix where all elements are zero, a **symmetric matrix** is a matrix whose transpose equals itself, a **skew-symmetric matrix** is a matrix whose transpose equals minus itself, **upper triangular matrix** is a matrix where elements $$a_{ij}$$ indexed by the positional indices $$i,j$$ satisfy $$a_{ij} = 0\,\,\forall\,i>j$$ and a **lower triangular matrix** is a matrix where elements satisfy $$a_{ij} = 0\,\,\forall\,i<j$$.
 
 Let $$A \in \mathbb{F}^{\,n\times n}$$ be a square matrix. $$A$$ is **invertible** if there exists another matrix $$A^{-1} \in \mathbb{F}^{\,n\times n}$$ such that $$AA^{-1}=A^{-1}A=I_n$$. If an invertible matrix exists, it is unique. If no inverse exists for $$A$$ then $$A$$ is **singular**.
 

@@ -24,8 +24,8 @@ The determinant of square matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ satisfies 
 - Determinant of transpose: $$\lvert A \rvert\,= \lvert A^\intercal \rvert$$
 - Determinant of scalar multiplication: $$\lvert \lambda A \rvert\,= \lambda^n\lvert A \rvert\,\,\forall\,\lambda\in\mathbb{F}$$
 - Determinant of matrix multiplication: $$\lvert AB \rvert\,= \lvert A \rvert \lvert B \rvert$$
-- Invertibility: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ is invertible
 - Determinant of matrix inverse: $$\lvert A^{-1} \rvert\,=\frac{1}{\lvert A \rvert}$$
+- Invertibility: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ is invertible
 - Full rank: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ has rank $$n$$
 
 Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The matrix inverse $$A^{-1}$$ can be calculated from the determinant and co-factors of $$A$$:

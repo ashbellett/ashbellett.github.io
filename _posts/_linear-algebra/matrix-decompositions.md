@@ -6,18 +6,12 @@ tags: ["linear algebra", "matrix decomposition"]
 description: "Fundamental decompositions of square and non-square matrices"
 ---
 
-Below is some Python code
+LU
 
-{% highlight python %}
-import math
+Rank factorisation
 
-class Point:
+Cholesky
 
-  def __init__(self, x: float, y: float, z: float):
-    self.x = x
-    self.y = y
-    self.z = z
+QR
 
-  def distance(self) -> float:
-    math.sqrt(x*x + y*y + z*z)
-{% endhighlight %}
+Singular value decomposition

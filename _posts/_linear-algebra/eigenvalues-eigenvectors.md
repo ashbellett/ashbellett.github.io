@@ -6,18 +6,20 @@ tags: ["linear algebra", "eigenvalue", "eigenvector"]
 description: "A fundamental decomposition of square matrices"
 ---
 
-Below is some Python code
+Eigen-decomposition
 
-{% highlight python %}
-import math
+Relationship to trace and determinant
 
-class Point:
+Characteristic polynomial
 
-  def __init__(self, x: float, y: float, z: float):
-    self.x = x
-    self.y = y
-    self.z = z
+Eigen-spectrum
 
-  def distance(self) -> float:
-    math.sqrt(x*x + y*y + z*z)
-{% endhighlight %}
+Eigen-space
+
+Algebraic and geometric multiplicities
+
+Eigen-bases
+
+Diagonalisation
+
+Spectral theorem

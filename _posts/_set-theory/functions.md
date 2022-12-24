@@ -8,7 +8,7 @@ description: "Mappings between sets"
 
 Let $$X$$ and $$Y$$ be sets and $$P(x,y)$$ be a predicte depending on $$x \in X$$ and $$y \in Y$$ such that $$\forall x \in X$$ there is exactly one $$y \in Y$$ for which $$P(x,y)$$ is true. A **function** $$f : X \rightarrow Y$$ defined by $$P(x,y)$$ maps any input $$x \in X$$ to an output $$f(x) \in Y$$.
 
-$$y=f(x) \Longleftrightarrow P(x,y)$$
+$$y=f(x) \Leftrightarrow P(x,y)$$
 
 $$X$$ is the **domain** and $$Y$$ is the **codomain** or **range** of the function $$f$$.
 
@@ -22,7 +22,7 @@ If the codomain of $$f$$ does not match the domain of $$g$$, the composition $$g
 
 A function $$f: X \rightarrow Y$$ is **injective** or "one-to-one" if distinct elements of its domain $$X$$ map to distinct elements of its codomain $$Y$$.
 
-$$ x \neq x' \Longrightarrow f(x) \neq f(x')$$
+$$ x \neq x' \Rightarrow f(x) \neq f(x')$$
 
 A function $$f: X \rightarrow Y$$ is **surjective** or "onto" if all elements of its domain $$X$$ map to all elements of its codomain $$Y$$.
 

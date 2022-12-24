@@ -69,23 +69,42 @@ $$\mathrm{tr}(AB) = \mathrm{tr}(BA) \,\,\forall\, A \in \mathbb{F}^{\,n\times p}
 
 $$\sum_i \underline{u}_{i}^\intercal A \underline{u}_i = \mathrm{tr}(AT) \,\,\forall\, \underline{u}_i \in \mathbb{F}^n, A \in \mathbb{F}^{\,n\times n} \,\,\mathrm{where} \,\, T=\sum_i \underline{u}_i \underline{u}_i^\intercal$$
 
-Addition, scalar multiplication, matrix multiplication, power matrices
+Let $$A, B \in \mathbb{F}^{\,n\times p}$$ and $$\lambda \in \mathbb{F}$$. **Matrix addition** is defined to be the matrix $$A+B \in \mathbb{F}^{\,n\times p}$$ where elements have been summed together element-wise. **Matrix scalar multiplication** is defined to be the matrix $$\lambda A \in \mathbb{F}^{\,n\times p}$$ where the scalar $$\lambda$$ has been multiplied with every element of $$A$$.
 
-Identity matrix, diagonal matrices, square matrices, symmetric matrices, triangular matrices
+Let $$A \in \mathbb{F}^{\,n\times p}$$ and $$B \in \mathbb{F}^{\,p\times m}$$. That is, $$A$$ has as many columns as $$B$$ has rows. **Matrix multiplication** is defined to be the matrix $$AB \in \mathbb{F}^{\,n\times m}$$ where elements indexed by the positional indices $$i,j$$ are defined by:
 
-Invertibility, conditions for invertibility
+$$ab_{ij} = a_{i1}b_{1j}+a_{i2}b_{2j}+...a_{ip}b_{pj}=\sum_{k=1}^p a_{ik}b_{kj}$$
 
-Let $$A \in \mathbb{F}^{\,n\times n}$$ be a square matrix. $$A$$ is an **orthogonal** matrix if its rows and columns form orthonormal sets of vectors. This is true if and only if the product of $$A$$ and its transpose $$A^\intercal$$ is equal to the identity matrix.
+Matrix multiplication satisfies the following properties:
+- Associativity: $$(AB)C=A(BC) \,\,\forall\,A \in \mathbb{F}^{\,n\times p},B \in \mathbb{F}^{\,p\times m},C \in \mathbb{F}^{\,m\times q}$$
+- Distributivity: $$A(B+C)=AB+AC$$ and $$(A+D)B=AB+DB$$ $$\forall\,A \in \mathbb{F}^{\,n\times p},B \in \mathbb{F}^{\,p\times m},C \in \mathbb{F}^{\,p\times m}, D \in \mathbb{F}^{\,n\times p}$$
+- Non-commutativity: $$AB \neq BA$$, in general, $$\forall\,A \in \mathbb{F}^{\,n\times p},B \in \mathbb{F}^{\,p\times n}$$
 
-$$AA^\intercal=AA^\intercal=I_n$$
+For a matrix to be multiplied with itself it must be square. Let $$A \in \mathbb{F}^{\,p\times p}$$. For $$n\geq2$$ the **matrix power** is recursively defined as the matrix $$A^n=A^{n-1}A\in \mathbb{F}^{\,p\times p}$$.
+
+The **identity matrix** $$I_n$$ of order $$n$$ is a square matrix with diagonal elements equal to one and zero otherwise. For a non-square matrix $$A\in\mathbb{F}^{\,n\times p}$$ there are two matrices that act as identity matrices for matrix multiplication: $$I_n$$ and $$I_p$$. They satisfy $$I_n A = AI_p = A$$. For a square matrix $$B\in\mathbb{F}^{\,p\times p}$$, $$B^0=I_p$$.
+
+A **diagonal matrix** is a square matrix where non-diagonal elements are zero, a **null matrix** is a matrix where all elements are zero, a **symmetric matrix** is a matrix where elements $$a_{ij}$$ indexed by the positional indices $$i,j$$ satisfy $$a_{ij} = a_{ji}$$, an **upper triangular matrix** is a matrix where elements satisfy $$a_{ij} = 0\,\,\forall\,i>j$$ and a **lower triangular matrix** is a matrix where elements satisfy $$a_{ij} = 0\,\,\forall\,i<j$$.
+
+Let $$A \in \mathbb{F}^{\,n\times n}$$ be a square matrix. $$A$$ is **invertible** if there exists another matrix $$A^{-1} \in \mathbb{F}^{\,n\times n}$$ such that $$AA^{-1}=A^{-1}A=I_n$$. If an invertible matrix exists, it is unique. If no inverse exists for $$A$$ then $$A$$ is **singular**.
+
+Let $$A \in \mathbb{F}^{\,n\times n}$$ be a square matrix. $$A$$ is invertible if any of the following conditions are true (below is subset of the conditions described in the Invertible Matrix Theorem):
+- $$A$$ has full rank
+- Columns of $$A$$ form a basis for $$\mathbb{F}^n$$
+- Transpose $$A^\intercal$$ is invertible
+- $$A\underline{v}=\underline{0}$$ only has the trivial solution $$\underline{v}=\underline{0}$$
+
+The matrix inverse satisfies the following properies for matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ and scalar $$\lambda\in\mathbb{F}$$:
+
+$$\left(\lambda A\right)^{-1}=\lambda^{-1}A^{-1}$$
+
+$$\left(AB\right)^{-1}=B^{-1}A^{-1}$$
+
+Let $$A \in \mathbb{F}^{\,n\times n}$$ be a square matrix. $$A$$ is an **orthogonal** matrix if its rows and columns form orthonormal sets of vectors. This is true if and only if the product of $$A$$ and its transpose $$A^\intercal$$ is equal to the identity matrix: $$AA^\intercal=AA^\intercal=I_n$$.
 
 Orthogonal matrices satify the following properties:
-
-$$A^{-1}=A^\intercal$$
-
-$$|A|=\pm1$$
-
-$$AB \mathrm{\,\,is\,\,orthogonal\,\,if\,\,} A \mathrm{\,\,and\,\,} B \mathrm{\,\,are\,\,orthogonal}$$
+- Matrix inverse is equal to transpose: $$A^{-1}=A^\intercal$$
+- Orthogonality of matrix multiplication: $$AB$$ is orthogonal if $$A$$ and $$B$$ are orthogonal
 
 Let $$A \in \mathbb{F}^{\,n\times p}\,\,\forall\, n\neq p$$ be a non-square matrix. $$A$$ is a **semi-orthogonal** matrix if:
 - the columns of $$A$$ form orthonormal sets and $$n>p$$; or
@@ -100,12 +119,8 @@ $$A^*=\begin{bmatrix}
   \overline{a_{1p}} & \overline{a_{2p}} & \ldots & \overline{a_{np}}
 \end{bmatrix}$$
 
-Let $$A \in \mathbb{C}^{\,n\times n}$$ be a complex, square matrix. $$A$$ is a **Hermitian** matrix if it is equal to its own conjugate transpose. The diagonal elements of a Hermitian matrix must be real.
+Let $$A \in \mathbb{C}^{\,n\times n}$$ be a complex, square matrix. $$A$$ is a **Hermitian** matrix if it is equal to its own conjugate transpose: $$a_{ij}=\overline{a_{ji}}$$. The diagonal elements of a Hermitian matrix must be real.
 
-$$a_{ij}=\overline{a_{ji}}$$
+Let $$A \in \mathbb{C}^{\,n\times n}$$ be a complex, square matrix. $$A$$ is a **unitary** matrix if its conjugate transpose is equal to its inverse: $$AA^*=A^*A=I_n$$.
 
-Let $$A \in \mathbb{C}^{\,n\times n}$$ be a complex, square matrix. $$A$$ is a **unitary** matrix if its conjugate transpose is equal to its inverse.
-
-$$AA^*=A^*A=I_n$$
-
-Positive definiteness
+Let $$A \in \mathbb{C}^{\,n\times n}$$ be a complex, square matrix. $$A$$ is **positive definite** if $$\underline{v}^*A\underline{v} > 0 \,\, \forall \, \underline{v} \in \mathbb{C}^n \setminus \{\underline{0}\}$$, **negative definite** if $$\underline{v}^*A\underline{v} < 0 \,\, \forall \, \underline{v} \in \mathbb{C}^n \setminus \{\underline{0}\}$$, **positive semi-definite** if $$\underline{v}^*A\underline{v} \geq 0 \,\, \forall \, \underline{v} \in \mathbb{C}^n \setminus \{\underline{0}\}$$ and **negative semi-definite** if $$\underline{v}^*A\underline{v} \leq 0 \,\, \forall \, \underline{v} \in \mathbb{C}^n \setminus \{\underline{0}\}$$.

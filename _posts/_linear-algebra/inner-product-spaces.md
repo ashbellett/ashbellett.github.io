@@ -28,12 +28,19 @@ Two vectors $$\underline{u}, \underline{v} \in \mathcal{V}$$ are **orthogonal** 
 
 For a subset of vectors $$U \subseteq \mathcal{V}$$, they are said to be an **orthogonal set** or **orthonormal set** if all vectors contained within the sets are pairwise orthogonal or orthonormal respectively. Orthonormal sets are linearly independent and a set of $$n$$ orthonormal vectors in an $$n$$-dimensional vector space is a basis.
 
+The **Gram-Schmidt orthonormalisation** procedure is a method to orthonormalise a set of linearly independent vectors $$\underline{u}_1,...\underline{u}_n \in \mathcal{U}$$ in an inner product space $$\mathcal{U}$$. The resultant orthonormalised vectors $$\underline{v}_1,...\underline{v}_n$$ will span $$\mathcal{U}$$.
+
+$$
+\begin{matrix}
+w_1 & := & u_1 & v_1 & := & \frac{w_1}{||w_1||} \\
+w_2 & := & u_2-\left(u_2 \cdot v_1\right)v_1 & v_2 & := & \frac{w_2}{||w_2||} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+w_n & := & u_n-\sum_{i=1}^{n-1}\left(u_n \cdot v_i\right)v_i & v_n & := & \frac{w_n}{||w_n||} \\
+\end{matrix}
+$$
+
 The **Cauchy-Schwarz inequality** states that for an inner product space $$\mathcal{V}$$ and $$\underline{v}_1,\underline{v}_2\in\mathcal{V}$$:
 
 $$|\langle\underline{v}_1,\underline{v}_2\rangle|\leq\|\underline{v}_1\|\|\underline{v}_2\|$$
 
 with equality if and only if $$\underline{v}_1$$ and $$\underline{v}_2$$ are linearly dependent.
-
-Sesquilinear forms and Hermitian spaces
-
-Gram-Schmidt orthonormalisation

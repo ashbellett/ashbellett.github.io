@@ -3,7 +3,7 @@ layout: post
 category: "Algebra"
 title:  "Matrix Decompositions"
 tags: ["algebra", "matrix decomposition"]
-description: "Fundamental decompositions of square and non-square matrices"
+description: "Decompositions of square and non-square matrices"
 ---
 
 LU

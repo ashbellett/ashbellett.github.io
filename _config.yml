@@ -33,12 +33,12 @@ collections:
     permalink: /:collection/:path
     order:
       - vector-spaces.md
-      - linear-transformations.md
       - inner-product-spaces.md
       - matrices.md
       - determinants.md
       - eigenvalues-eigenvectors.md
       - matrix-decompositions.md
+      - linear-transformations.md
   probability:
     output: true
     permalink: /:collection/:path

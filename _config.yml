@@ -11,6 +11,7 @@ url:     "ashbellett.com"
 
 collections:
   sets:
+    description: "test"
     output: true
     permalink: /:collection/:path
     order:

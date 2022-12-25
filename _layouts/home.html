@@ -9,13 +9,12 @@ layout: default
 
   {{ content }}
 
-
   {%- if site.sets.size > 0 -%}
 
   <a class="post-link collapsible-header">
     <h2 class="post-list-heading">Sets</h2>
   </a>
-
+  <p class="post-list collapsible-description">Collections of objects</p>
   <ul class="post-list collapsible-content">
     {% assign posts = site.sets | sort: "order" %}
     {%- for post in posts -%}
@@ -37,7 +36,7 @@ layout: default
   <a class="post-link collapsible-header">
     <h2 class="post-list-heading">Analysis</h2>
   </a>
-
+  <p class="post-list collapsible-description">Real-valued numbers and functions</p>
   <ul class="post-list collapsible-content">
     {%- for post in site.analysis -%}
     <li>
@@ -58,7 +57,7 @@ layout: default
   <a class="post-link collapsible-header">
     <h2 class="post-list-heading">Algebra</h2>
   </a>
-
+  <p class="post-list collapsible-description">Representations of linear systems</p>
   <ul class="post-list collapsible-content">
     {%- for post in site.algebra -%}
     <li>
@@ -79,7 +78,7 @@ layout: default
   <a class="post-link collapsible-header">
     <h2 class="post-list-heading">Probability</h2>
   </a>
-
+  <p class="post-list collapsible-description">Likelihood of events occurring</p>
   <ul class="post-list collapsible-content">
     {%- for post in site.probability -%}
     <li>
@@ -100,7 +99,7 @@ layout: default
   <a class="post-link collapsible-header">
     <h2 class="post-list-heading">Statistics</h2>
   </a>
-
+  <p class="post-list collapsible-description">Making conclusions from data</p>
   <ul class="post-list collapsible-content">
     {%- for post in site.statistics -%}
     <li>
@@ -121,7 +120,7 @@ layout: default
   <a class="post-link collapsible-header">
     <h2 class="post-list-heading">Optimisation</h2>
   </a>
-
+  <p class="post-list collapsible-description">Finding maximum and minimum values</p>
   <ul class="post-list collapsible-content">
     {%- for post in site.optimisation -%}
     <li>
@@ -140,6 +139,11 @@ layout: default
 </div>
 
 <style>
+  .collapsible-description {
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
   .collapsible-content {
     max-height: 0;
     overflow: hidden;
@@ -153,34 +157,27 @@ layout: default
 
   /* .collapsible-header.active {
     color: grey;
-  }
+  }*/
 
-  .collapsible-header:before {
-    content: url('assets/svg/arrow-right.svg');
-    width: 1rem;
-    height: 1rem;
-    color: grey;
-  }
-
-  .collapsible-header.active:before {
-    content: url('assets/svg/arrow-down.svg');
-    width: 1rem;
-    height: 1rem;
-    color: grey;
-  } */
 </style>
 
 <script>
   const collapsible = document.getElementsByClassName("collapsible-header");
 
   for (let index = 0; index < collapsible.length; index++) {
+    let description = collapsible[index].nextElementSibling
+    description.style.maxHeight = description.scrollHeight + "px";
     collapsible[index].addEventListener("click", function () {
       this.classList.toggle("active");
-      let content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
+      let state = this.classList.value.includes("active")
+      let description = this.nextElementSibling
+      let content = this.nextElementSibling.nextElementSibling;
+      if (state) {
+        description.style.maxHeight = 0;
         content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        description.style.maxHeight = description.scrollHeight + "px";
+        content.style.maxHeight = 0;
       }
     });
   }

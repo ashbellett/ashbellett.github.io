@@ -139,12 +139,8 @@ layout: default
 </div>
 
 <style>
-  .collapsible-description {
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
-
   .collapsible-content {
+    padding-left: 2rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -165,18 +161,13 @@ layout: default
   const collapsible = document.getElementsByClassName("collapsible-header");
 
   for (let index = 0; index < collapsible.length; index++) {
-    let description = collapsible[index].nextElementSibling
-    description.style.maxHeight = description.scrollHeight + "px";
     collapsible[index].addEventListener("click", function () {
       this.classList.toggle("active");
       let state = this.classList.value.includes("active")
-      let description = this.nextElementSibling
       let content = this.nextElementSibling.nextElementSibling;
       if (state) {
-        description.style.maxHeight = 0;
         content.style.maxHeight = content.scrollHeight + "px";
       } else {
-        description.style.maxHeight = description.scrollHeight + "px";
         content.style.maxHeight = 0;
       }
     });

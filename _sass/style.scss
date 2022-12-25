@@ -824,6 +824,7 @@ table {
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .footer-col-wrapper,
@@ -833,7 +834,7 @@ table {
 }
 
 .footer-col {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 0;
 }
 
 .footer-col-1,

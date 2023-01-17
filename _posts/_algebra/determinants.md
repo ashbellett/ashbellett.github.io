@@ -12,13 +12,13 @@ $$M_{ij} = \lvert B_{ij}\rvert$$
 
 $$C_{ij} = (-1)^{i+j}M_{ij}$$
 
-The **determinant** of $$A$$ is defined with the **Laplace expansion** of $$A$$:
+The **determinant** $$\mathrm{det}(A)$$ or $$\lvert A\rvert$$ of $$A$$ is defined with the **Laplace expansion** of $$A$$:
 
 $$\lvert A \rvert = \sum_{j=1}^{n} a_{ij}C_{ij}$$
 
 For the simple case $$n=2$$, $$\lvert A \rvert = a_{11}a_{22}-a_{12}a_{21}$$.
 
-The **real determinant** $$\mathrm{det}(A)$$ or $$\lvert A\rvert$$ of a real, square matrix $$A\in\mathbb{R}^{\,n\times n}$$ is a scalar representing the volume of the parallelepiped formed by taking each row of $$A$$ as a vector in $$\mathbb{R}^n$$.
+The **real determinant** of a real, square matrix $$A\in\mathbb{R}^{\,n\times n}$$ is a scalar representing the volume of the parallelepiped formed by taking each row of $$A$$ as a vector in $$\mathbb{R}^n$$.
 
 The determinant of square matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ satisfies the following properties:
 - Determinant of transpose: $$\lvert A \rvert\,= \lvert A^\intercal \rvert$$

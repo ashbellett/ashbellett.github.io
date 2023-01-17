@@ -12,7 +12,7 @@ $$M_{ij} = \lvert B_{ij}\rvert$$
 
 $$C_{ij} = (-1)^{i+j}M_{ij}$$
 
-The **determinant** $$\mathrm{det}(A)$$ or $$\lvert A\rvert$$ of $$A$$ is defined with the **Laplace expansion** of $$A$$:
+The **determinant**, $$\mathrm{det}(A)$$ or $$\lvert A\rvert$$, of $$A$$ is defined with the **Laplace expansion** of $$A$$:
 
 $$\lvert A \rvert = \sum_{j=1}^{n} a_{ij}C_{ij}$$
 

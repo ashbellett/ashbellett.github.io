@@ -18,9 +18,19 @@ A set containing no elements is the **empty set** $$\varnothing $$. A **singleto
 
 A set $$X$$ is a **subset** of another set $$Y$$, $$X \subseteq Y$$, if and only if every element of $$X$$ is also an element of $$Y$$. $$X$$ is a **proper subset** of $$Y$$, $$X \subset Y$$ if and only if $$X \subseteq Y$$ and $$X \neq Y$$.
 
-Let $$X$$ be a set. The statement $$P(x)$$ is a **predicate** if it depends on each $$x \in X$$.
+Let $$X$$ be a set. $$P(x)$$ is a **predicate** if it depends on each $$x \in X$$ and evaluates to a true or false statement.
 
-Let $$X$$ be a set and $$P(x)$$ be a predicate depending on $$x \in X$$. If $$P(x)$$ is true for all $$x \in X$$, the **universal quantifier** $$\forall $$ can be used to denote "for all". Hence $$ \forall x \in X : P(x)$$ means "the predicate $$P(x)$$ is true for all elements in $$X$$". If $$P(x)$$ is true for some $$x \in X$$, the **existential quantifier** $$\exists $$ can be used to mean "there exists some". Hence $$\exists x \in X : P(x)$$ means "there exists some elements in $$X$$ such that the predicate $$P(x)$$ is true".
+Let $$X$$ be a set and $$P(x)$$ be a predicate depending on $$x \in X$$. If $$P(x)$$ is true for all $$x \in X$$, the **universal quantifier** $$\forall $$ can be used to denote "for all".
+
+$$ \forall x \in X : P(x)$$
+
+means "the predicate $$P(x)$$ is true for all elements in $$X$$".
+
+If $$P(x)$$ is true for some $$x \in X$$, the **existential quantifier** $$\exists $$ can be used to mean "there exists some".
+
+$$\exists x \in X : P(x)$$
+
+means "there exists some elements in $$X$$ such that the predicate $$P(x)$$ is true".
 
 Let $$X$$ be a set and for each element $$x \in X$$ let $$P(x)$$ be a predicate depending on $$x$$. Then there exists a set $$ \{x \in X : P(x)\} $$ whose elements are the elements in $$X$$ for which $$P(x)$$ is true where the symbol ":" means "such that". Hence $$ \{x \in X : P(x)\} $$ means "the set of elements in $$X$$ such that the predicate $$P(x)$$ is true". Building sets from predicates is called **specification**.
 

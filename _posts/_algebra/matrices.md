@@ -80,9 +80,11 @@ Matrix multiplication satisfies the following properties:
 - Distributivity: $$A(B+C)=AB+AC$$ and $$(A+D)B=AB+DB$$ $$\forall\,A \in \mathbb{F}^{\,n\times p},B \in \mathbb{F}^{\,p\times m},C \in \mathbb{F}^{\,p\times m}, D \in \mathbb{F}^{\,n\times p}$$
 - Non-commutativity: $$AB \neq BA$$, in general, $$\forall\,A \in \mathbb{F}^{\,n\times p},B \in \mathbb{F}^{\,p\times n}$$
 
-For a matrix to be multiplied with itself it must be square. Let $$A \in \mathbb{F}^{\,p\times p}$$. For $$n\geq2$$ the **matrix power** is recursively defined as the matrix $$A^n=A^{n-1}A\in \mathbb{F}^{\,p\times p}$$.
+For a matrix to be multiplied with itself it must be square. Let $$A \in \mathbb{F}^{\,p\times p}$$. For $$n\geq2$$ the **matrix power** is recursively defined as the matrix
 
-The **identity matrix** $$I_n$$ of order $$n$$ is a square matrix with diagonal elements equal to one and zero otherwise. For a non-square matrix $$A\in\mathbb{F}^{\,n\times p}$$ there are two matrices that act as identity matrices for matrix multiplication: $$I_n$$ and $$I_p$$. They satisfy $$I_n A = AI_p = A$$. For a square matrix $$B\in\mathbb{F}^{\,p\times p}$$, $$B^0=I_p$$.
+$$A^n=A^{n-1}A\in \mathbb{F}^{\,p\times p}.$$
+
+The **identity matrix** $$I_n$$ of order $$n$$ is a square matrix with diagonal elements equal to one and zero otherwise. For a non-square matrix $$A\in\mathbb{F}^{\,n\times p}$$ there are two matrices that act as identity matrices for matrix multiplication: $$I_n$$ and $$I_p$$ which satisfy $$I_n A = AI_p = A$$. For a square matrix $$B\in\mathbb{F}^{\,p\times p}$$, $$B^0=I_p$$.
 
 A **diagonal matrix** is a square matrix where non-diagonal elements are zero, a **null matrix** is a matrix where all elements are zero, a **symmetric matrix** is a matrix whose transpose equals itself, a **skew-symmetric matrix** is a matrix whose transpose equals minus itself, **upper triangular matrix** is a matrix where elements $$a_{ij}$$ indexed by the positional indices $$i,j$$ satisfy $$a_{ij} = 0\,\,\forall\,i>j$$ and a **lower triangular matrix** is a matrix where elements satisfy $$a_{ij} = 0\,\,\forall\,i<j$$.
 

@@ -16,6 +16,22 @@ Let $$X \subseteq \mathbb{R}$$ be a subset of real numbers, $$x_0 \in X$$ and $$
 
 $$ \frac{df(x)}{dx} := \lim_{x_0 \rightarrow 0} \frac{f(x+x_0)-f(x)}{x_0}.$$
 
-Differentiability and continutiy
+Differentiability and continuity
 
-Derivatives of sums, product, quotient and chain rule
+Higher-order derivatives
+
+Derivatives of sums
+
+Derivatives of powers
+
+Product rule
+
+Quotient rule
+
+Chain rule
+
+Local maxima and minima
+
+L'Hôpital's rule
+
+Taylor expansion

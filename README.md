@@ -306,12 +306,71 @@ This is my personal website that contains notes on mathematics, science and engi
   - Factor graphs
 
 ### 11. Deep learning
-- Feed-forward networks
-- Convolutional networks
-- Recurrent networks
-- Auto-encoder networks
-- Generative-adversarial networks
-- Transformer networks
+- **Activation functions**
+  - Linear
+  - Sigmoid
+  - RELU
+  - ELU
+  - Softmax
+- **Loss functions**
+  - Mean squared error
+  - Cross-entropy loss
+  - Cosine similarity
+  - KL divergence
+- **Optimisers**
+  - Stochastic gradient descent
+  - Momentum
+  - Nesterov momentum
+  - Adagrad
+  - RMSprop
+  - Adam
+- **Initialisers**
+  - Glorot/Xavier initialisation
+  - Orthogonal initialisation
+- **Regularisation**
+  - Weight sharing
+  - Dropout
+  - Weight regularisation
+  - Early stopping/patience
+- **Normalisation**
+  - Batch normalisation
+  - Layer normalisation
+- **Feed-forward networks**
+  - Neuron unit
+  - Multi-layer perceptron
+- **Convolutional networks**
+  - Convolution operation
+  - Pooling
+  - Padding and stride
+  - Transposed convolutions
+- **Recurrent networks**
+  - RNN cell
+  - Stacked and bi-directional RNNs
+  - Back-propagation through time
+  - Long short term memory cell
+- **Transformer networks**
+  - Multi-head attention
+  - Positional encoding
+  - Transformer architecture
+- **Normalising flows**
+  - Bijectors
+  - Autoregressive flows
+  - Masked autoregressive flow (MAF)
+  - Masked autoencoder for distribution estimation (MADE)
+  - Inverse autoregressive flow (IAF)
+  - Non-linear independent components estimation (NICE)
+  - RealNVP model
+  - Glow model
+- **Auto-encoder networks**
+  - Bottleneck architecture
+  - Evidence lower bound (ELBO)
+  - Reparameterisation trick
+  - Variational auto-encoder
+- **Bayesian networks**
+  - Aleatoric and epistemic uncertainty
+  - Bayes by backpropogation
+  - MC dropout
+  - Uncertainty estimation
 
 ### 12. Agent systems
 - **Multi-armed bandits**
@@ -383,4 +442,3 @@ This is my personal website that contains notes on mathematics, science and engi
   - Parameter estimation
   - Forgetting factors
   - Change point detection
-  

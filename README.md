@@ -6,6 +6,7 @@ This is my personal website that contains notes on mathematics, science and engi
 
 Install Ruby gems:
 `bundle install`
+
 Serve app:
 `bundle exec jekyll serve`
 

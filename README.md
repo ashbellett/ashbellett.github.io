@@ -2,8 +2,15 @@
 
 This is my personal website that contains notes on mathematics, science and engineering for data scientists.
 
-## Topics
+## Installation
 
+Install Ruby gems:
+`bundle install`
+
+Serve app:
+`bundle exec jekyll serve`
+
+## Topics
 
 ### 1. Set theory
 - **Logic**

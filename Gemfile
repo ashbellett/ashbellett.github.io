@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version").strip
 
-gem "jekyll", "~> 4.3.1"
+gem "jekyll", "~> 4.3.2"
 
 group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4.0"
@@ -10,7 +10,7 @@ group :jekyll_plugins do
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 2.0.5"
+  gem "tzinfo", "~> 2.0.6"
   gem "tzinfo-data"
 end
 

@@ -6,14 +6,19 @@ permalink: /about
 
 ![ash]
 
-Data scientist and software engineer with 5 years of experience analysing, building and optimising data science applications; particularly data-driven platforms and machine learning workflows.
+Data scientist with 6 years of experience analysing, building and optimising data science applications; particularly data-driven platforms and machine learning workflows.
 
 ## Experience
+
+![canva] **Canva**
+
+Senior Data Scientist\
+Aug 2023 - present
 
 ![deloitte] **Deloitte**
 
 Manager, Data Science & Engineering\
-Jan 2023 - present
+Jan 2023 - Aug 2023
 
 Senior Data Scientist\
 Jan 2021 - Dec 2022
@@ -42,6 +47,8 @@ Electrical & Computer Systems\
 
 [ash]: assets/img/ash.png
 {: .profile }
+[canva]: assets/img/canva.jpg
+{: .brand }
 [deloitte]: assets/img/deloitte.jpg
 {: .brand }
 [ibm]: assets/img/ibm.jpg

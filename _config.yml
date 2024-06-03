@@ -15,9 +15,9 @@ collections:
     output: true
     permalink: /:collection/:path
     order:
+      - functions.md
       - logic.md
       - sets.md
-      - functions.md
   analysis:
     output: true
     permalink: /:collection/:path

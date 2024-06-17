@@ -51,9 +51,9 @@ Electrical & Computer Systems\
 {: .brand }
 [deloitte]: assets/img/deloitte.jpg
 {: .brand }
-[ibm]: assets/img/ibm.jpg
+[ibm]: assets/img/ibm.png
 {: .brand }
-[imperial]: assets/img/imperial.jpg
+[imperial]: assets/img/imperial.png
 {: .brand }
-[monash]: assets/img/monash.jpg
+[monash]: assets/img/monash.png
 {: .brand }

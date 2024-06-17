@@ -44,6 +44,7 @@ collections:
     output: true
     permalink: /:collection/:path
     order:
+      - events.md
       - probability-spaces.md
       - probability-forms.md
       - random-variables.md

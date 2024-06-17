@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Analysis"
+category: "Real Analysis"
 title:  "Derivatives"
-tags: ["analysis", "derivative"]
+tags: ["real", "analysis", "derivative"]
 description: "A function's rate of change"
 ---
 

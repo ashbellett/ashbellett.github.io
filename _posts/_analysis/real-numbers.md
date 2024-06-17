@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Analysis"
+category: "Real Analysis"
 title:  "Real Numbers"
-tags: ["analysis", "real number"]
+tags: ["real", "analysis", "real number"]
 description: "Continuous, one-dimensional quantities"
 ---
 

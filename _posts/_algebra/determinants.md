@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Algebra"
+category: "Linear Algebra"
 title:  "Determinants"
-tags: ["algebra", "determinant"]
+tags: ["linear", "algebra", "determinant"]
 description: "A fundamental property of square matrices"
 ---
 

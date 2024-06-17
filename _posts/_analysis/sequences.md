@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Analysis"
+category: "Real Analysis"
 title:  "Sequences"
-tags: ["analysis", "sequences"]
+tags: ["real", "analysis", "sequences"]
 description: "Ordered collections of numbers"
 ---
 

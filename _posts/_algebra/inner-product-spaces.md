@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Algebra"
+category: "Linear Algebra"
 title:  "Inner Product Spaces"
-tags: ["algebra", "inner product space"]
+tags: ["linear", "algebra", "inner product space"]
 description: "Vector spaces with additional structure"
 ---
 

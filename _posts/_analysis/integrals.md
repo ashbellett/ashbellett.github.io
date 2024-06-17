@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Analysis"
+category: "Real Analysis"
 title:  "Integrals"
-tags: ["analysis", "integral"]
+tags: ["real", "analysis", "integral"]
 description: "The space under a function"
 ---
 

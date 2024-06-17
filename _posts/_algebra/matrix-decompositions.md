@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Algebra"
+category: "Linear Algebra"
 title:  "Matrix Decompositions"
-tags: ["algebra", "matrix decomposition"]
+tags: ["linear", "algebra", "matrix decomposition"]
 description: "Decompositions of square and non-square matrices"
 ---
 

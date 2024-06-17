@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Analysis"
+category: "Real Analysis"
 title:  "Limits"
-tags: ["analysis", "limit"]
+tags: ["real", "analysis", "limit"]
 description: "Behaviour as points are approached"
 ---
 

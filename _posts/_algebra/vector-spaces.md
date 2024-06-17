@@ -1,8 +1,8 @@
 ---
 layout: post
-category: "Algebra"
+category: "Linear Algebra"
 title:  "Vector Spaces"
-tags: ["algebra", "vector space"]
+tags: ["linear", "algebra", "vector space"]
 description: "Spaces supporting addition and scalar multiplication of elements"
 ---
 

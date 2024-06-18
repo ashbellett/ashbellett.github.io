@@ -31,6 +31,10 @@ $lm-table-header-bg-color: lighten($lm-brand-color, 43%) !default;
 $lm-table-header-border:   lighten($lm-brand-color, 37%) !default;
 $lm-table-border-color:    $lm-border-color-01 !default;
 
+.tagline {
+  text-align: center;
+}
+
 .profile {
   border-radius: 50%;
   display: block;

@@ -6,7 +6,8 @@ permalink: /about
 
 ![ash]
 
-Data scientist with 6 years of experience analysing, building and optimising data science applications; particularly data-driven platforms and machine learning workflows.
+Data scientist analysing, building and optimising data-driven platforms and products.
+{: .tagline }
 
 ## Experience
 

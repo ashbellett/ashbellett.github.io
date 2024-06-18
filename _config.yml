@@ -1,17 +1,16 @@
 title: Ash Bellett
-
 author:
-  name:  Ash Bellett
+  name: Ash Bellett
   email: ash.bellett.ab@gmail.com
-
 include: [_pages]
 collections_dir: _posts
 baseurl: ""
-url:     "ashbellett.com"
-
+url: "ashbellett.com"
 collections:
   sets:
-    description: "test"
+    key: 0
+    title: "Sets"
+    description: "Collections of objects"
     output: true
     permalink: /:collection/:path
     order:
@@ -19,6 +18,9 @@ collections:
       - sets.md
       - functions.md
   analysis:
+    key: 1
+    title: "Real Analysis"
+    description: "Real-valued numbers and functions"
     output: true
     permalink: /:collection/:path
     order:
@@ -30,6 +32,9 @@ collections:
       - derivatives.md
       - integrals.md
   algebra:
+    key: 2
+    title: "Linear Algebra"
+    description: "Representations of linear systems"
     output: true
     permalink: /:collection/:path
     order:
@@ -41,6 +46,9 @@ collections:
       - matrix-decompositions.md
       - linear-transformations.md
   probability:
+    key: 3
+    title: "Probability"
+    description: "Likelihood of events occurring"
     output: true
     permalink: /:collection/:path
     order:
@@ -55,6 +63,9 @@ collections:
       - probabilistic-convergence.md
       - stochastic-processes.md
   statistics:
+    key: 4
+    title: "Statistics"
+    description: "Drawing conclusions from data"
     output: true
     permalink: /:collection/:path
     order:
@@ -64,13 +75,15 @@ collections:
       - interval-estimation.md
       - hypothesis-testing.md
   optimisation:
+    key: 5
+    title: "Optimisation"
+    description: "Finding maximum and minimum values"
     output: true
     permalink: /:collection/:path
     order:
       - convexity.md
       - unconstrained-optimisation.md
       - constrained-optimisation.md
-
 socials:
   - {
     platform: github,
@@ -87,9 +100,7 @@ socials:
     username: ashbellett,
     url: twitter.com/ashbellett
   }
-
 analytics: G-XFWQPSWM13
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

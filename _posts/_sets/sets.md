@@ -54,9 +54,17 @@ The **Cartesian product** of sets $$X$$ and $$Y,$$ $$X \times Y$$ is the set of 
 
 $$X \times Y := \{(x,y) : x \in X \ \mathrm{and} \ y \in Y\} $$
 
-Let $$X$$ be a set. The **power set** $$\mathcal{P}(X)$$ is the set of all subsets of $$X.$$
+The **power set** $$\mathcal{P}(X)$$ of a set $$X$$ is the set of all subsets of $$X.$$
 
 $$\mathcal{P}(X) := \{A : A \subseteq X \}$$
+
+A **partition** $$P$$ of a set $$X$$ is a set of non-empty subsets of $$X$$ such that every element $$x\in X$$ is in exactly one subset in $$P$$. Partitions of sets have the following properties:
+
+$$\varnothing \notin P$$
+
+$$\bigcup_{A\in P}=X$$
+
+$$A\cap B = \varnothing\,\,\forall\,A,B\in P, A\neq B.$$
 
 A set $$X$$ has **cardinality** $$n \in \mathbb{N}$$ if and only if it has equal cardinality with $$ \{i \in \mathbb{N} : i < n\} .$$ $$X$$ has $$n$$ elements if and only if it has cardinality $$n.$$
 

@@ -33,6 +33,8 @@ $$\mathbb{P}\left(\bigcap_{i=1}^k E_i\right).$$
 
 Events $$A,B\subseteq\Omega$$ are **independent events** if and only if their joint probability is the product of their marginal probabilities, $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right).$$ Disjoint events with non-zero probability of occurring are not independent events.
 
+Independence implies that the occurrence of one event does not affect the probability of another event occurring.
+
 A finite collection of $$k>2$$ events $$E_1, \ldots, E_k$$ are **pairwise independent** if $$E_i$$ and $$E_j$$ are independent for every pair of events $$E_i, E_j\in \left(E_1,E_2,\ldots,E_k\right)$$:
 
 $$\mathbb{P}\left(E_i\cap E_j\right)=\mathbb{P}\left(E_i\right)\,\mathbb{P}\left(E_j\right)\,\,\forall\,i,j\in \left(1,2,\ldots,k\right),\,i\neq j.$$
@@ -40,3 +42,5 @@ $$\mathbb{P}\left(E_i\cap E_j\right)=\mathbb{P}\left(E_i\right)\,\mathbb{P}\left
 A finite collection of $$k>2$$ events $$E_1, \ldots, E_k$$ are **mutually independent** if, for every subset of events in the collection, the probability of their intersection is the product of their probabilities. For $$l\leq k$$ and indices $$1\leq i_1,\ldots,i_l\leq k$$:
 
 $$\mathbb{P}\left(\bigcap_{j=1}^l E_{i_j}\right)=\prod_{j=1}^l\mathbb{P}\left(E_{i_j}\right).$$
+
+Mutual independence implies pairwise independence, but pairwise independence does not imply mutual independence.

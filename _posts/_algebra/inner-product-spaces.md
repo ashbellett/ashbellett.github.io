@@ -32,10 +32,10 @@ The **Gram-Schmidt orthonormalisation** procedure is a method to orthonormalise 
 
 $$
 \begin{matrix}
-w_1 & := & u_1 & v_1 & := & \frac{w_1}{||w_1||} \\
-w_2 & := & u_2-\left(u_2 \cdot v_1\right)v_1 & v_2 & := & \frac{w_2}{||w_2||} \\
+w_1 & := & u_1 & v_1 & := & \frac{w_1}{\|w_1\|} \\
+w_2 & := & u_2-\left(u_2 \cdot v_1\right)v_1 & v_2 & := & \frac{w_2}{\|w_2\|} \\
 \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
-w_n & := & u_n-\sum_{i=1}^{n-1}\left(u_n \cdot v_i\right)v_i & v_n & := & \frac{w_n}{||w_n||} \\
+w_n & := & u_n-\sum_{i=1}^{n-1}\left(u_n \cdot v_i\right)v_i & v_n & := & \frac{w_n}{\|w_n\|} \\
 \end{matrix}
 $$
 

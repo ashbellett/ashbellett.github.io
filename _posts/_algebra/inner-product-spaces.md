@@ -28,7 +28,7 @@ Two vectors $$\underline{u}, \underline{v} \in \mathcal{V}$$ are **orthogonal** 
 
 For a subset of vectors $$U \subseteq \mathcal{V}$$, they are said to be an **orthogonal set** or **orthonormal set** if all vectors contained within the sets are pairwise orthogonal or orthonormal respectively. Orthonormal sets are linearly independent and a set of $$n$$ orthonormal vectors in an $$n$$-dimensional vector space is a basis.
 
-The **Gram-Schmidt orthonormalisation** procedure is a method to orthonormalise a set of linearly independent vectors $$\underline{u}_1,...\underline{u}_n \in \mathcal{U}$$ in an inner product space $$\mathcal{U}$$. The resultant orthonormalised vectors $$\underline{v}_1,...\underline{v}_n$$ will span $$\mathcal{U}$$.
+The **Gram-Schmidt orthonormalisation** procedure is a method to orthonormalise a set of linearly independent vectors $$\underline{u}_1,\ldots\underline{u}_n \in \mathcal{U}$$ in an inner product space $$\mathcal{U}$$. The resultant orthonormalised vectors $$\underline{v}_1,\ldots\underline{v}_n$$ will span $$\mathcal{U}$$.
 
 $$
 \begin{matrix}

@@ -6,7 +6,7 @@ tags: ["linear", "algebra", "matrix"]
 description: "Multi-dimensional data structures"
 ---
 
-A **matrix** $$A \in \mathbb{F}^{\,n\times p} \,\,\forall\, n,p \geq 1$$ over the field $$\mathbb{F}$$ with **order** $$n \times p$$ is a collection of $$np$$ scalar elements $$a_{ij} \in \mathbb{F}$$ where $$n$$ is the number of rows, $$p$$ is the number of columns, $$i=1,...,n$$ and $$j=1,...,p$$. The positional indices $$i,j$$ allow the matrix to be expressed in a rectangular format:
+A **matrix** $$A \in \mathbb{F}^{\,n\times p} \,\,\forall\, n,p \geq 1$$ over the field $$\mathbb{F}$$ with **order** $$n \times p$$ is a collection of $$np$$ scalar elements $$a_{ij} \in \mathbb{F}$$ where $$n$$ is the number of rows, $$p$$ is the number of columns, $$i=1,\ldots,n$$ and $$j=1,,p$$. The positional indices $$i,j$$ allow the matrix to be expressed in a rectangular format:
 
 $$A=\begin{bmatrix}
   a_{11} & a_{12} & \ldots & a_{1p} \\
@@ -73,7 +73,7 @@ Let $$A, B \in \mathbb{F}^{\,n\times p}$$ and $$\lambda \in \mathbb{F}$$. **Matr
 
 Let $$A \in \mathbb{F}^{\,n\times p}$$ and $$B \in \mathbb{F}^{\,p\times m}$$. That is, $$A$$ has as many columns as $$B$$ has rows. **Matrix multiplication** is defined to be the matrix $$AB \in \mathbb{F}^{\,n\times m}$$ where elements indexed by the positional indices $$i,j$$ are defined by:
 
-$$ab_{ij} = a_{i1}b_{1j}+a_{i2}b_{2j}+...a_{ip}b_{pj}=\sum_{k=1}^p a_{ik}b_{kj}$$
+$$ab_{ij} = a_{i1}b_{1j}+a_{i2}b_{2j}+\ldots+a_{ip}b_{pj}=\sum_{k=1}^p a_{ik}b_{kj}$$
 
 Matrix multiplication satisfies the following properties:
 - Associativity: $$(AB)C=A(BC) \,\,\forall\,A \in \mathbb{F}^{\,n\times p},B \in \mathbb{F}^{\,p\times m},C \in \mathbb{F}^{\,m\times q}$$

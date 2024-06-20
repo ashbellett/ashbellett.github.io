@@ -6,7 +6,9 @@ tags: ["probability", "event"]
 description: "Sets of experiment outcomes"
 ---
 
-An **experiment** is a procedure that can be repeated, observed and whose outcomes are uncertain.
+An **experiment** is a procedure that can be repeated and whose observed outputs are uncertain.
+
+The observed outputs of experiments are **outcomes**.
 
 The set of possible outcomes is the **sample space** $$\Omega$$.
 

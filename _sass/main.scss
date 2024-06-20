@@ -31,10 +31,6 @@ $lm-table-header-bg-color: lighten($lm-brand-color, 43%) !default;
 $lm-table-header-border:   lighten($lm-brand-color, 37%) !default;
 $lm-table-border-color:    $lm-border-color-01 !default;
 
-.tagline {
-  text-align: center;
-}
-
 .profile {
   border-radius: 50%;
   display: block;
@@ -42,10 +38,23 @@ $lm-table-border-color:    $lm-border-color-01 !default;
   margin-right: auto;
 }
 
-.brand {
+.tagline {
+  text-align: center;
+}
+
+.brand-logo {
   height: 2rem;
   width: 2rem;
   padding-right: 0.5rem;
+}
+
+.brand-text {
+  font-size: larger;
+  margin-bottom: 0;
+}
+
+.role-text {
+  margin-left: 3rem;
 }
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
@@ -375,7 +384,7 @@ $table-border-color: $lm-table-border-color;
 
 // Define defaults for each variable.
 
-$base-font-family: "Source Serif Pro", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+$base-font-family: "Source Serif 4", serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
 $code-font-family: "Fira Code", "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
@@ -429,6 +438,7 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
+  font-optical-sizing: auto;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -702,7 +712,7 @@ table {
 
 .site-title {
   @include relative-font-size(1.625);
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;

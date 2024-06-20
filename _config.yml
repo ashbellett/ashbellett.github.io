@@ -54,7 +54,7 @@ collections:
     order:
       - events.md
       - probability-spaces.md
-      - probability-forms.md
+      - conditional-probability.md
       - random-variables.md
       - distributions.md
       - moments.md

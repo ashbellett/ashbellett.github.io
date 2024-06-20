@@ -6,9 +6,9 @@ tags: ["probability", "probability space"]
 description: "Model for assigning probabilities"
 ---
 
-For an event $$A\subseteq\Omega$$ the **probability** that $$A$$ occurs is $$\mathbb{P}(A)$$. The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events to real numbers and satisfies the following properties:
-- $$\mathbb{P}\left(\varnothing\right)=0$$, $$\mathbb{P}\left(\Omega\right)=1$$
+Given a sample space $$\Omega$$ and event $$A\subseteq\Omega$$, the **marginal probability** that $$A$$ occurs is $$\mathbb{P}(A)$$. The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events from the $$\sigma$$-algebra $$\mathcal{F}$$ on $$\Omega$$ to real numbers and satisfies the following properties:
 - For an event $$A$$, $$\mathbb{P}\left(A\right)\geq 0 \,\, \forall \, A\in\mathcal{F}$$
+- $$\mathbb{P}\left(\varnothing\right)=0$$, $$\mathbb{P}\left(\Omega\right)=1$$
 - if $$E_1, E_2, \ldots$$ are disjoint events in $$\mathcal{F}$$ then
 
 $$\mathbb{P}\left(\bigcup_{i=1}^\infty E_i\right)=\sum_{i=1}^\infty \mathbb{P}\left(E_i\right)$$

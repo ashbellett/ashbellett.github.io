@@ -6,14 +6,14 @@ tags: ["probability", "probability space"]
 description: "Model for assigning probabilities to events"
 ---
 
-Given an experiment described by $$\left(\Omega, \mathcal{F}\right)$$ where $$\Omega$$ is the sample space and $$\mathcal{F}$$ is a $$\sigma$$-algebra on $$\Omega$$, the **marginal probability** that an event $$A\in\mathcal{F}$$ will occur is $$\mathbb{P}(A)$$. The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events from $$\mathcal{F}$$ to real numbers and satisfies the following properties:
-- For an event $$A$$, $$\mathbb{P}\left(A\right)\geq 0 \,\, \forall \, A\in\mathcal{F}$$
-- $$\mathbb{P}\left(\varnothing\right)=0$$, $$\mathbb{P}\left(\Omega\right)=1$$
+Given an experiment described by $$\left(\Omega, \mathcal{F}\right)$$ where $$\Omega$$ is the sample space and $$\mathcal{F}$$ is a $$\sigma$$-algebra on $$\Omega,$$ the **marginal probability** that an event $$A\in\mathcal{F}$$ will occur is $$\mathbb{P}(A).$$ The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events from $$\mathcal{F}$$ to real numbers and satisfies the following properties:
+- For an event $$A,$$ $$\mathbb{P}\left(A\right)\geq 0 \,\, \forall \, A\in\mathcal{F}$$
+- $$\mathbb{P}\left(\varnothing\right)=0,$$ $$\mathbb{P}\left(\Omega\right)=1$$
 - if $$E_1, E_2, \ldots$$ are disjoint events in $$\mathcal{F}$$ then
 
 $$\mathbb{P}\left(\bigcup_{i=1}^\infty E_i\right)=\sum_{i=1}^\infty \mathbb{P}\left(E_i\right).$$
 
-The triple $$\left(\Omega,\mathcal{F},\mathbb{P}\right)$$ containing a sample space $$\Omega$$, a $$\sigma$$-algebra $$\mathcal{F}$$ on $$\Omega$$ and a probability measure $$\mathbb{P}$$ on $$\left(\Omega,\mathcal{F}\right)$$ is a **probability space** and has the following properties for events $$A,B\subseteq\Omega$$:
+The triple $$\left(\Omega,\mathcal{F},\mathbb{P}\right)$$ containing a sample space $$\Omega,$$ a $$\sigma$$-algebra $$\mathcal{F}$$ on $$\Omega$$ and a probability measure $$\mathbb{P}$$ on $$\left(\Omega,\mathcal{F}\right)$$ is a **probability space** and has the following properties for events $$A,B\subseteq\Omega$$:
 
 $$\mathbb{P}(\overline{A})=1-\mathbb{P}\left(A\right)$$
 
@@ -31,7 +31,7 @@ The **joint probability** of the finite collection of $$k>1$$ events $$E_1,\ldot
 
 $$\mathbb{P}\left(\bigcap_{i=1}^k E_i\right).$$
 
-Events $$A,B\subseteq\Omega$$ are **independent events** if and only if their joint probability is the product of their marginal probabilities, $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)$$. Disjoint events with non-zero probability of occurring are not independent events.
+Events $$A,B\subseteq\Omega$$ are **independent events** if and only if their joint probability is the product of their marginal probabilities, $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right).$$ Disjoint events with non-zero probability of occurring are not independent events.
 
 A finite collection of $$k>2$$ events $$E_1, \ldots, E_k$$ are **pairwise independent** if $$E_i$$ and $$E_j$$ are independent for every pair of events $$E_i, E_j\in \left(E_1,E_2,\ldots,E_k\right)$$:
 

@@ -6,11 +6,11 @@ tags: ["real", "analysis", "limit"]
 description: "Behaviour as points are approached"
 ---
 
-If a sequence $$ (a_n) $$ converges to $$L \in \mathbb{R}$$, the sequence is convergent and has a **limit** $$L$$.
+If a sequence $$ (a_n) $$ converges to $$L \in \mathbb{R},$$ the sequence is convergent and has a **limit** $$L.$$
 
 $$ L = \lim_{n\rightarrow \infty} a_n$$
 
-The statement "$$ (a_n) $$ converges to $$L$$" is represented as $$a_n \rightarrow L$$ as $$n \rightarrow \infty $$.
+The statement "$$ (a_n) $$ converges to $$L$$" is represented as $$a_n \rightarrow L$$ as $$n \rightarrow \infty .$$
 
 The **limit laws** are:
 

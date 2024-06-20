@@ -28,7 +28,7 @@ If the set of events $$\mathcal{F}$$ has the following properties:
 then $$\mathcal{F}$$ is an **algebra** of sets. An algebra is closed under finite unions and finite intersections.
 
 An algebra $$\mathcal{F}$$ is a **$$\sigma$$-algebra** if it satisfies the following properies:
-- if events $$E_1,E_2,\dots\in\mathcal{F}$$ then
+- if events $$E_1,E_2,\ldots\in\mathcal{F}$$ then
 
 $$\bigcup_{i=1}^\infty E_i\in\mathcal{F}$$
 

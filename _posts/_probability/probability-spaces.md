@@ -9,7 +9,7 @@ description: "Model for assigning probabilities"
 For an event $$A\subseteq\Omega$$ the **probability** that $$A$$ occurs is $$\mathbb{P}(A)$$. The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events to real numbers and satisfies the following properties:
 - $$\mathbb{P}\left(\varnothing\right)=0$$, $$\mathbb{P}\left(\Omega\right)=1$$
 - For an event $$A$$, $$\mathbb{P}\left(A\right)\geq 0 \,\, \forall \, A\in\mathcal{F}$$
-- if $$E_1, E_2, \dots$$ are disjoint events in $$\mathcal{F}$$ then
+- if $$E_1, E_2, \ldots$$ are disjoint events in $$\mathcal{F}$$ then
 
 $$\mathbb{P}\left(\bigcup_{i=1}^\infty E_i\right)=\sum_{i=1}^\infty \mathbb{P}\left(E_i\right)$$
 
@@ -29,6 +29,10 @@ $$\mathbb{P}\left(A\cap B\right)\geq\mathbb{P}\left(A\right)+\mathbb{P}\left(B\r
 
 Events $$A$$ and $$B$$ are **independent events** if and only if $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)$$. Disjoint events with non-zero probability of occurring are not independent events.
 
-A finite collection of $$k>2$$ events $$E_1, \dots, E_k$$ are **pairwise independent** if $$E_i$$ and $$E_j$$ are independent for every pair of events $$E_i, E_j\in \left(E_,1,\dots,E_k\right)$$:
+A finite collection of $$k>2$$ events $$E_1, \ldots, E_k$$ are **pairwise independent** if $$E_i$$ and $$E_j$$ are independent for every pair of events $$E_i, E_j\in \left(E_1,E_2,\ldots,E_k\right)$$:
 
-$$\mathbb{P}\left(E_i\cap E_j\right)=\mathbb{P}\left(E_i\right)\,\mathbb{P}\left(E_j\right)\,\,\forall\,i,j\in \left(1,\dots,k\right),\,i\neq j$$
+$$\mathbb{P}\left(E_i\cap E_j\right)=\mathbb{P}\left(E_i\right)\,\mathbb{P}\left(E_j\right)\,\,\forall\,i,j\in \left(1,2,\ldots,k\right),\,i\neq j$$
+
+A finite collection of $$k>2$$ events $$E_1, \ldots, E_k$$ are **mutually independent** if, for every subset of events in the collection, the probability of their intersection is the product of their probabilities. For $$l\leq k$$ and indices $$1\leq i_1,\ldots,i_l\leq k$$:
+
+$$\mathbb{P}\left(\bigcap_{j=1}^l E_{i_j}\right)=\prod_{j=1}^l\mathbb{P}\left(E_{i_j}\right)$$

@@ -16,7 +16,7 @@ Events $$A$$ and $$B$$ are independent events if and only if:
 
 $$\mathbb{P}\left(A\mid B\right)=\frac{\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)}{\mathbb{P}\left(B\right)}=\mathbb{P}\left(A\right).$$
 
-Conditional probability is equivalent to shrinking the sample space by replacing events with intersections between themselves and the event that has occurred and rescaling probabilities.
+Conditional probability is equivalent to reducing the sample space by replacing events with intersections between themselves and the event that has occurred and rescaling probabilities.
 
 Given events $$A,B,C\in\mathcal{F}$$, events $$A$$ and $$B$$ are **conditionally independent** given $$C$$ if and only if:
 

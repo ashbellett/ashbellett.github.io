@@ -95,11 +95,6 @@ socials:
     username: ashbellett,
     url: linkedin.com/in/ashbellett
   }
-  - {
-    platform: twitter,
-    username: ashbellett,
-    url: twitter.com/ashbellett
-  }
 analytics: G-XFWQPSWM13
 plugins:
   - jekyll-seo-tag

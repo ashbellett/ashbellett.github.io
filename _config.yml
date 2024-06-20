@@ -48,7 +48,7 @@ collections:
   probability:
     key: 3
     title: "Probability"
-    description: "Likelihood of events occurring"
+    description: "Occurrences of uncertain events"
     output: true
     permalink: /:collection/:path
     order:
@@ -77,7 +77,7 @@ collections:
   optimisation:
     key: 5
     title: "Optimisation"
-    description: "Finding maximum and minimum values"
+    description: "Maximising and minimising functions"
     output: true
     permalink: /:collection/:path
     order:

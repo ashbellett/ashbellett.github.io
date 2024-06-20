@@ -3,7 +3,7 @@ layout: post
 category: "Real Analysis"
 title:  "Real Numbers"
 tags: ["real", "analysis", "real number"]
-description: "Continuous, one-dimensional quantities"
+description: "Scalar quantities"
 ---
 
 The **absolute value** or **modulus** $$\lvert x\lvert$$ of a real number $$x \in \mathbb{R}$$ is $$x$$ when $$x$$ is positive, $$-x$$ when $$x$$ is negative and $$0$$ when $$x$$ is zero.

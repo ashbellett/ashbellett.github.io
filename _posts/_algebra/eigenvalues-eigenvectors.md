@@ -3,7 +3,7 @@ layout: post
 category: "Linear Algebra"
 title:  "Eigenvalues and Eigenvectors"
 tags: ["linear", "algebra", "eigenvalue", "eigenvector"]
-description: "A fundamental decomposition of square matrices"
+description: "Fundamental decomposition of square matrices"
 ---
 
 Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\underline{v} \in \mathbb{F}^n$$ be a non-zero vector. $$\underline{v}$$ is an **eigenvector** of $$A$$ if and only if

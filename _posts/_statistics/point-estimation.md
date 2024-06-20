@@ -3,7 +3,7 @@ layout: post
 category: "Statistics"
 title:  "Point Estimation"
 tags: ["probability", "point estimation"]
-description: "Finding a single parameter value from data"
+description: "Finding parameter values from data"
 ---
 
 Likelihood function

@@ -3,7 +3,7 @@ layout: post
 category: "Probability"
 title:  "Probability Spaces"
 tags: ["probability", "probability space"]
-description: "Model for assigning probabilities"
+description: "Model for assigning probabilities to events"
 ---
 
 Given a sample space $$\Omega$$ and event $$A\subseteq\Omega$$, the **marginal probability** that $$A$$ occurs is $$\mathbb{P}(A)$$. The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events from the $$\sigma$$-algebra $$\mathcal{F}$$ on $$\Omega$$ to real numbers and satisfies the following properties:

@@ -37,4 +37,4 @@ $$\bigcup_{i=1}^\infty E_i\in\mathcal{F}$$
 - if event $$A\in\mathcal{F}$$ then $$\overline{A}\in\mathcal{F}$$
 - the null event is in $$\mathcal{F},$$ $$\varnothing\in\mathcal{F}.$$
 
-Any experiment has an associated pair set $$\left(\Omega,\mathcal{F}\right)$$ where $$\Omega$$ is the set of all possible outcomes and $$\mathcal{F}$$ is a $$\sigma$$-algebra of subsets of $$\Omega$$ which contains all possible events.
+Any experiment has an associated pair set $$\left(\Omega,\mathcal{F}\right)$$ where $$\Omega$$ is the set of all possible outcomes and $$\mathcal{F}$$ is a $$\sigma$$-algebra of subsets of $$\Omega$$ which contains all possible events. The pair set containing a set and a $$\sigma$$-algebra of its subsets is called a **measurable space**.

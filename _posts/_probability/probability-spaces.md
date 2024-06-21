@@ -6,7 +6,7 @@ tags: ["probability", "probability space"]
 description: "Model for assigning probabilities to events"
 ---
 
-Given an experiment described by $$\left(\Omega, \mathcal{F}\right)$$ where $$\Omega$$ is the sample space and $$\mathcal{F}$$ is a $$\sigma$$-algebra on $$\Omega,$$ the **marginal probability** that an event $$A\in\mathcal{F}$$ will occur is $$\mathbb{P}(A).$$ The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \left[ 0,1\right]$$ that maps events from $$\mathcal{F}$$ to real numbers and satisfies the following properties:
+Given an experiment described by the measurable space $$\left(\Omega, \mathcal{F}\right)$$ where $$\Omega$$ is the sample space and $$\mathcal{F}$$ is a $$\sigma$$-algebra on $$\Omega,$$ the **marginal probability** that an event $$A\in\mathcal{F}$$ will occur is $$\mathbb{P}(A).$$ The **probability measure** $$\mathbb{P}$$ is a function $$\mathbb{P}: \mathcal{F} \rightarrow \mathbb{R}$$ that maps events from $$\mathcal{F}$$ to real numbers and satisfies the following properties:
 - For an event $$A,$$ $$\mathbb{P}\left(A\right)\geq 0 \,\, \forall \, A\in\mathcal{F}$$
 - $$\mathbb{P}\left(\varnothing\right)=0,$$ $$\mathbb{P}\left(\Omega\right)=1$$
 - if $$E_1, E_2, \ldots$$ are disjoint events in $$\mathcal{F}$$ then

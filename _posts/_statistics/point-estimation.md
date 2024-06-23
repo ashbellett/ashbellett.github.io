@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Statistics"
+category: "statistics"
 title:  "Point Estimation"
 tags: ["probability", "point estimation"]
 description: "Finding parameter values from data"

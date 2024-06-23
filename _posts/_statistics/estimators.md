@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Statistics"
+category: "statistics"
 title:  "Estimators"
 tags: ["probability", "estimators"]
 description: "Calculating parameter values from data"

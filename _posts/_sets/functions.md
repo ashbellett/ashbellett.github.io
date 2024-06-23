@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Sets"
+category: "sets"
 title:  "Functions"
 tags: ["sets", "function"]
 description: "Mappings between sets"

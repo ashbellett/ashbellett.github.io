@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Real Analysis"
+category: "real-analysis"
 title:  "Continuity"
 tags: ["real", "analysis", "continuity"]
 description: "Whether a function is unbroken"

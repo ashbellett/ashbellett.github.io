@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Probability"
+category: "probability"
 title:  "Stochastic Processes"
 tags: ["probability", "stochastic process"]
 description: "Models for random systems"

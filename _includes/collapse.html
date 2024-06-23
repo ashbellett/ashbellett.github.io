@@ -1,0 +1,27 @@
+<style>
+  .collapsible-content {
+    padding-left: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .collapsible-header:hover {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const collapsible = document.getElementsByClassName("collapsible-header");
+  for (let index = 0; index < collapsible.length; index++) {
+    collapsible[index].addEventListener("click", function () {
+      this.classList.toggle("active");
+      let state = this.classList.value.includes("active")
+      let content = this.nextElementSibling.nextElementSibling;
+      if (state) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = 0;
+      }
+    });
+  }
+</script>

@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Optimisation"
+category: "optimisation"
 title:  "Convexity"
 tags: ["optimisation", "convexity"]
 description: "Fundamental property of a function's shape"

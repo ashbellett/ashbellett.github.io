@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Statistics"
+category: "statistics"
 title:  "Sampling"
 tags: ["probability", "sampling"]
 description: "Selection of observations from a population"

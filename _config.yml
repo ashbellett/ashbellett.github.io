@@ -17,7 +17,7 @@ collections:
       - logic.md
       - sets.md
       - functions.md
-  analysis:
+  real-analysis:
     key: 1
     title: "Real Analysis"
     description: "Real-valued numbers and functions"
@@ -31,7 +31,7 @@ collections:
       - continuity.md
       - derivatives.md
       - integrals.md
-  algebra:
+  linear-algebra:
     key: 2
     title: "Linear Algebra"
     description: "Representations of linear systems"

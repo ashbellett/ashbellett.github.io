@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Probability"
+category: "probability"
 title:  "Events"
 tags: ["probability", "event"]
 description: "Sets of experiment outcomes"

@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Real Analysis"
+category: "real-analysis"
 title:  "Series"
 tags: ["real", "analysis", "series"]
 description: "Sums of numbers"

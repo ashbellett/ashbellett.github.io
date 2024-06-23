@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Linear Algebra"
+category: "linear-algebra"
 title:  "Matrices"
 tags: ["linear", "algebra", "matrix"]
 description: "Multi-dimensional data structures"

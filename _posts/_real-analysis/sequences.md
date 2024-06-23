@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Real Analysis"
+category: "real-analysis"
 title:  "Sequences"
 tags: ["real", "analysis", "sequences"]
 description: "Ordered collections of numbers"

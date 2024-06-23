@@ -10,7 +10,7 @@ layout: default
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <span class="p-author h-card" itemprop="name">
-        <a href="{{ collection.label | absolute_url }}">
+        <a href="{{ collection.label | relative_url }}">
           {{ collection.title }}
         </a>
       </span>

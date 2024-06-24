@@ -54,6 +54,10 @@ The **Cartesian product** of sets $$X$$ and $$Y,$$ $$X \times Y$$ is the set of 
 
 $$X \times Y := \{(x,y) : x \in X \ \mathrm{and} \ y \in Y\} $$
 
+Two sets $$X$$ and $$Y$$ are **disjoint** if and only if their intersection is the empty set.
+
+$$X\cap Y=\varnothing$$
+
 The **power set** $$\mathcal{P}(X)$$ of a set $$X$$ is the set of all subsets of $$X.$$
 
 $$\mathcal{P}(X) := \{A : A \subseteq X \}$$

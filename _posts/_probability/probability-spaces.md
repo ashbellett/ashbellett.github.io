@@ -31,9 +31,9 @@ The **joint probability** of the finite collection of $$k>1$$ events $$E_1,\ldot
 
 $$\mathbb{P}\left(\bigcap_{i=1}^k E_i\right).$$
 
-Events $$A,B\subseteq\Omega$$ are **independent events** if and only if their joint probability is the product of their marginal probabilities, $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right).$$ Disjoint events with non-zero probability of occurring are not independent events.
+Events $$A,B\subseteq\Omega$$ are **independent events** if and only if their joint probability is the product of their marginal probabilities, $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right).$$
 
-Independence implies that the occurrence of one event does not affect the probability of another event occurring.
+Disjoint events with non-zero probability of occurring are not independent events. Independence implies that the occurrence of one event does not affect the probability of another event occurring.
 
 A finite collection of $$k>2$$ events $$E_1, \ldots, E_k$$ are **pairwise independent** if $$E_i$$ and $$E_j$$ are independent for every pair of events $$E_i, E_j\in \left(E_1,E_2,\ldots,E_k\right)$$:
 

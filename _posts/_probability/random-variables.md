@@ -18,7 +18,7 @@ Given a random variable $$X$$ defined with respect to an underlying probability 
 
 $$\mathbb{P}_X\left(X\in A\right) = \mathbb{P}\left(\left\{\omega\in\Omega:X\left(\omega\right)\in A\right\}\right)\,\,\forall\,A\in\mathcal{S}.$$
 
-The pushforward probability measure $$\mathbb{P}_X$$ assigns probabilities to measureable subsets of the state space, $$A\in\mathcal{S},$$ and defines the **probability distribution** of $$X$$ over the state space $$S$$. The complete probability space is $$\left(S,\mathcal{S},\mathbb{P}_X\right).$$
+The pushforward probability measure $$\mathbb{P}_X$$ assigns probabilities to measurable subsets of the state space, $$A\in\mathcal{S},$$ and defines the **probability distribution** of $$X$$ over the state space $$S$$. The complete probability space is $$\left(S,\mathcal{S},\mathbb{P}_X\right).$$
 
 The **support** of the probability distribution $$\mathbb{P}_X$$ is the subset of the state space $$\mathcal{X}\subseteq S$$ such that the following properties are satisfied:
 

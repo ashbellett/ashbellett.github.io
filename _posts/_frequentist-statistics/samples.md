@@ -12,7 +12,7 @@ A set of data can be represented as a vector $$\underline{x}=\left(x_1,\ldots,x_
 
 It is often assumed that the population $$\mathbb{P}_X$$ belongs to a family of distributions indexed by a scalar or vector **parameter** $$\theta$$ where $$\theta$$ belongs to a parameter space $$\theta\in\Theta.$$ The population can be expressed as $$\mathbb{P}_{X\mid\theta}$$ to show that the corresponding pmf or pdf is dependent on the parameter $$\theta.$$
 
-Given a random sample $$\left(X_1,\ldots,X_n\right)$$ of size $$n$$ and a possibly multivariate function $$f:S^n\rightarrow\mathbb{R}^k\,\,\forall\,k\geq 1.$$ Then $$Y=f\left(X_1,\ldots,X_n\right)$$ is a random variable or vector and is called a **statistic**. The probability distribution of $$Y$$ is the **sampling distribution** of $$Y.$$
+Given a random sample $$\left(X_1,\ldots,X_n\right)$$ of size $$n$$ and a possibly multivariate function $$f:S^n\rightarrow\mathbb{R}^k\,\,\forall\,k\geq 1$$ then $$Y=f\left(X_1,\ldots,X_n\right)$$ is a random variable or vector and is called a **statistic**. The probability distribution of the statistic $$Y$$ is the **sampling distribution** of $$Y.$$
 
 The **sample mean** $$\overline{X}_n$$ is a statistic where $$f$$ is the arithmetic mean of the random sample:
 

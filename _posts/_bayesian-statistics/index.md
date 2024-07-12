@@ -2,6 +2,7 @@
 layout: page
 category: "bayesian-statistics"
 title:  "Bayesian Statistics"
+published: false
 ---
 
 {% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}

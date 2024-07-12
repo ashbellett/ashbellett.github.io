@@ -2,12 +2,16 @@
 
 This is my personal website that contains notes on mathematics, science and engineering for data scientists.
 
+## Prerequisites
+
+Install [Ruby](https://www.ruby-lang.org/).
+
 ## Installation
 
 Install Ruby gems:
 `bundle install`
 
-Serve app:
+Run website locally:
 `bundle exec jekyll serve`
 
 ## Topics

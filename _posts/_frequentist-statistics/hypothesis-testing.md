@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "statistics"
+category: "frequentist-statistics"
 title:  "Hypothesis Testing"
 tags: ["probability", "hypothesis-testing"]
 description: "Deciding whether data supports an idea"

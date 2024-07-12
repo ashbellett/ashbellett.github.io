@@ -14,7 +14,12 @@ In general, $$\mathbb{P}\left(A\mid B\right)\neq\mathbb{P}\left(B\mid A\right).$
 
 Events $$A$$ and $$B$$ are independent events if and only if:
 
-$$\mathbb{P}\left(A\mid B\right)=\frac{\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)}{\mathbb{P}\left(B\right)}=\mathbb{P}\left(A\right).$$
+$$
+\begin{align}
+\mathbb{P}\left(A\mid B\right)&=\frac{\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)}{\mathbb{P}\left(B\right)}\\
+&=\mathbb{P}\left(A\right).
+\end{align}
+$$
 
 Conditional probability is equivalent to reducing the sample space by replacing events with intersections between themselves and the event that has occurred and rescaling probabilities.
 
@@ -34,4 +39,9 @@ $$\mathbb{P}\left(A\right)=\sum_{i=1}^k \mathbb{P}\left(A\mid E_i\right)\,\mathb
 
 **Bayes' theorem** states that, given a partition on $$\Omega$$ containing $$k$$ events $$E_1,\ldots,E_k,$$ $$\mathbb{P}\left(E_i\right)>0$$ and $$\mathbb{P}\left(A\right)>0,$$ then:
 
-$$\mathbb{P}\left(E_i\mid A\right)=\frac{\mathbb{P}\left(A\mid E_i\right)\,\mathbb{P}\left(E_i\right)}{\mathbb{P}\left(A\right)}=\frac{\mathbb{P}\left(A\mid E_i\right)\,\mathbb{P}\left(E_i\right)}{\sum_{j=1}^k \mathbb{P}\left(A\mid E_j\right)\,\mathbb{P}\left(E_j\right)}$$
+$$
+\begin{align}
+\mathbb{P}\left(E_i\mid A\right)&=\frac{\mathbb{P}\left(A\mid E_i\right)\,\mathbb{P}\left(E_i\right)}{\mathbb{P}\left(A\right)}\\
+&=\frac{\mathbb{P}\left(A\mid E_i\right)\,\mathbb{P}\left(E_i\right)}{\sum_{j=1}^k \mathbb{P}\left(A\mid E_j\right)\,\mathbb{P}\left(E_j\right)}.
+\end{align}
+$$

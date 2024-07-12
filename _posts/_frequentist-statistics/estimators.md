@@ -1,9 +1,9 @@
 ---
 layout: post
-category: "statistics"
+category: "frequentist-statistics"
 title:  "Estimators"
 tags: ["probability", "estimators"]
-description: "Calculating parameter values from data"
+description: "Calculating parameters from data"
 ---
 
 Biasness

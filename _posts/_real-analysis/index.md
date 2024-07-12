@@ -1,6 +1,7 @@
 ---
 layout: page
 category: "real-analysis"
+title: "Real Analysis"
 ---
 
 {% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}

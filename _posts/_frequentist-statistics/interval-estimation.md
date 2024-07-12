@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "statistics"
+category: "frequentist-statistics"
 title:  "Interval Estimation"
 tags: ["probability", "interval estimation"]
 description: "Finding plausible ranges of parameter values from data"

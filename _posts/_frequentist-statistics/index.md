@@ -1,6 +1,7 @@
 ---
 layout: page
-category: "statistics"
+category: "frequentist-statistics"
+title:  "Frequentist Statistics"
 ---
 
 {% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}

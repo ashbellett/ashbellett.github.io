@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "statistics"
+category: "frequentist-statistics"
 title:  "Point Estimation"
 tags: ["probability", "point estimation"]
 description: "Finding parameter values from data"

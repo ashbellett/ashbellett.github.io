@@ -62,9 +62,9 @@ collections:
       - concentration-bounds.md
       - probabilistic-convergence.md
       - stochastic-processes.md
-  statistics:
+  frequentist-statistics:
     key: 4
-    title: "Statistics"
+    title: "Frequentist Statistics"
     description: "Drawing conclusions from data"
     output: true
     permalink: /:collection/:path
@@ -74,8 +74,14 @@ collections:
       - point-estimation.md
       - interval-estimation.md
       - hypothesis-testing.md
-  optimisation:
+  bayesian-statistics:
     key: 5
+    title: "Bayesian Statistics"
+    description: "Modelling parameters as random variables"
+    output: true
+    permalink: /:collection/:path
+  optimisation:
+    key: 6
     title: "Optimisation"
     description: "Maximising and minimising functions"
     output: true

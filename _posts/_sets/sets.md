@@ -62,7 +62,7 @@ The **power set** $$\mathcal{P}(X)$$ of a set $$X$$ is the set of all subsets of
 
 $$\mathcal{P}(X) := \{A : A \subseteq X \}$$
 
-A **partition** $$P$$ of a set $$X$$ is a set of non-empty subsets of $$X$$ such that every element $$x\in X$$ is in exactly one subset in $$P$$. Partitions of sets have the following properties:
+A **partition** $$P$$ of a set $$X$$ is a set of non-empty subsets of $$X$$ such that every element $$x\in X$$ is in exactly one subset in $$P.$$ Partitions of sets have the following properties:
 
 $$\varnothing \notin P$$
 

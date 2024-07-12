@@ -1,7 +1,7 @@
 ---
 layout: page
-category: "linear-algebra"
-title:  "Linear Algebra"
+category: "bayesian-statistics"
+title:  "Bayesian Statistics"
 ---
 
 {% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}

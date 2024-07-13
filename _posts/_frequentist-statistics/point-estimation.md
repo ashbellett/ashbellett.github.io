@@ -2,7 +2,7 @@
 layout: post
 category: "frequentist-statistics"
 title:  "Point Estimation"
-tags: ["probability", "point estimation"]
+tags: ["statistics", "point estimation"]
 description: "Finding parameter values from data"
 ---
 

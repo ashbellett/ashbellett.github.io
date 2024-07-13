@@ -2,7 +2,7 @@
 layout: post
 category: "frequentist-statistics"
 title:  "Interval Estimation"
-tags: ["probability", "interval estimation"]
+tags: ["statistics", "interval estimation"]
 description: "Finding plausible ranges of parameter values from data"
 ---
 

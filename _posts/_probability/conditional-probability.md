@@ -23,7 +23,7 @@ $$
 
 Conditional probability is equivalent to reducing the sample space by replacing events with intersections between themselves and the event that has occurred and rescaling probabilities.
 
-Given events $$A,B,C\in\mathcal{F}$$, events $$A$$ and $$B$$ are **conditionally independent** given $$C$$ if and only if:
+Given events $$A,B,C\in\mathcal{F},$$ events $$A$$ and $$B$$ are **conditionally independent** given $$C$$ if and only if:
 
 $$\mathbb{P}\left(A\cap B\mid C\right)=\mathbb{P}\left(A\mid C\right)\,\mathbb{P}\left(B\mid C\right)$$
 

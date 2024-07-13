@@ -12,7 +12,7 @@ $$M_{ij} = \lvert B_{ij}\rvert$$
 
 $$C_{ij} = (-1)^{i+j}M_{ij}$$
 
-The **determinant**, $$\mathrm{det}(A)$$ or $$\lvert A\rvert,$$ of $$A$$ is defined with the **Laplace expansion** of $$A$$:
+The **determinant**, $$\mathrm{det}(A)$$ or $$\lvert A\rvert,$$ of $$A$$ is defined with the **Laplace expansion** of $$A:$$
 
 $$\lvert A \rvert = \sum_{j=1}^{n} a_{ij}C_{ij}$$
 
@@ -28,7 +28,7 @@ The determinant of square matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ satisfies 
 - Invertibility: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ is invertible
 - Full rank: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ has rank $$n$$
 
-Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The matrix inverse $$A^{-1}$$ can be calculated from the determinant and co-factors of $$A$$:
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The matrix inverse $$A^{-1}$$ can be calculated from the determinant and co-factors of $$A:$$
 
 $$A^{-1}=\frac{C^\intercal}{\lvert A\rvert}$$
 

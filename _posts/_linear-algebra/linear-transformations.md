@@ -12,7 +12,7 @@ $$T(\underline{u}_1+\underline{u}_2)=T(\underline{u}_1)+T(\underline{u}_2)$$
 
 $$T(\lambda \underline{u}) = \lambda T(\underline{u}).$$
 
-Let $$\mathcal{U}, \mathcal{V}$$ be vector spaces over the field $$\mathbb{F}$$ and $$T: \mathcal{U} \rightarrow \mathcal{V}$$ be a linear transformation. The **image** of $$T$$ is the set of vectors mapped by $$T$$ from $$\mathcal{U}$$:
+Let $$\mathcal{U}, \mathcal{V}$$ be vector spaces over the field $$\mathbb{F}$$ and $$T: \mathcal{U} \rightarrow \mathcal{V}$$ be a linear transformation. The **image** of $$T$$ is the set of vectors mapped by $$T$$ from $$\mathcal{U}:$$
 
 $$\mathrm{Im} \, T := \{T(\underline{u}):\underline{u}\in\mathcal{U}\}$$
 
@@ -20,11 +20,11 @@ The **kernel** or **null space** of $$T$$ is the set of vectors in $$\mathcal{U}
 
 $$\mathrm{ker} \, T := \{\underline{u} \in \mathcal{U} : T(\underline{u}) = \underline{0}\}$$
 
-The **rank** of $$T$$ is the dimension of the image of $$T$$:
+The **rank** of $$T$$ is the dimension of the image of $$T:$$
 
 $$\mathrm{rank} \, T := \mathrm{dim}(\mathrm{Im} \, T)$$
 
-The **nullity** of $$T$$ is the dimension of the kernel of $$T$$:
+The **nullity** of $$T$$ is the dimension of the kernel of $$T:$$
 
 $$\mathrm{null} \, T := \mathrm{dim}(\mathrm{ker} \, T)$$
 

@@ -41,7 +41,7 @@ w_n & := & u_n-\sum_{i=1}^{n-1}\left(u_n \cdot v_i\right)v_i & v_n & := & \frac{
 \end{matrix}
 $$
 
-The **Cauchy-Schwarz inequality** states that for an inner product space $$\mathcal{V}$$ and $$\underline{v}_1,\underline{v}_2\in\mathcal{V}$$:
+The **Cauchy-Schwarz inequality** states that for an inner product space $$\mathcal{V}$$ and $$\underline{v}_1,\underline{v}_2\in\mathcal{V}:$$
 
 $$|\langle\underline{v}_1,\underline{v}_2\rangle|\leq\|\underline{v}_1\|\|\underline{v}_2\|$$
 

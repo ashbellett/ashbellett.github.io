@@ -36,7 +36,7 @@ The **rank** of a matrix $$A\in \mathbb{F}^{\,n\times p}$$ is the dimension of t
 
 Let $$A\in \mathbb{F}^{\,n\times p}$$ be a matrix with rank $$r.$$ If $$r=\min\{n,p\}$$ then $$A$$ is **full rank**. If $$r<\min\{n,p\}$$ then $$A$$ is **rank deficient** and its **rank deficiency** is $$\min\{n,p\}-r.$$
 
-The **transpose** of a matrix $$A\in \mathbb{R}^{\,n\times p}$$ is the matrix $$A\in \mathbb{R}^{\,p\times n}$$ whose rows and columns have been interchanged from $$A$$:
+The **transpose** of a matrix $$A\in \mathbb{R}^{\,n\times p}$$ is the matrix $$A\in \mathbb{R}^{\,p\times n}$$ whose rows and columns have been interchanged from $$A:$$
 
 $$A^\intercal=\begin{bmatrix}
   a_{11} & a_{21} & \ldots & a_{n1} \\
@@ -96,7 +96,7 @@ Let $$A \in \mathbb{F}^{\,n\times n}$$ be a square matrix. $$A$$ is invertible i
 - Transpose $$A^\intercal$$ is invertible
 - $$A\underline{v}=\underline{0}$$ only has the trivial solution $$\underline{v}=\underline{0}$$
 
-The matrix inverse satisfies the following properies for matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ and scalar $$\lambda\in\mathbb{F}$$:
+The matrix inverse satisfies the following properies for matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ and scalar $$\lambda\in\mathbb{F}:$$
 
 $$\left(\lambda A\right)^{-1}=\lambda^{-1}A^{-1}$$
 
@@ -112,7 +112,7 @@ Let $$A \in \mathbb{F}^{\,n\times p}\,\,\forall\, n\neq p$$ be a non-square matr
 - the columns of $$A$$ form orthonormal sets and $$n>p$$; or
 - the rows of $$A$$ form orthonormal sets and $$n<p.$$
 
-Let $$A \in \mathbb{C}^{\,n\times p}.$$ The **conjugate transpose** is the matrix $$A^*\in \mathbb{C}^{\,p\times n}$$ whose rows and columns have been interchanged from $$A$$ and whose elements are the complex conjugate of the elements in $$A$$:
+Let $$A \in \mathbb{C}^{\,n\times p}.$$ The **conjugate transpose** is the matrix $$A^*\in \mathbb{C}^{\,p\times n}$$ whose rows and columns have been interchanged from $$A$$ and whose elements are the complex conjugate of the elements in $$A:$$
 
 $$A^*=\begin{bmatrix}
   \overline{a_{11}} & \overline{a_{21}} & \ldots & \overline{a_{n1}} \\

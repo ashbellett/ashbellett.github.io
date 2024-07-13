@@ -70,7 +70,7 @@ collections:
     permalink: /:collection/:path
     order:
       - samples.md
-      - order-statistics.md
+      - sufficiency.md
       - estimators.md
       - point-estimation.md
       - interval-estimation.md

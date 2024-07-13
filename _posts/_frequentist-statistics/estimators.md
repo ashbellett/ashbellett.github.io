@@ -6,19 +6,15 @@ tags: ["statistics", "estimators"]
 description: "Calculating parameters from data"
 ---
 
-Let $$\underline{X}$$ be a random sample distributed according to the population $$\mathbb{P}_{X;\,\theta}.$$ A **point estimator** for the parameter $$\theta$$ is a statistic whose value $$\hat{\theta}$$ is intended to approximate $$\theta:$$
+Let $$\underline{X}$$ be a random sample distributed according to the population $$\mathbb{P}_{X;\,\theta}.$$ An **estimator** for the parameter $$\theta$$ is a statistic whose value $$\hat{\theta}$$, called an **estimate**, is intended to approximate $$\theta:$$
 
 $$\hat{\theta}=t\left(\underline{X}\right)$$
 
-Estimators and estimates
+Bias
 
-Method of moments
+Standard error
 
-Maximum likelihood estimation
-
-Delta method
-
-Biasness
+Mean squared error
 
 Consistency
 

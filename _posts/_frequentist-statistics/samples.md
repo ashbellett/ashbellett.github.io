@@ -6,7 +6,7 @@ tags: ["statistics", "samples"]
 description: "Selecting observations from a population"
 ---
 
-Let $$\underline{X}=\left(X_1,\ldots,X_n\right)$$ be a set of $$n$$ random variables defined with respect to a common probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right)$$ and a common state space $$S.$$ If $$X_1,\ldots,X_n$$ are mutually independent and share a common probability distribution $$\mathbb{P}_X$$ then $$\left(X_1,\ldots,X_n\right)$$ is a **random sample** of size $$n$$ from the **population** $$\mathbb{P}_X.$$ Equivalently, the set contains **independent and identically distributed** (iid) random variables.
+Let $$\underline{X}=\left(X_1,\ldots,X_n\right)$$ be a set of $$n$$ random variables defined with respect to a common probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right)$$ and a common state space $$S.$$ If $$X_1,\ldots,X_n$$ are mutually independent and share a common probability distribution $$\mathbb{P}_X$$ then $$\underline{X}$$ is a **random sample** of size $$n$$ from the **population** $$\mathbb{P}_X.$$ Equivalently, the set contains **independent and identically distributed** (iid) random variables.
 
 A set of data can be represented as a vector $$\underline{x}=\left(x_1,\ldots,x_n\right)$$ and is called an **observed random sample**. An observed random sample is considered realised values of a random sample containing $$n$$ iid random variables.
 
@@ -22,22 +22,38 @@ The **sample variance** $$S_n^2$$ is a statistic where $$t$$ is a scaled arithme
 
 $$S_n^2=\frac{1}{n-1}\sum_{i=1}^n \left(X_i-\overline{X}_n\right)^2.$$
 
-A statistic cannot contain more information than the random sample that it summarises. The degree to which a statistic encodes information about the distribution of a random sample is referred to as **sufficiency**.
+Let $$\underline{x}$$ be an observed random sample. The **order statistics** of $$\underline{x}$$ are the values $$\left(x_1,x_2,\ldots,x_n\right)$$ in increasing order denoted by $$x_{(1)}\leq x_{(2)}\leq\ldots\leq x_{(n)}$$.
 
-Given a random sample  $$\underline{X}$$ of size $$n$$ from the population $$\mathbb{P}_{X;\,\theta},$$ a statistic $$T$$ is a **sufficient statistic** for the parameter $$\theta$$ if:
+The **sample median** $$m$$ is defined as:
 
-$$\mathbb{P}\left(\underline{X}\mid T,\theta\right)=\mathbb{P}\left(\underline{X}\mid T\right).$$
+$$
+m=\begin{cases}
+x_{\left(\frac{n+1}{2}\right)} & \mathrm{if}\,n\,\mathrm{is}\,\mathrm{odd}\\
+\frac{1}{2}\left(x_{\left(\frac{n}{2}\right)}+x_{\left(\frac{n}{2}+1\right)}\right) & \mathrm{if}\,n\,\mathrm{is}\,\mathrm{even}.\\
+\end{cases}
+$$
 
-That is, the conditional distribution of the random sample given the value of the statistic $$T$$ is independent of the parameter $$\theta.$$
+Let $$\underline{X}$$ be a random sample. The **$$r^\mathrm{th}$$ order statistic** of $$\underline{X}$$ is the random variable $$X_{(r)}$$ where $$X_{(1)}\leq X_{(2)}\leq\ldots\leq X_{(n)}$$ is the ordered sample.
 
-If the population $$\mathbb{P}_{X;\,\theta}$$ is continuous with joint pdf of the random sample given by $$f_{\underline{X}}\left(\underline{X}\mid\theta\right)$$ and the pdf of a statistic $$T$$ is given by $$f_T\left(t\mid\theta\right)$$ then $$T$$ is a sufficient statistic for $$\theta$$ if and only if the ratio of pdfs
+If $$X_i$$ is continuous so that $$X_{(1)}<X_{(2)}<\ldots<X_{(n)}$$ with probability 1 then:
 
-$$\frac{f_{\underline{X}}\left(\underline{x}\mid\theta\right)}{f_T\left(t\mid\theta\right)}$$
+$$
+\begin{align}
+X_{(1)}&=\min_{i\in\left(1,\ldots,n\right)} X_i\\
+\ldots&\\
+X_{(n)}&=\max_{i\in\left(1,\ldots,n\right)} X_i.
+\end{align}
+$$
 
-is a function of only $$\theta\,\,\forall\,\left(\underline{X}\right)\in S^n.$$
+The **median** $$M$$ is a random variable and defined as:
 
-A statistic $$T$$ is a sufficient statistic for $$\theta$$ if and only if there exist functions $$u\left(t\mid\theta\right)$$ and $$v\left(\underline{X}\right)$$ such that the joint pdf of the random sample can be factored:
+$$
+M=\begin{cases}
+X_{\left(\frac{n+1}{2}\right)} & \mathrm{if}\,n\,\mathrm{is}\,\mathrm{odd}\\
+\frac{1}{2}\left(X_{\left(\frac{n}{2}\right)}+X_{\left(\frac{n}{2}+1\right)}\right) & \mathrm{if}\,n\,\mathrm{is}\,\mathrm{even}.\\
+\end{cases}
+$$
 
-$$f_{\underline{X}}\left(\underline{x}\mid\theta\right)=u\left(t\mid\theta\right)v\left(\underline{X}\right)$$
+The pdf of the median of a random sample with population pdf $$f$$ and cdf $$F$$ is:
 
-The tests for sufficient statistics are also true for discrete random samples using the corresponding pmfs instead.
+$$f_{(r)}\left(x\right)=\frac{n!}{\left(r-1\right)!\left(n-r\right)!}F\left(x\right)^{r-1}\left(1-F\left(x\right)\right)^{n-r}f\left(x\right).$$

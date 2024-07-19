@@ -28,11 +28,16 @@ $$se\left(\hat{\theta}\right)=\sqrt{\mathrm{var}\left[\hat{\theta}\right]}.$$
 
 The **mean squared error** $$MSE\left(\hat{\theta}\right)$$ of an estimator $$\hat{\theta}$$ is defined as a function of the parameter $$\theta:$$
 
-$$MSE\left(\hat{\theta}\right)=\mathbb{E}\left[\left(\hat{\theta}-\theta\right)^2\right]=b^2\left(\hat{\theta}\right)+\mathrm{var}\left[\hat{\theta}\right]$$
+$$
+\begin{align}
+MSE\left(\hat{\theta}\right)&=\mathbb{E}\left[\left(\hat{\theta}-\theta\right)^2\right]\\
+&=b^2\left(\hat{\theta}\right)+\mathrm{var}\left[\hat{\theta}\right]
+\end{align}
+$$
 
 and captures the trade-off between the bias and variance of an estimator.
 
-The bias, standard error and mean squared error are all defined in terms of the moments of the estimator's sampling distribution. However, since the random samples are drawn from the population $$\mathbb{P}_{X;\,\theta}$$ then these quantities can usually be calculated as functions of the moments of $$\mathbb{P}_{X;\,\theta}$$ too.
+The bias, standard error and mean squared error are all defined in terms of the moments of the estimator's sampling distribution. However, since the random samples are drawn from the population $$\mathbb{P}_{X;\,\theta}$$ then these quantities can also be calculated as functions of the moments of $$\mathbb{P}_{X;\,\theta}$$.
 
 Consistency
 

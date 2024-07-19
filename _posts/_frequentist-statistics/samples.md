@@ -44,16 +44,3 @@ X_{(1)}&=\min_{i\in\left(1,\ldots,n\right)} X_i\\
 X_{(n)}&=\max_{i\in\left(1,\ldots,n\right)} X_i.
 \end{align}
 $$
-
-The **median** $$M$$ is a random variable and defined as:
-
-$$
-M=\begin{cases}
-X_{\left(\frac{n+1}{2}\right)} & \mathrm{if}\,n\,\mathrm{is}\,\mathrm{odd}\\
-\frac{1}{2}\left(X_{\left(\frac{n}{2}\right)}+X_{\left(\frac{n}{2}+1\right)}\right) & \mathrm{if}\,n\,\mathrm{is}\,\mathrm{even}.\\
-\end{cases}
-$$
-
-The pdf of the median of a random sample with population pdf $$f$$ and cdf $$F$$ is:
-
-$$f_{(r)}\left(x\right)=\frac{n!}{\left(r-1\right)!\left(n-r\right)!}F\left(x\right)^{r-1}\left(1-F\left(x\right)\right)^{n-r}f\left(x\right).$$

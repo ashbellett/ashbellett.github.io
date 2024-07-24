@@ -33,7 +33,7 @@ $$\mathbb{P}\left(A\mid B,C\right)=\mathbb{P}\left(A\mid C\right).$$
 
 Conditional independence relationships can be written as $$A\perp\!\!\!\perp B\mid C.$$
 
-The **theorem of total probability** states that, given a partition on $$\Omega$$ containing $$k$$ events $$E_1,\ldots,E_k,$$ any event $$A\subseteq\Omega$$ is given by:
+The **theorem of total probability** states that, given a partition on $$\Omega$$ containing $$k$$ events $$E_1,\ldots,E_k,$$ the probability of an event $$A\subseteq\Omega$$ occurring is given by:
 
 $$\mathbb{P}\left(A\right)=\sum_{i=1}^k \mathbb{P}\left(A\mid E_i\right)\,\mathbb{P}\left(E_i\right).$$
 

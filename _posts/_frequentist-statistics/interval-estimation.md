@@ -6,7 +6,7 @@ tags: ["statistics", "interval estimation"]
 description: "Finding plausible ranges of parameter values from data"
 ---
 
-Let $$\underline{X}$$ be a random sample of size $$n$$ distributed according to the population $$\mathbb{P}_{X;\,\theta},$$ which depends on the parameter $$\theta,$$ and common state space $$S$$. An **interval estimator** for $$\theta$$ is a random interval $$\left[g_L\left(\underline{X}\right),g_U\left(\underline{X}\right)\right]$$ where the statistics $$g_L\left(\underline{X}\right)\leq g_U\left(\underline{X}\right)\,\,\forall\,\underline{X}\in S^n$$ are intended to contain the true parameter $$\theta.$$
+Let $$\underline{X}$$ be a random sample of size $$n$$ distributed according to the population $$\mathbb{P}_{X;\,\theta},$$ which depends on the parameter $$\theta,$$ and common state space $$S.$$ An **interval estimator** for $$\theta$$ is a random interval $$\left[g_L\left(\underline{X}\right),g_U\left(\underline{X}\right)\right]$$ where the statistics $$g_L\left(\underline{X}\right)\leq g_U\left(\underline{X}\right)\,\,\forall\,\underline{X}\in S^n$$ are intended to contain the true parameter $$\theta.$$
 
 An **interval estimate** for the parameter $$\theta$$ is obtained by using the realised values of the statistics $$g_L\left(\underline{x}\right)$$ and $$g_U\left(\underline{x}\right)$$ and is equivalent to stating $$g_L\left(\underline{x}\right)\leq\theta\leq g_U\left(\underline{x}\right).$$
 

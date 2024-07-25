@@ -28,7 +28,7 @@ $$ \lim_{n\rightarrow \infty} \frac{1}{n} = 0$$
 
 $$ \lim_{n\rightarrow \infty} c = c \, \, \forall c \in \mathbb{R} $$
 
-$$ \lim_{n\rightarrow \infty} x^n = 0 \, \, \forall \, \lvert x\lvert < 0 $$
+$$ \lim_{n\rightarrow \infty} x^n = 0 \, \, \forall \, \lvert x\rvert < 0 $$
 
 $$ \lim_{n\rightarrow \infty} x^{\frac{1}{n}} = 1 \, \, \forall \, x > 0 $$
 

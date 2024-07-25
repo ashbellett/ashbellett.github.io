@@ -6,9 +6,9 @@ tags: ["real", "analysis", "real number"]
 description: "Scalar quantities"
 ---
 
-The **absolute value** or **modulus** $$\lvert x\lvert$$ of a real number $$x \in \mathbb{R}$$ is $$x$$ when $$x$$ is positive, $$-x$$ when $$x$$ is negative and $$0$$ when $$x$$ is zero.
+The **absolute value** or **modulus** $$\lvert x\rvert$$ of a real number $$x \in \mathbb{R}$$ is $$x$$ when $$x$$ is positive, $$-x$$ when $$x$$ is negative and $$0$$ when $$x$$ is zero.
 
-$$ \lvert x\lvert \, := \begin{cases}
+$$ \lvert x\rvert \, := \begin{cases}
     -x & x<0 \\
     0 & x=0 \\
     x & x>0
@@ -17,7 +17,7 @@ $$
 
 Let $$x,y \in \mathbb{R}$$ be real numbers. The **distance** $$d(x,y)$$ between $$x$$ and $$y$$ is the absolute value of their difference.
 
-$$d(x,y) := \lvert x-y\lvert$$
+$$d(x,y) := \lvert x-y\rvert$$
 
 Let $$x,y,\varepsilon \in \mathbb{R}$$ be real numbers and $$ \varepsilon>0 .$$ $$x$$ and $$y$$ are $$ \boldsymbol{\varepsilon} $$**-close** if and only if $$d(x,y) \leq \varepsilon .$$
 

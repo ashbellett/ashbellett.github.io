@@ -79,7 +79,7 @@ $$
 \end{align}
 $$
 
-Let $$X$$ be a discrete random variable with support $$\mathcal{X}=\left\{x_1,x_2,\ldots\right\}$$ where $$x_1<x_2<\ldots$$, pmf $$p_X$$ and cdf $$F_X$$. Given $$x\in\mathbb{R}$$, for $$x<x_1$$ then $$F_X\left(x\right)=0$$ and for $$x\geq x_1:$$
+Let $$X$$ be a discrete random variable with support $$\mathcal{X}=\left\{x_1,x_2,\ldots\right\}$$ where $$x_1<x_2<\ldots,$$ pmf $$p_X$$ and cdf $$F_X.$$ Given $$x\in\mathbb{R},$$ for $$x<x_1$$ then $$F_X\left(x\right)=0$$ and for $$x\geq x_1:$$
 
 $$F_X\left(x\right)=\sum_{x_i\leq x}p_X\left(x_i\right)\Leftrightarrow p_X\left(x_i\right)=F_X\left(x_i\right)-F_X\left(x_{i-1}\right)\,\,\forall\,i\in\left\{2,3,\ldots\right\}.$$
 
@@ -108,13 +108,13 @@ $$f_X\left(x\right)\geq 0\,\,\forall\,x\in\mathbb{R}$$
 
 $$\int_{-\infty}^{\infty}f_X\left(x\right)\,dx=1.$$
 
-Let random variables $$X_1$$ and $$X_2$$ be defined on the probability spaces $$\left(S_1,\mathcal{S}_1,\mathbb{P}_{X_1}\right)$$ and $$\left(S_2,\mathcal{S}_2,\mathbb{P}_{X_2}\right)$$ respectively and with respect to a common underlying probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right)$$. The **random variable events** $$X_1\in A_1$$ and $$X_2\in A_2$$ where $$A_1\in\mathcal{S}_1$$ and $$A_2\in\mathcal{S}_2$$ are associated with the events $$E_1,E_2\in\Omega$$ respectively:
+Let random variables $$X_1$$ and $$X_2$$ be defined on the probability spaces $$\left(S_1,\mathcal{S}_1,\mathbb{P}_{X_1}\right)$$ and $$\left(S_2,\mathcal{S}_2,\mathbb{P}_{X_2}\right)$$ respectively and with respect to a common underlying probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right).$$ The **random variable events** $$X_1\in A_1$$ and $$X_2\in A_2$$ where $$A_1\in\mathcal{S}_1$$ and $$A_2\in\mathcal{S}_2$$ are associated with the events $$E_1,E_2\in\Omega$$ respectively:
 
 $$\mathbb{P}_{X_1}\left(X_1\in A_1\right)=\mathbb{P}\left(E_1\right)$$
 
 $$\mathbb{P}_{X_2}\left(X_2\in A_2\right)=\mathbb{P}\left(E_2\right).$$
 
-The **joint random variable event** is $$\left(X_1\in A_1,X_2\in A_2\right)$$ and corresponds to the intersection of the associated sample space events $$E_1\cap E_2$$. The **bivariate probability distribution** for the bivariate random vector $$\left(X_1,X_2\right)$$ is a joint pushforward probability measure:
+The **joint random variable event** is $$\left(X_1\in A_1,X_2\in A_2\right)$$ and corresponds to the intersection of the associated sample space events $$E_1\cap E_2.$$ The **bivariate probability distribution** for the bivariate random vector $$\left(X_1,X_2\right)$$ is a joint pushforward probability measure:
 
 $$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}\left(\left\{\omega\in\Omega:X_1\left(\omega\right)\in A_1,X_2\left(\omega\right)\in A_2\right\}\right).$$
 

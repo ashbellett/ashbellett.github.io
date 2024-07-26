@@ -37,7 +37,7 @@ $$
 
 and captures the trade-off between the bias and variance of an estimator.
 
-The bias, standard error and mean squared error are all defined in terms of the moments of the estimator's sampling distribution. However, since the random samples are drawn from the population $$\mathbb{P}_{X;\,\theta}$$ then these quantities can also be calculated as functions of the moments of $$\mathbb{P}_{X;\,\theta}$$.
+The bias, standard error and mean squared error are all defined in terms of the moments of the estimator's sampling distribution. However, since the random samples are drawn from the population $$\mathbb{P}_{X;\,\theta}$$ then these quantities can also be calculated as functions of the moments of $$\mathbb{P}_{X;\,\theta}.$$
 
 Consistency
 

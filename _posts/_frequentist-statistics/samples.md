@@ -22,7 +22,7 @@ The **sample variance** $$S_n^2$$ is a statistic where $$t$$ is a scaled arithme
 
 $$S_n^2=\frac{1}{n-1}\sum_{i=1}^n \left(X_i-\overline{X}_n\right)^2.$$
 
-Let $$\underline{x}$$ be an observed random sample. The **order statistics** of $$\underline{x}$$ are the values $$\left(x_1,x_2,\ldots,x_n\right)$$ in increasing order denoted by $$x_{(1)}\leq x_{(2)}\leq\ldots\leq x_{(n)}$$.
+Let $$\underline{x}$$ be an observed random sample. The **order statistics** of $$\underline{x}$$ are the values $$\left(x_1,x_2,\ldots,x_n\right)$$ in increasing order denoted by $$x_{(1)}\leq x_{(2)}\leq\ldots\leq x_{(n)}.$$
 
 The **sample median** $$m$$ is defined as:
 

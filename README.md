@@ -4,22 +4,28 @@ This is my personal website that contains notes on mathematics, science and engi
 
 ## Prerequisites
 
-Install [Ruby](https://www.ruby-lang.org/).
+Install [Ruby](https://www.ruby-lang.org/) at the version in `.ruby-version` (currently 4.0.7), e.g. `brew install ruby` on macOS.
 
 ## Installation
 
 Install Ruby gems:
-`bundle install`
 
-Run website locally:
-`bundle exec jekyll serve`
+```bash
+bundle install
+```
+
+Run website locally at http://localhost:4000:
+
+```bash
+bundle exec jekyll serve
+```
 
 ## Topics
 
 ### 1. Set theory
 - **Logic**
   - Logical statements
-  - Neccesity, sufficiency and equivalence
+  - Necessity, sufficiency and equivalence
   - Negation, conjunction and disjunction
 - **Sets**
   - Membership, equality and subsets
@@ -57,7 +63,7 @@ Run website locally:
   - Balls and points
   - Closure, open and closed sets
   - Boundedness and continuity
-  - Connectedness and equivalance
+  - Connectedness and equivalence
 
 ### 4. Linear algebra
 - **Vectors**
@@ -153,7 +159,7 @@ Run website locally:
   - Summary statistics
   - Sufficiency
 - **Estimators**
-  - Biasness
+  - Bias
   - Consistency
   - Efficiency
 - **Point estimation**
@@ -298,7 +304,7 @@ Run website locally:
   - Reference prior
   - General basis functions
   - Generalised linear models
-- **Non-parameteric models**
+- **Non-parametric models**
   - Random probability measures
   - Dirichlet processes
   - Pólya Trees
@@ -379,7 +385,7 @@ Run website locally:
   - Variational auto-encoder
 - **Bayesian networks**
   - Aleatoric and epistemic uncertainty
-  - Bayes by backpropogation
+  - Bayes by backpropagation
   - MC dropout
   - Uncertainty estimation
 

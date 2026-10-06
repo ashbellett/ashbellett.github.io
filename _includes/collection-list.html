@@ -1,0 +1,13 @@
+{%- assign docs = include.collection.docs | where_exp: "item", "item.layout == 'post'" -%}
+<ul class="post-list{% if include.collapsible %} collapsible-content{% endif %}"{% if include.id %} id="{{ include.id }}"{% endif %}>
+  {%- for doc in docs -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ doc.url | relative_url }}">
+          {{ doc.title | escape }}
+        </a>
+      </h3>
+      {{ doc.description }}
+    </li>
+  {%- endfor -%}
+</ul>

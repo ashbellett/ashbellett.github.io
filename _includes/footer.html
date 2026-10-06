@@ -1,5 +1,5 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ " /" | relative_url }}"></data>
+  <data class="u-url" value="{{ '/' | absolute_url }}"></data>
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
@@ -9,13 +9,14 @@
           {%- for social in site.socials -%}
             <li>
               <a
-                rel="me"
+                rel="me noopener"
                 href="//{{ social.url }}"
                 target="_blank"
                 title="{{ social.username }}"
               >
                 <img
                   class="svg-icon grey"
+                  alt="{{ social.platform }}"
                   src="{{ '/assets/svg/#.svg' | replace: '#', social.platform }}"
                 />
                 {{ social.username }}

@@ -9,15 +9,12 @@ layout: default
   {{ content }}
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" | sort: "key" %}
   {%- for collection in collections -%}
-    {%- assign list_id = "collection-" | append: collection.label -%}
-    <h2 class="post-list-heading">
-      <button type="button" class="collapsible-header" aria-expanded="false" aria-controls="{{ list_id }}">
-        {{ collection.title }}
-      </button>
-    </h2>
-    <p class="post-list collapsible-description">{{ collection.description }}</p>
-    {% include collection-list.html collection=collection collapsible=true id=list_id %}
+    <details class="collection">
+      <summary>
+        <h2 class="post-list-heading">{{ collection.title }}</h2>
+        <span class="collection-description">{{ collection.description }}</span>
+      </summary>
+      {% include collection-list.html collection=collection %}
+    </details>
   {%- endfor -%}
 </div>
-
-{% include collapse.html %}

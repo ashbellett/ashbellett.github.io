@@ -3,6 +3,7 @@ author:
   name: Ash Bellett
   email: ash.bellett.ab@gmail.com
 include: [_pages]
+exclude: [README.md, LICENSE]
 collections_dir: _posts
 baseurl: ""
 url: "https://ashbellett.com"

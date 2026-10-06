@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+{% assign collection = site.collections | where_exp: "item", "item.label == page.collection" | first %}
+
+<div class="home">
+  <h1 class="page-heading">{{ collection.title }}</h1>
+  <p>{{ collection.description }}</p>
+  {% include collection-list.html collection=collection %}
+</div>

@@ -102,6 +102,11 @@ socials:
     username: ashbellett,
     url: linkedin.com/in/ashbellett
   }
+  - {
+    platform: x,
+    username: ashbellett,
+    url: x.com/ashbellett
+  }
 analytics: G-XFWQPSWM13
 plugins:
   - jekyll-seo-tag

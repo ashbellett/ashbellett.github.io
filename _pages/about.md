@@ -59,7 +59,7 @@ Electrical & Computer Systems\
 2013 - 2017
 {: .role-text }
 
-[ash]: assets/img/ash.png
+[ash]: assets/img/ash.jpg
 {: .profile }
 [canva]: assets/img/canva.jpg
 {: .brand-logo }

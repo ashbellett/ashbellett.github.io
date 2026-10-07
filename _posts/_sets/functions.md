@@ -6,15 +6,15 @@ tags: ["sets", "function"]
 description: "Mappings between sets"
 ---
 
-Let $$X$$ and $$Y$$ be sets and $$P(x,y)$$ be a predicte depending on $$x \in X$$ and $$y \in Y$$ such that $$\forall x \in X$$ there is exactly one $$y \in Y$$ for which $$P(x,y)$$ is true. A **function** $$f : X \rightarrow Y$$ defined by $$P(x,y)$$ maps any input $$x \in X$$ to an output $$f(x) \in Y.$$
+Let $$X$$ and $$Y$$ be sets and $$P(x,y)$$ be a predicate depending on $$x \in X$$ and $$y \in Y$$ such that $$\forall x \in X$$ there is exactly one $$y \in Y$$ for which $$P(x,y)$$ is true. A **function** $$f : X \rightarrow Y$$ defined by $$P(x,y)$$ maps any input $$x \in X$$ to an output $$f(x) \in Y.$$
 
 $$y=f(x) \Leftrightarrow P(x,y)$$
 
-$$X$$ is the **domain** and $$Y$$ is the **codomain** or **range** of the function $$f.$$
+$$X$$ is the **domain** and $$Y$$ is the **codomain** of the function $$f.$$ The term **range** is sometimes used for the codomain but more often means the image $$f(X)$$ defined below.
 
 Two functions with the same domain $$X$$ and codomain $$Y,$$ $$f : X \rightarrow Y$$ and $$g : X \rightarrow Y,$$ are **equal** $$f=g$$ if and only if $$f(x)=g(x)\, \forall x \in X.$$
 
-Let $$f : X \rightarrow Y$$ and $$g : Y \rightarrow Z$$ be two functions such that the codomain of $$f$$ is the same set as the domain of $$g.$$ The **composition** $$g \circ f : X \rightarrow Z$$ of the two functions $$f$$ and $$g$$ if the output of $$g$$ when its input is the output of $$f$$ given an input $$x \in X.$$
+Let $$f : X \rightarrow Y$$ and $$g : Y \rightarrow Z$$ be two functions such that the codomain of $$f$$ is the same set as the domain of $$g.$$ The **composition** $$g \circ f : X \rightarrow Z$$ of the two functions $$f$$ and $$g$$ is the function whose output is the output of $$g$$ when its input is the output of $$f$$ given an input $$x \in X.$$
 
 $$(g \circ f)(x) := g\left(f(x)\right)$$
 
@@ -24,7 +24,7 @@ A function $$f: X \rightarrow Y$$ is **injective** or "one-to-one" if distinct e
 
 $$ x \neq x' \Rightarrow f(x) \neq f(x')$$
 
-A function $$f: X \rightarrow Y$$ is **surjective** or "onto" if all elements of its domain $$X$$ map to all elements of its codomain $$Y.$$
+A function $$f: X \rightarrow Y$$ is **surjective** or "onto" if every element of its codomain $$Y$$ is the image of at least one element of its domain $$X.$$
 
 $$ \forall y \in Y \, \exists x \in X : f(x) = y$$
 

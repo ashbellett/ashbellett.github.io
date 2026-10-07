@@ -20,11 +20,11 @@ $$\mathbb{P}_X\left(X\in A\right) = \mathbb{P}\left(\left\{\omega\in\Omega:X\lef
 
 The pushforward probability measure $$\mathbb{P}_X$$ assigns probabilities to measurable subsets of the state space, $$A\in\mathcal{S},$$ and defines the **probability distribution** of $$X$$ over the state space $$S.$$ The complete probability space is $$\left(S,\mathcal{S},\mathbb{P}_X\right).$$
 
-The **support** of the probability distribution $$\mathbb{P}_X$$ is the subset of the state space $$\mathcal{X}\subseteq S$$ such that the following properties are satisfied:
+The **support** of the probability distribution $$\mathbb{P}_X$$ of a real-valued random variable $$X$$ is the smallest closed set $$\mathcal{X}\subseteq\mathbb{R}$$ such that $$\mathbb{P}_X\left(X\in\mathcal{X}\right)=1.$$ Equivalently, it is the set of points whose every neighbourhood has positive probability:
 
-$$\mathbb{P}_X\left(X\in A\right)>0\,\,\forall\,A\subseteq\mathcal{X},A\neq\varnothing$$
+$$\mathcal{X}=\left\{x\in\mathbb{R}:\mathbb{P}_X\left(x-\varepsilon<X<x+\varepsilon\right)>0\,\,\forall\,\varepsilon>0\right\}.$$
 
-$$\mathbb{P}_X\left(\mathcal{X}\right)=1.$$
+Individual points of the support can have probability zero; for a continuous random variable every point does. In practice the support of a discrete random variable is usually taken to be $$\left\{x:p_X\left(x\right)>0\right\}$$ and that of a continuous random variable $$\left\{x:f_X\left(x\right)>0\right\}$$ (see below), which differ from the definition above by at most a set of probability zero.
 
 A **cumulative distribution function** (cdf) $$F_X\left(x\right)$$ of a random variable $$X$$ is:
 
@@ -40,11 +40,11 @@ $$\lim_{x\rightarrow-\infty}F_X\left(x\right)=0$$
 
 $$\lim_{x\rightarrow\infty}F_X\left(x\right)=1.$$
 
-The probability $$\mathbb{P}_X\left(x\in A\right)$$ where $$A\subseteq S$$ and $$A=\left(a_1, a_2\right]$$ is a semi-closed interval where $$a_1<a_2$$ is constructed through the difference of cdfs:
+The probability $$\mathbb{P}_X\left(X\in A\right)$$ where $$A\subseteq S$$ and $$A=\left(a_1, a_2\right]$$ is a half-open interval where $$a_1<a_2$$ is constructed through the difference of cdfs:
 
 $$
 \begin{align}
-\mathbb{P}_X\left(x\in A\right)&=\mathbb{P}_X\left(a_1<X\leq a_2\right)\\
+\mathbb{P}_X\left(X\in A\right)&=\mathbb{P}_X\left(a_1<X\leq a_2\right)\\
 &=\mathbb{P}_X\left(X\leq a_2\right)-\mathbb{P}_X\left(X\leq a_1\right)\\
 &=F_X\left(a_2\right)-F_X\left(a_1\right).
 \end{align}
@@ -70,7 +70,7 @@ $$p_X\left(x\right)\geq 0\,\,\forall\,x\in S$$
 
 $$\sum_{x\in S}p_X\left(x\right)=1.$$
 
-For discrete random variables, the elements $$x\in S$$ form a set partition of the state space $$S$$; that is, all elements in $$S$$ are disjoint. The probability $$\mathbb{P}_X\left(X\in A\right)$$ where $$A\in\mathcal{X}$$ and $$\mathcal{X}$$ is the support of $$\mathbb{P}_X$$ is constructed through the summation of the pmf:
+For discrete random variables, the singleton sets $$\{x\},$$ $$x\in S,$$ form a partition of the state space $$S$$ into disjoint events. The probability $$\mathbb{P}_X\left(X\in A\right)$$ for any $$A\in\mathcal{S}$$ is constructed through the summation of the pmf:
 
 $$
 \begin{align}
@@ -89,11 +89,11 @@ $$F_X\left(x\right)=\int_{-\infty}^x f_X\left(t\right)\,dt.$$
 
 The support of a continuous random variable is $$\mathcal{X}=\left\{x:f_X\left(x\right)>0\right\}.$$
 
-Continuous pdfs and cdfs have the following properties:
+Continuous pdfs and cdfs have the following properties. The pdf is the derivative of the cdf at every $$x$$ where $$F_X$$ is differentiable (for example, wherever $$f_X$$ is continuous):
 
 $$f_X\left(x\right)=\frac{d}{dt}\left[F_X\left(t\right)\right]_{t=x}$$
 
-$$f_X\left(x\right)\neq\mathbb{P}\left(X=x\right)=0$$
+The probability that $$X$$ takes any single value is zero, $$\mathbb{P}_X\left(X=x\right)=0\,\,\forall\,x\in\mathbb{R},$$ so the density $$f_X\left(x\right)$$ is not a probability and can even exceed one. Including or excluding the endpoints of an interval therefore does not change its probability:
 
 $$
 \begin{align}
@@ -108,7 +108,7 @@ $$f_X\left(x\right)\geq 0\,\,\forall\,x\in\mathbb{R}$$
 
 $$\int_{-\infty}^{\infty}f_X\left(x\right)\,dx=1.$$
 
-Let random variables $$X_1$$ and $$X_2$$ be defined on the probability spaces $$\left(S_1,\mathcal{S}_1,\mathbb{P}_{X_1}\right)$$ and $$\left(S_2,\mathcal{S}_2,\mathbb{P}_{X_2}\right)$$ respectively and with respect to a common underlying probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right).$$ The **random variable events** $$X_1\in A_1$$ and $$X_2\in A_2$$ where $$A_1\in\mathcal{S}_1$$ and $$A_2\in\mathcal{S}_2$$ are associated with the events $$E_1,E_2\in\Omega$$ respectively:
+Let random variables $$X_1$$ and $$X_2$$ be defined on the probability spaces $$\left(S_1,\mathcal{S}_1,\mathbb{P}_{X_1}\right)$$ and $$\left(S_2,\mathcal{S}_2,\mathbb{P}_{X_2}\right)$$ respectively and with respect to a common underlying probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right).$$ The **random variable events** $$X_1\in A_1$$ and $$X_2\in A_2$$ where $$A_1\in\mathcal{S}_1$$ and $$A_2\in\mathcal{S}_2$$ are associated with the events $$E_1,E_2\in\mathcal{F}$$ respectively:
 
 $$\mathbb{P}_{X_1}\left(X_1\in A_1\right)=\mathbb{P}\left(E_1\right)$$
 
@@ -120,4 +120,4 @@ $$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}\left(\left\{
 
 The random variables $$X_1$$ and $$X_2$$ are independent if and only if:
 
-$$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}_{X_1}\left(X_1\in A_1\right)\mathbb{P}_{X_2}\left(X_2\in A_2\right).$$
+$$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}_{X_1}\left(X_1\in A_1\right)\mathbb{P}_{X_2}\left(X_2\in A_2\right)\,\,\forall\,A_1\in\mathcal{S}_1,A_2\in\mathcal{S}_2.$$

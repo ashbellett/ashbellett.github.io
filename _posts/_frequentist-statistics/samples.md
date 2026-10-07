@@ -12,7 +12,7 @@ A set of data can be represented as a vector $$\underline{x}=\left(x_1,\ldots,x_
 
 It is often assumed that the population $$\mathbb{P}_X$$ belongs to a family of distributions indexed by a scalar or vector **parameter** $$\theta$$ where $$\theta$$ belongs to a parameter space $$\theta\in\Theta.$$ The population can be expressed as $$\mathbb{P}_{X;\,\theta}$$ to show that the corresponding pmf or pdf is dependent on the parameter $$\theta.$$
 
-Given a random sample $$\underline{X}$$ of size $$n$$ and a possibly multivariate function $$t:S^n\rightarrow\mathbb{R}^k\,\,\forall\,k\geq 1$$ then $$T=t\left(\underline{X}\right)$$ is a random variable or vector called a **statistic**. The probability distribution of the statistic $$T$$ is the **sampling distribution** of $$T.$$
+Given a random sample $$\underline{X}$$ of size $$n$$ and a possibly multivariate function $$t:S^n\rightarrow\mathbb{R}^k$$ for some $$k\geq 1$$ that does not depend on any unknown parameter $$\theta,$$ then $$T=t\left(\underline{X}\right)$$ is a random variable or vector called a **statistic**. The probability distribution of the statistic $$T$$ is the **sampling distribution** of $$T.$$
 
 The **sample mean** $$\overline{X}_n$$ is a statistic where $$t$$ is the arithmetic mean of the random sample:
 
@@ -35,12 +35,13 @@ $$
 
 Let $$\underline{X}$$ be a random sample. The **$$r^\mathrm{th}$$ order statistic** of $$\underline{X}$$ is the random variable $$X_{(r)}$$ where $$X_{(1)}\leq X_{(2)}\leq\ldots\leq X_{(n)}$$ is the ordered sample.
 
-If $$X_i$$ is continuous so that $$X_{(1)}<X_{(2)}<\ldots<X_{(n)}$$ with probability 1 then:
+The smallest and largest order statistics are the sample minimum and maximum:
 
 $$
 \begin{align}
-X_{(1)}&=\min_{i\in\left(1,\ldots,n\right)} X_i\\
-\ldots&\\
-X_{(n)}&=\max_{i\in\left(1,\ldots,n\right)} X_i.
+X_{(1)}&=\min_{i\in\left\{1,\ldots,n\right\}} X_i\\
+X_{(n)}&=\max_{i\in\left\{1,\ldots,n\right\}} X_i.
 \end{align}
 $$
+
+If $$X_i$$ is continuous then ties occur with probability 0, so $$X_{(1)}<X_{(2)}<\ldots<X_{(n)}$$ with probability 1.

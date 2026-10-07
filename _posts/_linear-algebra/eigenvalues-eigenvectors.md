@@ -14,37 +14,39 @@ where $$\lambda\in\mathbb{F}$$ is called an **eigenvalue** of $$A$$ if $$\underl
 
 The linear transformation $$A\underline{v}$$ where $$\underline{v}$$ is an eigenvector of $$A$$ is equivalent to the scalar transformation $$\lambda\underline{v}.$$
 
-Eigenvalues satisfy the following properties:
+Let $$\lambda_1,\ldots,\lambda_n \in \mathbb{C}$$ be the eigenvalues of $$A,$$ repeated according to their algebraic multiplicity (defined below). The eigenvalues satisfy the following properties:
 
 $$\sum_{i=1}^n \lambda_i = \mathrm{tr}(A)$$
 
 $$\prod_{i=1}^n \lambda_i = \lvert A\rvert$$
 
-The expression $$\lvert A-\lambda I_n\rvert$$ is an $$n^{\mathrm{th}}$$-order polynomial in $$\lambda$$ called the **characteristic polynomial** of $$A.$$ The roots $$\lvert A-\lambda I_n\rvert=0$$ are the eigenvalues of $$A.$$
+The expression $$\lvert A-\lambda I_n\rvert$$ is a polynomial of degree $$n$$ in $$\lambda$$ called the **characteristic polynomial** of $$A.$$ The roots of $$\lvert A-\lambda I_n\rvert=0$$ are the eigenvalues of $$A.$$
 
 The set of all distinct eigenvalues of $$A$$ is called the **eigen-spectrum** $$\sigma_A$$ of $$A.$$
 
 $$\sigma_A=\{\lambda : \lvert A-\lambda I_n\rvert=0\}$$
 
-The characteristic polynomial of $$A$$ will admit $$m$$ distinct complex roots where $$1\leq m\leq n.$$ Therefore the cardinality of the eigen-spectrum $$\sigma_A$$ is $$m.$$
+The characteristic polynomial of $$A$$ will admit $$m$$ distinct complex roots where $$1\leq m\leq n.$$ Therefore, taking eigenvalues over $$\mathbb{C},$$ the cardinality of the eigen-spectrum $$\sigma_A$$ is $$m.$$ A real matrix can have complex eigenvalues: the rotation matrix $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$ has eigenvalues $$\pm i$$ and no real eigenvalues. The results below that count $$n$$ eigenvalues assume that all roots of the characteristic polynomial lie in $$\mathbb{F},$$ which always holds for $$\mathbb{F}=\mathbb{C}.$$
 
-For each eigenvalue $$\lambda_i\in\sigma_A,$$ the non-zero solution to
+For each eigenvalue $$\lambda_i\in\sigma_A,$$ any non-zero solution to
 
 $$\left(A-\lambda_i I_n\right)\underline{v_i}=\underline{0}$$
 
-yields the corresponding eigenvector $$\underline{v_i}$$ of $$A.$$
+is an eigenvector $$\underline{v_i}$$ of $$A$$ corresponding to $$\lambda_i.$$
 
-The **eigen-space** $$\mathcal{E}_{\lambda}$$ of $$A$$ with respect to eigenvalue $$\lambda$$ is the vector space that is spanned by all eigenvectors of $$A.$$
+The **eigen-space** $$\mathcal{E}_{\lambda}$$ of $$A$$ with respect to eigenvalue $$\lambda$$ is the vector space that is spanned by all eigenvectors of $$A$$ corresponding to $$\lambda.$$ Equivalently, it is the kernel of $$A-\lambda I_n,$$ which contains these eigenvectors together with the zero vector:
+
+$$\mathcal{E}_{\lambda}=\{\underline{v} \in \mathbb{F}^n : \left(A-\lambda I_n\right)\underline{v}=\underline{0}\}$$
 
 The **algebraic multiplicity** $$\mu_A\left(\lambda\right)$$ of $$\lambda$$ with respect to the matrix $$A$$ is the number of times $$\lambda$$ appears as a root of the characteristic polynomial of $$A.$$ The sum of the algebraic multiplicities of all eigenvalues of $$A$$ is $$n.$$
 
-The **geometric multiplicity** $$\gamma_A\left(\lambda\right)$$ of $$\lambda$$ with respect to the matrix $$A$$ is the number of linearly independent eigenvectors of $$A$$ and is equivalent to the dimension of the eigen-space of $$A$$ with respect to $$\lambda.$$
+The **geometric multiplicity** $$\gamma_A\left(\lambda\right)$$ of $$\lambda$$ with respect to the matrix $$A$$ is the maximum number of linearly independent eigenvectors of $$A$$ corresponding to $$\lambda$$ and is equivalent to the dimension of the eigen-space of $$A$$ with respect to $$\lambda.$$
 
 The algebraic and geometric multiplicities are related by:
 
 $$1\leq\gamma_A\left(\lambda\right)\leq\mu_A\left(\lambda\right)\leq n\,\,\forall\,\lambda\in\sigma_A$$
 
-which means that while distinct eigenvalues correspond to linearly independent eigenvectors, repeated eigenvalues do no necessarily correspond to multiple linearly independent eigenvectors.
+Eigenvectors corresponding to distinct eigenvalues are always linearly independent, but this inequality shows that a repeated eigenvalue does not necessarily correspond to multiple linearly independent eigenvectors.
 
 $$A$$ will admit $$n$$ linearly independent eigenvectors if and only if:
 
@@ -52,7 +54,7 @@ $$\gamma_A\left(\lambda_i\right)=\mu_A\left(\lambda_i\right)\,\,\forall\,\lambda
 
 $$A$$ will admit fewer than $$n$$ linearly independent eigenvectors if and only if:
 
-$$\gamma_A\left(\lambda_i\right)<\mu_A\left(\lambda_i\right)\,\,\exists\,\lambda_i\in\sigma_A$$
+$$\gamma_A\left(\lambda_i\right)<\mu_A\left(\lambda_i\right)\,\,\mathrm{for}\,\mathrm{some}\,\,\lambda_i\in\sigma_A$$
 
 and $$A$$ is referred to as **defective**.
 

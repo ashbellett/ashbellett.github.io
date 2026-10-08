@@ -30,10 +30,10 @@ $$\hat{\theta}\left(\underline{x}\right)=\operatorname*{arg\,max}_{\theta\in\The
 
 The likelihood function often contains exponential terms. The **log-likelihood** function is defined as:
 
-$$\mathcal{l}\left(\theta\mid\underline{x}\right)=\log_e\mathcal{L}\left(\theta\mid\underline{x}\right)$$
+$$\ell\left(\theta\mid\underline{x}\right)=\log_e\mathcal{L}\left(\theta\mid\underline{x}\right)$$
 
-Because logarithms are monotonic functions then $$\hat{\theta}\left(\underline{x}\right)$$ also maximises the log-likelihood $$\mathcal{l}\left(\theta\mid\underline{x}\right)$$ and is often more practical to maximise:
+Because the logarithm is a strictly increasing function and the likelihood is positive then $$\hat{\theta}\left(\underline{x}\right)$$ also maximises the log-likelihood $$\ell\left(\theta\mid\underline{x}\right)$$ and is often more practical to maximise:
 
-$$\hat{\theta}\left(\underline{x}\right)=\operatorname*{arg\,max}_{\theta\in\Theta}\,\mathcal{l}\left(\theta\mid\underline{x}\right)$$
+$$\hat{\theta}\left(\underline{x}\right)=\operatorname*{arg\,max}_{\theta\in\Theta}\,\ell\left(\theta\mid\underline{x}\right)$$
 
 The **maximum likelihood estimator** (also MLE) is the estimator $$\hat{\theta}\left(\underline{X}\right).$$

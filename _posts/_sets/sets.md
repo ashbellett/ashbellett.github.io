@@ -30,7 +30,7 @@ If $$P(x)$$ is true for some $$x \in X,$$ the **existential quantifier** $$\exis
 
 $$\exists x \in X : P(x)$$
 
-means "there exists some elements in $$X$$ such that the predicate $$P(x)$$ is true".
+means "there exists at least one element in $$X$$ such that the predicate $$P(x)$$ is true".
 
 Let $$X$$ be a set and for each element $$x \in X$$ let $$P(x)$$ be a predicate depending on $$x.$$ Then there exists a set $$ \{x \in X : P(x)\} $$ whose elements are the elements in $$X$$ for which $$P(x)$$ is true where the symbol ":" means "such that". Hence $$ \{x \in X : P(x)\} $$ means "the set of elements in $$X$$ such that the predicate $$P(x)$$ is true". Building sets from predicates is called **specification**.
 
@@ -46,9 +46,9 @@ The **relative complement** of a set $$X$$ in another set $$Y,$$ $$Y \setminus X
 
 $$Y \setminus X := \{x : x \in Y \ \mathrm{and} \ x \notin X\} $$
 
-The **symmetric difference** of a set $$X$$ with another set $$Y,$$ $$X \ominus Y$$ is the set of elements in $$X$$ or $$Y$$ and not in $$X$$ and $$Y.$$
+The **symmetric difference** of a set $$X$$ with another set $$Y,$$ $$X \triangle Y$$ is the set of elements in $$X$$ or $$Y$$ but not in both $$X$$ and $$Y.$$
 
-$$X \ominus Y := \{x : x \in X \ \mathrm{and} \ x \in Y \ \mathrm{and} \ x \notin X \cup Y\} $$
+$$X \triangle Y := \{x : x \in X \cup Y \ \mathrm{and} \ x \notin X \cap Y\} = (X \setminus Y) \cup (Y \setminus X) $$
 
 The **Cartesian product** of sets $$X$$ and $$Y,$$ $$X \times Y$$ is the set of all ordered pairs $$(x,y)$$ where $$x$$ is an element of $$X$$ and $$y$$ is an element of $$Y.$$
 
@@ -66,12 +66,14 @@ A **partition** $$P$$ of a set $$X$$ is a set of non-empty subsets of $$X$$ such
 
 $$\varnothing \notin P$$
 
-$$\bigcup_{A\in P}=X$$
+$$\bigcup_{A\in P} A=X$$
 
 $$A\cap B = \varnothing\,\,\forall\,A,B\in P, A\neq B.$$
 
-A set $$X$$ has **cardinality** $$n \in \mathbb{N}$$ if and only if it has equal cardinality with $$ \{i \in \mathbb{N} : i < n\} .$$ $$X$$ has $$n$$ elements if and only if it has cardinality $$n.$$
+Two sets $$X$$ and $$Y$$ have **equal cardinality** if and only if there exists a bijection $$f : X \rightarrow Y,$$ that is, a function pairing every element of $$X$$ with exactly one element of $$Y$$ and vice versa.
+
+Let $$\mathbb{N} = \{0, 1, 2, \ldots\}$$ denote the natural numbers. A set $$X$$ has **cardinality** $$n \in \mathbb{N}$$ if and only if it has equal cardinality with $$ \{i \in \mathbb{N} : i < n\} .$$ $$X$$ has $$n$$ elements if and only if it has cardinality $$n.$$
 
 A set $$X$$ is **finite** if and only if it has cardinality $$n \in \mathbb{N}.$$ Otherwise, the set is **infinite**.
 
-A set $$X$$ is **countable** if and only if it has cardinality equal with the natural numbers $$ \mathbb{N}.$$ The set is **uncountable** if it is infinite and not countable.
+A set $$X$$ is **countably infinite** if and only if it has equal cardinality with the natural numbers $$ \mathbb{N}.$$ A set is **countable** if it is finite or countably infinite, and **uncountable** if it is not countable.

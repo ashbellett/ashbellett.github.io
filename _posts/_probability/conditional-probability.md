@@ -12,14 +12,11 @@ $$\mathbb{P}\left(A\mid B\right)=\frac{\mathbb{P}\left(A\cap B\right)}{\mathbb{P
 
 In general, $$\mathbb{P}\left(A\mid B\right)\neq\mathbb{P}\left(B\mid A\right).$$
 
-Events $$A$$ and $$B$$ are independent events if and only if:
+If $$\mathbb{P}\left(B\right)>0,$$ events $$A$$ and $$B$$ are independent events if and only if:
 
-$$
-\begin{align}
-\mathbb{P}\left(A\mid B\right)&=\frac{\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)}{\mathbb{P}\left(B\right)}\\
-&=\mathbb{P}\left(A\right).
-\end{align}
-$$
+$$\mathbb{P}\left(A\mid B\right)=\mathbb{P}\left(A\right)$$
+
+since, when $$A$$ and $$B$$ are independent, $$\mathbb{P}\left(A\mid B\right)=\frac{\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right)}{\mathbb{P}\left(B\right)}=\mathbb{P}\left(A\right),$$ and conversely $$\mathbb{P}\left(A\mid B\right)=\mathbb{P}\left(A\right)$$ rearranges to $$\mathbb{P}\left(A\cap B\right)=\mathbb{P}\left(A\right)\,\mathbb{P}\left(B\right).$$
 
 Conditional probability is equivalent to reducing the sample space by replacing events with intersections between themselves and the event that has occurred and rescaling probabilities.
 
@@ -27,13 +24,15 @@ Given events $$A,B,C\in\mathcal{F},$$ events $$A$$ and $$B$$ are **conditionally
 
 $$\mathbb{P}\left(A\cap B\mid C\right)=\mathbb{P}\left(A\mid C\right)\,\mathbb{P}\left(B\mid C\right)$$
 
-or, equivalently:
+or, equivalently when $$\mathbb{P}\left(B\cap C\right)>0:$$
 
-$$\mathbb{P}\left(A\mid B,C\right)=\mathbb{P}\left(A\mid C\right).$$
+$$\mathbb{P}\left(A\mid B,C\right)=\mathbb{P}\left(A\mid C\right)$$
+
+where $$\mathbb{P}\left(A\mid B,C\right)$$ denotes $$\mathbb{P}\left(A\mid B\cap C\right).$$
 
 Conditional independence relationships can be written as $$A\perp\!\!\!\perp B\mid C.$$
 
-The **theorem of total probability** states that, given a partition on $$\Omega$$ containing $$k$$ events $$E_1,\ldots,E_k,$$ the probability of an event $$A\subseteq\Omega$$ occurring is given by:
+The **theorem of total probability** states that, given a partition on $$\Omega$$ containing $$k$$ events $$E_1,\ldots,E_k\in\mathcal{F}$$ with $$\mathbb{P}\left(E_i\right)>0,$$ the probability of an event $$A\in\mathcal{F}$$ occurring is given by:
 
 $$\mathbb{P}\left(A\right)=\sum_{i=1}^k \mathbb{P}\left(A\mid E_i\right)\,\mathbb{P}\left(E_i\right).$$
 

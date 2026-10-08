@@ -8,12 +8,12 @@ description: "Spaces supporting addition and scalar multiplication of elements"
 
 A **binary operation** is a function $$\mathbb{X} \times \mathbb{X} \rightarrow \mathbb{X}$$ which maps ordered pairs of elements from $$\mathbb{X}$$ to other elements of $$\mathbb{X}.$$
 
-A **field** $$\mathbb{F}$$ is a set with two binary operations called addition and scalar multiplication. Addition $$a+b$$ and scalar multiplication $$a \cdot b,$$ $$a,b \in \mathbb{F}$$ satisfy the field axioms:
-- Associativity of addition and scalar multiplication: $$a + (b + c) = (a + b) + c$$ and $$a \cdot (b \cdot c) = (a \cdot b) \cdot c.$$
-- Commutativity of addition and scalar multiplication: $$a + b = b + a$$ and $$a \cdot b = b \cdot a.$$
-- Distributivity of scalar multiplication over addition: $$a \cdot (b + c) = (a \cdot b) + (a \cdot c).$$
-- Additive and scalar multiplicative identity: $$\exists \, 0, 1 \in \mathbb{F} : a + 0 = a$$ and $$a \cdot 1 = a.$$
-- Additive and scalar multiplicative inverse: $$\exists \, {-}a \in \mathbb{F} : a+(-a)=0 \,\, \forall \, a \in \mathbb{F}$$ and $$\exists \, a^{-1} \in \mathbb{F} \setminus \{0\} : a \cdot a^{-1} = 1 \,\, \forall \, a \in \mathbb{F}\setminus \{0\}.$$
+A **field** $$\mathbb{F}$$ is a set with two binary operations called addition and multiplication. Addition $$a+b$$ and multiplication $$a \cdot b,$$ $$a,b,c \in \mathbb{F}$$ satisfy the field axioms:
+- Associativity of addition and multiplication: $$a + (b + c) = (a + b) + c$$ and $$a \cdot (b \cdot c) = (a \cdot b) \cdot c.$$
+- Commutativity of addition and multiplication: $$a + b = b + a$$ and $$a \cdot b = b \cdot a.$$
+- Distributivity of multiplication over addition: $$a \cdot (b + c) = (a \cdot b) + (a \cdot c).$$
+- Additive and multiplicative identity: $$\exists \, 0, 1 \in \mathbb{F}$$ with $$0 \neq 1$$ such that $$a + 0 = a$$ and $$a \cdot 1 = a \,\, \forall \, a \in \mathbb{F}.$$
+- Additive and multiplicative inverse: $$\forall \, a \in \mathbb{F} \,\, \exists \, {-}a \in \mathbb{F} : a+(-a)=0$$ and $$\forall \, a \in \mathbb{F}\setminus \{0\} \,\, \exists \, a^{-1} \in \mathbb{F} : a \cdot a^{-1} = 1.$$
 
 Usually $$\mathbb{F}=\mathbb{R}$$ (real numbers) or $$\mathbb{F}=\mathbb{C}$$ (complex numbers). Any element $$\lambda \in \mathbb{F}$$ is a **scalar**.
 
@@ -33,6 +33,6 @@ Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$ and $$U$$ be
 
 $$\underline{u}_k = \sum_{i=1, i\neq k}^n \alpha_i\underline{u}_i$$
 
-If there are no linearly dependent vectors in $$U$$ then its vectors are **linearly independent**. Equivalently, the vectors in $$U$$ are linearly independent if and only if the solution to $$\alpha_1\underline{u}_1+\ldots+\alpha_n\underline{u}_n=\underline{0}$$ is the trivial solution $$\alpha_1=\ldots=\alpha_n=0.$$ $$U$$ is said to be linearly dependent if every finite subset of $$U$$ is linearly independent.
+If there are no linearly dependent vectors in $$U$$ then its vectors are **linearly independent**. Equivalently, the vectors in $$U$$ are linearly independent if and only if the solution to $$\alpha_1\underline{u}_1+\ldots+\alpha_n\underline{u}_n=\underline{0}$$ is the trivial solution $$\alpha_1=\ldots=\alpha_n=0.$$ $$U$$ is said to be linearly independent if every finite subset of $$U$$ is linearly independent.
 
-Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$ and $$U$$ be a subset of $$\mathcal{V}.$$ $$U$$ is said to **span** $$\mathcal{V}$$ if all vectors in $$\mathcal{V}$$ can be expressed as a linear combination of vectors in $$U.$$ $$U$$ is said to be a **basis** of $$\mathcal{V}$$ if $$U$$ spans $$\mathcal{V}$$ and the vectors in $$U$$ are linearly independent. The **dimension** of $$\mathcal{V}$$ is the number of vectors in its basis. Every vector space that can be spanned has a basis and all bases for a given vector space have the same number of vectors. Hence, the dimension of a vector space is uniquely defined.
+Let $$\mathcal{V}$$ be a vector space over the field $$\mathbb{F}$$ and $$U$$ be a subset of $$\mathcal{V}.$$ $$U$$ is said to **span** $$\mathcal{V}$$ if all vectors in $$\mathcal{V}$$ can be expressed as a linear combination of vectors in $$U.$$ $$U$$ is said to be a **basis** of $$\mathcal{V}$$ if $$U$$ spans $$\mathcal{V}$$ and the vectors in $$U$$ are linearly independent. The **dimension** of $$\mathcal{V}$$ is the number of vectors in its basis. Every vector space spanned by a finite set has a basis and all bases for a given vector space have the same number of vectors. Hence, the dimension of a vector space is uniquely defined.

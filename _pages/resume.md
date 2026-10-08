@@ -1,14 +1,9 @@
 ---
 layout: page
-title: About
-permalink: /about
-header: true
+title: Résumé
+permalink: /resume
+redirect_from: /about
 ---
-
-![ash]
-
-Data scientist analysing, building and optimising data-driven platforms and products.
-{: .tagline }
 
 ## Experience
 
@@ -59,8 +54,6 @@ Electrical & Computer Systems\
 2013 - 2017
 {: .role-text }
 
-[ash]: assets/img/ash.jpg
-{: .profile }
 [canva]: assets/img/canva.jpg
 {: .brand-logo }
 [deloitte]: assets/img/deloitte.jpg

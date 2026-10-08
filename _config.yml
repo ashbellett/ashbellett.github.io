@@ -13,7 +13,7 @@ collections:
     title: "Sets"
     description: "Collections of objects"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
     order:
       - logic.md
       - sets.md
@@ -23,7 +23,7 @@ collections:
     title: "Real Analysis"
     description: "Real-valued numbers and functions"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
     order:
       - real-numbers.md
       - sequences.md
@@ -37,7 +37,7 @@ collections:
     title: "Linear Algebra"
     description: "Representations of linear systems"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
     order:
       - vector-spaces.md
       - inner-product-spaces.md
@@ -51,7 +51,7 @@ collections:
     title: "Probability"
     description: "Occurrences of uncertain events"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
     order:
       - events.md
       - probability-spaces.md
@@ -68,7 +68,7 @@ collections:
     title: "Frequentist Statistics"
     description: "Drawing conclusions from data"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
     order:
       - samples.md
       - sufficiency.md
@@ -81,13 +81,13 @@ collections:
     title: "Bayesian Statistics"
     description: "Modelling parameters as random variables"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
   optimisation:
     key: 6
     title: "Optimisation"
     description: "Maximising and minimising functions"
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:collection/:path
     order:
       - convexity.md
       - unconstrained-optimisation.md
@@ -112,3 +112,4 @@ analytics: G-XFWQPSWM13
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from

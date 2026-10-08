@@ -1,0 +1,6 @@
+# Header navigation, in display order. A link is marked active on its URL and
+# on any page beneath it, e.g. /notes/ is active on /notes/sets/logic.
+- title: Notes
+  url: /notes/
+- title: Résumé
+  url: /resume

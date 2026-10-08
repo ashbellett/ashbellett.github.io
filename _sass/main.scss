@@ -603,6 +603,10 @@ table {
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
+
+    &.active {
+      font-weight: 600;
+    }
     display: block;
     padding: 5px 10px;
 

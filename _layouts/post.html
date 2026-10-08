@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}
+{% assign collection_index = collection.docs | where: "layout", "collection" | first %}
 
 <article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
 
@@ -10,7 +11,7 @@ layout: default
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <span class="p-category">
-        <a href="{{ '/' | append: collection.label | relative_url }}">
+        <a href="{{ collection_index.url | relative_url }}">
           {{ collection.title }}
         </a>
       </span>

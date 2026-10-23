@@ -67,11 +67,11 @@ collections:
       - probability-spaces.md
       - conditional-probability.md
       - random-variables.md
-      - distributions.md
       - moments.md
-      - limit-theorems.md
+      - distributions.md
       - concentration-bounds.md
       - probabilistic-convergence.md
+      - limit-theorems.md
       - stochastic-processes.md
   frequentist-statistics:
     key: 5

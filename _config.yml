@@ -18,8 +18,22 @@ collections:
       - logic.md
       - sets.md
       - functions.md
-  real-analysis:
+  linear-algebra:
     key: 1
+    title: "Linear Algebra"
+    description: "Representations of linear systems"
+    output: true
+    permalink: /notes/:collection/:path
+    order:
+      - vector-spaces.md
+      - inner-product-spaces.md
+      - linear-transformations.md
+      - matrices.md
+      - determinants.md
+      - eigenvalues-eigenvectors.md
+      - matrix-decompositions.md
+  real-analysis:
+    key: 2
     title: "Real Analysis"
     description: "Real-valued numbers and functions"
     output: true
@@ -32,20 +46,6 @@ collections:
       - continuity.md
       - derivatives.md
       - integrals.md
-  linear-algebra:
-    key: 2
-    title: "Linear Algebra"
-    description: "Representations of linear systems"
-    output: true
-    permalink: /notes/:collection/:path
-    order:
-      - vector-spaces.md
-      - inner-product-spaces.md
-      - matrices.md
-      - determinants.md
-      - eigenvalues-eigenvectors.md
-      - matrix-decompositions.md
-      - linear-transformations.md
   optimisation:
     key: 3
     title: "Optimisation"

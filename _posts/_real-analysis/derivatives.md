@@ -119,7 +119,7 @@ $$D_{\underline{v}}f(\underline{x})=\sum_{i=1}^{n}\frac{\partial f(\underline{x}
 
 The existence of all partial derivatives at $$\underline{x}$$ does not imply differentiability or even continuity at $$\underline{x}.$$ However, if all partial derivatives exist and are continuous on $$X,$$ in which case $$f$$ is **continuously differentiable** and written $$f\in C^1(X),$$ then $$f$$ is differentiable on $$X.$$
 
-Let $$\underline{f}=\left(f_1,\ldots,f_m\right):X\rightarrow\mathbb{R}^m$$ be a function whose components $$f_j:X\rightarrow\mathbb{R}$$ are differentiable at $$\underline{x}.$$ The **Jacobian matrix** of $$\underline{f}$$ at $$\underline{x}$$ is the $$m\times n$$ rectangular array $$J_{\underline{f}}(\underline{x})$$ whose entry in row $$j$$ and column $$i$$ is the partial derivative of the $$j$$-th component with respect to the $$i$$-th coordinate, so that its rows are the gradients of the components.
+Let $$\underline{f}=\left(f_1,\ldots,f_m\right):X\rightarrow\mathbb{R}^m$$ be a function whose components $$f_j:X\rightarrow\mathbb{R}$$ are differentiable at $$\underline{x}.$$ The **Jacobian matrix** of $$\underline{f}$$ at $$\underline{x}$$ is the $$m\times n$$ matrix $$J_{\underline{f}}(\underline{x})$$ whose entry in row $$j$$ and column $$i$$ is the partial derivative of the $$j$$-th component with respect to the $$i$$-th coordinate, so that its rows are the gradients of the components.
 
 $$\left[J_{\underline{f}}(\underline{x})\right]_{ji}:=\frac{\partial f_j(\underline{x})}{\partial x_i}$$
 
@@ -135,7 +135,7 @@ The **second-order partial derivative** of $$f$$ with respect to $$x_i$$ and the
 
 $$\frac{\partial^2 f(\underline{x})}{\partial x_j\partial x_i}:=\frac{\partial}{\partial x_j}\left(\frac{\partial f(\underline{x})}{\partial x_i}\right)$$
 
-The **Hessian matrix** of $$f$$ at $$\underline{x}$$ is the $$n\times n$$ rectangular array $$H_f(\underline{x})$$ of second-order partial derivatives.
+The **Hessian matrix** of $$f$$ at $$\underline{x}$$ is the $$n\times n$$ matrix $$H_f(\underline{x})$$ of second-order partial derivatives.
 
 $$\left[H_f(\underline{x})\right]_{ij}:=\frac{\partial^2 f(\underline{x})}{\partial x_i\partial x_j}$$
 

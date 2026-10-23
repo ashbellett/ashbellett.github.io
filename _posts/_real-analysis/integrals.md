@@ -118,7 +118,7 @@ Let $$U,V\subseteq\mathbb{R}^n$$ be open sets and $$\underline{\varphi}:U\righta
 
 $$\int_V f(\underline{y})\,d\underline{y}=\int_U f\left(\underline{\varphi}(\underline{x})\right)\left\lvert\det J_{\underline{\varphi}}(\underline{x})\right\rvert\,d\underline{x}$$
 
-where $$\left\lvert\det J_{\underline{\varphi}}(\underline{x})\right\rvert,$$ the absolute value of the determinant of the Jacobian matrix of $$\underline{\varphi}$$ that is formalised in the linear algebra notes, is the factor by which $$\underline{\varphi}$$ scales volume near $$\underline{x}.$$ In two dimensions this factor is
+where $$\left\lvert\det J_{\underline{\varphi}}(\underline{x})\right\rvert,$$ the absolute value of the determinant of the Jacobian matrix of $$\underline{\varphi},$$ is the factor by which $$\underline{\varphi}$$ scales volume near $$\underline{x}.$$ In two dimensions this factor is
 
 $$\left\lvert\det J_{\underline{\varphi}}(\underline{x})\right\rvert=\left\lvert\frac{\partial\varphi_1}{\partial x_1}\frac{\partial\varphi_2}{\partial x_2}-\frac{\partial\varphi_1}{\partial x_2}\frac{\partial\varphi_2}{\partial x_1}\right\rvert.$$
 

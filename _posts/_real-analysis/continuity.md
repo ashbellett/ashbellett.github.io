@@ -18,15 +18,9 @@ The function $$f$$ is continuous on $$X$$ if and only if $$f$$ is continuous at 
 
 Let $$f,g:X\rightarrow\mathbb{R}$$ be continuous at $$x_0\in X$$ and $$c\in\mathbb{R}.$$ The limit laws give that $$f+g,$$ $$f-g,$$ $$c\,f$$ and $$f\,g$$ are continuous at $$x_0,$$ and $$\frac{f}{g}$$ is continuous at $$x_0$$ if $$g(x_0)\neq 0.$$ Let $$Y\subseteq\mathbb{R},$$ $$f:X\rightarrow Y$$ be continuous at $$x_0$$ and $$g:Y\rightarrow\mathbb{R}$$ be continuous at $$f(x_0).$$ The composition $$g\circ f:X\rightarrow\mathbb{R}$$ is continuous at $$x_0.$$ Constant functions and the identity function $$x\mapsto x$$ are continuous, so every polynomial is continuous on $$\mathbb{R}$$ and every rational function is continuous wherever its denominator is non-zero.
 
-Let $$X \subseteq \mathbb{R}$$ be a subset of real numbers. $$X$$ is an **interval** if for all $$x,y \in X$$ with $$x<y,$$ every $$z \in \mathbb{R}$$ with $$x<z<y$$ is also in $$X.$$ The empty set is an interval since it has no such $$x,y.$$
-
-$$[x,y]\subseteq X \,\, \forall \, x,y \in X$$
-
-An interval $$X$$ is **bounded** if it has both an upper bound and a lower bound. A non-empty bounded interval has **endpoints** $$a=\inf X$$ and $$b=\sup X$$ and is one of four sets, depending on which endpoints it contains: the **open interval** $$(a,b)=\{x\in\mathbb{R}:a<x<b\},$$ the **closed interval** $$[a,b]=\{x\in\mathbb{R}:a\leq x\leq b\}$$ and the **half-open intervals** $$[a,b)$$ and $$(a,b].$$ An unbounded interval is one of $$(a,\infty),$$ $$[a,\infty),$$ $$(-\infty,b),$$ $$(-\infty,b]$$ or $$\mathbb{R}.$$ The **length** of a non-empty bounded interval is $$b-a,$$ and the empty set has length $$0.$$
-
 The **intermediate value theorem** states that if a function $$f:[a,b]\rightarrow\mathbb{R}$$ is continuous and $$C$$ lies strictly between $$f(a)$$ and $$f(b)$$ (either $$f(a)<C<f(b)$$ or $$f(b)<C<f(a)$$) then there is at least one $$c\in(a,b) : f(c)=C.$$
 
-Let $$f:X\rightarrow\mathbb{R}$$ be a function. $$f$$ is **bounded** on $$X$$ if its image $$f(X)$$ is a bounded set.
+Let $$f:X\rightarrow\mathbb{R}$$ be a function. $$f$$ is bounded on $$X$$ if and only if its image $$f(X)$$ is a bounded set.
 
 $$\exists M\geq 0:\lvert f(x)\rvert\leq M\,\,\forall\,x\in X$$
 

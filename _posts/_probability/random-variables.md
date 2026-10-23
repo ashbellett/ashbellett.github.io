@@ -106,20 +106,6 @@ $$f_X\left(x\right)\geq 0\,\,\forall\,x\in\mathbb{R}$$
 
 $$\int_{-\infty}^{\infty}f_X\left(x\right)\,dx=1.$$
 
-Let random variables $$X_1$$ and $$X_2$$ be defined on the probability spaces $$\left(S_1,\mathcal{S}_1,\mathbb{P}_{X_1}\right)$$ and $$\left(S_2,\mathcal{S}_2,\mathbb{P}_{X_2}\right)$$ respectively and with respect to a common underlying probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right).$$ The **random variable events** $$X_1\in A_1$$ and $$X_2\in A_2$$ where $$A_1\in\mathcal{S}_1$$ and $$A_2\in\mathcal{S}_2$$ are associated with the events $$E_1,E_2\in\mathcal{F}$$ respectively:
-
-$$\mathbb{P}_{X_1}\left(X_1\in A_1\right)=\mathbb{P}\left(E_1\right)$$
-
-$$\mathbb{P}_{X_2}\left(X_2\in A_2\right)=\mathbb{P}\left(E_2\right).$$
-
-The **joint random variable event** is $$\left(X_1\in A_1,X_2\in A_2\right)$$ and corresponds to the intersection of the associated sample space events $$E_1\cap E_2.$$ The **bivariate probability distribution** for the bivariate random vector $$\left(X_1,X_2\right)$$ is a joint pushforward probability measure:
-
-$$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}\left(\left\{\omega\in\Omega:X_1\left(\omega\right)\in A_1,X_2\left(\omega\right)\in A_2\right\}\right).$$
-
-The random variables $$X_1$$ and $$X_2$$ are independent if and only if:
-
-$$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}_{X_1}\left(X_1\in A_1\right)\mathbb{P}_{X_2}\left(X_2\in A_2\right)\,\,\forall\,A_1\in\mathcal{S}_1,A_2\in\mathcal{S}_2.$$
-
 Two random variables $$X_1$$ and $$X_2$$ are **identically distributed** if and only if they have the same probability distribution, $$\mathbb{P}_{X_1}\left(X_1\in A\right)=\mathbb{P}_{X_2}\left(X_2\in A\right)\,\,\forall\,A.$$ A collection of random variables that are mutually independent and identically distributed is **independent and identically distributed** (iid).
 
 Let $$X_1,\ldots,X_n$$ be real-valued random variables defined with respect to a common probability space. The **random vector** $$\underline{X}=\left(X_1,\ldots,X_n\right)$$ is the function $$\underline{X}:\Omega\rightarrow\mathbb{R}^n$$ with components $$X_i,$$ and its **joint distribution** $$\mathbb{P}_{\underline{X}}$$ is the pushforward probability measure on $$\mathbb{R}^n.$$ The **joint cumulative distribution function** of $$\underline{X}$$ is
@@ -146,6 +132,20 @@ $$F_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n F_{X_i}\left(x_i\rig
 
 $$f_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n f_{X_i}\left(x_i\right)$$
 
+Let random variables $$X_1$$ and $$X_2$$ be defined on the probability spaces $$\left(S_1,\mathcal{S}_1,\mathbb{P}_{X_1}\right)$$ and $$\left(S_2,\mathcal{S}_2,\mathbb{P}_{X_2}\right)$$ respectively and with respect to a common underlying probability space $$\left(\Omega,\mathcal{F},\mathbb{P}\right).$$ The **random variable events** $$X_1\in A_1$$ and $$X_2\in A_2$$ where $$A_1\in\mathcal{S}_1$$ and $$A_2\in\mathcal{S}_2$$ are associated with the events $$E_1,E_2\in\mathcal{F}$$ respectively:
+
+$$\mathbb{P}_{X_1}\left(X_1\in A_1\right)=\mathbb{P}\left(E_1\right)$$
+
+$$\mathbb{P}_{X_2}\left(X_2\in A_2\right)=\mathbb{P}\left(E_2\right).$$
+
+The **joint random variable event** is $$\left(X_1\in A_1,X_2\in A_2\right)$$ and corresponds to the intersection of the associated sample space events $$E_1\cap E_2.$$ The **bivariate probability distribution** for the bivariate random vector $$\left(X_1,X_2\right)$$ is a joint pushforward probability measure:
+
+$$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}\left(\left\{\omega\in\Omega:X_1\left(\omega\right)\in A_1,X_2\left(\omega\right)\in A_2\right\}\right).$$
+
+The random variables $$X_1$$ and $$X_2$$ are independent if and only if:
+
+$$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}_{X_1}\left(X_1\in A_1\right)\mathbb{P}_{X_2}\left(X_2\in A_2\right)\,\,\forall\,A_1\in\mathcal{S}_1,A_2\in\mathcal{S}_2.$$
+
 Let $$\left(X_1,X_2\right)$$ be a discrete random vector and $$x_2$$ be a value with $$p_{X_2}\left(x_2\right)>0.$$ The **conditional pmf** of $$X_1$$ given $$X_2=x_2$$ is the conditional probability of the event $$X_1=x_1$$ given the event $$X_2=x_2.$$
 
 $$p_{X_1\mid X_2}\left(x_1\mid x_2\right)=\frac{p_{X_1,X_2}\left(x_1,x_2\right)}{p_{X_2}\left(x_2\right)}$$
@@ -154,7 +154,7 @@ Let $$\left(X_1,X_2\right)$$ be a continuous random vector and $$x_2$$ be a valu
 
 $$f_{X_1\mid X_2}\left(x_1\mid x_2\right)=\frac{f_{X_1,X_2}\left(x_1,x_2\right)}{f_{X_2}\left(x_2\right)}$$
 
-The **conditional distribution** of $$X_1$$ given $$X_2=x_2$$ is the probability distribution with this pmf or pdf. Rearranging gives the **chain rule** $$f_{X_1,X_2}=f_{X_1\mid X_2}f_{X_2},$$ and $$X_1$$ and $$X_2$$ are independent if and only if the conditional distribution of $$X_1$$ given $$X_2=x_2$$ equals the marginal distribution of $$X_1$$ for every $$x_2.$$ Bayes' theorem for densities follows in the same way as for events.
+The **conditional distribution** of $$X_1$$ given $$X_2=x_2$$ is the probability distribution with this pmf or pdf. Rearranging gives $$f_{X_1,X_2}=f_{X_1\mid X_2}f_{X_2},$$ and $$X_1$$ and $$X_2$$ are independent if and only if the conditional distribution of $$X_1$$ given $$X_2=x_2$$ equals the marginal distribution of $$X_1$$ for every $$x_2.$$ Bayes' theorem for densities follows in the same way as for events.
 
 $$f_{X_2\mid X_1}\left(x_2\mid x_1\right)=\frac{f_{X_1\mid X_2}\left(x_1\mid x_2\right)f_{X_2}\left(x_2\right)}{f_{X_1}\left(x_1\right)}$$
 

@@ -84,7 +84,7 @@ A stationary distribution is a left eigenvector of $$P$$ with eigenvalue $$1.$$ 
 
 $$\lim_{n\rightarrow\infty}p_{ij}^{(n)}=\pi_j\,\,\forall\,i,j\in S,\qquad\frac{1}{n}\sum_{m=1}^n\mathbf{1}_{\{X_m=j\}}\xrightarrow{a.s.}\pi_j$$
 
-The second statement is a law of large numbers for dependent random variables, and it extends to $$\frac{1}{n}\sum_{m=1}^n g\left(X_m\right)\xrightarrow{a.s.}\sum_{j\in S}\pi_jg\left(j\right)$$ for any $$g$$ with finite expectation under $$\underline{\pi},$$ which is the basis of Markov chain Monte Carlo methods. A distribution $$\underline{\pi}$$ satisfies the **detailed balance equations** with respect to $$P$$ if and only if the probability flow between every pair of states balances,
+The second statement is a law of large numbers for dependent random variables, and it extends to $$\frac{1}{n}\sum_{m=1}^n g\left(X_m\right)\xrightarrow{a.s.}\sum_{j\in S}\pi_jg\left(j\right)$$ for any $$g$$ with finite expectation under $$\underline{\pi},$$ which is the basis of methods that estimate expectations under $$\underline{\pi}$$ by simulating the chain. A distribution $$\underline{\pi}$$ satisfies the **detailed balance equations** with respect to $$P$$ if and only if the probability flow between every pair of states balances,
 
 $$\pi_ip_{ij}=\pi_jp_{ji}\,\,\forall\,i,j\in S,$$
 

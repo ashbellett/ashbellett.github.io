@@ -37,13 +37,46 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Membership, equality and subsets
   - Predicates, quantifiers and specification
   - Set operations
-  - Cardinality, finiteness and countability
 - **Functions**
-  - Functions and composition
+  - Functions, images and composition
   - Injection, surjection and bijection
-  - Images and inverses
+  - Cardinality, finiteness and countability
 
-### 2. Real analysis
+### 2. Linear algebra
+- **Vectors**
+  - Vector spaces
+  - Linear independence
+  - Span, basis and dimension
+  - Inner product spaces
+  - Positive definiteness
+  - Length and angles
+  - Orthogonality
+- **Linear transformations**
+  - Linear transformations
+  - Image, kernel and rank
+  - Rank-nullity theorem
+- **Matrices**
+  - Matrix algebra
+  - Determinants
+  - Invertibility
+  - Special matrices
+- **Eigenvalues and eigenvectors**
+  - Eigen-decomposition
+  - Characteristic polynomial
+  - Diagonalisation
+- **Matrix decompositions**
+  - Spectral decomposition
+  - LU and PLU decompositions
+  - Rank factorisation
+  - Cholesky decomposition
+  - QR decomposition
+  - Singular value decomposition and low-rank approximation
+  - Moore–Penrose pseudo-inverse
+- **Matrix applications**
+  - Systems of linear equations
+  - Projection
+
+### 3. Real analysis
 - **Real numbers**
   - Absolute value, distance and closeness
   - Bounds, suprema and infima
@@ -75,7 +108,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Improper integrals
   - Multiple integrals and change of variables
 
-### 3. Topology
+### 4. Topology
 - **Topological spaces**
   - Topologies and neighbourhoods
   - Relative topologies and subspaces
@@ -86,37 +119,6 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Closure, open and closed sets
   - Boundedness and continuity
   - Connectedness and equivalence
-
-### 4. Linear algebra
-- **Vectors**
-  - Vector spaces
-  - Linear independence
-  - Span, basis and dimension
-  - Inner product spaces
-  - Positive definiteness
-  - Length and angles
-  - Orthogonality
-- **Matrices**
-  - Matrix algebra
-  - Determinants
-  - Invertibility
-  - Special matrices
-- **Eigenvalues and eigenvectors**
-  - Eigen-decomposition
-  - Characteristic polynomial
-  - Diagonalisation
-- **Matrix decompositions**
-  - Spectral decomposition
-  - LU and PLU decompositions
-  - Rank factorisation
-  - Cholesky decomposition
-  - QR decomposition
-  - Singular value decomposition and low-rank approximation
-  - Moore–Penrose pseudo-inverse
-- **Matrix applications**
-  - Systems of linear equations
-  - Projection
-  - Linear transformations
 
 ### 5. Optimisation
 - **Convexity**

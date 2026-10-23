@@ -69,11 +69,3 @@ $$\varnothing \notin P$$
 $$\bigcup_{A\in P} A=X$$
 
 $$A\cap B = \varnothing\,\,\forall\,A,B\in P, A\neq B.$$
-
-Two sets $$X$$ and $$Y$$ have **equal cardinality** if and only if there exists a bijection $$f : X \rightarrow Y,$$ that is, a function pairing every element of $$X$$ with exactly one element of $$Y$$ and vice versa.
-
-Let $$\mathbb{N} = \{0, 1, 2, \ldots\}$$ denote the natural numbers. A set $$X$$ has **cardinality** $$n \in \mathbb{N}$$ if and only if it has equal cardinality with $$ \{i \in \mathbb{N} : i < n\} .$$ $$X$$ has $$n$$ elements if and only if it has cardinality $$n.$$
-
-A set $$X$$ is **finite** if and only if it has cardinality $$n \in \mathbb{N}.$$ Otherwise, the set is **infinite**.
-
-A set $$X$$ is **countably infinite** if and only if it has equal cardinality with the natural numbers $$ \mathbb{N}.$$ A set is **countable** if it is finite or countably infinite, and **uncountable** if it is not countable.

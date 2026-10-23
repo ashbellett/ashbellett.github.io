@@ -65,7 +65,7 @@ Let $$C\subseteq\mathbb{R}^n$$ be a convex set and $$f:C\rightarrow\mathbb{R}$$ 
 - every local minimiser of $$f$$ on $$C$$ is a global minimiser;
 - the set of global minimisers is a convex set, since it is a sublevel set;
 - if $$f$$ is strictly convex then it has at most one global minimiser;
-- if $$f$$ is strongly convex and $$C$$ is closed, meaning that its complement $$\mathbb{R}^n\setminus C$$ is open, then $$f$$ has exactly one global minimiser;
+- if $$f$$ is strongly convex and continuous and $$C$$ is non-empty and **closed**, meaning that its complement $$\mathbb{R}^n\setminus C$$ is open, then $$f$$ has exactly one global minimiser;
 - if $$f$$ is differentiable on an open convex set $$C$$ then $$\underline{x}^*$$ is a global minimiser if and only if $$\nabla f(\underline{x}^*)=\underline{0},$$ so every stationary point is a global minimiser;
 - if $$f$$ is differentiable on a convex set $$C$$ that need not be open then $$\underline{x}^*$$ is a global minimiser if and only if no direction into $$C$$ is a direction of descent.
 

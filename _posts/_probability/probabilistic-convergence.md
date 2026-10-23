@@ -62,7 +62,7 @@ Convergence in distribution of $$X_n$$ to $$X$$ and of $$Y_n$$ to $$Y$$ separate
 
 $$X_n+Y_n\xrightarrow{d}X+c,\qquad X_nY_n\xrightarrow{d}cX,\qquad\frac{X_n}{Y_n}\xrightarrow{d}\frac{X}{c}\,\,\left(c\neq 0\right).$$
 
-Slutsky's theorem allows unknown constants in a limit, such as a standard deviation, to be replaced by consistent estimates of them without changing the limiting distribution.
+Slutsky's theorem allows unknown constants in a limit, such as a standard deviation, to be replaced by estimates that converge in probability to them without changing the limiting distribution.
 
 Let $$\theta\in\mathbb{R}$$ and $$X_1,X_2,\ldots$$ be random variables with $$\sqrt{n}\left(X_n-\theta\right)\xrightarrow{d}\mathrm{N}\left(0,\sigma^2\right).$$ The **delta method** states that if $$g:\mathbb{R}\rightarrow\mathbb{R}$$ is differentiable at $$\theta$$ with $$g'\left(\theta\right)\neq 0$$ then
 

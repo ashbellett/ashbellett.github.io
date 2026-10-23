@@ -28,11 +28,17 @@ Let $$\mathcal{V}$$ be an inner product space over the field $$\mathbb{F}$$ and 
 
 $$\|\underline{v}\|:=\sqrt{\langle \underline{v},\underline{v} \rangle} \in \mathbb{R}$$
 
+The **Cauchy-Schwarz inequality** states that for an inner product space $$\mathcal{V}$$ and $$\underline{v}_1,\underline{v}_2\in\mathcal{V}:$$
+
+$$|\langle\underline{v}_1,\underline{v}_2\rangle|\leq\|\underline{v}_1\|\|\underline{v}_2\|$$
+
+with equality if and only if $$\underline{v}_1$$ and $$\underline{v}_2$$ are linearly dependent.
+
 Let $$\mathcal{V}$$ be an inner product space over $$\mathbb{R}.$$ The **angle** $$\theta$$ between two non-zero vectors $$\underline{u},\underline{v} \in \mathcal{V}$$ is defined as the inverse cosine of the quotient of the inner product of the two vectors and the product of their norms:
 
 $$\theta:=\cos^{-1}\left(\frac{\langle \underline{u},\underline{v} \rangle}{\|\underline{u}\|\|\underline{v}\|}\right) \in [0, \pi]$$
 
-The Cauchy-Schwarz inequality below guarantees that the quotient lies in $$[-1, 1].$$
+The Cauchy-Schwarz inequality guarantees that the quotient lies in $$[-1, 1].$$
 
 Two vectors $$\underline{u}, \underline{v} \in \mathcal{V}$$ are **orthogonal** to each other $$\underline{u} \perp \underline{v}$$ if $$\langle \underline{u},\underline{v} \rangle=0.$$ If $$\underline{u}$$ and $$\underline{v}$$ are orthogonal unit vectors $$\|\underline{u}\|=\|\underline{v}\|=1$$ then they are **orthonormal**.
 
@@ -48,9 +54,3 @@ $$
 \underline{w}_n & := & \underline{u}_n-\sum_{i=1}^{n-1}\langle \underline{u}_n, \underline{v}_i \rangle\underline{v}_i & \underline{v}_n & := & \frac{\underline{w}_n}{\|\underline{w}_n\|} \\
 \end{matrix}
 $$
-
-The **Cauchy-Schwarz inequality** states that for an inner product space $$\mathcal{V}$$ and $$\underline{v}_1,\underline{v}_2\in\mathcal{V}:$$
-
-$$|\langle\underline{v}_1,\underline{v}_2\rangle|\leq\|\underline{v}_1\|\|\underline{v}_2\|$$
-
-with equality if and only if $$\underline{v}_1$$ and $$\underline{v}_2$$ are linearly dependent.

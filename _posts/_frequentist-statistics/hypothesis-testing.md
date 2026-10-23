@@ -84,7 +84,9 @@ and needs no maximisation at all. For a vector parameter with $$r$$ restrictions
 
 Let $$\underline{X}$$ be a random sample of size $$n$$ from $$\mathrm{N}\left(\mu,\sigma^2\right).$$ The sample mean and sample variance are independent with
 
-$$\overline{X}_n\sim\mathrm{N}\left(\mu,\frac{\sigma^2}{n}\right),\qquad\frac{\left(n-1\right)S_n^2}{\sigma^2}\sim\chi^2_{n-1},\qquad\frac{\sqrt{n}\left(\overline{X}_n-\mu\right)}{S_n}\sim t_{n-1},$$
+$$\overline{X}_n\sim\mathrm{N}\left(\mu,\frac{\sigma^2}{n}\right),\qquad\frac{\left(n-1\right)S_n^2}{\sigma^2}\sim\chi^2_{n-1}$$
+
+$$\frac{\sqrt{n}\left(\overline{X}_n-\mu\right)}{S_n}\sim t_{n-1}$$
 
 from which the standard tests for normal populations follow, each with its test statistic and sampling distribution under $$H_0:$$
 - the **$$z$$-test** for $$H_0:\mu=\mu_0$$ with known variance uses $$Z=\frac{\sqrt{n}\left(\overline{X}_n-\mu_0\right)}{\sigma}\sim\mathrm{N}\left(0,1\right);$$

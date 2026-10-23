@@ -92,7 +92,9 @@ $$\int_a^b f(x)\,dx:=\lim_{c\rightarrow a,\,c>a}\int_c^b f(x)\,dx$$
 
 and the improper integral of a function unbounded near $$b$$ is defined in the same way. For example,
 
-$$\int_1^{\infty}\frac{1}{x^p}\,dx=\frac{1}{p-1}\,\,\mathrm{converges}\,\,\mathrm{if}\,\mathrm{and}\,\mathrm{only}\,\mathrm{if}\,\,p>1,\qquad\int_0^1\frac{1}{x^p}\,dx=\frac{1}{1-p}\,\,\mathrm{converges}\,\,\mathrm{if}\,\mathrm{and}\,\mathrm{only}\,\mathrm{if}\,\,p<1.$$
+$$\int_1^{\infty}\frac{1}{x^p}\,dx=\frac{1}{p-1}\,\,\mathrm{converges}\,\,\mathrm{if}\,\mathrm{and}\,\mathrm{only}\,\mathrm{if}\,\,p>1$$
+
+$$\int_0^1\frac{1}{x^p}\,dx=\frac{1}{1-p}\,\,\mathrm{converges}\,\,\mathrm{if}\,\mathrm{and}\,\mathrm{only}\,\mathrm{if}\,\,p<1.$$
 
 An improper integral $$\int f(x)\,dx$$ is **absolutely convergent** if $$\int\lvert f(x)\rvert\,dx$$ converges, which implies that $$\int f(x)\,dx$$ converges. The **comparison test for integrals** states that if $$\lvert f(x)\rvert\leq g(x)$$ on the range of integration and $$\int g(x)\,dx$$ converges then $$\int f(x)\,dx$$ is absolutely convergent. The **Gaussian integral** is a frequently used improper integral.
 

@@ -37,3 +37,10 @@ Because the logarithm is a strictly increasing function and the likelihood is po
 $$\hat{\theta}\left(\underline{x}\right)=\operatorname*{arg\,max}_{\theta\in\Theta}\,\ell\left(\theta\mid\underline{x}\right)$$
 
 The **maximum likelihood estimator** (also MLE) is the estimator $$\hat{\theta}\left(\underline{X}\right).$$
+
+Under the regularity conditions and some further smoothness, the maximum likelihood estimator has the following asymptotic properties, which make it the default estimator in parametric models:
+- it is consistent, $$\hat{\theta}\left(\underline{X}\right)\xrightarrow{p}\theta;$$
+- it is asymptotically normal with asymptotic variance equal to the reciprocal of the Fisher information, $$\sqrt{n}\left(\hat{\theta}\left(\underline{X}\right)-\theta\right)\xrightarrow{d}\mathrm{N}\left(0,\frac{1}{I\left(\theta\right)}\right),$$ so it is asymptotically efficient;
+- it is **invariant**: if $$\hat{\theta}$$ is the maximum likelihood estimate of $$\theta$$ then $$g\left(\hat{\theta}\right)$$ is the maximum likelihood estimate of $$g\left(\theta\right)$$ for any function $$g.$$
+
+The maximum likelihood estimator is in general biased for finite $$n;$$ for example, the maximum likelihood estimate of a normal variance is $$\frac{1}{n}\sum_{i=1}^n\left(x_i-\overline{x}\right)^2$$ rather than the unbiased sample variance. The observed Fisher information $$-\ell''\left(\hat{\theta}\mid\underline{x}\right)$$ is a consistent estimate of $$n\,I\left(\theta\right)$$ and gives the approximate standard error $$se\left(\hat{\theta}\right)\approx\left(-\ell''\left(\hat{\theta}\mid\underline{x}\right)\right)^{-\frac{1}{2}}.$$

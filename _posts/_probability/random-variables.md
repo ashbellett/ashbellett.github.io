@@ -43,11 +43,11 @@ $$\lim_{x\rightarrow\infty}F_X\left(x\right)=1.$$
 The probability $$\mathbb{P}_X\left(X\in A\right)$$ where $$A\subseteq S$$ and $$A=\left(a_1, a_2\right]$$ is a half-open interval where $$a_1<a_2$$ is constructed through the difference of cdfs:
 
 $$
-\begin{align}
+\begin{align*}
 \mathbb{P}_X\left(X\in A\right)&=\mathbb{P}_X\left(a_1<X\leq a_2\right)\\
 &=\mathbb{P}_X\left(X\leq a_2\right)-\mathbb{P}_X\left(X\leq a_1\right)\\
 &=F_X\left(a_2\right)-F_X\left(a_1\right).
-\end{align}
+\end{align*}
 $$
 
 Given a random variable $$X$$ defined on the measurable space $$\left(S,\mathcal{S}\right),$$ $$X$$ is a **discrete random variable** if there is an injective function between the state space $$S$$ and the set (or subset) of natural numbers $$\mathbb{N}.$$ That is, $$S$$ is countable:
@@ -73,10 +73,10 @@ $$\sum_{x\in S}p_X\left(x\right)=1.$$
 For discrete random variables, the singleton sets $$\{x\},$$ $$x\in S,$$ form a partition of the state space $$S$$ into disjoint events. The probability $$\mathbb{P}_X\left(X\in A\right)$$ for any $$A\in\mathcal{S}$$ is constructed through the summation of the pmf:
 
 $$
-\begin{align}
+\begin{align*}
 \mathbb{P}_X\left(X\in A\right)&=\sum_{x\in A}\mathbb{P}_X\left(X=x\right)\\
 &=\sum_{x\in A}p_X\left(x\right).
-\end{align}
+\end{align*}
 $$
 
 Let $$X$$ be a discrete random variable with support $$\mathcal{X}=\left\{x_1,x_2,\ldots\right\}$$ where $$x_1<x_2<\ldots,$$ pmf $$p_X$$ and cdf $$F_X.$$ Given $$x\in\mathbb{R},$$ for $$x<x_1$$ then $$F_X\left(x\right)=0$$ and for $$x\geq x_1:$$
@@ -96,10 +96,10 @@ $$f_X\left(x\right)=\frac{d}{dt}\left[F_X\left(t\right)\right]_{t=x}$$
 The probability that $$X$$ takes any single value is zero, $$\mathbb{P}_X\left(X=x\right)=0\,\,\forall\,x\in\mathbb{R},$$ so the density $$f_X\left(x\right)$$ is not a probability and can even exceed one. Including or excluding the endpoints of an interval therefore does not change its probability:
 
 $$
-\begin{align}
+\begin{align*}
 \mathbb{P}_X\left(x_1\leq X\leq x_2\right)&=\mathbb{P}_X\left(x_1<X<x_2\right)\\
 &=F_X\left(x_2\right)-F_X\left(x_1\right)\,\,\forall\,x_1<x_2;\,x_1,x_2\in\mathbb{R}.
-\end{align}
+\end{align*}
 $$
 
 The pdf $$f_X$$ of a continuous random variable $$X$$ has the following properties:

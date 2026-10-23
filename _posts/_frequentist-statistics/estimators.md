@@ -29,10 +29,10 @@ $$se\left(\hat{\theta}\right)=\sqrt{\mathrm{var}\left[\hat{\theta}\right]}.$$
 The **mean squared error** $$MSE\left(\hat{\theta}\right)$$ of an estimator $$\hat{\theta}$$ is defined as a function of the parameter $$\theta:$$
 
 $$
-\begin{align}
+\begin{align*}
 MSE\left(\hat{\theta}\right)&=\mathbb{E}\left[\left(\hat{\theta}-\theta\right)^2\right]\\
 &=b^2\left(\hat{\theta}\right)+\mathrm{var}\left[\hat{\theta}\right]
-\end{align}
+\end{align*}
 $$
 
 and captures the trade-off between the bias and variance of an estimator.

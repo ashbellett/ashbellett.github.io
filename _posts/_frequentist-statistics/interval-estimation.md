@@ -15,10 +15,10 @@ A one-sided interval estimate is of the form $$\left(-\infty,g_U\left(\underline
 Let $$\left[g_L\left(\underline{X}\right),g_U\left(\underline{X}\right)\right]$$ be an interval estimator for the parameter $$\theta.$$ The **coverage probability** is the probability that $$\theta$$ lies within $$\left[g_L\left(\underline{X}\right),g_U\left(\underline{X}\right)\right].$$ The coverage probability is equivalent to the joint probability:
 
 $$
-\begin{align}
+\begin{align*}
 \mathbb{P}\left(g_L\left(\underline{X}\right)\leq\theta,g_U\left(\underline{X}\right)\geq\theta\right)\\
 =\mathbb{P}\left(\theta\in\left[g_L\left(\underline{X}\right),g_U\left(\underline{X}\right)\right]\right)
-\end{align}
+\end{align*}
 $$
 
 The **confidence coefficient** of the interval estimator $$\left[g_L\left(\underline{X}\right),g_U\left(\underline{X}\right)\right]$$ is the infimum of the coverage probability over all possible values of the true parameter $$\theta:$$

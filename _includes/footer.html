@@ -1,24 +1,20 @@
-<footer class="site-footer h-card">
-  <data class="u-url" value="{{ '/' | absolute_url }}"></data>
+<footer class="site-footer">
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <ul class="contact-list">
-          <li class="p-name">{{ site.author.name | escape }}</li>
-          <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          <li>{{ site.author.name | escape }}</li>
+          <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
           {%- for social in site.socials -%}
+            {%- assign icon = social.platform | prepend: "icons/" | append: ".svg" -%}
             <li>
               <a
                 rel="me noopener"
-                href="//{{ social.url }}"
+                href="https://{{ social.url }}"
                 target="_blank"
                 title="{{ social.username }}"
               >
-                <img
-                  class="svg-icon grey"
-                  alt="{{ social.platform }}"
-                  src="{{ '/assets/svg/#.svg' | replace: '#', social.platform }}"
-                />
+                {% include {{ icon }} %}
                 {{ social.username }}
               </a>
             </li>

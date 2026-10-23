@@ -50,7 +50,7 @@ $$
 \end{align*}
 $$
 
-Given a random variable $$X$$ defined on the measurable space $$\left(S,\mathcal{S}\right),$$ $$X$$ is a **discrete random variable** if there is an injective function between the state space $$S$$ and the set (or subset) of natural numbers $$\mathbb{N}.$$ That is, $$S$$ is countable:
+Given a random variable $$X$$ defined on the measurable space $$\left(S,\mathcal{S}\right),$$ $$X$$ is a **discrete random variable** if there is an injective function from the state space $$S$$ to the natural numbers $$\mathbb{N}.$$ That is, $$S$$ is countable:
 
 $$S=\{x_1,\ldots,x_n\}\,\mathrm{(finite), or}$$
 
@@ -86,8 +86,6 @@ $$F_X\left(x\right)=\sum_{x_i\leq x}p_X\left(x_i\right)\Leftrightarrow p_X\left(
 A random variable $$X$$ is a **continuous random variable** if the cdf is a continuous function on $$\mathbb{R}.$$ $$X$$ is **absolutely continuous** if the cdf $$F_X$$ can be written in terms of its **probability density function** (pdf) $$f_X$$ as:
 
 $$F_X\left(x\right)=\int_{-\infty}^x f_X\left(t\right)\,dt.$$
-
-The support of a continuous random variable is $$\mathcal{X}=\left\{x:f_X\left(x\right)>0\right\}.$$
 
 Continuous pdfs and cdfs have the following properties. The pdf is the derivative of the cdf at every $$x$$ where $$F_X$$ is differentiable (for example, wherever $$f_X$$ is continuous):
 

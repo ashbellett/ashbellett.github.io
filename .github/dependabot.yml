@@ -1,0 +1,11 @@
+# Keeps the pinned GitHub Actions commits and Ruby gems current.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: bundler
+    directory: /
+    schedule:
+      interval: monthly

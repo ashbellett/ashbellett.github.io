@@ -22,7 +22,9 @@ bundle exec jekyll serve
 
 ## Maths
 
-Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts. A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute, so check the build output for `katex-error`.
+Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts.
+
+KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an older release. To upgrade, download the release's npm tarball and check its `integrity` hash from `https://registry.npmjs.org/katex`, then copy `dist/katex.min.js` to `_vendor/katex/`, `dist/fonts/*.woff2` to `assets/css/fonts/`, and `dist/katex.min.css` to `assets/css/katex.css` with the `woff` and `ttf` `src` entries removed. All three must come from the same release. Dependabot does not track this. A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute, so check the build output for `katex-error`.
 
 ## Topics
 

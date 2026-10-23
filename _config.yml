@@ -109,6 +109,11 @@ socials:
     url: x.com/ashbellett
   }
 analytics: G-XFWQPSWM13
+sass:
+  style: compressed
+  sourcemap: never
+redirect_from:
+  json: false
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

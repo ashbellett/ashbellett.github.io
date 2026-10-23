@@ -15,4 +15,4 @@ Some things I'm proud of:
 - **Solo hiked and camped** from Chamonix, France to Courmayeur, Italy along the Tour du Mont Blanc (2026).
 
 [ash]: assets/img/ash.jpg
-{: .profile }
+{: .profile width="200" height="200" }

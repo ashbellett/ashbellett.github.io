@@ -5,22 +5,18 @@ layout: default
 {% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}
 {% assign collection_index = collection.docs | where: "layout", "collection" | first %}
 
-<article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
+<article class="post">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <span class="p-category">
-        <a href="{{ collection_index.url | relative_url }}">
-          {{ collection.title }}
-        </a>
-      </span>
+      <a href="{{ collection_index.url | relative_url }}">
+        {{ collection.title }}
+      </a>
     </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content">
     {{ content }}
   </div>
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

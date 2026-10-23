@@ -90,9 +90,13 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Characteristic polynomial
   - Diagonalisation
 - **Matrix decompositions**
+  - Spectral decomposition
+  - LU and PLU decompositions
+  - Rank factorisation
   - Cholesky decomposition
   - QR decomposition
-  - Singular value decomposition
+  - Singular value decomposition and low-rank approximation
+  - Moore–Penrose pseudo-inverse
 - **Matrix applications**
   - Systems of linear equations
   - Projection

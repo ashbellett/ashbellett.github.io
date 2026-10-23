@@ -18,7 +18,9 @@ The estimate is unbiased, converges almost surely to the posterior expectation b
 
 **Importance sampling** reweights draws from a proposal distribution rather than discarding them. For a proposal $$q$$ with $$q\left(\theta\right)>0$$ wherever $$\tilde{\pi}\left(\theta\right)>0,$$
 
-$$\mathbb{E}\left[g\left(\theta\right)\mid\underline{x}\right]=\frac{\int g\left(\theta\right)w\left(\theta\right)q\left(\theta\right)d\theta}{\int w\left(\theta\right)q\left(\theta\right)d\theta},\qquad w\left(\theta\right):=\frac{\tilde{\pi}\left(\theta\right)}{q\left(\theta\right)},$$
+$$\mathbb{E}\left[g\left(\theta\right)\mid\underline{x}\right]=\frac{\int g\left(\theta\right)w\left(\theta\right)q\left(\theta\right)d\theta}{\int w\left(\theta\right)q\left(\theta\right)d\theta}$$
+
+$$w\left(\theta\right):=\frac{\tilde{\pi}\left(\theta\right)}{q\left(\theta\right)}$$
 
 so with draws $$\theta^{(s)}\sim q$$ and **importance weights** $$w_s=w\left(\theta^{(s)}\right)$$ the **self-normalised importance sampling estimate** is
 
@@ -44,7 +46,9 @@ the sum of a potential energy and a kinetic energy. Each iteration draws a fresh
 
 **Analytic approximations** replace the posterior by a tractable distribution rather than sampling from it. The **Laplace approximation** fits a normal distribution at the posterior mode using the second-order Taylor expansion of the log posterior,
 
-$$\pi\left(\theta\mid\underline{x}\right)\approx\mathrm{N}_d\left(\hat{\theta}_{\mathrm{MAP}},H^{-1}\right),\qquad H:=-\nabla^2_{\theta}\log_e\tilde{\pi}\left(\hat{\theta}_{\mathrm{MAP}}\right),$$
+$$\pi\left(\theta\mid\underline{x}\right)\approx\mathrm{N}_d\left(\hat{\theta}_{\mathrm{MAP}},H^{-1}\right)$$
+
+$$H:=-\nabla^2_{\theta}\log_e\tilde{\pi}\left(\hat{\theta}_{\mathrm{MAP}}\right)$$
 
 where $$H$$ is the negative Hessian matrix of the log posterior at the mode, and gives the approximation of the marginal likelihood $$f\left(\underline{x}\right)\approx\tilde{\pi}\left(\hat{\theta}_{\mathrm{MAP}}\right)\left(2\pi\right)^{\frac{d}{2}}\lvert H\rvert^{-\frac{1}{2}}$$ by integrating the normal density. It is accurate when the posterior is close to normal, which by the Bernstein–von Mises theorem holds for large $$n$$ in regular models, and poor for skewed, multimodal or bounded posteriors.
 
@@ -54,7 +58,9 @@ $$q^*:=\operatorname*{arg\,min}_{q\in\mathcal{Q}}\mathrm{KL}\left(q\,\|\,\pi\lef
 
 which turns integration into optimisation. The divergence involves the unknown marginal likelihood, but expanding it gives
 
-$$\log_e f\left(\underline{x}\right)=\mathrm{ELBO}\left(q\right)+\mathrm{KL}\left(q\,\|\,\pi\left(\cdot\mid\underline{x}\right)\right),\qquad\mathrm{ELBO}\left(q\right):=\mathbb{E}_q\left[\log_e\tilde{\pi}\left(\theta\right)\right]-\mathbb{E}_q\left[\log_e q\left(\theta\right)\right],$$
+$$\log_e f\left(\underline{x}\right)=\mathrm{ELBO}\left(q\right)+\mathrm{KL}\left(q\,\|\,\pi\left(\cdot\mid\underline{x}\right)\right)$$
+
+$$\mathrm{ELBO}\left(q\right):=\mathbb{E}_q\left[\log_e\tilde{\pi}\left(\theta\right)\right]-\mathbb{E}_q\left[\log_e q\left(\theta\right)\right]$$
 
 where the **evidence lower bound** (ELBO) depends only on the unnormalised posterior and, since the divergence is non-negative, is a lower bound on the log marginal likelihood that is tight when $$q$$ equals the posterior. Minimising the divergence is therefore equivalent to maximising the ELBO over $$\mathcal{Q}.$$ The **mean-field** family consists of distributions that factorise over components, $$q\left(\theta\right)=\prod_{j=1}^d q_j\left(\theta_j\right),$$ for which **coordinate ascent variational inference** maximises the ELBO one factor at a time with the closed-form update
 

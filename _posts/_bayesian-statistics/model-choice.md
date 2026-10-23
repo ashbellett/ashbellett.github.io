@@ -32,7 +32,9 @@ so that $$\frac{1}{2}\left(\mathrm{BIC}_2-\mathrm{BIC}_1\right)\approx\log_e B_{
 
 **Bayesian model averaging** (BMA) makes inferences and predictions by averaging over the models with their posterior probabilities as weights rather than conditioning on a single chosen model. The posterior predictive distribution of a future observation and the posterior distribution of a quantity $$\Delta$$ that has the same meaning in every model, such as a prediction or an effect size, are
 
-$$f\left(\tilde{x}\mid\underline{x}\right)=\sum_{k=1}^K f\left(\tilde{x}\mid\underline{x},M_k\right)\mathbb{P}\left(M_k\mid\underline{x}\right),\qquad\pi\left(\Delta\mid\underline{x}\right)=\sum_{k=1}^K\pi\left(\Delta\mid\underline{x},M_k\right)\mathbb{P}\left(M_k\mid\underline{x}\right).$$
+$$f\left(\tilde{x}\mid\underline{x}\right)=\sum_{k=1}^K f\left(\tilde{x}\mid\underline{x},M_k\right)\mathbb{P}\left(M_k\mid\underline{x}\right)$$
+
+$$\pi\left(\Delta\mid\underline{x}\right)=\sum_{k=1}^K\pi\left(\Delta\mid\underline{x},M_k\right)\mathbb{P}\left(M_k\mid\underline{x}\right).$$
 
 Model averaging propagates model uncertainty into the final inference, so its intervals are wider and better calibrated than those from the single best model, and its predictions have lower expected loss under the logarithmic score than those of any single model when the true model is among the candidates.
 
@@ -42,7 +44,9 @@ $$\mathrm{elpd}_{\mathrm{loo}}:=\sum_{i=1}^n\log_e f\left(x_i\mid\underline{x}_{
 
 where $$\underline{x}_{-i}$$ is the data with the $$i$$-th observation removed, or approximated by an information criterion. The **deviance** of a model at parameter value $$\theta$$ is $$D\left(\theta\right):=-2\log_e f\left(\underline{x}\mid\theta\right),$$ and the **deviance information criterion** (DIC) is the posterior mean deviance plus a penalty equal to the **effective number of parameters** $$p_D,$$ the difference between the posterior mean deviance and the deviance at the posterior mean,
 
-$$\mathrm{DIC}:=\overline{D}+p_D,\qquad\overline{D}:=\mathbb{E}\left[D\left(\theta\right)\mid\underline{x}\right],\qquad p_D:=\overline{D}-D\left(\mathbb{E}\left[\theta\mid\underline{x}\right]\right),$$
+$$\mathrm{DIC}:=\overline{D}+p_D,\qquad\overline{D}:=\mathbb{E}\left[D\left(\theta\right)\mid\underline{x}\right]$$
+
+$$p_D:=\overline{D}-D\left(\mathbb{E}\left[\theta\mid\underline{x}\right]\right)$$
 
 which is computed directly from posterior draws. The **widely applicable information criterion** (WAIC) is a more stable alternative that uses the pointwise posterior predictive densities,
 

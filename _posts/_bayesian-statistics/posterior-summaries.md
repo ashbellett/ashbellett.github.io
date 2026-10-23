@@ -42,13 +42,17 @@ $$\left[F^{-1}_{\theta\mid\underline{x}}\left(\tfrac{\alpha}{2}\right),F^{-1}_{\
 
 where $$F^{-1}_{\theta\mid\underline{x}}$$ is the posterior quantile function, and transforms correctly under monotonic reparametrisation. The **highest posterior density** (HPD) region is the set of parameter values with posterior density above a threshold chosen to give the required level,
 
-$$C_{\mathrm{HPD}}=\left\{\theta\in\Theta:\pi\left(\theta\mid\underline{x}\right)\geq k\right\},\qquad\mathbb{P}\left(\theta\in C_{\mathrm{HPD}}\mid\underline{x}\right)=1-\alpha,$$
+$$C_{\mathrm{HPD}}=\left\{\theta\in\Theta:\pi\left(\theta\mid\underline{x}\right)\geq k\right\}$$
+
+$$\mathbb{P}\left(\theta\in C_{\mathrm{HPD}}\mid\underline{x}\right)=1-\alpha$$
 
 which is the smallest set of that level, is an interval when the posterior is unimodal, may be a union of intervals when it is multimodal and is not invariant under reparametrisation. The two coincide for a symmetric unimodal posterior. By the Bernstein–von Mises theorem both are approximately $$\hat{\theta}\pm z_{1-\frac{\alpha}{2}}\left(n\,I\left(\hat{\theta}\right)\right)^{-\frac{1}{2}}$$ for large $$n,$$ where $$z_{1-\frac{\alpha}{2}}$$ is the $$\left(1-\frac{\alpha}{2}\right)$$-quantile of the standard normal distribution.
 
 Let $$H_0:\theta\in\Theta_0$$ and $$H_1:\theta\in\Theta_1$$ be hypotheses with $$\Theta_0\cup\Theta_1=\Theta.$$ The **posterior probability of a hypothesis** is the posterior probability of its parameter set,
 
-$$\mathbb{P}\left(H_0\mid\underline{x}\right)=\int_{\Theta_0}\pi\left(\theta\mid\underline{x}\right)d\theta,\qquad\mathbb{P}\left(H_1\mid\underline{x}\right)=1-\mathbb{P}\left(H_0\mid\underline{x}\right),$$
+$$\mathbb{P}\left(H_0\mid\underline{x}\right)=\int_{\Theta_0}\pi\left(\theta\mid\underline{x}\right)d\theta$$
+
+$$\mathbb{P}\left(H_1\mid\underline{x}\right)=1-\mathbb{P}\left(H_0\mid\underline{x}\right)$$
 
 and the Bayes action under the loss that charges $$L_0$$ for wrongly rejecting $$H_0$$ and $$L_1$$ for wrongly accepting it is to reject $$H_0$$ if and only if $$\frac{\mathbb{P}\left(H_1\mid\underline{x}\right)}{\mathbb{P}\left(H_0\mid\underline{x}\right)}>\frac{L_0}{L_1}.$$ The hypotheses are treated symmetrically and $$H_0$$ can be accepted, in contrast to a frequentist test, and the posterior probability of a composite hypothesis is a direct measure of its plausibility rather than a $$p$$-value. A simple hypothesis $$H_0:\theta=\theta_0$$ has posterior probability zero under a continuous prior, so testing it requires a prior that places positive probability on $$\theta_0,$$ which is treated as a comparison of two models.
 

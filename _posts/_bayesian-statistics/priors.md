@@ -17,7 +17,9 @@ With a conjugate prior the posterior is found by updating the parameters of the 
 - $$\mathrm{Multinomial}\left(m,\underline{\theta}\right)$$ data with $$\underline{\theta}\sim\mathrm{Dirichlet}\left(\underline{\alpha}\right)$$ gives $$\underline{\theta}\mid\underline{x}\sim\mathrm{Dirichlet}\left(\underline{\alpha}+\underline{s}\right)$$ where $$\underline{s}$$ is the vector of category counts;
 - $$\mathrm{N}\left(\theta,\sigma^2\right)$$ data with known $$\sigma^2$$ and $$\theta\sim\mathrm{N}\left(\mu_0,\tau_0^2\right)$$ gives a normal posterior whose **precision**, the reciprocal of the variance, is the sum of the prior precision and the data precision, and whose mean is the precision-weighted average of the prior mean and the sample mean,
 
-$$\theta\mid\underline{x}\sim\mathrm{N}\left(\mu_n,\tau_n^2\right),\qquad\frac{1}{\tau_n^2}=\frac{1}{\tau_0^2}+\frac{n}{\sigma^2},\qquad\mu_n=\tau_n^2\left(\frac{\mu_0}{\tau_0^2}+\frac{n\overline{x}}{\sigma^2}\right).$$
+$$\theta\mid\underline{x}\sim\mathrm{N}\left(\mu_n,\tau_n^2\right),\qquad\frac{1}{\tau_n^2}=\frac{1}{\tau_0^2}+\frac{n}{\sigma^2}$$
+
+$$\mu_n=\tau_n^2\left(\frac{\mu_0}{\tau_0^2}+\frac{n\overline{x}}{\sigma^2}\right).$$
 
 In each case the posterior mean is a weighted average of the prior mean and the maximum likelihood estimate, with the weight on the data increasing with $$n,$$ and the hyperparameters can be read as a **prior sample size** of pseudo-observations: the $$\mathrm{Beta}\left(\alpha,\beta\right)$$ prior acts like $$\alpha$$ prior successes and $$\beta$$ prior failures. For normal data with unknown mean and variance the conjugate prior is the normal-inverse-gamma distribution, in which $$\sigma^2$$ has an inverse-gamma prior and $$\theta$$ given $$\sigma^2$$ has a normal prior.
 
@@ -35,7 +37,9 @@ A prior is **proper** if it is a probability distribution and **improper** if it
 
 A **non-informative prior** is intended to let the data dominate the posterior by expressing as little prior knowledge as possible. The **flat prior** $$\pi\left(\theta\right)\propto 1$$ is the obvious candidate, but it is not invariant under reparametrisation: if $$\theta$$ has a flat prior then by the change of variables formula $$\phi=g\left(\theta\right)$$ has prior $$\pi\left(\phi\right)\propto\left\lvert\frac{d}{d\phi}g^{-1}\left(\phi\right)\right\rvert,$$ which is not flat unless $$g$$ is affine, so flatness depends on the parametrisation chosen. The **Jeffreys prior** is proportional to the square root of the Fisher information,
 
-$$\pi_J\left(\theta\right)\propto\sqrt{I\left(\theta\right)},\qquad\pi_J\left(\underline{\theta}\right)\propto\sqrt{\lvert I\left(\underline{\theta}\right)\rvert}$$
+$$\pi_J\left(\theta\right)\propto\sqrt{I\left(\theta\right)}$$
+
+$$\pi_J\left(\underline{\theta}\right)\propto\sqrt{\lvert I\left(\underline{\theta}\right)\rvert}$$
 
 for a vector parameter, and is invariant under reparametrisation, since the Fisher information transforms as $$I\left(\phi\right)=I\left(\theta\right)\left(\frac{d\theta}{d\phi}\right)^2$$ and the square root exactly cancels the change of variables factor. The Jeffreys prior for a Bernoulli probability is $$\mathrm{Beta}\left(\frac{1}{2},\frac{1}{2}\right),$$ for a normal mean with known variance it is flat and for a normal standard deviation with known mean it is $$\pi_J\left(\sigma\right)\propto\frac{1}{\sigma},$$ which is flat in $$\log_e\sigma.$$ It is often improper and can perform poorly for vector parameters.
 

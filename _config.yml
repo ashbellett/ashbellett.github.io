@@ -46,8 +46,18 @@ collections:
       - eigenvalues-eigenvectors.md
       - matrix-decompositions.md
       - linear-transformations.md
-  probability:
+  optimisation:
     key: 3
+    title: "Optimisation"
+    description: "Maximising and minimising functions"
+    output: true
+    permalink: /notes/:collection/:path
+    order:
+      - convexity.md
+      - unconstrained-optimisation.md
+      - constrained-optimisation.md
+  probability:
+    key: 4
     title: "Probability"
     description: "Occurrences of uncertain events"
     output: true
@@ -64,7 +74,7 @@ collections:
       - probabilistic-convergence.md
       - stochastic-processes.md
   frequentist-statistics:
-    key: 4
+    key: 5
     title: "Frequentist Statistics"
     description: "Drawing conclusions from data"
     output: true
@@ -77,21 +87,11 @@ collections:
       - interval-estimation.md
       - hypothesis-testing.md
   bayesian-statistics:
-    key: 5
+    key: 6
     title: "Bayesian Statistics"
     description: "Modelling parameters as random variables"
     output: true
     permalink: /notes/:collection/:path
-  optimisation:
-    key: 6
-    title: "Optimisation"
-    description: "Maximising and minimising functions"
-    output: true
-    permalink: /notes/:collection/:path
-    order:
-      - convexity.md
-      - unconstrained-optimisation.md
-      - constrained-optimisation.md
 socials:
   - {
     platform: github,

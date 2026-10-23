@@ -118,7 +118,29 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Projection
   - Linear transformations
 
-### 5. Probability
+### 5. Optimisation
+- **Convexity**
+  - Convex sets and functions
+  - Jensen's inequality
+  - First- and second-order conditions
+  - Operations preserving convexity
+  - Implications for minimisation
+- **Unconstrained optimisation**
+  - Optimisation problems and existence of minimisers
+  - Optimality conditions
+  - Line search methods and convergence rates
+  - Gradient descent
+  - Newton and quasi-Newton methods
+- **Constrained optimisation**
+  - Constraints and active sets
+  - Substitution method
+  - Lagrangian multipliers
+  - Karush-Kuhn-Tucker conditions
+  - Lagrangian duality
+  - Linear programming and the simplex method
+  - Interior point methods
+
+### 6. Probability
 - **Probability spaces**
   - Sample spaces and events
   - Sigma algebras
@@ -180,7 +202,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Renewal processes
   - Markov processes
 
-### 6. Statistics
+### 7. Statistics
 - **Samples**
   - Summary statistics
   - Sufficiency
@@ -205,20 +227,6 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Types of hypothesis tests
   - Simple and composite hypotheses
   - Multiple testing
-
-### 7. Optimisation
-- **Convexity**
-  - Convex sets and functions
-  - Determination of convexity
-  - Implications of convexity
-- **Unconstrained optimisation**
-  - Gradient descent methods
-  - Newton's method
-- **Constrained optimisation**
-  - Substitution method
-  - Lagrangian multipliers
-  - Simplex method
-  - Interior point methods
 
 ### 8. Supervised learning
 - **Linear models**

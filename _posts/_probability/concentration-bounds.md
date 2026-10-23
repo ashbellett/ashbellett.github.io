@@ -26,7 +26,7 @@ $$\mathbb{P}\left(X\geq a\right)\leq\inf_{t>0}e^{-ta}M_X\left(t\right),\qquad\ma
 
 which is Markov's inequality applied to $$e^{tX}$$ followed by optimising over $$t.$$ Because the mgf of a sum of independent random variables is the product of their mgfs, the Chernoff bound gives tail probabilities for sums that decrease exponentially in $$a,$$ whereas Chebyshev's inequality decreases only as $$\frac{1}{a^2}.$$
 
-**Jensen's inequality** for random variables states that if $$\varphi:\mathbb{R}\rightarrow\mathbb{R}$$ is a convex function and $$X$$ has finite mean then
+Jensen's inequality for random variables states that if $$\varphi:\mathbb{R}\rightarrow\mathbb{R}$$ is a convex function and $$X$$ has finite mean then
 
 $$\varphi\left(\mathbb{E}\left[X\right]\right)\leq\mathbb{E}\left[\varphi\left(X\right)\right]$$
 

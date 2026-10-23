@@ -6,7 +6,7 @@ tags: ["optimisation", "unconstrained optimisation"]
 description: "Finding maximum and minimum values"
 ---
 
-Let $$X\subseteq\mathbb{R}^n$$ be a set and $$f:X\rightarrow\mathbb{R}$$ be a function. An **optimisation problem** is the problem of finding the smallest value of the **objective function** $$f$$ over the **feasible set** $$X$$ and the points at which it is attained.
+Let $$X\subseteq\mathbb{R}^n$$ be a set and $$f:X\rightarrow\mathbb{R}$$ be a function. An **optimisation problem** is the problem of finding the smallest value of the **objective function** $$f$$ over the **feasible set** $$X,$$ whose points are **feasible**, and the points at which it is attained.
 
 $$\min_{\underline{x}\in X}f(\underline{x})$$
 
@@ -16,15 +16,15 @@ $$\operatorname*{arg\,min}_{\underline{x}\in X}f(\underline{x}):=\left\{\underli
 
 Maximising $$f$$ is equivalent to minimising $$-f,$$ so only minimisation is considered. The problem is **unconstrained** if the feasible set is $$\mathbb{R}^n$$ or an open subset of it, so that every point near a feasible point is feasible, and **constrained** otherwise.
 
-A point $$\underline{x}^*\in X$$ is a **local minimiser** of $$f$$ if and only if there exists $$\delta>0$$ such that $$f(\underline{x}^*)\leq f(\underline{x})$$ for all $$\underline{x}\in X$$ with $$\lVert\underline{x}-\underline{x}^*\rVert<\delta,$$ a **strict local minimiser** if the inequality is strict for $$\underline{x}\neq\underline{x}^*$$ and a **global minimiser** if and only if $$f(\underline{x}^*)\leq f(\underline{x})\,\,\forall\,\underline{x}\in X.$$ A global minimiser is a local minimiser, but a local minimiser need not be global unless $$f$$ is convex.
+A point $$\underline{x}^*\in X$$ is a local minimiser of $$f$$ if and only if there exists $$\delta>0$$ such that $$f(\underline{x}^*)\leq f(\underline{x})$$ for all $$\underline{x}\in X$$ with $$\lVert\underline{x}-\underline{x}^*\rVert<\delta,$$ a **strict local minimiser** if the inequality is strict for $$\underline{x}\neq\underline{x}^*$$ and a global minimiser if and only if $$f(\underline{x}^*)\leq f(\underline{x})\,\,\forall\,\underline{x}\in X.$$ A global minimiser is a local minimiser, but a local minimiser need not be global unless $$f$$ is convex.
 
-A set $$X\subseteq\mathbb{R}^n$$ is **bounded** if it is contained in some ball $$\{\underline{x}:\lVert\underline{x}\rVert\leq r\}$$ and **closed** if its complement is open. A set that is both closed and bounded is **compact**. The **Weierstrass extreme value theorem** states that a continuous function on a non-empty compact set attains its minimum and maximum, so a global minimiser exists. For an unconstrained problem on $$\mathbb{R}^n$$ a global minimiser exists if $$f$$ is continuous and **coercive**, meaning that $$f(\underline{x})$$ grows without bound as $$\lVert\underline{x}\rVert$$ does, since minimising over $$\mathbb{R}^n$$ then reduces to minimising over a compact sublevel set.
+A set $$X\subseteq\mathbb{R}^n$$ is **bounded** if it is contained in some ball $$\{\underline{x}:\lVert\underline{x}\rVert\leq r\}$$ and closed if its complement is open. A set that is both closed and bounded is **compact**. The **Weierstrass extreme value theorem** states that a continuous function on a non-empty compact set attains its minimum and maximum, so a global minimiser exists. For an unconstrained problem on $$\mathbb{R}^n$$ a global minimiser exists if $$f$$ is continuous and **coercive**, meaning that $$f(\underline{x})$$ grows without bound as $$\lVert\underline{x}\rVert$$ does, since minimising over $$\mathbb{R}^n$$ then reduces to minimising over a compact sublevel set.
 
 Let $$X\subseteq\mathbb{R}^n$$ be open and $$f:X\rightarrow\mathbb{R}$$ be differentiable at a local minimiser $$\underline{x}^*.$$ The **first-order necessary condition** states that the gradient vanishes at $$\underline{x}^*,$$ since otherwise $$f$$ decreases along $$-\nabla f(\underline{x}^*).$$
 
 $$\nabla f(\underline{x}^*)=\underline{0}$$
 
-A point satisfying this condition is a **stationary point** of $$f.$$ If $$f\in C^2(X)$$ the **second-order necessary condition** states that the Hessian matrix at a local minimiser is positive semi-definite, and the **second-order sufficient condition** states that a stationary point at which the Hessian matrix is positive definite is a strict local minimiser. Both follow from the second-order Taylor expansion
+A point satisfying this condition is a stationary point of $$f,$$ as in the univariate case. If $$f\in C^2(X)$$ the **second-order necessary condition** states that the Hessian matrix at a local minimiser is positive semi-definite, and the **second-order sufficient condition** states that a stationary point at which the Hessian matrix is positive definite is a strict local minimiser. Both follow from the second-order Taylor expansion
 
 $$f\left(\underline{x}^*+\underline{h}\right)=f(\underline{x}^*)+\frac{1}{2}\underline{h}^\intercal H_f(\underline{x}^*)\,\underline{h}+R_2(\underline{h}).$$
 

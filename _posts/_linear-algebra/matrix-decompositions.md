@@ -18,7 +18,7 @@ Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The **leading principal
 
 $$A=LU$$
 
-where $$L\in\mathbb{F}^{\,n\times n}$$ is a lower triangular matrix with diagonal elements equal to one and $$U\in\mathbb{F}^{\,n\times n}$$ is an upper triangular matrix. An LU decomposition exists if and only if every leading principal minor $$\lvert A_k\rvert,$$ $$k=1,\ldots,n-1,$$ is non-zero, and it is unique when $$A$$ is invertible. The factors are produced by Gaussian elimination: $$U$$ is the result of eliminating the elements below the diagonal column by column using row operations and $$L$$ records the multipliers used.
+where $$L\in\mathbb{F}^{\,n\times n}$$ is a lower triangular matrix with diagonal elements equal to one and $$U\in\mathbb{F}^{\,n\times n}$$ is an upper triangular matrix. If $$A$$ is invertible then an LU decomposition exists if and only if every leading principal minor $$\lvert A_k\rvert,$$ $$k=1,\ldots,n-1,$$ is non-zero, and it is then unique. The factors are produced by Gaussian elimination: $$U$$ is the result of eliminating the elements below the diagonal column by column using row operations and $$L$$ records the multipliers used.
 
 A **permutation matrix** $$P\in\mathbb{F}^{\,n\times n}$$ is a matrix obtained by reordering the rows of the identity matrix $$I_n,$$ so that $$PA$$ reorders the rows of $$A$$ in the same way. Permutation matrices are orthogonal, so $$P^{-1}=P^\intercal.$$ Every square matrix $$A$$ has a **PLU decomposition**
 

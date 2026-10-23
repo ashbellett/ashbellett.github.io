@@ -16,7 +16,7 @@ $$
 \end{align*}
 $$
 
-The feasible set is $$X=\left\{\underline{x}\in\mathbb{R}^n:g_i(\underline{x})\leq 0\,\,\forall\,i,\,h_j(\underline{x})=0\,\,\forall\,j\right\}$$ and a point of $$X$$ is **feasible**. A constraint of the form $$g(\underline{x})\geq 0$$ or $$g(\underline{x})\leq b$$ is written in standard form as $$-g(\underline{x})\leq 0$$ or $$g(\underline{x})-b\leq 0.$$ Let $$\underline{x}\in X.$$ The inequality constraint $$g_i$$ is **active** at $$\underline{x}$$ if and only if $$g_i(\underline{x})=0$$ and **inactive** if and only if $$g_i(\underline{x})<0.$$ Equality constraints are active at every feasible point. The **active set** $$\mathcal{A}(\underline{x})$$ is the set of indices of the active constraints at $$\underline{x}.$$ The problem is a convex optimisation problem if $$f$$ and every $$g_i$$ are convex and every $$h_j$$ is affine, since the feasible set is then an intersection of convex sublevel sets and hyperplanes.
+The feasible set is $$X=\left\{\underline{x}\in\mathbb{R}^n:g_i(\underline{x})\leq 0\,\,\forall\,i,\,h_j(\underline{x})=0\,\,\forall\,j\right\}$$ and a point of $$X$$ is feasible. A constraint of the form $$g(\underline{x})\geq 0$$ or $$g(\underline{x})\leq b$$ is written in standard form as $$-g(\underline{x})\leq 0$$ or $$g(\underline{x})-b\leq 0.$$ Let $$\underline{x}\in X.$$ The inequality constraint $$g_i$$ is **active** at $$\underline{x}$$ if and only if $$g_i(\underline{x})=0$$ and **inactive** if and only if $$g_i(\underline{x})<0.$$ Equality constraints are active at every feasible point. The **active set** $$\mathcal{A}(\underline{x})$$ is the set of indices of the active constraints at $$\underline{x}.$$ The problem is a convex optimisation problem if $$f$$ and every $$g_i$$ are convex and every $$h_j$$ is affine, since the feasible set is then an intersection of convex sublevel sets and hyperplanes.
 
 The **substitution method** applies to equality constraints that can be solved explicitly for some of the variables. If the constraints $$h_j(\underline{x})=0$$ are equivalent to $$\underline{x}=\underline{\varphi}(\underline{z})$$ for $$\underline{z}\in\mathbb{R}^{n-p}$$ then the constrained problem is equivalent to the unconstrained problem of minimising $$f\left(\underline{\varphi}(\underline{z})\right)$$ over $$\underline{z}.$$ For example, minimising $$x_1^2+x_2^2$$ subject to $$x_1+x_2=1$$ becomes minimising $$x_1^2+\left(1-x_1\right)^2,$$ whose stationary point gives $$x_1=x_2=\frac{1}{2}.$$ The method fails when the constraints cannot be solved in closed form.
 
@@ -72,7 +72,7 @@ $$\max_{\underline{y}\in\mathbb{R}^m}\underline{b}^\intercal\underline{y}\,\,\,\
 
 and strong duality holds whenever either problem has a feasible point.
 
-A **vertex** or **extreme point** of a polyhedron $$X$$ is a point of $$X$$ that is not a convex combination of two other points of $$X.$$ Let $$B\subseteq\{1,\ldots,n\}$$ be a set of $$m$$ indices such that the columns $$A_B\in\mathbb{R}^{\,m\times m}$$ of $$A$$ indexed by $$B$$ are linearly independent. $$B$$ is a **basis** of the linear program, the variables indexed by $$B$$ are the **basic variables** and the others are the **non-basic variables**. The **basic solution** for $$B$$ sets the non-basic variables to zero and solves for the basic variables,
+A **vertex** or **extreme point** of a polyhedron $$X$$ is a point of $$X$$ that is not a convex combination of two other points of $$X.$$ Let $$B\subseteq\{1,\ldots,n\}$$ be a set of $$m$$ indices such that the columns $$A_B\in\mathbb{R}^{\,m\times m}$$ of $$A$$ indexed by $$B$$ are linearly independent. $$B$$ is called a basis of the linear program, the variables indexed by $$B$$ are the **basic variables** and the others are the **non-basic variables**. The **basic solution** for $$B$$ sets the non-basic variables to zero and solves for the basic variables,
 
 $$\underline{x}_B=A_B^{-1}\underline{b},\qquad\underline{x}_N=\underline{0},$$
 
@@ -82,7 +82,7 @@ The **simplex method** moves from one basic feasible solution to an adjacent one
 
 $$\bar{c}_j:=c_j-\underline{c}_B^\intercal A_B^{-1}\underline{a}_j$$
 
-The current basic feasible solution is optimal if $$\bar{c}_j\geq 0$$ for every non-basic $$j.$$ Otherwise a non-basic variable with negative reduced cost is chosen as the **entering variable** and increased until some basic variable reaches zero, which is identified by the **ratio test** over the components of $$\underline{d}=A_B^{-1}\underline{a}_j$$ with $$d_i>0,$$
+The current basic feasible solution is optimal if $$\bar{c}_j\geq 0$$ for every non-basic $$j.$$ Otherwise a non-basic variable with negative reduced cost is chosen as the **entering variable** and increased until some basic variable reaches zero, which is identified by the **minimum ratio test** over the components of $$\underline{d}=A_B^{-1}\underline{a}_j$$ with $$d_i>0,$$
 
 $$\alpha=\min_{i:\,d_i>0}\frac{x_{B_i}}{d_i},$$
 

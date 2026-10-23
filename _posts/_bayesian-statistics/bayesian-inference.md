@@ -28,7 +28,7 @@ The posterior distribution contains everything the data and the prior say about 
 
 $$\pi\left(\theta\mid\underline{x}\right)\propto\theta^s\left(1-\theta\right)^{n-s}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}=\theta^{\alpha+s-1}\left(1-\theta\right)^{\beta+n-s-1},$$
 
-which is the kernel of a $$\mathrm{Beta}\left(\alpha+s,\beta+n-s\right)$$ distribution, so the posterior mean $$\frac{\alpha+s}{\alpha+\beta+n}$$ lies between the prior mean $$\frac{\alpha}{\alpha+\beta}$$ and the maximum likelihood estimate $$\frac{s}{n}$$ and moves towards the latter as $$n$$ grows.
+which is the kernel of a $$\mathrm{Beta}\left(\alpha+s,\beta+n-s\right)$$ distribution, so the **posterior mean** $$\frac{\alpha+s}{\alpha+\beta+n},$$ the mean of the posterior distribution, lies between the prior mean $$\frac{\alpha}{\alpha+\beta}$$ and the maximum likelihood estimate $$\frac{s}{n}$$ and moves towards the latter as $$n$$ grows.
 
 Since the likelihood depends on the data only through a sufficient statistic $$T\left(\underline{x}\right)$$ by the factorisation theorem, so does the posterior distribution: $$\pi\left(\theta\mid\underline{x}\right)=\pi\left(\theta\mid T\left(\underline{x}\right)\right).$$ More generally the posterior depends on the data only through the likelihood function, so two experiments that produce proportional likelihoods lead to the same inference, a property known as the **likelihood principle** that frequentist procedures based on sampling distributions do not share.
 

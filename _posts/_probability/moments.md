@@ -48,7 +48,7 @@ $$\mathrm{var}\left[aX+b\right]=a^2\,\mathrm{var}\left[X\right].$$
 
 The variance is measured in squared units of $$X$$ whereas the standard deviation is measured in the units of $$X.$$
 
-Let $$k\in\mathbb{N}.$$ The **$$k$$-th moment** of $$X$$ is $$\mathbb{E}\left[X^k\right],$$ the **$$k$$-th central moment** is $$\mathbb{E}\left[\left(X-\mu\right)^k\right]$$ and the **$$k$$-th standardised moment** is $$\mathbb{E}\left[\left(\frac{X-\mu}{\sigma}\right)^k\right].$$ The mean is the first moment and the variance is the second central moment. If the $$k$$-th moment is finite then every lower moment is finite. The **skewness** of $$X$$ is its third standardised moment and measures the asymmetry of its distribution, being zero for a distribution symmetric about its mean. The **kurtosis** of $$X$$ is its fourth standardised moment and measures the weight of its tails relative to its centre, and the **excess kurtosis** is the kurtosis minus $$3,$$ the kurtosis of the normal distribution. The **standardisation** of $$X$$ is the random variable $$Z=\frac{X-\mu}{\sigma},$$ which has mean $$0$$ and variance $$1.$$
+Let $$k\in\mathbb{N}.$$ The **$$k$$-th moment** of $$X$$ is $$\mathbb{E}\left[X^k\right],$$ the **$$k$$-th central moment** is $$\mathbb{E}\left[\left(X-\mu\right)^k\right]$$ and the **$$k$$-th standardised moment** is $$\mathbb{E}\left[\left(\frac{X-\mu}{\sigma}\right)^k\right].$$ The mean is the first moment and the variance is the second central moment. If the $$k$$-th moment is finite then every lower moment is finite. The **skewness** of $$X$$ is its third standardised moment and measures the asymmetry of its distribution, being zero for a distribution symmetric about its mean. The **kurtosis** of $$X$$ is its fourth standardised moment and measures the weight of its tails relative to its centre, and the **excess kurtosis** is the kurtosis minus $$3.$$ The **standardisation** of $$X$$ is the random variable $$Z=\frac{X-\mu}{\sigma},$$ which has mean $$0$$ and variance $$1.$$
 
 Let $$X$$ and $$Y$$ be random variables with finite variances and means $$\mu_X$$ and $$\mu_Y.$$ The **covariance** of $$X$$ and $$Y$$ is the expected product of their deviations from their means.
 
@@ -90,11 +90,11 @@ $$\mathbb{E}\left[Y\mid X=x\right]:=\sum_y y\,p_{Y\mid X}\left(y\mid x\right)$$
 
 $$\mathbb{E}\left[Y\mid X=x\right]:=\int_{-\infty}^{\infty}y\,f_{Y\mid X}\left(y\mid x\right)dy$$
 
-This is a function $$h(x)=\mathbb{E}\left[Y\mid X=x\right]$$ of $$x,$$ and the **conditional expectation** $$\mathbb{E}\left[Y\mid X\right]:=h(X)$$ is the random variable obtained by evaluating it at $$X.$$ The **law of total expectation** or **tower property** states that averaging the conditional expectation over $$X$$ recovers the expectation of $$Y.$$
+This is a function $$h(x)=\mathbb{E}\left[Y\mid X=x\right]$$ of $$x,$$ and the conditional expectation $$\mathbb{E}\left[Y\mid X\right]:=h(X)$$ is the random variable obtained by evaluating it at $$X.$$ The **law of total expectation** or **tower property** states that averaging the conditional expectation over $$X$$ recovers the expectation of $$Y.$$
 
 $$\mathbb{E}\left[\mathbb{E}\left[Y\mid X\right]\right]=\mathbb{E}\left[Y\right]$$
 
-Conditional expectation is linear in $$Y,$$ satisfies $$\mathbb{E}\left[g(X)Y\mid X\right]=g(X)\,\mathbb{E}\left[Y\mid X\right]$$ for any function $$g,$$ equals $$\mathbb{E}\left[Y\right]$$ if $$X$$ and $$Y$$ are independent and, among all functions of $$X$$ with finite variance, minimises the mean squared error $$\mathbb{E}\left[\left(Y-g(X)\right)^2\right],$$ so it is the best predictor of $$Y$$ from $$X$$ in mean square. The **conditional variance** of $$Y$$ given $$X$$ is the variance of the conditional distribution,
+Conditional expectation is linear in $$Y,$$ satisfies $$\mathbb{E}\left[g(X)Y\mid X\right]=g(X)\,\mathbb{E}\left[Y\mid X\right]$$ for any function $$g,$$ equals $$\mathbb{E}\left[Y\right]$$ if $$X$$ and $$Y$$ are independent and, among all functions of $$X$$ with finite variance, minimises the expected squared error $$\mathbb{E}\left[\left(Y-g(X)\right)^2\right],$$ so it is the best predictor of $$Y$$ from $$X$$ in mean square. The **conditional variance** of $$Y$$ given $$X$$ is the variance of the conditional distribution,
 
 $$\mathrm{var}\left[Y\mid X\right]:=\mathbb{E}\left[\left(Y-\mathbb{E}\left[Y\mid X\right]\right)^2\mid X\right],$$
 

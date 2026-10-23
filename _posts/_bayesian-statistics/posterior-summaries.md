@@ -22,7 +22,7 @@ $$r\left(\pi,\delta\right):=\int_{\Theta}R\left(\theta,\delta\right)\pi\left(\th
 
 and a **Bayes rule** minimises the Bayes risk. The decision rule that takes the Bayes action for every data set is a Bayes rule, so acting optimally conditional on the observed data is also optimal on average over data sets. Estimating $$\theta$$ is the decision problem with $$\mathcal{A}=\Theta,$$ and a Bayes action for it is a **Bayes estimator**.
 
-The Bayes estimator depends on the loss function. The **squared error loss** $$L\left(\theta,a\right)=\left(\theta-a\right)^2$$ gives the **posterior mean**,
+The Bayes estimator depends on the loss function. The **squared error loss** $$L\left(\theta,a\right)=\left(\theta-a\right)^2$$ gives the posterior mean,
 
 $$\hat{\theta}=\mathbb{E}\left[\theta\mid\underline{x}\right]=\int_{\Theta}\theta\,\pi\left(\theta\mid\underline{x}\right)d\theta,$$
 
@@ -30,7 +30,7 @@ whose posterior expected loss is the **posterior variance** $$\mathrm{var}\left[
 
 $$\hat{\theta}_{\mathrm{MAP}}=\operatorname*{arg\,max}_{\theta\in\Theta}\pi\left(\theta\mid\underline{x}\right)=\operatorname*{arg\,max}_{\theta\in\Theta}\left(\ell\left(\theta\mid\underline{x}\right)+\log_e\pi\left(\theta\right)\right).$$
 
-The MAP estimate is the maximum likelihood estimate under a flat prior and in general is a **penalised maximum likelihood** estimate with penalty $$-\log_e\pi\left(\theta\right):$$ a normal prior centred at zero penalises $$\theta^2$$ and a Laplace prior penalises $$\lvert\theta\rvert,$$ which are the penalties of ridge and lasso regularisation. The posterior mean and median are invariant to affine reparametrisation only, and the posterior mode is not invariant to reparametrisation at all, since the change of variables factor moves the maximum of the density. The **posterior standard deviation** $$\sqrt{\mathrm{var}\left[\theta\mid\underline{x}\right]}$$ is the Bayesian analogue of the standard error.
+The MAP estimate is the maximum likelihood estimate under a flat prior and in general is a **penalised maximum likelihood** estimate with penalty $$-\log_e\pi\left(\theta\right):$$ a normal prior centred at zero penalises $$\theta^2$$ and a Laplace prior penalises $$\lvert\theta\rvert,$$ which are the penalties of ridge and lasso regularisation. The posterior median is invariant under monotonic reparametrisation, the posterior mean only under affine reparametrisation and the posterior mode under neither, since the change of variables factor moves the maximum of the density. The **posterior standard deviation** $$\sqrt{\mathrm{var}\left[\theta\mid\underline{x}\right]}$$ is the Bayesian analogue of the standard error.
 
 Let $$\alpha\in\left(0,1\right).$$ A **credible set** of **credible level** $$1-\alpha$$ is a set $$C\subseteq\Theta$$ that has posterior probability $$1-\alpha,$$
 

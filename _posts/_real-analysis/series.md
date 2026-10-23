@@ -72,7 +72,7 @@ The **absolute convergence test** states that an absolutely convergent series is
 
 $$\left\lvert\sum_{n=1}^{\infty} a_n\right\rvert\leq\sum_{n=1}^{\infty}\lvert a_n\rvert$$
 
-The **alternating series test** states that if $$(b_n)$$ is a monotonically decreasing sequence with $$b_n\geq 0\,\,\forall\,n$$ and $$b_n\rightarrow 0$$ then the **alternating series** $$\sum_{n=1}^{\infty}\left(-1\right)^n b_n$$ converges, and its partial sums satisfy
+An **alternating series** is a series $$\sum_{n=1}^{\infty}\left(-1\right)^n b_n$$ with $$b_n\geq 0\,\,\forall\,n,$$ whose terms alternate in sign. The **alternating series test** states that if $$(b_n)$$ is monotonically decreasing and $$b_n\rightarrow 0$$ then the alternating series converges, and its partial sums satisfy
 
 $$\left\lvert\sum_{n=1}^{\infty}\left(-1\right)^n b_n-\sum_{n=1}^{N}\left(-1\right)^n b_n\right\rvert\leq b_{N+1}\,\,\forall\,N\in\mathbb{N}.$$
 

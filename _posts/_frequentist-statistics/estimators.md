@@ -53,7 +53,7 @@ A sequence of estimators is **asymptotically normal** if and only if its standar
 
 $$\sqrt{n}\left(\hat{\theta}_n-\theta\right)\xrightarrow{d}\mathrm{N}\left(0,v\left(\theta\right)\right),$$
 
-where $$v\left(\theta\right)$$ is the **asymptotic variance**. An asymptotically normal estimator is consistent, and its sampling distribution is approximately $$\mathrm{N}\left(\theta,\frac{v\left(\theta\right)}{n}\right)$$ for large $$n,$$ which is what interval estimates and hypothesis tests are built on. The sample mean is asymptotically normal with $$v=\sigma^2$$ by the central limit theorem, and the delta method gives the asymptotic normality of smooth functions of asymptotically normal estimators.
+where $$v\left(\theta\right)$$ is the **asymptotic variance**. An asymptotically normal estimator is consistent, and its sampling distribution is approximately $$\mathrm{N}\left(\theta,\frac{v\left(\theta\right)}{n}\right)$$ for large $$n,$$ which is what the interval estimates and tests of the following notes are built on. The sample mean is asymptotically normal with $$v=\sigma^2$$ by the central limit theorem, and the delta method gives the asymptotic normality of smooth functions of asymptotically normal estimators.
 
 Let the population $$\mathbb{P}_{X;\,\theta}$$ have pmf or pdf $$f_{X;\,\theta}\left(x;\,\theta\right)$$ with scalar parameter $$\theta$$ in an open parameter space, and suppose the **regularity conditions** hold: the support of $$f_{X;\,\theta}$$ does not depend on $$\theta,$$ $$f_{X;\,\theta}$$ is twice differentiable in $$\theta$$ and differentiation with respect to $$\theta$$ and integration or summation over $$x$$ may be interchanged. The **score** is the derivative of the log pmf or pdf with respect to the parameter,
 

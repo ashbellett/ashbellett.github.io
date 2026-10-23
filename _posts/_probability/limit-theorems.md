@@ -6,7 +6,7 @@ tags: ["probability", "limit theorem"]
 description: "Behaviour after many outcomes have been observed"
 ---
 
-Let $$X_1,X_2,\ldots$$ be an iid sequence of random variables with mean $$\mu$$ and, where needed, finite variance $$\sigma^2>0.$$ The **partial sum** and the **average** of the first $$n$$ terms are
+Let $$X_1,X_2,\ldots$$ be an iid sequence of random variables with mean $$\mu$$ and, where needed, finite variance $$\sigma^2>0.$$ The partial sum and the average of the first $$n$$ terms are
 
 $$S_n:=\sum_{i=1}^n X_i,\qquad\overline{X}_n:=\frac{1}{n}\sum_{i=1}^n X_i,$$
 
@@ -66,7 +66,7 @@ $$\sqrt{n}\left(\overline{\underline{X}}_n-\underline{\mu}\right)\xrightarrow{d}
 
 Combined with the multivariate delta method it gives the limiting normal distribution of any smooth function of averages, such as the average of the squares together with the average itself, from which the limiting distribution of a variance estimate follows.
 
-Let $$X_1,\ldots,X_n$$ be random variables. The **order statistics** $$X_{(1)}\leq X_{(2)}\leq\ldots\leq X_{(n)}$$ are the values of $$X_1,\ldots,X_n$$ arranged in increasing order, so that $$X_{(k)}$$ is the **$$k$$-th order statistic**, the $$k$$-th smallest value. The smallest and largest are the **minimum** and **maximum**,
+Let $$X_1,\ldots,X_n$$ be random variables. The **order statistics** $$X_{(1)}\leq X_{(2)}\leq\ldots\leq X_{(n)}$$ are the values of $$X_1,\ldots,X_n$$ arranged in increasing order, so that $$X_{(k)}$$ is the **$$k$$-th order statistic**, the $$k$$-th smallest value. The smallest and largest are the minimum and maximum of $$X_1,\ldots,X_n,$$
 
 $$X_{(1)}=\min_{i}X_i,\qquad X_{(n)}=\max_{i}X_i.$$
 
@@ -82,7 +82,7 @@ $$F_{X_{(n)}}\left(x\right)=F\left(x\right)^n,\qquad F_{X_{(1)}}\left(x\right)=1
 
 and the joint pdf of all $$n$$ order statistics is $$n!\prod_{i=1}^n f\left(x_i\right)$$ on the region $$x_1<x_2<\ldots<x_n$$ and zero elsewhere. If $$U_1,\ldots,U_n$$ are iid $$\mathrm{U}\left(0,1\right)$$ then $$U_{(k)}\sim\mathrm{Beta}\left(k,n-k+1\right),$$ and since $$F\left(X_i\right)\sim\mathrm{U}\left(0,1\right)$$ by the probability integral transform, $$F\left(X_{(k)}\right)\sim\mathrm{Beta}\left(k,n-k+1\right)$$ in general. Hence $$\mathbb{E}\left[F\left(X_{(k)}\right)\right]=\frac{k}{n+1},$$ so the $$k$$-th order statistic sits on average at the $$\frac{k}{n+1}$$-quantile.
 
-The order statistics have their own limit theorems. Let $$u\in\left(0,1\right)$$ and $$k_n$$ be a sequence with $$\frac{k_n}{n}\rightarrow u,$$ and suppose $$f$$ is continuous and positive at the $$u$$-quantile $$x_u=F^{-1}\left(u\right).$$ The **central order statistic** $$X_{(k_n)}$$ is asymptotically normal around the quantile,
+The order statistics have their own limit theorems. Let $$u\in\left(0,1\right)$$ and $$k_n$$ be a sequence with $$\frac{k_n}{n}\rightarrow u,$$ and suppose $$f$$ is continuous and positive at the $$u$$-quantile $$x_u=F^{-1}\left(u\right).$$ The **central order statistic** $$X_{(k_n)}$$ converges in distribution to a normal distribution after centring at the quantile,
 
 $$\sqrt{n}\left(X_{(k_n)}-x_u\right)\xrightarrow{d}\mathrm{N}\left(0,\frac{u\left(1-u\right)}{f\left(x_u\right)^2}\right),$$
 

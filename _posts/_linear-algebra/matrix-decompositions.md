@@ -84,7 +84,9 @@ $$\lVert A\rVert_F:=\sqrt{\sum_{i=1}^n\sum_{j=1}^p a_{ij}^2}=\sqrt{\mathrm{tr}\l
 
 The **Eckart–Young theorem** states that for $$k<r$$ the matrix of rank at most $$k$$ that is closest to $$A$$ in Frobenius norm is the **truncated singular value decomposition** that keeps the $$k$$ largest singular values.
 
-$$A_k:=\sum_{i=1}^k\sigma_i\,\underline{u}_i\underline{v}_i^\intercal,\qquad\lVert A-A_k\rVert_F=\sqrt{\sum_{i=k+1}^r\sigma_i^2}=\min_{\mathrm{rank}\,B\leq k}\lVert A-B\rVert_F$$
+$$A_k:=\sum_{i=1}^k\sigma_i\,\underline{u}_i\underline{v}_i^\intercal$$
+
+$$\lVert A-A_k\rVert_F=\sqrt{\sum_{i=k+1}^r\sigma_i^2}=\min_{\mathrm{rank}\,B\leq k}\lVert A-B\rVert_F$$
 
 This **low-rank approximation** underlies principal components analysis and data compression.
 

@@ -55,12 +55,12 @@ Electrical & Computer Systems\
 {: .role-text }
 
 [canva]: assets/img/canva.jpg
-{: .brand-logo }
+{: .brand-logo width="32" height="32" }
 [deloitte]: assets/img/deloitte.jpg
-{: .brand-logo }
+{: .brand-logo width="32" height="32" }
 [ibm]: assets/img/ibm.png
-{: .brand-logo }
+{: .brand-logo width="32" height="32" }
 [imperial]: assets/img/imperial.png
-{: .brand-logo }
+{: .brand-logo width="32" height="32" }
 [monash]: assets/img/monash.png
-{: .brand-logo }
+{: .brand-logo width="32" height="32" }

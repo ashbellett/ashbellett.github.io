@@ -92,6 +92,12 @@ collections:
     description: "Modelling parameters as random variables"
     output: true
     permalink: /notes/:collection/:path
+    order:
+      - bayesian-inference.md
+      - priors.md
+      - posterior-summaries.md
+      - computational-inference.md
+      - model-choice.md
 socials:
   - {
     platform: github,

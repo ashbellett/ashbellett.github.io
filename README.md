@@ -298,34 +298,34 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Shrinkage methods
   - Minimum covariance determinant
 
-### 10. Bayesian methods
-- **Subjective probability**
-  - Subjective uncertainty
-  - Standard events
-  - Conditional probability
-  - Decisions
-  - Utility
-  - Estimation and prediction
-- **Prior and likelihood representation**
-  - Exchangeability
-  - De Finetti's representation theorem
-  - Priors
-  - Asymptotics
-- **Parametric modelling**
-  - Conjugate models
-  - Exponential families
-  - Non-conjugate families
-  - Posterior summaries
+### 10. Bayesian statistics
+- **Bayesian inference**
+  - Prior, likelihood, posterior and marginal likelihood
+  - Sequential updating and nuisance parameters
+  - Posterior predictive distribution
+  - Exchangeability and de Finetti's representation theorem
+- **Priors**
+  - Conjugate priors and exponential families
+  - Improper, flat, Jeffreys and reference priors
+  - Weakly informative priors
+  - Hierarchical priors and shrinkage
+  - Posterior consistency and the Bernstein-von Mises theorem
+- **Posterior summaries**
+  - Loss, utility and Bayes actions
+  - Posterior mean, median and mode
+  - Credible intervals and highest posterior density regions
+  - Posterior probabilities of hypotheses
+  - Prediction
 - **Computational inference**
   - Intractable integrals
-  - Monte Carlo estimation
-  - Markov chain Monte Carlo (MCMC)
-  - Hamiltonian Markov chain Monte Carlo
-  - Analytic approximations
+  - Monte Carlo, rejection and importance sampling
+  - Markov chain Monte Carlo
+  - Metropolis-Hastings, Gibbs and Hamiltonian Monte Carlo
+  - Laplace approximation and variational inference
 - **Model choice**
-  - Model uncertainty
-  - Model averaging
-  - Model selection
+  - Model uncertainty and Bayes factors
+  - Bayesian model averaging
+  - Model selection and information criteria
   - Posterior predictive checking
 - **Linear models**
   - Conjugate prior

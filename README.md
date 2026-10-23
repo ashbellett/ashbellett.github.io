@@ -194,28 +194,32 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 
 ### 7. Statistics
 - **Samples**
+  - Random samples and populations
+  - Statistics and sampling distributions
   - Summary statistics
-  - Sufficiency
+- **Sufficiency**
+  - Sufficient statistics
+  - Factorisation theorem
 - **Estimators**
-  - Bias
-  - Consistency
+  - Bias, standard error and mean squared error
+  - Consistency and asymptotic normality
+  - Score, Fisher information and the Cramér-Rao lower bound
   - Efficiency
 - **Point estimation**
-  - Likelihood function
-  - Method of least squares
   - Method of moments
-  - Maximum likelihood estimation
+  - Likelihood function
+  - Maximum likelihood estimation and its asymptotics
 - **Interval estimation**
   - Interval estimators
   - Coverage probability
   - Confidence intervals
 - **Hypothesis testing**
   - Null and alternative hypotheses
-  - Test statistic and critical value
-  - Significance level and p-values
-  - Power and sample size
-  - Types of hypothesis tests
-  - Simple and composite hypotheses
+  - Test statistics, critical regions and p-values
+  - Type I and II errors and power
+  - Neyman-Pearson lemma and uniformly most powerful tests
+  - Likelihood ratio, Wald and score tests
+  - Standard parametric and non-parametric tests
   - Multiple testing
 
 ### 8. Supervised learning

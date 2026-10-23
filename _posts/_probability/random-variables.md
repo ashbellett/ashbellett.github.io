@@ -119,3 +119,51 @@ $$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}\left(\left\{
 The random variables $$X_1$$ and $$X_2$$ are independent if and only if:
 
 $$\mathbb{P}_{X_1,X_2}\left(X_1\in A_1,X_2\in A_2\right)=\mathbb{P}_{X_1}\left(X_1\in A_1\right)\mathbb{P}_{X_2}\left(X_2\in A_2\right)\,\,\forall\,A_1\in\mathcal{S}_1,A_2\in\mathcal{S}_2.$$
+
+Two random variables $$X_1$$ and $$X_2$$ are **identically distributed** if and only if they have the same probability distribution, $$\mathbb{P}_{X_1}\left(X_1\in A\right)=\mathbb{P}_{X_2}\left(X_2\in A\right)\,\,\forall\,A.$$ A collection of random variables that are mutually independent and identically distributed is **independent and identically distributed** (iid).
+
+Let $$X_1,\ldots,X_n$$ be real-valued random variables defined with respect to a common probability space. The **random vector** $$\underline{X}=\left(X_1,\ldots,X_n\right)$$ is the function $$\underline{X}:\Omega\rightarrow\mathbb{R}^n$$ with components $$X_i,$$ and its **joint distribution** $$\mathbb{P}_{\underline{X}}$$ is the pushforward probability measure on $$\mathbb{R}^n.$$ The **joint cumulative distribution function** of $$\underline{X}$$ is
+
+$$F_{\underline{X}}\left(\underline{x}\right)=\mathbb{P}\left(X_1\leq x_1,\ldots,X_n\leq x_n\right)\,\,\forall\,\underline{x}\in\mathbb{R}^n.$$
+
+If every $$X_i$$ is discrete then $$\underline{X}$$ is a **discrete random vector** with **joint probability mass function**
+
+$$p_{\underline{X}}\left(\underline{x}\right)=\mathbb{P}\left(X_1=x_1,\ldots,X_n=x_n\right)$$
+
+and $$\underline{X}$$ is a **continuous random vector** if there is a **joint probability density function** $$f_{\underline{X}}:\mathbb{R}^n\rightarrow\left[0,\infty\right)$$ such that for every measurable $$A\subseteq\mathbb{R}^n$$
+
+$$\mathbb{P}\left(\underline{X}\in A\right)=\int_A f_{\underline{X}}\left(\underline{x}\right)d\underline{x}.$$
+
+The joint pmf sums to one over the state space and the joint pdf integrates to one over $$\mathbb{R}^n.$$ The **marginal distribution** of a component $$X_i$$ is its own probability distribution and is recovered from the joint distribution by summing or integrating over the other components. For $$n=2$$ the **marginal pmf** and **marginal pdf** of $$X_1$$ are
+
+$$p_{X_1}\left(x_1\right)=\sum_{x_2}p_{X_1,X_2}\left(x_1,x_2\right),\qquad f_{X_1}\left(x_1\right)=\int_{-\infty}^{\infty}f_{X_1,X_2}\left(x_1,x_2\right)dx_2.$$
+
+The random variables $$X_1,\ldots,X_n$$ are mutually independent if and only if the joint cdf factorises as the product of the marginal cdfs for all $$\underline{x},$$ and equivalently if and only if the joint pmf or pdf factorises as the product of the marginal pmfs or pdfs.
+
+$$F_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n F_{X_i}\left(x_i\right),\qquad f_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n f_{X_i}\left(x_i\right)$$
+
+Let $$\left(X_1,X_2\right)$$ be a discrete random vector and $$x_2$$ be a value with $$p_{X_2}\left(x_2\right)>0.$$ The **conditional pmf** of $$X_1$$ given $$X_2=x_2$$ is the conditional probability of the event $$X_1=x_1$$ given the event $$X_2=x_2.$$
+
+$$p_{X_1\mid X_2}\left(x_1\mid x_2\right)=\frac{p_{X_1,X_2}\left(x_1,x_2\right)}{p_{X_2}\left(x_2\right)}$$
+
+Let $$\left(X_1,X_2\right)$$ be a continuous random vector and $$x_2$$ be a value with $$f_{X_2}\left(x_2\right)>0.$$ The **conditional pdf** of $$X_1$$ given $$X_2=x_2$$ is defined by the same ratio of densities, even though the event $$X_2=x_2$$ has probability zero.
+
+$$f_{X_1\mid X_2}\left(x_1\mid x_2\right)=\frac{f_{X_1,X_2}\left(x_1,x_2\right)}{f_{X_2}\left(x_2\right)}$$
+
+The **conditional distribution** of $$X_1$$ given $$X_2=x_2$$ is the probability distribution with this pmf or pdf. Rearranging gives the **chain rule** $$f_{X_1,X_2}=f_{X_1\mid X_2}f_{X_2},$$ and $$X_1$$ and $$X_2$$ are independent if and only if the conditional distribution of $$X_1$$ given $$X_2=x_2$$ equals the marginal distribution of $$X_1$$ for every $$x_2.$$ Bayes' theorem for densities follows in the same way as for events.
+
+$$f_{X_2\mid X_1}\left(x_2\mid x_1\right)=\frac{f_{X_1\mid X_2}\left(x_1\mid x_2\right)f_{X_2}\left(x_2\right)}{f_{X_1}\left(x_1\right)}$$
+
+Let $$X$$ be a random variable and $$g:\mathbb{R}\rightarrow\mathbb{R}$$ be a function. The **transformation** $$Y=g(X)$$ is a random variable whose distribution is determined by that of $$X$$ through $$F_Y\left(y\right)=\mathbb{P}\left(g(X)\leq y\right).$$ If $$X$$ is discrete then
+
+$$p_Y\left(y\right)=\sum_{x:\,g(x)=y}p_X\left(x\right).$$
+
+If $$X$$ is continuous and $$g$$ is strictly monotonic and differentiable on the support of $$X$$ then the **change of variables formula** gives
+
+$$f_Y\left(y\right)=f_X\left(g^{-1}\left(y\right)\right)\left\lvert\frac{d}{dy}g^{-1}\left(y\right)\right\rvert.$$
+
+If $$g$$ is not monotonic the formula is applied separately on each interval where $$g$$ is monotonic and the contributions are summed; for example $$Y=X^2$$ has $$f_Y\left(y\right)=\frac{1}{2\sqrt{y}}\left(f_X\left(\sqrt{y}\right)+f_X\left(-\sqrt{y}\right)\right)$$ for $$y>0.$$ For a continuous random vector $$\underline{X}$$ and a bijection $$\underline{g}:\mathbb{R}^n\rightarrow\mathbb{R}^n$$ that is continuously differentiable with continuously differentiable inverse, the change of variables theorem for multiple integrals gives
+
+$$f_{\underline{Y}}\left(\underline{y}\right)=f_{\underline{X}}\left(\underline{g}^{-1}\left(\underline{y}\right)\right)\left\lvert\det J_{\underline{g}^{-1}}\left(\underline{y}\right)\right\rvert$$
+
+where $$J_{\underline{g}^{-1}}$$ is the Jacobian matrix of the inverse transformation.

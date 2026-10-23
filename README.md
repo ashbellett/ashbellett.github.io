@@ -141,66 +141,56 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Interior point methods
 
 ### 6. Probability
+- **Events**
+  - Experiments, outcomes and events
+  - Algebras and sigma algebras
 - **Probability spaces**
-  - Sample spaces and events
-  - Sigma algebras
-  - Probability measures
-  - Probability axioms
-- **Probability forms**
-  - Marginal probability
-  - Joint probability
-  - Conditional probability
+  - Probability measures and axioms
+  - Marginal and joint probability
+  - Independent events
+- **Conditional probability**
+  - Conditional probability and independence
+  - Total probability and Bayes' theorem
 - **Random variables**
-  - Pushforward probability measure
-  - Support
-  - Discrete random variables
-  - Continuous random variables
-  - Independent random variables
+  - Pushforward probability measure and support
+  - Discrete and continuous random variables
+  - Random vectors, joint, marginal and conditional distributions
   - Transformations of random variables
 - **Moments**
   - Expectation
-  - Variance
-  - Higher-order moments
+  - Variance and higher-order moments
   - Covariance and correlation
-  - Probability generating functions
-  - Moment generating functions
-  - Characteristic functions
+  - Conditional expectation and variance
+  - Probability, moment and characteristic generating functions
 - **Distributions**
-  - Discrete uniform
-  - Bernoulli
-  - Binomial
-  - Geometric
-  - Poisson
-  - Continuous uniform
-  - Exponential
-  - Gamma
-  - Beta
-  - Chi-squared
-  - Normal
-  - Dirichlet
-  - Multivariate distributions
+  - Parametric families and quantiles
+  - Discrete uniform, Bernoulli, binomial, geometric and Poisson
+  - Continuous uniform, exponential, gamma, beta and chi-squared
+  - Normal, Student's t and F
+  - Multinomial, multivariate normal and Dirichlet
+  - Exponential families
 - **Concentration bounds**
-  - Univariate bounds
-  - Bounds of expectations
-  - Bounds of sums
-  - Bounds of functions
+  - Markov, Chebyshev and Chernoff bounds
+  - Jensen, Cauchy-Schwarz, Hölder and Lyapunov inequalities
+  - Sub-Gaussian variables, Hoeffding and Bernstein inequalities
+  - McDiarmid, Efron-Stein and Gaussian concentration
 - **Probabilistic convergence**
   - Pointwise and uniform convergence
+  - Almost sure convergence, convergence in probability and in mean
   - Convergence in distribution
-  - Convergence in probability
-  - Almost-sure convergence
+  - Continuous mapping and Slutsky's theorems
   - Delta method
 - **Limit theorems**
-  - Laws of large numbers
-  - Central limit theorem
+  - Laws of large numbers and the Glivenko-Cantelli theorem
+  - Central limit theorems
   - Order statistics
 - **Stochastic processes**
-  - Covariance and correlation
-  - Stationarity
+  - Processes, sample paths and finite-dimensional distributions
+  - Mean, autocovariance and stationarity
   - Gaussian processes
-  - Wiener process
-  - Renewal processes
-  - Markov processes
+  - Wiener process and martingales
+  - Poisson and renewal processes
+  - Markov chains
 
 ### 7. Statistics
 - **Samples**

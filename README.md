@@ -44,20 +44,36 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Images and inverses
 
 ### 2. Real analysis
-- **Limits**
+- **Real numbers**
   - Absolute value, distance and closeness
-  - Sequences
+  - Bounds, suprema and infima
+- **Sequences**
   - Boundedness and monotonicity
-  - Convergence and limits
+  - Convergence and Cauchy sequences
+- **Limits**
+  - Limits of sequences and limit laws
+  - Limits of functions
+- **Series**
+  - Finite series and series over finite sets
+  - Infinite series and convergence tests
+  - Power series
+- **Continuity**
+  - Continuity and intervals
+  - Intermediate and extreme value theorems
+  - Uniform and Lipschitz continuity
+  - Monotonic and inverse functions
 - **Derivatives**
-  - Continuity and differentiability
-  - Univariate differential calculus
+  - Differentiability and higher-order derivatives
+  - Derivative rules
+  - Extrema and mean value theorems
+  - L'Hôpital's rule and Taylor expansion
   - Multivariate differential calculus
 - **Integrals**
-  - Partitions and integration
+  - Partitions and the Riemann integral
   - Fundamental theorems of calculus
-  - Univariate integral calculus
-  - Multivariate integral calculus
+  - Integration by parts and substitution
+  - Improper integrals
+  - Multiple integrals and change of variables
 
 ### 3. Topology
 - **Topological spaces**

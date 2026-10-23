@@ -109,6 +109,8 @@ socials:
     url: x.com/ashbellett
   }
 analytics: G-XFWQPSWM13
+kramdown:
+  math_engine: katex
 sass:
   style: compressed
   sourcemap: never

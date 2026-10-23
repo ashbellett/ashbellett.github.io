@@ -38,10 +38,10 @@ Let $$\underline{X}$$ be a random sample. The **$$r^\mathrm{th}$$ order statisti
 The smallest and largest order statistics are the sample minimum and maximum:
 
 $$
-\begin{align}
+\begin{align*}
 X_{(1)}&=\min_{i\in\left\{1,\ldots,n\right\}} X_i\\
 X_{(n)}&=\max_{i\in\left\{1,\ldots,n\right\}} X_i.
-\end{align}
+\end{align*}
 $$
 
 If $$X_i$$ is continuous then ties occur with probability 0, so $$X_{(1)}<X_{(2)}<\ldots<X_{(n)}$$ with probability 1.

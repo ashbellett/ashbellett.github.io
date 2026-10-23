@@ -20,6 +20,10 @@ Run website locally at http://localhost:4000:
 bundle exec jekyll serve
 ```
 
+## Maths
+
+Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts. A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute, so check the build output for `katex-error`.
+
 ## Topics
 
 ### 1. Set theory

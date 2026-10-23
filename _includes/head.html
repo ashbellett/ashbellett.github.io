@@ -1,6 +1,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- capture analytics_js %}{% include analytics.js %}{% endcapture -%}
+  {%- comment -%}
+  GitHub Pages cannot send response headers, so the Content Security Policy
+  is a meta tag. The inline analytics snippet is allowed by its hash, computed
+  from the same text that is emitted below, so editing analytics.js cannot
+  silently break analytics. The hosts are Google's documented analytics-only
+  set plus Google Fonts; KaTeX output relies on style attributes.
+  {%- endcomment -%}
+  {%- capture csp -%}
+    default-src 'none';
+    base-uri 'none';
+    form-action 'none';
+    script-src 'sha256-{{ analytics_js | sha256_base64 }}' https://www.googletagmanager.com;
+    style-src 'self' https://fonts.googleapis.com;
+    style-src-attr 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' https://www.googletagmanager.com https://*.google-analytics.com;
+    connect-src https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com
+  {%- endcapture -%}
+  <meta http-equiv="Content-Security-Policy" content="{{ csp | normalize_whitespace }}">
   {%- seo -%}
   <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -13,7 +33,8 @@
   {%- if page.layout == 'post' %}
   <link rel="stylesheet" href="{{ '/assets/css/katex.css' | relative_url }}">
   {%- endif %}
-  {%- if jekyll.environment == 'production' and site.analytics -%}
-    {%- include analytics.html -%}
-  {%- endif -%}
+  {%- if jekyll.environment == 'production' and site.analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
+  <script>{{ analytics_js }}</script>
+  {%- endif %}
 </head>

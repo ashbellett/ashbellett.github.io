@@ -4,7 +4,7 @@ This is my personal website that contains notes on mathematics, science and engi
 
 ## Prerequisites
 
-Install [Ruby](https://www.ruby-lang.org/) at the version in `.ruby-version` (currently 4.0.7), e.g. `brew install ruby` on macOS.
+Install [Ruby](https://www.ruby-lang.org/) 4.0, e.g. `brew install ruby` on macOS. CI builds with the exact version in `.ruby-version` (currently 4.0.9); any 4.0.x release works locally.
 
 ## Installation
 

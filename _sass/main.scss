@@ -442,6 +442,20 @@ pre {
   }
 }
 
+/**
+ * Maths
+ *
+ * A display equation wider than the text column scrolls within the column,
+ * as code blocks and tables do, instead of widening the whole page on narrow
+ * viewports. The vertical padding stops the hidden overflow from clipping
+ * tall delimiters, superscripts and subscripts.
+ */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}
+
 
 
 /**

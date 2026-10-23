@@ -50,7 +50,11 @@ The **Borel–Cantelli lemma** states that if $$A_1,A_2,\ldots$$ are events with
 
 The **continuous mapping theorem** states that if $$g:\mathbb{R}\rightarrow\mathbb{R}$$ is continuous at every point of a set that $$X$$ lies in with probability one then convergence of $$X_n$$ to $$X$$ is preserved by $$g$$ in each mode.
 
-$$X_n\xrightarrow{a.s.}X\Rightarrow g\left(X_n\right)\xrightarrow{a.s.}g\left(X\right),\qquad X_n\xrightarrow{p}X\Rightarrow g\left(X_n\right)\xrightarrow{p}g\left(X\right),\qquad X_n\xrightarrow{d}X\Rightarrow g\left(X_n\right)\xrightarrow{d}g\left(X\right)$$
+$$X_n\xrightarrow{a.s.}X\Rightarrow g\left(X_n\right)\xrightarrow{a.s.}g\left(X\right)$$
+
+$$X_n\xrightarrow{p}X\Rightarrow g\left(X_n\right)\xrightarrow{p}g\left(X\right)$$
+
+$$X_n\xrightarrow{d}X\Rightarrow g\left(X_n\right)\xrightarrow{d}g\left(X\right)$$
 
 The theorem also holds for random vectors and continuous $$g:\mathbb{R}^k\rightarrow\mathbb{R}^m.$$ In particular sums, products, powers and ratios with non-zero denominators of sequences that converge jointly also converge.
 

@@ -28,7 +28,9 @@ $$\mathbb{E}\left[c\right]=c,\qquad\mathbb{E}\left[\mathbf{1}_A\right]=\mathbb{P
 
 $$\mathbb{E}\left[aX+bY+c\right]=a\,\mathbb{E}\left[X\right]+b\,\mathbb{E}\left[Y\right]+c$$
 
-$$\mathrm{if}\,\,X\leq Y\,\,\mathrm{then}\,\,\mathbb{E}\left[X\right]\leq\mathbb{E}\left[Y\right],\qquad\left\lvert\mathbb{E}\left[X\right]\right\rvert\leq\mathbb{E}\left[\lvert X\rvert\right]$$
+$$\mathrm{if}\,\,X\leq Y\,\,\mathrm{then}\,\,\mathbb{E}\left[X\right]\leq\mathbb{E}\left[Y\right]$$
+
+$$\left\lvert\mathbb{E}\left[X\right]\right\rvert\leq\mathbb{E}\left[\lvert X\rvert\right]$$
 
 $$\mathrm{if}\,\,X\,\,\mathrm{and}\,\,Y\,\,\mathrm{are}\,\,\mathrm{independent}\,\,\mathrm{then}\,\,\mathbb{E}\left[XY\right]=\mathbb{E}\left[X\right]\mathbb{E}\left[Y\right]$$
 
@@ -36,7 +38,9 @@ The first property of the second line is linearity, which holds whether or not $
 
 Let $$X$$ have finite mean $$\mu.$$ The **variance** of $$X$$ is the expected squared deviation from the mean, and the **standard deviation** $$\sigma$$ is its square root.
 
-$$\mathrm{var}\left[X\right]:=\mathbb{E}\left[\left(X-\mu\right)^2\right]=\mathbb{E}\left[X^2\right]-\mu^2,\qquad\sigma:=\sqrt{\mathrm{var}\left[X\right]}$$
+$$\mathrm{var}\left[X\right]:=\mathbb{E}\left[\left(X-\mu\right)^2\right]=\mathbb{E}\left[X^2\right]-\mu^2$$
+
+$$\sigma:=\sqrt{\mathrm{var}\left[X\right]}$$
 
 The variance is finite if and only if $$\mathbb{E}\left[X^2\right]$$ is finite. It satisfies $$\mathrm{var}\left[X\right]\geq 0$$ with equality if and only if $$X=\mu$$ almost surely, and for $$a,b\in\mathbb{R}$$
 
@@ -68,17 +72,23 @@ The correlation satisfies $$-1\leq\rho_{X,Y}\leq 1,$$ with $$\lvert\rho_{X,Y}\rv
 
 Let $$\underline{X}=\left(X_1,\ldots,X_n\right)$$ be a random vector whose components have finite variances. The **mean vector** $$\underline{\mu}=\mathbb{E}\left[\underline{X}\right]$$ is the vector of component means and the **covariance matrix** $$\Sigma=\mathrm{cov}\left[\underline{X}\right]\in\mathbb{R}^{\,n\times n}$$ is the matrix of pairwise covariances.
 
-$$\underline{\mu}_i:=\mathbb{E}\left[X_i\right],\qquad\Sigma_{ij}:=\mathrm{cov}\left[X_i,X_j\right],\qquad\Sigma=\mathbb{E}\left[\left(\underline{X}-\underline{\mu}\right)\left(\underline{X}-\underline{\mu}\right)^\intercal\right]$$
+$$\underline{\mu}_i:=\mathbb{E}\left[X_i\right],\qquad\Sigma_{ij}:=\mathrm{cov}\left[X_i,X_j\right]$$
+
+$$\Sigma=\mathbb{E}\left[\left(\underline{X}-\underline{\mu}\right)\left(\underline{X}-\underline{\mu}\right)^\intercal\right]$$
 
 The covariance matrix is symmetric and positive semi-definite, since $$\underline{a}^\intercal\Sigma\underline{a}=\mathrm{var}\left[\underline{a}^\intercal\underline{X}\right]\geq 0$$ for every $$\underline{a}\in\mathbb{R}^n,$$ and is positive definite unless some linear combination of the components is almost surely constant. Its diagonal holds the variances of the components. For $$A\in\mathbb{R}^{\,m\times n}$$ and $$\underline{b}\in\mathbb{R}^m$$ the affine transformation $$A\underline{X}+\underline{b}$$ has
 
-$$\mathbb{E}\left[A\underline{X}+\underline{b}\right]=A\underline{\mu}+\underline{b},\qquad\mathrm{cov}\left[A\underline{X}+\underline{b}\right]=A\Sigma A^\intercal.$$
+$$\mathbb{E}\left[A\underline{X}+\underline{b}\right]=A\underline{\mu}+\underline{b}$$
+
+$$\mathrm{cov}\left[A\underline{X}+\underline{b}\right]=A\Sigma A^\intercal.$$
 
 The **correlation matrix** has entries $$\rho_{X_i,X_j},$$ so has ones on its diagonal, and is the covariance matrix of the standardised components.
 
 Let $$\left(X,Y\right)$$ be a random vector and $$x$$ be a value with $$p_X\left(x\right)>0$$ or $$f_X\left(x\right)>0.$$ The **conditional expectation** of $$Y$$ given $$X=x$$ is the expectation of the conditional distribution of $$Y$$ given $$X=x.$$
 
-$$\mathbb{E}\left[Y\mid X=x\right]:=\sum_y y\,p_{Y\mid X}\left(y\mid x\right),\qquad\mathbb{E}\left[Y\mid X=x\right]:=\int_{-\infty}^{\infty}y\,f_{Y\mid X}\left(y\mid x\right)dy$$
+$$\mathbb{E}\left[Y\mid X=x\right]:=\sum_y y\,p_{Y\mid X}\left(y\mid x\right)$$
+
+$$\mathbb{E}\left[Y\mid X=x\right]:=\int_{-\infty}^{\infty}y\,f_{Y\mid X}\left(y\mid x\right)dy$$
 
 This is a function $$h(x)=\mathbb{E}\left[Y\mid X=x\right]$$ of $$x,$$ and the **conditional expectation** $$\mathbb{E}\left[Y\mid X\right]:=h(X)$$ is the random variable obtained by evaluating it at $$X.$$ The **law of total expectation** or **tower property** states that averaging the conditional expectation over $$X$$ recovers the expectation of $$Y.$$
 

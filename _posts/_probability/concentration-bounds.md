@@ -60,7 +60,9 @@ $$\mathbb{E}\left[e^{t\left(X-\mu\right)}\right]\leq\exp\left(\frac{t^2\left(b-a
 
 Let $$X_1,\ldots,X_n$$ be independent random variables with $$a_i\leq X_i\leq b_i$$ almost surely and $$S_n=\sum_{i=1}^n X_i.$$ **Hoeffding's inequality** states that for every $$s>0$$
 
-$$\mathbb{P}\left(S_n-\mathbb{E}\left[S_n\right]\geq s\right)\leq\exp\left(-\frac{2s^2}{\sum_{i=1}^n\left(b_i-a_i\right)^2}\right),\qquad\mathbb{P}\left(\left\lvert S_n-\mathbb{E}\left[S_n\right]\right\rvert\geq s\right)\leq 2\exp\left(-\frac{2s^2}{\sum_{i=1}^n\left(b_i-a_i\right)^2}\right).$$
+$$\mathbb{P}\left(S_n-\mathbb{E}\left[S_n\right]\geq s\right)\leq\exp\left(-\frac{2s^2}{\sum_{i=1}^n\left(b_i-a_i\right)^2}\right)$$
+
+$$\mathbb{P}\left(\left\lvert S_n-\mathbb{E}\left[S_n\right]\right\rvert\geq s\right)\leq 2\exp\left(-\frac{2s^2}{\sum_{i=1}^n\left(b_i-a_i\right)^2}\right).$$
 
 It follows from the Chernoff bound and Hoeffding's lemma. For the average $$\overline{X}_n=\frac{1}{n}S_n$$ of iid random variables in $$\left[0,1\right]$$ with mean $$\mu$$ it gives
 

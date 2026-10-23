@@ -18,7 +18,9 @@ The limit theorems describe how $$\overline{X}_n$$ behaves as $$n\rightarrow\inf
 
 The **weak law of large numbers** states that the average converges in probability to the mean.
 
-$$\overline{X}_n\xrightarrow{p}\mu,\qquad\mathrm{that}\,\,\mathrm{is}\,\,\lim_{n\rightarrow\infty}\mathbb{P}\left(\left\lvert\overline{X}_n-\mu\right\rvert>\varepsilon\right)=0\,\,\forall\,\varepsilon>0$$
+$$\overline{X}_n\xrightarrow{p}\mu$$
+
+$$\mathrm{that}\,\,\mathrm{is}\,\,\lim_{n\rightarrow\infty}\mathbb{P}\left(\left\lvert\overline{X}_n-\mu\right\rvert>\varepsilon\right)=0\,\,\forall\,\varepsilon>0$$
 
 Under the assumption of finite variance it follows from Chebyshev's inequality, $$\mathbb{P}\left(\left\lvert\overline{X}_n-\mu\right\rvert>\varepsilon\right)\leq\frac{\sigma^2}{n\varepsilon^2},$$ but it holds whenever the mean exists. The law also holds for independent random variables with a common mean that are not identically distributed provided their variances are bounded, and for uncorrelated rather than independent random variables with bounded variances.
 
@@ -46,7 +48,9 @@ $$\frac{\sqrt{n}\left(\overline{X}_n-\mu\right)}{\sigma}=\frac{S_n-n\mu}{\sigma\
 
 Equivalently, $$\sqrt{n}\left(\overline{X}_n-\mu\right)\xrightarrow{d}\mathrm{N}\left(0,\sigma^2\right).$$ The theorem is proved by showing that the characteristic function of the standardised average converges to $$e^{-\frac{t^2}{2}}$$ and applying Lévy's continuity theorem. For large $$n$$ it justifies the approximations
 
-$$\overline{X}_n\approx\mathrm{N}\left(\mu,\frac{\sigma^2}{n}\right),\qquad S_n\approx\mathrm{N}\left(n\mu,n\sigma^2\right),\qquad\mathbb{P}\left(\overline{X}_n\leq x\right)\approx\Phi\left(\frac{\sqrt{n}\left(x-\mu\right)}{\sigma}\right).$$
+$$\overline{X}_n\approx\mathrm{N}\left(\mu,\frac{\sigma^2}{n}\right),\qquadS_n\approx\mathrm{N}\left(n\mu,n\sigma^2\right)$$
+
+$$\mathbb{P}\left(\overline{X}_n\leq x\right)\approx\Phi\left(\frac{\sqrt{n}\left(x-\mu\right)}{\sigma}\right).$$
 
 The case of Bernoulli random variables, in which $$S_n\sim\mathrm{Binomial}\left(n,p\right)$$ is approximately $$\mathrm{N}\left(np,np\left(1-p\right)\right),$$ is the **de Moivre–Laplace theorem**. The finiteness of the variance is essential: the average of iid Cauchy random variables has the same Cauchy distribution for every $$n$$ and does not concentrate at all.
 
@@ -68,7 +72,9 @@ $$X_{(1)}=\min_{i}X_i,\qquad X_{(n)}=\max_{i}X_i.$$
 
 Let $$X_1,\ldots,X_n$$ be iid continuous random variables with cdf $$F$$ and pdf $$f,$$ so that ties occur with probability zero and the inequalities between the order statistics are strict almost surely. The event $$X_{(k)}\leq x$$ occurs if and only if at least $$k$$ of the $$X_i$$ are at most $$x,$$ and the number of such $$X_i$$ is $$\mathrm{Binomial}\left(n,F\left(x\right)\right),$$ so
 
-$$F_{X_{(k)}}\left(x\right)=\sum_{j=k}^n\binom{n}{j}F\left(x\right)^j\left(1-F\left(x\right)\right)^{n-j},\qquad f_{X_{(k)}}\left(x\right)=\frac{n!}{\left(k-1\right)!\left(n-k\right)!}F\left(x\right)^{k-1}\left(1-F\left(x\right)\right)^{n-k}f\left(x\right).$$
+$$F_{X_{(k)}}\left(x\right)=\sum_{j=k}^n\binom{n}{j}F\left(x\right)^j\left(1-F\left(x\right)\right)^{n-j}$$
+
+$$f_{X_{(k)}}\left(x\right)=\frac{n!}{\left(k-1\right)!\left(n-k\right)!}F\left(x\right)^{k-1}\left(1-F\left(x\right)\right)^{n-k}f\left(x\right).$$
 
 The density follows from requiring $$k-1$$ values below $$x,$$ one value at $$x$$ and $$n-k$$ values above $$x.$$ In particular the maximum and minimum have
 

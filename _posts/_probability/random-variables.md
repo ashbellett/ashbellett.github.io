@@ -136,11 +136,15 @@ $$\mathbb{P}\left(\underline{X}\in A\right)=\int_A f_{\underline{X}}\left(\under
 
 The joint pmf sums to one over the state space and the joint pdf integrates to one over $$\mathbb{R}^n.$$ The **marginal distribution** of a component $$X_i$$ is its own probability distribution and is recovered from the joint distribution by summing or integrating over the other components. For $$n=2$$ the **marginal pmf** and **marginal pdf** of $$X_1$$ are
 
-$$p_{X_1}\left(x_1\right)=\sum_{x_2}p_{X_1,X_2}\left(x_1,x_2\right),\qquad f_{X_1}\left(x_1\right)=\int_{-\infty}^{\infty}f_{X_1,X_2}\left(x_1,x_2\right)dx_2.$$
+$$p_{X_1}\left(x_1\right)=\sum_{x_2}p_{X_1,X_2}\left(x_1,x_2\right)$$
+
+$$f_{X_1}\left(x_1\right)=\int_{-\infty}^{\infty}f_{X_1,X_2}\left(x_1,x_2\right)dx_2.$$
 
 The random variables $$X_1,\ldots,X_n$$ are mutually independent if and only if the joint cdf factorises as the product of the marginal cdfs for all $$\underline{x},$$ and equivalently if and only if the joint pmf or pdf factorises as the product of the marginal pmfs or pdfs.
 
-$$F_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n F_{X_i}\left(x_i\right),\qquad f_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n f_{X_i}\left(x_i\right)$$
+$$F_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n F_{X_i}\left(x_i\right)$$
+
+$$f_{\underline{X}}\left(\underline{x}\right)=\prod_{i=1}^n f_{X_i}\left(x_i\right)$$
 
 Let $$\left(X_1,X_2\right)$$ be a discrete random vector and $$x_2$$ be a value with $$p_{X_2}\left(x_2\right)>0.$$ The **conditional pmf** of $$X_1$$ given $$X_2=x_2$$ is the conditional probability of the event $$X_1=x_1$$ given the event $$X_2=x_2.$$
 

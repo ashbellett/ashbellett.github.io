@@ -118,7 +118,35 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Surface integrals and flux
   - Green's, Stokes' and divergence theorems
 
-### 4. Optimisation
+### 4. Topology
+- **Metric spaces**
+  - Metrics, norms and examples
+  - Equivalent metrics and norms
+  - Open balls, open and closed sets
+  - Interior, closure and boundary
+  - Convergence and continuity
+- **Completeness**
+  - Cauchy sequences and complete spaces
+  - Contraction mapping theorem
+- **Topological spaces**
+  - Topologies and neighbourhoods
+  - Bases and the metric topology
+  - Subspaces and product topologies
+  - Continuity and homeomorphisms
+  - Hausdorff spaces
+- **Compactness**
+  - Open covers and compactness
+  - Sequential compactness and the Heine–Borel theorem
+  - Continuous functions on compact sets
+- **Connectedness**
+  - Connected and path-connected sets
+  - Continuous images of connected sets
+- **Function spaces**
+  - Continuous functions and the supremum norm
+  - Completeness of continuous functions
+  - Weierstrass and Stone–Weierstrass approximation theorems
+
+### 5. Optimisation
 - **Convexity**
   - Convex sets and functions
   - Jensen's inequality
@@ -140,7 +168,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Linear programming and the simplex method
   - Interior point methods
 
-### 5. Probability
+### 6. Probability
 - **Events**
   - Experiments, outcomes and events
   - Algebras and sigma algebras
@@ -192,7 +220,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Poisson and renewal processes
   - Markov chains
 
-### 6. Statistics
+### 7. Statistics
 - **Samples**
   - Random samples and populations
   - Statistics and sampling distributions
@@ -222,7 +250,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Standard parametric and non-parametric tests
   - Multiple testing
 
-### 7. Supervised learning
+### 8. Supervised learning
 - **Linear models**
   - Linear regression
   - Logistic regression
@@ -258,7 +286,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Loss functions
   - Validation metrics
 
-### 8. Unsupervised learning
+### 9. Unsupervised learning
 - **Dimension reduction**
   - Principal components analysis
   - Canonical correlation analysis
@@ -298,7 +326,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Shrinkage methods
   - Minimum covariance determinant
 
-### 9. Bayesian statistics
+### 10. Bayesian statistics
 - **Bayesian inference**
   - Prior, likelihood, posterior and marginal likelihood
   - Sequential updating and nuisance parameters
@@ -350,7 +378,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Markov networks
   - Factor graphs
 
-### 10. Deep learning
+### 11. Deep learning
 - **Activation functions**
   - Linear
   - Sigmoid
@@ -417,7 +445,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - MC dropout
   - Uncertainty estimation
 
-### 11. Agent systems
+### 12. Agent systems
 - **Multi-armed bandits**
   - Optimal arm identification
   - Regret minimisation
@@ -434,7 +462,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Deep Q-learning
   - Policy gradient methods
 
-### 12. Structured data analysis
+### 13. Structured data analysis
 - Data types
 - Data summaries
 - Data transformations
@@ -444,7 +472,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 - Spatial data
 - Multivariate data
 
-### 13. Unstructured data analysis
+### 14. Unstructured data analysis
 - **Networks**
   - Vertices and edges
   - Adjacency and direction
@@ -475,7 +503,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Text clustering
   - Sequence modelling
 
-### 14. Big data methods
+### 15. Big data methods
 - **Optimisation**
   - Gradient descent methods
   - Distributed, stochastic gradient descent

@@ -155,7 +155,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Completeness of continuous functions
   - Weierstrass and Stone–Weierstrass approximation theorems
 
-#### 5. Differential equations *(planned)*
+#### 5. Differential equations
 - **Ordinary differential equations**
   - Order, linearity and solutions
   - Initial and boundary value problems

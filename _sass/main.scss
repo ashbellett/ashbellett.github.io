@@ -2,36 +2,147 @@
 
 @use "sass:color";
 
-$color-scheme-auto: false !default;
-$color-scheme-dark: false !default;
 
+
+// Colours
+// -------
+// Each colour has a light and a dark value. The page follows the visitor's
+// system setting through CSS custom properties, so the rules below refer to
+// the variables at the end of this section rather than to either palette.
 
 // Light mode
-// ----------
 
-$lm-brand-color:           #828282 !default;
-$lm-brand-color-light:     color.adjust($lm-brand-color, $lightness: 40%) !default;
-$lm-brand-color-dark:      color.adjust($lm-brand-color, $lightness: -25%) !default;
+$lm-brand-color:           #828282;
+$lm-brand-color-light:     color.adjust($lm-brand-color, $lightness: 40%);
+$lm-brand-color-dark:      color.adjust($lm-brand-color, $lightness: -25%);
 
-$lm-site-title-color:      $lm-brand-color-dark !default;
+$lm-site-title-color:      $lm-brand-color-dark;
 
-$lm-text-color:            #111111 !default;
-$lm-background-color:      #fdfdfd !default;
-$lm-code-background-color: #eeeeff !default;
+$lm-text-color:            #111111;
+$lm-background-color:      #fdfdfd;
+$lm-code-background-color: #eeeeff;
 
-$lm-link-base-color:       #2a7ae2 !default;
-$lm-link-visited-color:    color.adjust($lm-link-base-color, $lightness: -15%) !default;
-$lm-link-hover-color:      $lm-text-color !default;
+$lm-link-base-color:       #2a7ae2;
+$lm-link-visited-color:    color.adjust($lm-link-base-color, $lightness: -15%);
+$lm-link-hover-color:      $lm-text-color;
 
-$lm-border-color-01:       $lm-brand-color-light !default;
-$lm-border-color-02:       color.adjust($lm-brand-color, $lightness: 35%) !default;
-$lm-border-color-03:       $lm-brand-color-dark !default;
+$lm-border-color-01:       $lm-brand-color-light;
+$lm-border-color-02:       color.adjust($lm-brand-color, $lightness: 35%);
+$lm-border-color-03:       $lm-brand-color-dark;
 
-$lm-table-text-color:      color.adjust($lm-text-color, $lightness: 18%) !default;
-$lm-table-zebra-color:     color.adjust($lm-brand-color, $lightness: 46%) !default;
-$lm-table-header-bg-color: color.adjust($lm-brand-color, $lightness: 43%) !default;
-$lm-table-header-border:   color.adjust($lm-brand-color, $lightness: 37%) !default;
-$lm-table-border-color:    $lm-border-color-01 !default;
+$lm-table-text-color:      color.adjust($lm-text-color, $lightness: 18%);
+$lm-table-zebra-color:     color.adjust($lm-brand-color, $lightness: 46%);
+$lm-table-header-bg-color: color.adjust($lm-brand-color, $lightness: 43%);
+$lm-table-header-border:   color.adjust($lm-brand-color, $lightness: 37%);
+$lm-table-border-color:    $lm-border-color-01;
+
+// Dark mode
+
+$dm-brand-color:           #999999;
+$dm-brand-color-light:     color.adjust($dm-brand-color, $lightness: 5%);
+$dm-brand-color-dark:      color.adjust($dm-brand-color, $lightness: -35%);
+
+$dm-site-title-color:      $dm-brand-color-light;
+
+$dm-text-color:            #bbbbbb;
+$dm-background-color:      #181818;
+$dm-code-background-color: #212121;
+
+$dm-link-base-color:       #79b8ff;
+$dm-link-visited-color:    $dm-link-base-color;
+$dm-link-hover-color:      $dm-text-color;
+
+$dm-border-color-01:       $dm-brand-color-dark;
+$dm-border-color-02:       $dm-brand-color-light;
+$dm-border-color-03:       $dm-brand-color;
+
+$dm-table-text-color:      $dm-text-color;
+$dm-table-zebra-color:     color.adjust($dm-background-color, $lightness: 4%);
+$dm-table-header-bg-color: color.adjust($dm-background-color, $lightness: 10%);
+$dm-table-header-border:   color.adjust($dm-background-color, $lightness: 21%);
+$dm-table-border-color:    $dm-border-color-01;
+
+:root {
+  color-scheme: light dark;
+
+  --brand-color: #{$lm-brand-color};
+  --brand-color-light: #{$lm-brand-color-light};
+  --brand-color-dark: #{$lm-brand-color-dark};
+
+  --site-title-color: #{$lm-site-title-color};
+
+  --text-color: #{$lm-text-color};
+  --background-color: #{$lm-background-color};
+  --code-background-color: #{$lm-code-background-color};
+
+  --link-base-color: #{$lm-link-base-color};
+  --link-visited-color: #{$lm-link-visited-color};
+  --link-hover-color: #{$lm-link-hover-color};
+
+  --border-color-01: #{$lm-border-color-01};
+  --border-color-02: #{$lm-border-color-02};
+  --border-color-03: #{$lm-border-color-03};
+
+  --table-text-color: #{$lm-table-text-color};
+  --table-zebra-color: #{$lm-table-zebra-color};
+  --table-header-bg-color: #{$lm-table-header-bg-color};
+  --table-header-border: #{$lm-table-header-border};
+  --table-border-color: #{$lm-table-border-color};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-color: #{$dm-brand-color};
+    --brand-color-light: #{$dm-brand-color-light};
+    --brand-color-dark: #{$dm-brand-color-dark};
+
+    --site-title-color: #{$dm-site-title-color};
+
+    --text-color: #{$dm-text-color};
+    --background-color: #{$dm-background-color};
+    --code-background-color: #{$dm-code-background-color};
+
+    --link-base-color: #{$dm-link-base-color};
+    --link-visited-color: #{$dm-link-visited-color};
+    --link-hover-color: #{$dm-link-hover-color};
+
+    --border-color-01: #{$dm-border-color-01};
+    --border-color-02: #{$dm-border-color-02};
+    --border-color-03: #{$dm-border-color-03};
+
+    --table-text-color: #{$dm-table-text-color};
+    --table-zebra-color: #{$dm-table-zebra-color};
+    --table-header-bg-color: #{$dm-table-header-bg-color};
+    --table-header-border: #{$dm-table-header-border};
+    --table-border-color: #{$dm-table-border-color};
+  }
+}
+
+$brand-color: var(--brand-color);
+$brand-color-light: var(--brand-color-light);
+$brand-color-dark: var(--brand-color-dark);
+
+$site-title-color: var(--site-title-color);
+
+$text-color: var(--text-color);
+$background-color: var(--background-color);
+$code-background-color: var(--code-background-color);
+
+$link-base-color: var(--link-base-color);
+$link-visited-color: var(--link-visited-color);
+$link-hover-color: var(--link-hover-color);
+
+$border-color-01: var(--border-color-01);
+$border-color-02: var(--border-color-02);
+$border-color-03: var(--border-color-03);
+
+$table-text-color: var(--table-text-color);
+$table-zebra-color: var(--table-zebra-color);
+$table-header-bg-color: var(--table-header-bg-color);
+$table-header-border: var(--table-header-border);
+$table-border-color: var(--table-border-color);
+
+
 
 .profile {
   width: 200px;
@@ -61,199 +172,27 @@ $lm-table-border-color:    $lm-border-color-01 !default;
   margin-left: 3rem;
 }
 
-// Dark mode
-// ---------
-
-$dm-brand-color:           #999999 !default;
-$dm-brand-color-light:     color.adjust($dm-brand-color, $lightness: 5%) !default;
-$dm-brand-color-dark:      color.adjust($dm-brand-color, $lightness: -35%) !default;
-
-$dm-site-title-color:      $dm-brand-color-light !default;
-
-$dm-text-color:            #bbbbbb !default;
-$dm-background-color:      #181818 !default;
-$dm-code-background-color: #212121 !default;
-
-$dm-link-base-color:       #79b8ff !default;
-$dm-link-visited-color:    $dm-link-base-color !default;
-$dm-link-hover-color:      $dm-text-color !default;
-
-$dm-border-color-01:       $dm-brand-color-dark !default;
-$dm-border-color-02:       $dm-brand-color-light !default;
-$dm-border-color-03:       $dm-brand-color !default;
-
-$dm-table-text-color:      $dm-text-color !default;
-$dm-table-zebra-color:     color.adjust($dm-background-color, $lightness: 4%) !default;
-$dm-table-header-bg-color: color.adjust($dm-background-color, $lightness: 10%) !default;
-$dm-table-header-border:   color.adjust($dm-background-color, $lightness: 21%) !default;
-$dm-table-border-color:    $dm-border-color-01 !default;
 
 
-// Mode selection
-// --------------
-
-
-// Classic skin (always light mode)
-// Assign outside of the if construct to establish global variable scope
-
-$brand-color: $lm-brand-color;
-$brand-color-light: $lm-brand-color-light;
-$brand-color-dark: $lm-brand-color-dark;
-
-$site-title-color: $lm-site-title-color;
-
-$text-color: $lm-text-color;
-$background-color: $lm-background-color;
-$code-background-color: $lm-code-background-color;
-
-$link-base-color: $lm-link-base-color;
-$link-visited-color: $lm-link-visited-color;
-$link-hover-color: $lm-link-hover-color;
-
-$border-color-01: $lm-border-color-01;
-$border-color-02: $lm-border-color-02;
-$border-color-03: $lm-border-color-03;
-
-$table-text-color: $lm-table-text-color;
-$table-zebra-color: $lm-table-zebra-color;
-$table-header-bg-color: $lm-table-header-bg-color;
-$table-header-border: $lm-table-header-border;
-$table-border-color: $lm-table-border-color;
-
-
-@if $color-scheme-auto {
-
-  // Auto mode
-
-  :root {
-    --minima-brand-color: #{$lm-brand-color};
-    --minima-brand-color-light: #{$lm-brand-color-light};
-    --minima-brand-color-dark: #{$lm-brand-color-dark};
-
-    --minima-site-title-color: #{$lm-site-title-color};
-
-    --minima-text-color: #{$lm-text-color};
-    --minima-background-color: #{$lm-background-color};
-    --minima-code-background-color: #{$lm-code-background-color};
-
-    --minima-link-base-color: #{$lm-link-base-color};
-    --minima-link-visited-color: #{$lm-link-visited-color};
-    --minima-link-hover-color: #{$lm-link-hover-color};
-
-    --minima-border-color-01: #{$lm-border-color-01};
-    --minima-border-color-02: #{$lm-border-color-02};
-    --minima-border-color-03: #{$lm-border-color-03};
-
-    --minima-table-text-color: #{$lm-table-text-color};
-    --minima-table-zebra-color: #{$lm-table-zebra-color};
-    --minima-table-header-bg-color: #{$lm-table-header-bg-color};
-    --minima-table-header-border: #{$lm-table-header-border};
-    --minima-table-border-color: #{$lm-table-border-color};
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --minima-brand-color: #{$dm-brand-color};
-      --minima-brand-color-light: #{$dm-brand-color-light};
-      --minima-brand-color-dark: #{$dm-brand-color-dark};
-
-      --minima-site-title-color: #{$dm-site-title-color};
-
-      --minima-text-color: #{$dm-text-color};
-      --minima-background-color: #{$dm-background-color};
-      --minima-code-background-color: #{$dm-code-background-color};
-
-      --minima-link-base-color: #{$dm-link-base-color};
-      --minima-link-visited-color: #{$dm-link-visited-color};
-      --minima-link-hover-color: #{$dm-link-hover-color};
-
-      --minima-border-color-01: #{$dm-border-color-01};
-      --minima-border-color-02: #{$dm-border-color-02};
-      --minima-border-color-03: #{$dm-border-color-03};
-
-      --minima-table-text-color: #{$dm-table-text-color};
-      --minima-table-zebra-color: #{$dm-table-zebra-color};
-      --minima-table-header-bg-color: #{$dm-table-header-bg-color};
-      --minima-table-header-border: #{$dm-table-header-border};
-      --minima-table-border-color: #{$dm-table-border-color};
-    }
-  }
-
-  $brand-color: var(--minima-brand-color);
-  $brand-color-light: var(--minima-brand-color-light);
-  $brand-color-dark: var(--minima-brand-color-dark);
-
-  $site-title-color: var(--minima-site-title-color);
-
-  $text-color: var(--minima-text-color);
-  $background-color: var(--minima-background-color);
-  $code-background-color: var(--minima-code-background-color);
-
-  $link-base-color: var(--minima-link-base-color);
-  $link-visited-color: var(--minima-link-visited-color);
-  $link-hover-color: var(--minima-link-hover-color);
-
-  $border-color-01: var(--minima-border-color-01);
-  $border-color-02: var(--minima-border-color-02);
-  $border-color-03: var(--minima-border-color-03);
-
-  $table-text-color: var(--minima-table-text-color);
-  $table-zebra-color: var(--minima-table-zebra-color);
-  $table-header-bg-color: var(--minima-table-header-bg-color);
-  $table-header-border: var(--minima-table-header-border);
-  $table-border-color: var(--minima-table-border-color);
-
-
-} @else if $color-scheme-dark {
-
-  // Dark skin (always dark mode)
-
-  $brand-color: $dm-brand-color;
-  $brand-color-light: $dm-brand-color-light;
-  $brand-color-dark: $dm-brand-color-dark;
-
-  $site-title-color: $dm-site-title-color;
-
-  $text-color: $dm-text-color;
-  $background-color: $dm-background-color;
-  $code-background-color: $dm-code-background-color;
-
-  $link-base-color: $dm-link-base-color;
-  $link-visited-color: $dm-link-visited-color;
-  $link-hover-color: $dm-link-hover-color;
-
-  $border-color-01: $dm-border-color-01;
-  $border-color-02: $dm-border-color-02;
-  $border-color-03: $dm-border-color-03;
-
-  $table-text-color: $dm-table-text-color;
-  $table-zebra-color: $dm-table-zebra-color;
-  $table-header-bg-color: $dm-table-header-bg-color;
-  $table-header-border: $dm-table-header-border;
-  $table-border-color: $dm-table-border-color;
-}
-
-// Define defaults for each variable.
-
-$base-font-family: "Source Serif 4", serif, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+$base-font-family: "Source Serif 4", serif;
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     30px;
 
-$table-text-align: left !default;
+$table-text-align: left;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    800px;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm:          600px;
+$on-laptop:        800px;
 
-$on-medium:        $on-palm !default;
-$on-large:         $on-laptop !default;
+$on-medium:        $on-palm;
+$on-large:         $on-laptop;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -370,7 +309,6 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  // font-family: $header-font-family;
   font-weight: $base-font-weight;
 }
 

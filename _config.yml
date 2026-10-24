@@ -1,4 +1,6 @@
 title: Ash Bellett
+description: "Data scientist analysing, building and optimising data-driven platforms and products."
+lang: en-AU
 author:
   name: Ash Bellett
   email: ash.bellett.ab@gmail.com
@@ -150,6 +152,18 @@ sass:
   sourcemap: never
 redirect_from:
   json: false
+# Link previews: the profile photo is square, so use the small card.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/img/ash.jpg
+        width: 400
+        height: 400
+        alt: Ash Bellett
+twitter:
+  card: summary
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

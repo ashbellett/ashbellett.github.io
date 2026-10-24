@@ -99,8 +99,8 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Finite series and series over finite sets
   - Infinite series and convergence tests
   - Power series
-  - Sequences of functions and uniform convergence *(planned)*
-  - Exponential and trigonometric series and Euler's formula *(planned)*
+  - Sequences of functions and uniform convergence
+  - Exponential and trigonometric series and Euler's formula
 - **Continuity**
   - Continuity and intervals
   - Intermediate and extreme value theorems
@@ -118,7 +118,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Integration by parts and substitution
   - Improper integrals
   - Multiple integrals and change of variables
-- **Vector calculus** *(planned)*
+- **Vector calculus**
   - Scalar and vector fields
   - Cross product
   - Gradient, divergence and curl

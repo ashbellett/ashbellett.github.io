@@ -89,7 +89,17 @@ The case $$k=0$$ is the mean value theorem. If $$f$$ is smooth at $$x_0$$ then i
 
 $$\sum_{i=0}^{\infty}\frac{f^{(i)}(x_0)}{i!}\left(x-x_0\right)^i$$
 
-and $$f$$ is **analytic** at $$x_0$$ if the Taylor series converges to $$f(x)$$ for all $$x$$ in some open interval containing $$x_0.$$ A smooth function need not be analytic, since its Taylor series may converge to a different function. The exponential series is the Taylor series of $$\exp$$ at $$0,$$ since $$\exp'=\exp$$ and $$\exp(0)=1.$$
+and $$f$$ is **analytic** at $$x_0$$ if the Taylor series converges to $$f(x)$$ for all $$x$$ in some open interval containing $$x_0.$$ A smooth function need not be analytic, since its Taylor series may converge to a different function.
+
+A power series $$\sum_{n=0}^{\infty} a_n\left(x-c\right)^n$$ with radius of convergence $$R>0$$ is differentiable on $$\left(c-R,c+R\right)$$ and its derivative is the **term-by-term derivative**, a power series with the same radius of convergence.
+
+$$\frac{d}{dx}\sum_{n=0}^{\infty} a_n\left(x-c\right)^n=\sum_{n=1}^{\infty} n\,a_n\left(x-c\right)^{n-1}$$
+
+Repeating this, a power series is smooth on its open interval of convergence, $$a_k=\frac{f^{(k)}(c)}{k!}$$ and so the series is its own Taylor series at $$c$$ and is analytic there. Differentiating the exponential, cosine and sine series term by term gives
+
+$$\exp'=\exp,\qquad\cos'=-\sin,\qquad\sin'=\cos,$$
+
+and the derivative of the natural logarithm, the inverse function of $$\exp$$ on $$\mathbb{R},$$ is $$\frac{d}{dx}\log_e x=\frac{1}{x}$$ for $$x>0.$$ Since $$\exp'=\exp>0$$ on $$\mathbb{R},$$ the exponential function is strictly increasing and the real power $$a^x=\exp\left(x\log_e a\right)$$ has derivative $$a^x\log_e a$$ for $$a>0.$$
 
 Let $$\underline{x}=\left(x_1,\ldots,x_n\right)\in\mathbb{R}^n$$ and $$\underline{y}\in\mathbb{R}^n.$$ The **Euclidean distance** between $$\underline{x}$$ and $$\underline{y}$$ is
 

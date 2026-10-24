@@ -48,7 +48,7 @@ $$\int_a^b f(x)\,dx=\int_a^d f(x)\,dx+\int_d^b f(x)\,dx$$
 
 $$\left(b-a\right)\inf_{x\in[a,b]}f(x)\leq\int_a^b f(x)\,dx\leq\left(b-a\right)\sup_{x\in[a,b]}f(x)$$
 
-The functions $$f\,g,$$ $$\lvert f\rvert$$ and $$\max\{f,g\}$$ are also in $$\mathcal{R}[a,b].$$ By convention $$\int_a^a f(x)\,dx=0$$ and $$\int_b^a f(x)\,dx=-\int_a^b f(x)\,dx,$$ so that the additivity property holds for any ordering of $$a,$$ $$b$$ and $$d.$$ The **mean value theorem for integrals** states that if $$f$$ is continuous on $$[a,b]$$ then there exists $$c\in[a,b]$$ at which $$f$$ equals its average value.
+The functions $$f\,g,$$ $$\lvert f\rvert$$ and $$\max\{f,g\}$$ are also in $$\mathcal{R}[a,b].$$ By convention $$\int_a^a f(x)\,dx=0$$ and $$\int_b^a f(x)\,dx=-\int_a^b f(x)\,dx,$$ so that the additivity property holds for any ordering of $$a,$$ $$b$$ and $$d.$$ If $$f_n\in\mathcal{R}[a,b]$$ converge uniformly to $$f$$ on $$[a,b]$$ then $$f\in\mathcal{R}[a,b]$$ and the integrals converge, $$\int_a^b f_n(x)\,dx\rightarrow\int_a^b f(x)\,dx,$$ so a uniformly convergent series of integrable functions may be integrated term by term. In particular a power series may be integrated term by term over any closed interval inside its interval of convergence. The **mean value theorem for integrals** states that if $$f$$ is continuous on $$[a,b]$$ then there exists $$c\in[a,b]$$ at which $$f$$ equals its average value.
 
 $$f(c)=\frac{1}{b-a}\int_a^b f(x)\,dx$$
 

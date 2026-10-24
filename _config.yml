@@ -46,6 +46,7 @@ collections:
       - continuity.md
       - derivatives.md
       - integrals.md
+      - vector-calculus.md
   optimisation:
     key: 3
     title: "Optimisation"

@@ -129,3 +129,59 @@ with the conventions $$\frac{1}{0}=\infty$$ and $$\frac{1}{\infty}=0.$$ The set 
 $$\exp\left(x\right):=\sum_{n=0}^{\infty}\frac{x^n}{n!}$$
 
 has $$R=\infty$$ and converges for every $$x\in\mathbb{R}.$$
+
+Let $$X\subseteq\mathbb{R}$$ and $$f_n:X\rightarrow\mathbb{R}$$ be a sequence of functions indexed by $$n\in\mathbb{N}.$$ The sequence **converges pointwise** to $$f:X\rightarrow\mathbb{R}$$ if and only if $$f_n(x)\rightarrow f(x)$$ for every $$x\in X,$$ and **converges uniformly** to $$f$$ if and only if the largest difference between $$f_n$$ and $$f$$ tends to zero.
+
+$$\sup_{x\in X}\lvert f_n(x)-f(x)\rvert\rightarrow 0\,\,\mathrm{as}\,\,n\rightarrow\infty$$
+
+Written out, $$(f_n)$$ converges uniformly to $$f$$ if and only if for every $$\varepsilon>0$$ there exists $$N\in\mathbb{N}$$ that depends on $$\varepsilon$$ alone such that $$\lvert f_n(x)-f(x)\rvert\leq\varepsilon$$ for all $$n\geq N$$ and all $$x\in X,$$ whereas for pointwise convergence $$N$$ may also depend on $$x.$$ Uniform convergence implies pointwise convergence but not conversely: $$f_n(x)=x^n$$ converges pointwise on $$\left[0,1\right]$$ to the function that is $$0$$ on $$\left[0,1\right)$$ and $$1$$ at $$1,$$ but not uniformly, since $$\sup_x\lvert f_n(x)-f(x)\rvert=1$$ for every $$n.$$ The **uniform Cauchy criterion** states that $$(f_n)$$ converges uniformly to some function on $$X$$ if and only if
+
+$$\forall\varepsilon>0\,\exists N\in\mathbb{N}:\sup_{x\in X}\lvert f_n(x)-f_m(x)\rvert\leq\varepsilon\,\,\forall\,m,n\geq N.$$
+
+A **series of functions** $$\sum_{n=1}^{\infty} f_n$$ converges pointwise or uniformly on $$X$$ if and only if its sequence of partial sums $$S_N=\sum_{n=1}^{N} f_n$$ does. The **Weierstrass M-test** states that if there are constants $$M_n\geq 0$$ with $$\lvert f_n(x)\rvert\leq M_n\,\,\forall\,x\in X$$ and $$\sum_{n=1}^{\infty} M_n$$ converges then $$\sum_{n=1}^{\infty} f_n$$ converges absolutely at every $$x\in X$$ and uniformly on $$X.$$ By comparison with $$\sum_{n=0}^{\infty}\lvert a_n\rvert r^n,$$ a power series with radius of convergence $$R$$ converges uniformly on every closed interval $$\left[c-r,c+r\right]$$ with $$0\leq r<R,$$ but it need not converge uniformly on $$\left(c-R,c+R\right):$$ the partial sums of the geometric series are bounded on $$\left(-1,1\right)$$ whereas its sum is not.
+
+A **complex number** is an ordered pair $$z=\left(a,b\right)$$ of real numbers, written $$z=a+ib,$$ where $$a=\mathrm{Re}\,z$$ is the **real part** of $$z,$$ $$b=\mathrm{Im}\,z$$ is the **imaginary part** of $$z$$ and the **imaginary unit** $$i=0+1i$$ satisfies $$i^2=-1.$$ The set of complex numbers is $$\mathbb{C},$$ with addition and multiplication
+
+$$\left(a+ib\right)+\left(c+id\right):=\left(a+c\right)+i\left(b+d\right),\qquad\left(a+ib\right)\left(c+id\right):=\left(ac-bd\right)+i\left(ad+bc\right).$$
+
+With these operations $$\mathbb{C}$$ is a field that contains $$\mathbb{R}$$ as the complex numbers with imaginary part $$0.$$ The **complex conjugate** of $$z$$ is $$\overline{z}:=a-ib$$ and the **modulus** of $$z$$ is $$\lvert z\rvert:=\sqrt{a^2+b^2}=\sqrt{z\,\overline{z}},$$ which agrees with the absolute value when $$z\in\mathbb{R}.$$ For $$z,w\in\mathbb{C}$$
+
+$$\lvert z\,w\rvert=\lvert z\rvert\lvert w\rvert,\qquad\lvert z+w\rvert\leq\lvert z\rvert+\lvert w\rvert,\qquad\lvert\mathrm{Re}\,z\rvert,\lvert\mathrm{Im}\,z\rvert\leq\lvert z\rvert\leq\lvert\mathrm{Re}\,z\rvert+\lvert\mathrm{Im}\,z\rvert.$$
+
+No ordering of $$\mathbb{C}$$ is compatible with its field operations, so inequalities between complex numbers are inequalities between their moduli.
+
+A sequence $$\left(z_n\right)$$ of complex numbers converges to $$z\in\mathbb{C}$$ if and only if $$\lvert z_n-z\rvert\rightarrow 0,$$ which by the last inequality holds if and only if $$\mathrm{Re}\,z_n\rightarrow\mathrm{Re}\,z$$ and $$\mathrm{Im}\,z_n\rightarrow\mathrm{Im}\,z.$$ Applied to real and imaginary parts, the Cauchy criterion, convergence and absolute convergence of series with the modulus in place of the absolute value, the absolute convergence, comparison, root and ratio tests, the series laws and the rearrangement of absolutely convergent series all carry over to complex sequences and series. A **complex power series** $$\sum_{n=0}^{\infty} a_n\left(z-c\right)^n$$ with $$a_n,c,z\in\mathbb{C}$$ has a radius of convergence $$R$$ given by the same formula, converges absolutely on the **disc of convergence** $$\left\{z\in\mathbb{C}:\lvert z-c\rvert<R\right\}$$ and diverges for $$\lvert z-c\rvert>R.$$
+
+The exponential series converges absolutely for every $$z\in\mathbb{C}$$ and defines the **exponential function** $$\exp:\mathbb{C}\rightarrow\mathbb{C}.$$ Multiplying two exponential series and rearranging the absolutely convergent result gives the **exponential law**, from which the remaining properties follow.
+
+$$\exp\left(z+w\right)=\exp\left(z\right)\exp\left(w\right),\qquad\exp\left(0\right)=1,\qquad\exp\left(-z\right)=\frac{1}{\exp\left(z\right)}\neq 0,\qquad\exp\left(\overline{z}\right)=\overline{\exp\left(z\right)}$$
+
+For real $$x$$ the exponential function is real with $$\exp\left(x\right)>0,$$ it is injective on $$\mathbb{R}$$ with image $$\left(0,\infty\right)$$ and $$\exp\left(x\right)\geq 1+x.$$ Its inverse function on $$\mathbb{R}$$ is the **natural logarithm** $$\log_e:\left(0,\infty\right)\rightarrow\mathbb{R},$$ which satisfies $$\log_e\left(xy\right)=\log_e x+\log_e y$$ and $$\log_e 1=0.$$ **Euler's number** is $$e:=\exp\left(1\right)=\sum_{n=0}^{\infty}\frac{1}{n!}\approx 2.71828.$$ By the exponential law $$\exp\left(\frac{p}{q}\right)=e^{\frac{p}{q}}$$ for every rational exponent, so $$e^z:=\exp\left(z\right)$$ is written for every $$z\in\mathbb{C},$$ and for $$a>0$$ and $$x\in\mathbb{R}$$ the **real power** $$a^x:=\exp\left(x\log_e a\right)$$ extends the rational powers of $$a.$$
+
+Let $$t\in\mathbb{R}.$$ The **cosine** and **sine** of $$t$$ are the sums of the even and odd parts of the exponential series with alternating signs, which converge absolutely for every $$t.$$
+
+$$\cos t:=\sum_{n=0}^{\infty}\frac{\left(-1\right)^n t^{2n}}{\left(2n\right)!},\qquad\sin t:=\sum_{n=0}^{\infty}\frac{\left(-1\right)^n t^{2n+1}}{\left(2n+1\right)!}$$
+
+Splitting $$\exp\left(it\right)$$ into its even and odd terms and using $$i^{2n}=\left(-1\right)^n$$ gives **Euler's formula**.
+
+$$e^{it}=\cos t+i\sin t$$
+
+Consequently $$\cos t=\mathrm{Re}\,e^{it}=\frac{e^{it}+e^{-it}}{2}$$ and $$\sin t=\mathrm{Im}\,e^{it}=\frac{e^{it}-e^{-it}}{2i},$$ so $$\cos\left(-t\right)=\cos t$$ and $$\sin\left(-t\right)=-\sin t,$$ and the exponential law gives the following identities for $$s,t\in\mathbb{R}$$ and $$n\in\mathbb{N}.$$
+
+$$\cos^2 t+\sin^2 t=\left\lvert e^{it}\right\rvert^2=1$$
+
+$$\cos\left(s+t\right)=\cos s\cos t-\sin s\sin t,\qquad\sin\left(s+t\right)=\sin s\cos t+\cos s\sin t$$
+
+$$\left(\cos t+i\sin t\right)^n=\cos nt+i\sin nt$$
+
+The last identity is **de Moivre's formula**. The **tangent** of $$t$$ is $$\tan t:=\frac{\sin t}{\cos t}$$ wherever $$\cos t\neq 0.$$
+
+The cosine has a smallest positive zero, and $$\pi\approx 3.14159$$ is defined as twice that zero, so that $$\cos\frac{\pi}{2}=0$$ and $$\sin\frac{\pi}{2}=1.$$ Euler's formula then gives $$e^{\frac{i\pi}{2}}=i,$$ $$e^{i\pi}=-1$$ and $$e^{2\pi i}=1,$$ so by the exponential law
+
+$$\exp\left(z+2\pi i\right)=\exp\left(z\right)\,\,\forall\,z\in\mathbb{C}$$
+
+and the cosine and sine are **periodic** with **period** $$2\pi,$$ meaning $$\cos\left(t+2\pi\right)=\cos t$$ and $$\sin\left(t+2\pi\right)=\sin t.$$ The function $$t\mapsto e^{it}$$ is a bijection from $$\left[0,2\pi\right)$$ onto the **unit circle** $$\left\{z\in\mathbb{C}:\lvert z\rvert=1\right\},$$ so every non-zero $$z\in\mathbb{C}$$ has a unique **polar form**
+
+$$z=\lvert z\rvert e^{i\theta}=\lvert z\rvert\left(\cos\theta+i\sin\theta\right),\qquad\theta\in\left[0,2\pi\right),$$
+
+where $$\theta$$ is the **argument** of $$z.$$ In polar form multiplication multiplies moduli and adds arguments, and the zeros of the complex polynomial $$z^n-1$$ are the $$n$$ **roots of unity** $$e^{\frac{2\pi ik}{n}}$$ for $$k=0,\ldots,n-1.$$

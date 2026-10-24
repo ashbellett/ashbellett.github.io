@@ -99,8 +99,8 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Finite series and series over finite sets
   - Infinite series and convergence tests
   - Power series
-  - Sequences of functions and uniform convergence *(planned)*
-  - Exponential and trigonometric series and Euler's formula *(planned)*
+  - Sequences of functions and uniform convergence
+  - Exponential and trigonometric series and Euler's formula
 - **Continuity**
   - Continuity and intervals
   - Intermediate and extreme value theorems
@@ -118,7 +118,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Integration by parts and substitution
   - Improper integrals
   - Multiple integrals and change of variables
-- **Vector calculus** *(planned)*
+- **Vector calculus**
   - Scalar and vector fields
   - Cross product
   - Gradient, divergence and curl
@@ -127,7 +127,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Surface integrals and flux
   - Green's, Stokes' and divergence theorems
 
-#### 4. Topology *(planned)*
+#### 4. Topology
 - **Metric spaces**
   - Metrics, norms and examples
   - Equivalent metrics and norms
@@ -155,7 +155,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Completeness of continuous functions
   - Weierstrass and Stone–Weierstrass approximation theorems
 
-#### 5. Differential equations *(planned)*
+#### 5. Differential equations
 - **Ordinary differential equations**
   - Order, linearity and solutions
   - Initial and boundary value problems

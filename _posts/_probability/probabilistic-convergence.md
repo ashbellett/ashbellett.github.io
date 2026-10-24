@@ -6,11 +6,7 @@ tags: ["probability", "probabilistic convergence"]
 description: "Behaviour after randomness is observed for a while"
 ---
 
-Let $$X\subseteq\mathbb{R}$$ and $$f_n:X\rightarrow\mathbb{R}$$ be a sequence of functions indexed by $$n\in\mathbb{N}.$$ The sequence **converges pointwise** to $$f:X\rightarrow\mathbb{R}$$ if and only if $$f_n(x)\rightarrow f(x)$$ for every $$x\in X,$$ and **converges uniformly** to $$f$$ if and only if the largest difference between $$f_n$$ and $$f$$ tends to zero.
-
-$$\sup_{x\in X}\lvert f_n(x)-f(x)\rvert\rightarrow 0\,\,\mathrm{as}\,\,n\rightarrow\infty$$
-
-Uniform convergence implies pointwise convergence but not conversely: $$f_n(x)=x^n$$ converges pointwise on $$\left[0,1\right]$$ to the function that is $$0$$ on $$\left[0,1\right)$$ and $$1$$ at $$1,$$ but not uniformly, since $$\sup_x\lvert f_n(x)-f(x)\rvert=1$$ for every $$n.$$ A uniform limit of continuous functions is continuous, which the example shows can fail for pointwise limits. Random variables are functions on a sample space, so a sequence of random variables $$X_n$$ **converges surely** to $$X$$ if $$X_n(\omega)\rightarrow X(\omega)$$ for every outcome $$\omega\in\Omega.$$ This is too strong to be useful, since it is sensitive to outcomes of probability zero, and the modes of convergence below weaken it in different ways.
+A sequence of functions $$f_n:X\rightarrow\mathbb{R}$$ converges pointwise to $$f$$ if $$f_n(x)\rightarrow f(x)$$ for every $$x\in X$$ and converges uniformly to $$f$$ if $$\sup_{x\in X}\lvert f_n(x)-f(x)\rvert\rightarrow 0,$$ and uniform convergence implies pointwise convergence but not conversely. Random variables are functions on a sample space, so a sequence of random variables $$X_n$$ **converges surely** to $$X$$ if $$X_n(\omega)\rightarrow X(\omega)$$ for every outcome $$\omega\in\Omega.$$ This is too strong to be useful, since it is sensitive to outcomes of probability zero, and the modes of convergence below weaken it in different ways.
 
 Let $$X_1,X_2,\ldots$$ and $$X$$ be random variables defined on a common probability space. The sequence **converges almost surely** to $$X,$$ written $$X_n\xrightarrow{a.s.}X,$$ if and only if the set of outcomes on which $$X_n(\omega)\rightarrow X(\omega)$$ has probability one.
 

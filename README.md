@@ -118,7 +118,35 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Surface integrals and flux
   - Green's, Stokes' and divergence theorems
 
-### 4. Differential equations
+### 4. Topology
+- **Metric spaces**
+  - Metrics, norms and examples
+  - Equivalent metrics and norms
+  - Open balls, open and closed sets
+  - Interior, closure and boundary
+  - Convergence and continuity
+- **Completeness**
+  - Cauchy sequences and complete spaces
+  - Contraction mapping theorem
+- **Topological spaces**
+  - Topologies and neighbourhoods
+  - Bases and the metric topology
+  - Subspaces and product topologies
+  - Continuity and homeomorphisms
+  - Hausdorff spaces
+- **Compactness**
+  - Open covers and compactness
+  - Sequential compactness and the Heine–Borel theorem
+  - Continuous functions on compact sets
+- **Connectedness**
+  - Connected and path-connected sets
+  - Continuous images of connected sets
+- **Function spaces**
+  - Continuous functions and the supremum norm
+  - Completeness of continuous functions
+  - Weierstrass and Stone–Weierstrass approximation theorems
+
+### 5. Differential equations
 - **Ordinary differential equations**
   - Order, linearity and solutions
   - Initial and boundary value problems
@@ -154,7 +182,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Eigenfunction expansions
   - Green's functions
 
-### 5. Optimisation
+### 6. Optimisation
 - **Convexity**
   - Convex sets and functions
   - Jensen's inequality
@@ -176,7 +204,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Linear programming and the simplex method
   - Interior point methods
 
-### 6. Probability
+### 7. Probability
 - **Events**
   - Experiments, outcomes and events
   - Algebras and sigma algebras
@@ -228,7 +256,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Poisson and renewal processes
   - Markov chains
 
-### 7. Statistics
+### 8. Statistics
 - **Samples**
   - Random samples and populations
   - Statistics and sampling distributions
@@ -258,7 +286,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Standard parametric and non-parametric tests
   - Multiple testing
 
-### 8. Supervised learning
+### 9. Supervised learning
 - **Linear models**
   - Linear regression
   - Logistic regression
@@ -294,7 +322,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Loss functions
   - Validation metrics
 
-### 9. Unsupervised learning
+### 10. Unsupervised learning
 - **Dimension reduction**
   - Principal components analysis
   - Canonical correlation analysis
@@ -334,7 +362,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Shrinkage methods
   - Minimum covariance determinant
 
-### 10. Bayesian statistics
+### 11. Bayesian statistics
 - **Bayesian inference**
   - Prior, likelihood, posterior and marginal likelihood
   - Sequential updating and nuisance parameters
@@ -386,7 +414,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Markov networks
   - Factor graphs
 
-### 11. Deep learning
+### 12. Deep learning
 - **Activation functions**
   - Linear
   - Sigmoid
@@ -453,7 +481,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - MC dropout
   - Uncertainty estimation
 
-### 12. Agent systems
+### 13. Agent systems
 - **Multi-armed bandits**
   - Optimal arm identification
   - Regret minimisation
@@ -470,7 +498,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Deep Q-learning
   - Policy gradient methods
 
-### 13. Structured data analysis
+### 14. Structured data analysis
 - Data types
 - Data summaries
 - Data transformations
@@ -480,7 +508,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 - Spatial data
 - Multivariate data
 
-### 14. Unstructured data analysis
+### 15. Unstructured data analysis
 - **Networks**
   - Vertices and edges
   - Adjacency and direction
@@ -511,7 +539,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Text clustering
   - Sequence modelling
 
-### 15. Big data methods
+### 16. Big data methods
 - **Optimisation**
   - Gradient descent methods
   - Distributed, stochastic gradient descent

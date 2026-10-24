@@ -28,7 +28,11 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 
 ## Topics
 
-### 1. Set theory
+Topics are in dependency order. Topics and sections marked *(planned)* have no notes yet.
+
+### Mathematics
+
+#### 1. Sets
 - **Logic**
   - Logical statements
   - Necessity, sufficiency and equivalence
@@ -42,27 +46,32 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Injection, surjection and bijection
   - Cardinality, finiteness and countability
 
-### 2. Linear algebra
-- **Vectors**
-  - Vector spaces
+#### 2. Linear algebra
+- **Vector spaces**
+  - Fields and vector spaces
+  - Subspaces
   - Linear independence
   - Span, basis and dimension
-  - Inner product spaces
+- **Inner product spaces**
+  - Bilinear and sesquilinear forms
   - Positive definiteness
-  - Length and angles
-  - Orthogonality
+  - Inner products, length and angles
+  - Orthogonality and Gram-Schmidt orthonormalisation
 - **Linear transformations**
   - Linear transformations
   - Image, kernel and rank
   - Rank-nullity theorem
 - **Matrices**
   - Matrix algebra
-  - Determinants
-  - Invertibility
+  - Column space, row space and rank
   - Special matrices
+  - Invertibility
+- **Determinants**
+  - Minors and co-factors
+  - Determinants and Laplace expansion
 - **Eigenvalues and eigenvectors**
-  - Eigen-decomposition
-  - Characteristic polynomial
+  - Eigenvalues, eigenvectors and the characteristic polynomial
+  - Algebraic and geometric multiplicity
   - Diagonalisation
 - **Matrix decompositions**
   - Spectral decomposition
@@ -72,11 +81,11 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - QR decomposition
   - Singular value decomposition and low-rank approximation
   - Moore–Penrose pseudo-inverse
-- **Matrix applications**
+- **Matrix applications** *(planned)*
   - Systems of linear equations
   - Projection
 
-### 3. Real analysis
+#### 3. Real analysis
 - **Real numbers**
   - Absolute value, distance and closeness
   - Bounds, suprema and infima
@@ -90,8 +99,8 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Finite series and series over finite sets
   - Infinite series and convergence tests
   - Power series
-  - Sequences of functions and uniform convergence
-  - Exponential and trigonometric series and Euler's formula
+  - Sequences of functions and uniform convergence *(planned)*
+  - Exponential and trigonometric series and Euler's formula *(planned)*
 - **Continuity**
   - Continuity and intervals
   - Intermediate and extreme value theorems
@@ -109,7 +118,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Integration by parts and substitution
   - Improper integrals
   - Multiple integrals and change of variables
-- **Vector calculus**
+- **Vector calculus** *(planned)*
   - Scalar and vector fields
   - Cross product
   - Gradient, divergence and curl
@@ -118,7 +127,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Surface integrals and flux
   - Green's, Stokes' and divergence theorems
 
-### 4. Topology
+#### 4. Topology *(planned)*
 - **Metric spaces**
   - Metrics, norms and examples
   - Equivalent metrics and norms
@@ -146,7 +155,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Completeness of continuous functions
   - Weierstrass and Stone–Weierstrass approximation theorems
 
-### 5. Differential equations
+#### 5. Differential equations *(planned)*
 - **Ordinary differential equations**
   - Order, linearity and solutions
   - Initial and boundary value problems
@@ -182,7 +191,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Eigenfunction expansions
   - Green's functions
 
-### 6. Optimisation
+#### 6. Optimisation
 - **Convexity**
   - Convex sets and functions
   - Jensen's inequality
@@ -204,7 +213,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Linear programming and the simplex method
   - Interior point methods
 
-### 7. Probability
+#### 7. Probability
 - **Events**
   - Experiments, outcomes and events
   - Algebras and sigma algebras
@@ -256,7 +265,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Poisson and renewal processes
   - Markov chains
 
-### 8. Statistics
+#### 8. Frequentist statistics
 - **Samples**
   - Random samples and populations
   - Statistics and sampling distributions
@@ -286,7 +295,39 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Standard parametric and non-parametric tests
   - Multiple testing
 
-### 9. Supervised learning
+#### 9. Bayesian statistics
+- **Bayesian inference**
+  - Prior, likelihood, posterior and marginal likelihood
+  - Sequential updating and nuisance parameters
+  - Posterior predictive distribution
+  - Exchangeability and de Finetti's representation theorem
+- **Priors**
+  - Conjugate priors and exponential families
+  - Improper, flat, Jeffreys and reference priors
+  - Weakly informative priors
+  - Hierarchical priors and shrinkage
+  - Posterior consistency and the Bernstein-von Mises theorem
+- **Posterior summaries**
+  - Loss, utility and Bayes actions
+  - Posterior mean, median and mode
+  - Credible intervals and highest posterior density regions
+  - Posterior probabilities of hypotheses
+  - Prediction
+- **Computational inference**
+  - Intractable integrals
+  - Monte Carlo, rejection and importance sampling
+  - Markov chain Monte Carlo
+  - Metropolis-Hastings, Gibbs and Hamiltonian Monte Carlo
+  - Laplace approximation and variational inference
+- **Model choice**
+  - Model uncertainty and Bayes factors
+  - Bayesian model averaging
+  - Model selection and information criteria
+  - Posterior predictive checking
+
+### Machine learning *(planned)*
+
+#### 10. Supervised learning
 - **Linear models**
   - Linear regression
   - Logistic regression
@@ -322,7 +363,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Loss functions
   - Validation metrics
 
-### 10. Unsupervised learning
+#### 11. Unsupervised learning
 - **Dimension reduction**
   - Principal components analysis
   - Canonical correlation analysis
@@ -362,35 +403,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Shrinkage methods
   - Minimum covariance determinant
 
-### 11. Bayesian statistics
-- **Bayesian inference**
-  - Prior, likelihood, posterior and marginal likelihood
-  - Sequential updating and nuisance parameters
-  - Posterior predictive distribution
-  - Exchangeability and de Finetti's representation theorem
-- **Priors**
-  - Conjugate priors and exponential families
-  - Improper, flat, Jeffreys and reference priors
-  - Weakly informative priors
-  - Hierarchical priors and shrinkage
-  - Posterior consistency and the Bernstein-von Mises theorem
-- **Posterior summaries**
-  - Loss, utility and Bayes actions
-  - Posterior mean, median and mode
-  - Credible intervals and highest posterior density regions
-  - Posterior probabilities of hypotheses
-  - Prediction
-- **Computational inference**
-  - Intractable integrals
-  - Monte Carlo, rejection and importance sampling
-  - Markov chain Monte Carlo
-  - Metropolis-Hastings, Gibbs and Hamiltonian Monte Carlo
-  - Laplace approximation and variational inference
-- **Model choice**
-  - Model uncertainty and Bayes factors
-  - Bayesian model averaging
-  - Model selection and information criteria
-  - Posterior predictive checking
+#### 12. Bayesian models
 - **Linear models**
   - Conjugate prior
   - Reference prior
@@ -414,7 +427,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Markov networks
   - Factor graphs
 
-### 12. Deep learning
+#### 13. Deep learning
 - **Activation functions**
   - Linear
   - Sigmoid
@@ -481,7 +494,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - MC dropout
   - Uncertainty estimation
 
-### 13. Agent systems
+#### 14. Agent systems
 - **Multi-armed bandits**
   - Optimal arm identification
   - Regret minimisation
@@ -498,7 +511,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Deep Q-learning
   - Policy gradient methods
 
-### 14. Structured data analysis
+#### 15. Structured data analysis
 - Data types
 - Data summaries
 - Data transformations
@@ -508,7 +521,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 - Spatial data
 - Multivariate data
 
-### 15. Unstructured data analysis
+#### 16. Unstructured data analysis
 - **Networks**
   - Vertices and edges
   - Adjacency and direction
@@ -539,7 +552,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Text clustering
   - Sequence modelling
 
-### 16. Big data methods
+#### 17. Big data methods
 - **Optimisation**
   - Gradient descent methods
   - Distributed, stochastic gradient descent

@@ -26,6 +26,10 @@ Formulae are written in TeX between `$$` delimiters and converted to HTML when t
 
 KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an older release. To upgrade, download the release's npm tarball and check its `integrity` hash from `https://registry.npmjs.org/katex`, then copy `dist/katex.min.js` to `_vendor/katex/`, `dist/fonts/*.woff2` to `assets/css/fonts/`, and `dist/katex.min.css` to `assets/css/katex.css` with the `woff` and `ttf` `src` entries removed. All three must come from the same release. Dependabot does not track this. A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute, so check the build output for `katex-error`.
 
+## Fonts
+
+Body text uses [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4), self-hosted so no page requests a third-party host. `assets/fonts/source-serif-4-latin.woff2` is the variable (weight 400–700, optical size 8–60) latin subset served by Google Fonts. To update it, request `https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700` with a modern browser user agent, download the woff2 under `/* latin */`, and copy its `unicode-range` into the `@font-face` rule in `_sass/main.scss`.
+
 ## Topics
 
 Topics are in dependency order. Topics and sections marked *(planned)* have no notes yet.

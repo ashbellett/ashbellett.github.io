@@ -90,6 +90,8 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Finite series and series over finite sets
   - Infinite series and convergence tests
   - Power series
+  - Sequences of functions and uniform convergence
+  - Exponential and trigonometric series and Euler's formula
 - **Continuity**
   - Continuity and intervals
   - Intermediate and extreme value theorems
@@ -107,20 +109,16 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Integration by parts and substitution
   - Improper integrals
   - Multiple integrals and change of variables
+- **Vector calculus**
+  - Scalar and vector fields
+  - Cross product
+  - Gradient, divergence and curl
+  - Laplacian and vector identities
+  - Line integrals and conservative fields
+  - Surface integrals and flux
+  - Green's, Stokes' and divergence theorems
 
-### 4. Topology
-- **Topological spaces**
-  - Topologies and neighbourhoods
-  - Relative topologies and subspaces
-  - Closure, continuity and compactness
-- **Metric spaces**
-  - Metrics
-  - Balls and points
-  - Closure, open and closed sets
-  - Boundedness and continuity
-  - Connectedness and equivalence
-
-### 5. Optimisation
+### 4. Optimisation
 - **Convexity**
   - Convex sets and functions
   - Jensen's inequality
@@ -142,7 +140,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Linear programming and the simplex method
   - Interior point methods
 
-### 6. Probability
+### 5. Probability
 - **Events**
   - Experiments, outcomes and events
   - Algebras and sigma algebras
@@ -194,7 +192,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Poisson and renewal processes
   - Markov chains
 
-### 7. Statistics
+### 6. Statistics
 - **Samples**
   - Random samples and populations
   - Statistics and sampling distributions
@@ -224,7 +222,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Standard parametric and non-parametric tests
   - Multiple testing
 
-### 8. Supervised learning
+### 7. Supervised learning
 - **Linear models**
   - Linear regression
   - Logistic regression
@@ -260,7 +258,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Loss functions
   - Validation metrics
 
-### 9. Unsupervised learning
+### 8. Unsupervised learning
 - **Dimension reduction**
   - Principal components analysis
   - Canonical correlation analysis
@@ -300,7 +298,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Shrinkage methods
   - Minimum covariance determinant
 
-### 10. Bayesian statistics
+### 9. Bayesian statistics
 - **Bayesian inference**
   - Prior, likelihood, posterior and marginal likelihood
   - Sequential updating and nuisance parameters
@@ -352,7 +350,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Markov networks
   - Factor graphs
 
-### 11. Deep learning
+### 10. Deep learning
 - **Activation functions**
   - Linear
   - Sigmoid
@@ -419,7 +417,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - MC dropout
   - Uncertainty estimation
 
-### 12. Agent systems
+### 11. Agent systems
 - **Multi-armed bandits**
   - Optimal arm identification
   - Regret minimisation
@@ -436,7 +434,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Deep Q-learning
   - Policy gradient methods
 
-### 13. Structured data analysis
+### 12. Structured data analysis
 - Data types
 - Data summaries
 - Data transformations
@@ -446,7 +444,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 - Spatial data
 - Multivariate data
 
-### 14. Unstructured data analysis
+### 13. Unstructured data analysis
 - **Networks**
   - Vertices and edges
   - Adjacency and direction
@@ -477,7 +475,7 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
   - Text clustering
   - Sequence modelling
 
-### 15. Big data methods
+### 14. Big data methods
 - **Optimisation**
   - Gradient descent methods
   - Distributed, stochastic gradient descent

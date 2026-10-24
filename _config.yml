@@ -47,8 +47,21 @@ collections:
       - derivatives.md
       - integrals.md
       - vector-calculus.md
-  optimisation:
+  topology:
     key: 3
+    title: "Topology"
+    description: "Nearness, limits and continuity in general spaces"
+    output: true
+    permalink: /notes/:collection/:path
+    order:
+      - metric-spaces.md
+      - completeness.md
+      - topological-spaces.md
+      - compactness.md
+      - connectedness.md
+      - function-spaces.md
+  optimisation:
+    key: 4
     title: "Optimisation"
     description: "Maximising and minimising functions"
     output: true
@@ -58,7 +71,7 @@ collections:
       - unconstrained-optimisation.md
       - constrained-optimisation.md
   probability:
-    key: 4
+    key: 5
     title: "Probability"
     description: "Occurrences of uncertain events"
     output: true
@@ -75,7 +88,7 @@ collections:
       - limit-theorems.md
       - stochastic-processes.md
   frequentist-statistics:
-    key: 5
+    key: 6
     title: "Frequentist Statistics"
     description: "Drawing conclusions from data"
     output: true
@@ -88,7 +101,7 @@ collections:
       - interval-estimation.md
       - hypothesis-testing.md
   bayesian-statistics:
-    key: 6
+    key: 7
     title: "Bayesian Statistics"
     description: "Modelling parameters as random variables"
     output: true

@@ -127,7 +127,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Surface integrals and flux
   - Green's, Stokes' and divergence theorems
 
-#### 4. Topology *(planned)*
+#### 4. Topology
 - **Metric spaces**
   - Metrics, norms and examples
   - Equivalent metrics and norms

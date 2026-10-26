@@ -958,3 +958,40 @@ table {
     @include relative-font-size(1.0625);
   }
 }
+
+// Previous and next notes, side by side; the next link keeps to the right
+// even on a topic's first note, where there is no previous link
+.note-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc($spacing-unit / 2);
+  padding-top: calc($spacing-unit / 2);
+  border-top: 1px solid $border-color-01;
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+
+      .note-nav-title {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.note-nav-next {
+  grid-column: 2;
+  text-align: right;
+}
+
+.note-nav-label {
+  display: block;
+  font-size: $small-font-size;
+  color: $brand-color;
+}
+
+.note-nav-title {
+  @include relative-font-size(1.125);
+}

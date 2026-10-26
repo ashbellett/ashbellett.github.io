@@ -257,6 +257,12 @@ $on-large:         $on-laptop;
 
 html {
   font-size: $base-font-size;
+
+  // Glides to in-page link targets, such as the skip link's, rather than
+  // jumping, unless the visitor's system asks for reduced motion
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 /**

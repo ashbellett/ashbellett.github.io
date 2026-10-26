@@ -2,6 +2,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- comment -%}
+  Browser bar colours for mobile, matching $lm- and $dm-background-color in
+  _sass/main.scss. assets/js/theme.js repaints them when the header toggle
+  overrides the system scheme, so they must come before that script.
+  {%- endcomment %}
+  <meta name="theme-color" content="#fdfdfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
+  {%- comment -%}
   GitHub Pages cannot send response headers, so the Content Security Policy
   is a meta tag. Scripts are the site's own theme toggle and Cloudflare Web
   Analytics (the beacon script and the endpoint it reports to); KaTeX output
@@ -20,7 +27,13 @@
   {%- endcapture -%}
   <meta http-equiv="Content-Security-Policy" content="{{ csp | normalize_whitespace }}">
   {%- seo -%}
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+  {%- comment -%}
+  The .ico (16, 32 and 48 px) is for browsers without SVG favicons. iOS uses
+  apple-touch-icon for home-screen shortcuts and rounds its corners itself.
+  {%- endcomment %}
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/source-serif-4-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   {%- comment -%}
   GitHub Pages lets browsers reuse an asset for 10 minutes without checking

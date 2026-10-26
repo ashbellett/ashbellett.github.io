@@ -1,0 +1,57 @@
+{%- comment -%}
+Previous and next links for a note. The notes are read in order across all
+topics, so the first and last note of a topic link on to the neighbouring
+topic, named in the label. Topics follow their `key` and notes their `order`
+in _config.yml, as on the notes page.
+{%- endcomment -%}
+{%- assign collections = site.collections | where_exp: "item", "item.label != 'posts'" | sort: "key" -%}
+{%- assign prev_doc = nil -%}
+{%- assign next_doc = nil -%}
+{%- assign found = false -%}
+{%- for collection in collections -%}
+  {%- assign docs = collection.docs | where_exp: "item", "item.layout == 'post'" -%}
+  {%- for doc in docs -%}
+    {%- if found -%}
+      {%- assign next_doc = doc -%}
+      {%- assign next_collection = collection -%}
+      {%- break -%}
+    {%- elsif doc.url == page.url -%}
+      {%- assign found = true -%}
+      {%- assign prev_doc = last_doc -%}
+      {%- assign prev_collection = last_collection -%}
+    {%- else -%}
+      {%- assign last_doc = doc -%}
+      {%- assign last_collection = collection -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if next_doc -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if prev_doc or next_doc %}
+<nav class="note-nav" aria-label="Previous and next notes">
+  {%- if prev_doc %}
+  <a class="note-nav-prev" href="{{ prev_doc.url | relative_url }}" rel="prev">
+    <span class="note-nav-label">
+      {%- if prev_collection.label == page.collection -%}
+        ← Previous
+      {%- else -%}
+        ← Previous topic: {{ prev_collection.title | escape }}
+      {%- endif -%}
+    </span>
+    <span class="note-nav-title">{{ prev_doc.title | escape }}</span>
+  </a>
+  {%- endif %}
+  {%- if next_doc %}
+  <a class="note-nav-next" href="{{ next_doc.url | relative_url }}" rel="next">
+    <span class="note-nav-label">
+      {%- if next_collection.label == page.collection -%}
+        Next →
+      {%- else -%}
+        Next topic: {{ next_collection.title | escape }} →
+      {%- endif -%}
+    </span>
+    <span class="note-nav-title">{{ next_doc.title | escape }}</span>
+  </a>
+  {%- endif %}
+</nav>
+{%- endif %}

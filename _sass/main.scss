@@ -7,8 +7,9 @@
 // Colours
 // -------
 // Each colour has a light and a dark value. The page follows the visitor's
-// system setting through CSS custom properties, so the rules below refer to
-// the variables at the end of this section rather than to either palette.
+// system setting, or the header toggle, through CSS custom properties, so the
+// rules below refer to the variables at the end of this section rather than
+// to either palette.
 
 // Light mode
 
@@ -68,7 +69,7 @@ $dm-table-border-color:    $dm-border-color-01;
 $dm-logo-backdrop-color:   #e6e6e6;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   --brand-color: #{$lm-brand-color};
   --brand-color-light: #{$lm-brand-color-light};
@@ -97,33 +98,60 @@ $dm-logo-backdrop-color:   #e6e6e6;
   --logo-backdrop-color: #{$lm-logo-backdrop-color};
 }
 
+// Dark mode applies when the visitor chose it with the header toggle, or when
+// their system is dark and they have not chosen light. assets/js/theme.js
+// sets data-theme on <html> from the saved choice.
+
+@mixin dark-palette {
+  color-scheme: dark;
+
+  --brand-color: #{$dm-brand-color};
+  --brand-color-light: #{$dm-brand-color-light};
+  --brand-color-dark: #{$dm-brand-color-dark};
+
+  --site-title-color: #{$dm-site-title-color};
+
+  --text-color: #{$dm-text-color};
+  --background-color: #{$dm-background-color};
+  --code-background-color: #{$dm-code-background-color};
+
+  --link-base-color: #{$dm-link-base-color};
+  --link-visited-color: #{$dm-link-visited-color};
+  --link-hover-color: #{$dm-link-hover-color};
+
+  --border-color-01: #{$dm-border-color-01};
+  --border-color-02: #{$dm-border-color-02};
+  --border-color-03: #{$dm-border-color-03};
+
+  --table-text-color: #{$dm-table-text-color};
+  --table-zebra-color: #{$dm-table-zebra-color};
+  --table-header-bg-color: #{$dm-table-header-bg-color};
+  --table-header-border: #{$dm-table-header-border};
+  --table-border-color: #{$dm-table-border-color};
+
+  --logo-backdrop-color: #{$dm-logo-backdrop-color};
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
-    --brand-color: #{$dm-brand-color};
-    --brand-color-light: #{$dm-brand-color-light};
-    --brand-color-dark: #{$dm-brand-color-dark};
+  :root:not([data-theme="light"]) {
+    @include dark-palette;
+  }
+}
 
-    --site-title-color: #{$dm-site-title-color};
+:root[data-theme="dark"] {
+  @include dark-palette;
+}
 
-    --text-color: #{$dm-text-color};
-    --background-color: #{$dm-background-color};
-    --code-background-color: #{$dm-code-background-color};
+// Applies the enclosed rules to the current selector in dark mode
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) & {
+      @content;
+    }
+  }
 
-    --link-base-color: #{$dm-link-base-color};
-    --link-visited-color: #{$dm-link-visited-color};
-    --link-hover-color: #{$dm-link-hover-color};
-
-    --border-color-01: #{$dm-border-color-01};
-    --border-color-02: #{$dm-border-color-02};
-    --border-color-03: #{$dm-border-color-03};
-
-    --table-text-color: #{$dm-table-text-color};
-    --table-zebra-color: #{$dm-table-zebra-color};
-    --table-header-bg-color: #{$dm-table-header-bg-color};
-    --table-header-border: #{$dm-table-header-border};
-    --table-border-color: #{$dm-table-border-color};
-
-    --logo-backdrop-color: #{$dm-logo-backdrop-color};
+  :root[data-theme="dark"] & {
+    @content;
   }
 }
 
@@ -522,6 +550,11 @@ table {
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-title {
@@ -529,11 +562,7 @@ table {
   font-weight: 500;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
-
-  @include media-query($on-palm) {
-    padding-right: 45px;
-  }
+  margin-right: auto;
 
   &,
   &:visited {
@@ -576,14 +605,22 @@ table {
     cursor: pointer;
   }
 
+  // The open menu drops below the button rather than widening it, so it
+  // leaves the theme toggle beside the button uncovered
   input ~ .trigger {
-    clear: both;
     display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -1px;
+    padding: 5px 0;
+    white-space: nowrap;
+    background-color: $background-color;
+    border: 1px solid $border-color-01;
+    border-radius: 5px;
   }
 
   input:checked ~ .trigger {
     display: block;
-    padding-bottom: 5px;
   }
 
   .page-link {
@@ -605,7 +642,6 @@ table {
 
   @media screen and (min-width: $on-medium) {
     position: static;
-    float: right;
     border: none;
     background-color: inherit;
 
@@ -619,6 +655,10 @@ table {
 
     input ~ .trigger {
       display: block;
+      position: static;
+      padding: 0;
+      background-color: inherit;
+      border: none;
     }
 
     .page-link {
@@ -630,6 +670,68 @@ table {
       }
       margin-left: auto;
     }
+  }
+}
+
+// On phones a bordered button beside the menu button, matching it; on wider
+// screens a bare icon after the navigation links. Hidden until
+// assets/js/theme.js runs, as it does nothing without it.
+.theme-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  // Clears the absolutely positioned 38px menu button and a 6px gap
+  margin: 9px 44px 0 0;
+  padding: 0;
+  color: $border-color-03;
+  background-color: $background-color;
+  border: 1px solid $border-color-01;
+  border-radius: 5px;
+  cursor: pointer;
+
+  .js & {
+    display: flex;
+  }
+
+  .theme-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  // Shows the scheme a click switches to
+  .theme-icon-sun {
+    display: none;
+  }
+
+  @include dark-mode {
+    .theme-icon-moon {
+      display: none;
+    }
+
+    .theme-icon-sun {
+      display: block;
+    }
+  }
+
+  // Touch screens would keep the hover colour after a tap
+  @media (hover: hover) {
+    &:hover {
+      color: $link-base-color;
+    }
+  }
+
+  @media screen and (min-width: $on-medium) {
+    align-self: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 -7px 0 13px;
+    color: $text-color;
+    background-color: transparent;
+    border: none;
   }
 }
 

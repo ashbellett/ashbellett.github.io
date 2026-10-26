@@ -33,10 +33,27 @@
     return root.dataset.theme || systemTheme();
   }
 
+  // Mobile browser bars follow <meta name="theme-color">, one per scheme
+  // selected by media query. A saved choice paints both with its scheme's
+  // colour; with none, each goes back to its own.
+  var barColours = document.querySelectorAll('meta[name="theme-color"]');
+  var ownColour = {};
+  barColours.forEach(function (meta) {
+    ownColour[meta.media.indexOf("dark") === -1 ? "light" : "dark"] = meta.content;
+  });
+
+  function paintBars() {
+    barColours.forEach(function (meta) {
+      var scheme = meta.media.indexOf("dark") === -1 ? "light" : "dark";
+      meta.content = ownColour[root.dataset.theme || scheme];
+    });
+  }
+
   var saved = load();
   if (saved === "light" || saved === "dark") {
     root.dataset.theme = saved;
   }
+  paintBars();
   // Reveals the toggle, which does nothing without this script
   root.classList.add("js");
 
@@ -61,6 +78,7 @@
         root.dataset.theme = next;
         save(next);
       }
+      paintBars();
       sync();
     });
     system.addEventListener("change", sync);

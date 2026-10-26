@@ -36,6 +36,8 @@ $lm-table-header-bg-color: color.adjust($lm-brand-color, $lightness: 43%);
 $lm-table-header-border:   color.adjust($lm-brand-color, $lightness: 37%);
 $lm-table-border-color:    $lm-border-color-01;
 
+$lm-logo-backdrop-color:   transparent;
+
 // Dark mode
 
 $dm-brand-color:           #999999;
@@ -61,6 +63,9 @@ $dm-table-zebra-color:     color.adjust($dm-background-color, $lightness: 4%);
 $dm-table-header-bg-color: color.adjust($dm-background-color, $lightness: 10%);
 $dm-table-header-border:   color.adjust($dm-background-color, $lightness: 21%);
 $dm-table-border-color:    $dm-border-color-01;
+
+// Off-white tile behind logos drawn in dark ink on a transparent background
+$dm-logo-backdrop-color:   #e6e6e6;
 
 :root {
   color-scheme: light dark;
@@ -88,6 +93,8 @@ $dm-table-border-color:    $dm-border-color-01;
   --table-header-bg-color: #{$lm-table-header-bg-color};
   --table-header-border: #{$lm-table-header-border};
   --table-border-color: #{$lm-table-border-color};
+
+  --logo-backdrop-color: #{$lm-logo-backdrop-color};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -115,6 +122,8 @@ $dm-table-border-color:    $dm-border-color-01;
     --table-header-bg-color: #{$dm-table-header-bg-color};
     --table-header-border: #{$dm-table-header-border};
     --table-border-color: #{$dm-table-border-color};
+
+    --logo-backdrop-color: #{$dm-logo-backdrop-color};
   }
 }
 
@@ -142,6 +151,8 @@ $table-header-bg-color: var(--table-header-bg-color);
 $table-header-border: var(--table-header-border);
 $table-border-color: var(--table-border-color);
 
+$logo-backdrop-color: var(--logo-backdrop-color);
+
 
 
 .profile {
@@ -160,7 +171,19 @@ $table-border-color: var(--table-border-color);
 .brand-logo {
   height: 2rem;
   width: 2rem;
-  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+// A transparent logo in dark ink gets a tile in dark mode. The tile grows
+// outwards by its padding, and the negative margins cancel it, so the logo
+// and the text beside it sit exactly where the other logos' do.
+.brand-logo-transparent {
+  $tile-padding: 3px;
+
+  padding: $tile-padding;
+  margin: (-$tile-padding) calc(0.5rem - #{$tile-padding}) (-$tile-padding) (-$tile-padding);
+  border-radius: 5px;
+  background-color: $logo-backdrop-color;
 }
 
 .brand-text {

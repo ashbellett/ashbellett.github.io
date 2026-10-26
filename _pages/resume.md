@@ -61,6 +61,6 @@ Electrical & Computer Systems\
 [ibm]: assets/img/ibm.png
 {: .brand-logo width="32" height="32" }
 [imperial]: assets/img/imperial.png
-{: .brand-logo width="32" height="32" }
+{: .brand-logo .brand-logo-transparent width="32" height="32" }
 [monash]: assets/img/monash.png
-{: .brand-logo width="32" height="32" }
+{: .brand-logo .brand-logo-transparent width="32" height="32" }

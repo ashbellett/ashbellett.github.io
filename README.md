@@ -30,6 +30,10 @@ KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an o
 
 Body text uses [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4), self-hosted so no page requests a third-party host. `assets/fonts/source-serif-4-latin.woff2` is the variable (weight 400–700, optical size 8–60) latin subset served by Google Fonts. To update it, request `https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700` with a modern browser user agent, download the woff2 under `/* latin */`, and copy its `unicode-range` into the `@font-face` rule in `_sass/main.scss`.
 
+## Colour scheme
+
+Pages follow the visitor's system light/dark setting through CSS. The header toggle, `assets/js/theme.js`, overrides it: the choice is saved in `localStorage` and applied in `<head>` before the page is drawn, and switching back to the system's scheme clears it. The script is the site's only JavaScript, allowed by `script-src 'self'` in the Content Security Policy; without it the toggle is hidden and the system setting applies.
+
 ## Topics
 
 Topics are in dependency order. Topics and sections marked *(planned)* have no notes yet.

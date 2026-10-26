@@ -4,7 +4,6 @@
       <div class="footer-col">
         <ul class="contact-list">
           <li>{{ site.author.name | escape }}</li>
-          <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
           {%- for social in site.socials -%}
             {%- assign icon = social.platform | prepend: "icons/" | append: ".svg" -%}
             <li>

@@ -2,7 +2,7 @@
 layout: page
 ---
 
-![ash]
+![Ash Bellett][ash]
 {: .tagline }
 
 **Data scientist** analysing, building and optimising data-driven platforms and products.

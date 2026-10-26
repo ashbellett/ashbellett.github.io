@@ -370,6 +370,44 @@ a {
 }
 
 
+
+/**
+ * Focus
+ *
+ * A consistent ring for keyboard focus; mouse and touch focus show nothing.
+ */
+:focus-visible {
+  outline: 2px solid $link-base-color;
+  outline-offset: 2px;
+}
+
+// Hidden from view but still read by screen readers and reachable by keyboard
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+// The first thing keyboard users reach, it jumps past the header
+.skip-link {
+  position: absolute;
+  top: 9px;
+  left: calc($spacing-unit / 2);
+  z-index: 3;
+  padding: 5px 10px;
+  background-color: $background-color;
+  border: 1px solid $border-color-01;
+  border-radius: 5px;
+
+  &:not(:focus) {
+    @extend %visually-hidden;
+  }
+}
+
+
 /**
  * Blockquotes
  */
@@ -550,8 +588,15 @@ table {
   border-radius: 5px;
   text-align: right;
 
+  // Visually hidden rather than display: none, so keyboard users can tab to
+  // it and open the menu with Space
   .nav-trigger {
-    display: none;
+    @extend %visually-hidden;
+
+    &:focus-visible + label {
+      outline: 2px solid $link-base-color;
+      outline-offset: 2px;
+    }
   }
 
   .menu-icon {
@@ -609,6 +654,7 @@ table {
     border: none;
     background-color: inherit;
 
+    .nav-trigger,
     label[for="nav-trigger"] {
       display: none;
     }

@@ -7,51 +7,51 @@ redirect_from: /about
 
 ## Experience
 
-![canva] Canva
+![][canva] Canva
 {: .brand-text }
 
 Senior Data Scientist\
-Aug 2023 - present
+Aug 2023 – present
 {: .role-text }
 
-![deloitte] Deloitte
+![][deloitte] Deloitte
 {: .brand-text }
 
 Manager, Data Science & Engineering\
-Jan 2023 - Aug 2023
+Jan 2023 – Aug 2023
 {: .role-text }
 
 Senior Data Scientist\
-Jan 2021 - Dec 2022
+Jan 2021 – Dec 2022
 {: .role-text }
 
-![ibm] IBM
+![][ibm] IBM
 {: .brand-text }
 
 Senior Data Scientist\
-Jul 2019 - Jan 2021
+Jul 2019 – Jan 2021
 {: .role-text }
 
 Associate\
-Jan 2018 - Jun 2019
+Jan 2018 – Jun 2019
 {: .role-text }
 
 ## Education
 
-![imperial] Imperial College London
+![][imperial] Imperial College London
 {: .brand-text }
 
 Master of Science\
 Data Science & Machine Learning\
-2021 - 2023
+2021–2023
 {: .role-text }
 
-![monash] Monash University
+![][monash] Monash University
 {: .brand-text }
 
 Bachelor of Engineering (with Honours)\
 Electrical & Computer Systems\
-2013 - 2017
+2013–2017
 {: .role-text }
 
 [canva]: assets/img/canva.jpg

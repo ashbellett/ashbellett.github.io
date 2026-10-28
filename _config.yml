@@ -160,6 +160,13 @@ socials:
     url: x.com/ashbellett
   }
 analytics: aab2f9bb943f41cf8cac7e2dd7a08c59
+# PostHog Cloud (US) project, used without cookies. The token is public: it
+# is in every page. The hosts are also allowed by the Content Security Policy
+# in _includes/head.html.
+posthog:
+  token: phc_n3KoMAj6eV4agmoHnF7bwsL9Zk5ZkjyovsgWt4CLzKzd
+  api_host: https://us.i.posthog.com
+  assets_host: https://us-assets.i.posthog.com
 kramdown:
   math_engine: katex
 sass:

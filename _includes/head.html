@@ -10,20 +10,22 @@
   <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
   {%- comment -%}
   GitHub Pages cannot send response headers, so the Content Security Policy
-  is a meta tag. Scripts are the site's own theme toggle and Cloudflare Web
-  Analytics (the beacon script and the endpoint it reports to); KaTeX output
-  relies on style attributes.
+  is a meta tag. Scripts are the site's own theme toggle and analytics:
+  Cloudflare Web Analytics (the beacon script and the endpoint it reports to)
+  and PostHog (its library, the add-ons and project settings it loads from the
+  assets host, and the API host it reports to). KaTeX output relies on style
+  attributes.
   {%- endcomment -%}
   {%- capture csp -%}
     default-src 'none';
     base-uri 'none';
     form-action 'none';
-    script-src 'self' https://static.cloudflareinsights.com;
+    script-src 'self' https://static.cloudflareinsights.com {{ site.posthog.assets_host }};
     style-src 'self';
     style-src-attr 'unsafe-inline';
     font-src 'self';
     img-src 'self';
-    connect-src https://cloudflareinsights.com
+    connect-src https://cloudflareinsights.com {{ site.posthog.api_host }} {{ site.posthog.assets_host }}
   {%- endcapture -%}
   <meta http-equiv="Content-Security-Policy" content="{{ csp | normalize_whitespace }}">
   {%- seo -%}
@@ -50,5 +52,10 @@
   {%- endif %}
   {%- if jekyll.environment == 'production' and site.analytics %}
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics }}"}'></script>
+  {%- endif %}
+  {%- if jekyll.environment == 'production' and site.posthog %}
+  {%- comment -%} Deferred scripts run in order, so the library is ready for analytics.js {%- endcomment %}
+  <script src="{{ site.posthog.assets_host }}/static/array.js" defer></script>
+  <script src="{{ '/assets/js/analytics.js' | relative_url }}?v={{ build }}" data-token="{{ site.posthog.token }}" data-api-host="{{ site.posthog.api_host }}" defer></script>
   {%- endif %}
 </head>

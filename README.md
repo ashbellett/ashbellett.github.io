@@ -35,7 +35,11 @@ Body text uses [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4
 
 ## Colour scheme
 
-Pages follow the visitor's system light/dark setting through CSS. The header toggle, `assets/js/theme.js`, overrides it: the choice is saved in `localStorage` and applied in `<head>` before the page is drawn, and switching back to the system's scheme clears it. The script is the site's only JavaScript, allowed by `script-src 'self'` in the Content Security Policy; without it the toggle is hidden and the system setting applies.
+Pages follow the visitor's system light/dark setting through CSS. The header toggle, `assets/js/theme.js`, overrides it: the choice is saved in `localStorage` and applied in `<head>` before the page is drawn, and switching back to the system's scheme clears it. The script is allowed by `script-src 'self'` in the Content Security Policy; without it the toggle is hidden and the system setting applies.
+
+## Analytics
+
+Production builds load two analytics services; local builds load neither. [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) counts page views, its site token being `analytics` in `_config.yml`. [PostHog](https://posthog.com/) records page views, clicks, time on page and Core Web Vitals, configured under `posthog` in `_config.yml`. PostHog's library comes from its CDN, always at the latest release, and `assets/js/analytics.js` starts it, because the Content Security Policy blocks PostHog's usual inline snippet. It runs in cookieless mode, so it stores nothing in the browser and needs no consent banner. PostHog's servers tell visitors apart with a daily hash, which requires *Cookieless server hash mode* in the project's settings; without it, PostHog drops every event. Session replay does not work without cookies. The Content Security Policy reads PostHog's hosts from `_config.yml`, so moving to another region needs no other change.
 
 ## Topics
 

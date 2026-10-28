@@ -6,41 +6,76 @@ tags: ["topology", "topological space"]
 description: "Nearness without distance"
 ---
 
-Let $$X$$ be a set. A **topology** on $$X$$ is a collection $$\mathcal{T}$$ of subsets of $$X,$$ called the **open sets** of the topology, that satisfies the topology axioms:
+Let $$X$$ be a set. A **topology** on $$X$$ is a collection $$\mathcal{T}$$ of subsets of $$X$$ that satisfies the topology axioms:
 - $$\varnothing\in\mathcal{T}$$ and $$X\in\mathcal{T};$$
 - the union of any collection of sets in $$\mathcal{T}$$ is in $$\mathcal{T};$$
 - the intersection of finitely many sets in $$\mathcal{T}$$ is in $$\mathcal{T}.$$
 
-A **topological space** $$\left(X,\mathcal{T}\right)$$ is a set equipped with a topology and is written $$X$$ when the topology is understood. A set is **closed** if its complement is open, so arbitrary intersections and finite unions of closed sets are closed. The open sets of a metric space satisfy the axioms, so every metric space is a topological space with the **metric topology** induced by its metric, and equivalent metrics induce the same topology. The topology in which every subset is open is the **discrete topology**, induced by the discrete metric, and the topology $$\left\{\varnothing,X\right\}$$ is the **indiscrete topology**. A topological space is **metrisable** if its topology is induced by some metric; the indiscrete topology on a set with more than one point is not metrisable.
+Let $$X$$ be a set and $$\mathcal{T}$$ be a topology on $$X.$$ The pair $$\left(X,\mathcal{T}\right)$$ is a **topological space**, and is written $$X$$ when the topology is understood. The sets in $$\mathcal{T}$$ are the **open sets** of the topological space.
 
-Let $$\mathcal{T}$$ and $$\mathcal{T}'$$ be topologies on $$X.$$ $$\mathcal{T}'$$ is **finer** than $$\mathcal{T},$$ and $$\mathcal{T}$$ is **coarser** than $$\mathcal{T}',$$ if $$\mathcal{T}\subseteq\mathcal{T}',$$ so that the discrete topology is the finest and the indiscrete topology the coarsest topology on $$X.$$
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space and $$F\subseteq X.$$ The set $$F$$ is **closed** if and only if its complement $$X\setminus F$$ is open. Arbitrary intersections and finite unions of closed sets are closed.
 
-Let $$x\in X$$ and $$A\subseteq X.$$ A **neighbourhood** of $$x$$ is a set that contains an open set containing $$x.$$ The interior, limit points, isolated points, closure, boundary and density of $$A$$ are defined as in a metric space with "open ball centred at $$x$$" replaced by "neighbourhood of $$x$$", and the interior remains the largest open set in $$A$$ and the closure the smallest closed set containing $$A.$$ A sequence $$\left(x_n\right)$$ converges to $$x$$ if and only if every neighbourhood of $$x$$ contains all but finitely many of its terms.
+Let $$(X,d)$$ be a metric space. The **metric topology** induced by $$d$$ is the collection of open sets of the metric space, which satisfies the topology axioms. Every metric space is a topological space with its metric topology, and equivalent metrics induce the same topology.
 
-A **basis** for a topology $$\mathcal{T}$$ is a collection $$\mathcal{B}\subseteq\mathcal{T}$$ of open sets such that every open set is a union of sets in $$\mathcal{B}.$$ The open balls form a basis for the metric topology, as do the open balls with rational radii, and the open intervals with rational endpoints form a countable basis for the usual topology on $$\mathbb{R}.$$ A collection $$\mathcal{B}$$ of subsets of $$X$$ is a basis for some topology if and only if it covers $$X$$ and the intersection of any two of its sets is a union of sets in $$\mathcal{B};$$ that topology, the topology **generated** by $$\mathcal{B},$$ is the coarsest topology containing $$\mathcal{B}.$$
+Let $$X$$ be a set. The **discrete topology** on $$X$$ is the topology in which every subset of $$X$$ is open, and is induced by the discrete metric. The **indiscrete topology** on $$X$$ is the topology $$\left\{\varnothing,X\right\}.$$
 
-Let $$A\subseteq X.$$ The **subspace topology** on $$A$$ consists of the intersections of $$A$$ with the open sets of $$X,$$ and $$A$$ with this topology is a **subspace** of $$X.$$
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space. The topological space is **metrisable** if and only if its topology is induced by some metric. The indiscrete topology on a set with more than one point is not metrisable.
+
+Let $$X$$ be a set and $$\mathcal{T}$$ and $$\mathcal{T}'$$ be topologies on $$X.$$ The topology $$\mathcal{T}'$$ is **finer** than $$\mathcal{T},$$ and $$\mathcal{T}$$ is **coarser** than $$\mathcal{T}',$$ if and only if $$\mathcal{T}\subseteq\mathcal{T}'.$$ The discrete topology is the finest topology on $$X$$ and the indiscrete topology is the coarsest.
+
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space and $$x\in X.$$ A **neighbourhood** of $$x$$ is a set that contains an open set containing $$x.$$
+
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space and $$A\subseteq X.$$ The interior points, limit points and isolated points of $$A,$$ and the interior, closure and boundary of $$A$$ and the density of $$A$$ in $$X,$$ are defined as in a metric space with "open ball centred at $$x$$" replaced by "neighbourhood of $$x$$". The interior remains the largest open set contained in $$A$$ and the closure remains the smallest closed set containing $$A.$$
+
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space, $$\left(x_n\right)$$ be a sequence in $$X$$ and $$x\in X.$$ The sequence $$\left(x_n\right)$$ **converges** to $$x$$ if and only if every neighbourhood of $$x$$ contains all but finitely many of its terms.
+
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space. A **basis** for $$\mathcal{T}$$ is a collection $$\mathcal{B}\subseteq\mathcal{T}$$ of open sets such that every open set is a union of sets in $$\mathcal{B}.$$ The open balls form a basis for the metric topology, as do the open balls with rational radii, and the open intervals with rational endpoints form a countable basis for the usual topology on $$\mathbb{R}.$$
+
+Let $$X$$ be a set and $$\mathcal{B}$$ be a collection of subsets of $$X.$$ The collection $$\mathcal{B}$$ is a basis for some topology on $$X$$ if and only if $$\mathcal{B}$$ covers $$X$$ and the intersection of any two sets in $$\mathcal{B}$$ is a union of sets in $$\mathcal{B}.$$ The topology **generated** by $$\mathcal{B}$$ is the coarsest topology containing $$\mathcal{B}.$$
+
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space and $$A\subseteq X.$$ The **subspace topology** on $$A$$ is the collection of intersections of $$A$$ with the open sets of $$X.$$
 
 $$\mathcal{T}_A:=\left\{U\cap A:U\in\mathcal{T}\right\}$$
 
-A metric subspace carries the subspace topology, and a set that is open in a subspace need not be open in the whole space: $$\left[0,\frac{1}{2}\right)$$ is open in the subspace $$\left[0,1\right]$$ of $$\mathbb{R}.$$ If $$A$$ is open in $$X$$ then the open sets of the subspace are exactly the open subsets of $$X$$ contained in $$A,$$ and likewise for closed sets if $$A$$ is closed.
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space and $$A\subseteq X.$$ The set $$A$$ with the subspace topology is a **subspace** of $$X.$$ Subspaces have the following properties:
+- a metric subspace carries the subspace topology;
+- a set that is open in a subspace need not be open in the whole space: $$\left[0,\frac{1}{2}\right)$$ is open in the subspace $$\left[0,1\right]$$ of $$\mathbb{R};$$
+- if $$A$$ is open in $$X$$ then the open sets of the subspace are exactly the open subsets of $$X$$ contained in $$A,$$ and likewise for closed sets if $$A$$ is closed.
 
 Let $$\left(X,\mathcal{T}_X\right)$$ and $$\left(Y,\mathcal{T}_Y\right)$$ be topological spaces. The **product topology** on the Cartesian product $$X\times Y$$ is the topology generated by the basis of products of open sets.
 
 $$\mathcal{B}:=\left\{U\times V:U\in\mathcal{T}_X,\,V\in\mathcal{T}_Y\right\}$$
 
-The product of finitely many spaces is defined in the same way. The product topology on $$\mathbb{R}^m\times\mathbb{R}^n$$ is the usual topology on $$\mathbb{R}^{m+n},$$ and the product of the metric spaces $$\left(X,d_X\right)$$ and $$\left(Y,d_Y\right)$$ is metrisable by the **product metric** $$d\left(\left(x,y\right),\left(x',y'\right)\right):=\max\left\{d_X\left(x,x'\right),d_Y\left(y,y'\right)\right\},$$ which is strongly equivalent to $$d_X+d_Y$$ and to $$\sqrt{d_X^2+d_Y^2}.$$ A sequence in a product converges if and only if each of its coordinate sequences converges.
+The product of finitely many spaces is defined in the same way. The product topology has the following properties:
+- the product topology on $$\mathbb{R}^m\times\mathbb{R}^n$$ is the usual topology on $$\mathbb{R}^{m+n};$$
+- the product of the metric spaces $$\left(X,d_X\right)$$ and $$\left(Y,d_Y\right)$$ is metrisable by the **product metric** $$d\left(\left(x,y\right),\left(x',y'\right)\right):=\max\left\{d_X\left(x,x'\right),d_Y\left(y,y'\right)\right\},$$ which is strongly equivalent to $$d_X+d_Y$$ and to $$\sqrt{d_X^2+d_Y^2};$$
+- a sequence in a product converges if and only if each of its coordinate sequences converges.
 
-Let $$f:X\rightarrow Y$$ be a function between topological spaces. $$f$$ is **continuous** if and only if the inverse image of every open set is open, which for metric spaces agrees with the earlier definition.
+Let $$\left(X,\mathcal{T}_X\right)$$ and $$\left(Y,\mathcal{T}_Y\right)$$ be topological spaces and $$f:X\rightarrow Y$$ be a function. The function $$f$$ is **continuous** if and only if the inverse image of every open set is open.
 
 $$f^{-1}(V)\in\mathcal{T}_X\,\,\forall\,V\in\mathcal{T}_Y$$
 
-Equivalently, the inverse image of every closed set is closed, or the inverse image of every set in a basis for $$\mathcal{T}_Y$$ is open. Constant functions, the identity function, the inclusion of a subspace and the **coordinate projections** $$\left(x,y\right)\mapsto x$$ and $$\left(x,y\right)\mapsto y$$ of a product are continuous, a composition of continuous functions is continuous, the restriction of a continuous function to a subspace is continuous and a function into a product is continuous if and only if each of its coordinate functions is. A continuous function maps convergent sequences to convergent sequences, but in a general topological space the converse can fail, so continuity is not determined by sequences alone.
+For metric spaces this agrees with the earlier definition. Equivalently, $$f$$ is continuous if and only if the inverse image of every closed set is closed, or if and only if the inverse image of every set in a basis for $$\mathcal{T}_Y$$ is open.
 
-$$f$$ is a **homeomorphism** if it is a bijection and both $$f$$ and $$f^{-1}$$ are continuous, in which case $$X$$ and $$Y$$ are **homeomorphic** and $$f$$ induces a bijection between their topologies. A **topological property** is a property preserved by homeomorphisms, such as being metrisable or having a countable basis; metric properties such as boundedness and completeness are not topological, since $$x\mapsto\tan x$$ is a homeomorphism from the bounded incomplete space $$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$$ onto $$\mathbb{R}.$$ A continuous bijection need not be a homeomorphism: $$t\mapsto e^{it}$$ is a continuous bijection from $$\left[0,2\pi\right)$$ onto the unit circle whose inverse is discontinuous at $$1.$$ A continuous function $$f:X\rightarrow Y$$ is an **open map** if it maps open sets to open sets and a **closed map** if it maps closed sets to closed sets, and a continuous bijection is a homeomorphism if and only if it is an open map, if and only if it is a closed map.
+Let $$X$$ and $$Y$$ be topological spaces. The **coordinate projections** of the product $$X\times Y$$ are the functions $$\left(x,y\right)\mapsto x$$ and $$\left(x,y\right)\mapsto y.$$ Continuous functions between topological spaces have the following properties:
+- constant functions, the identity function, the inclusion of a subspace and the coordinate projections of a product are continuous;
+- a composition of continuous functions is continuous;
+- the restriction of a continuous function to a subspace is continuous;
+- a function into a product is continuous if and only if each of its coordinate functions is continuous;
+- a continuous function maps convergent sequences to convergent sequences, but in a general topological space the converse can fail, so continuity is not determined by sequences alone.
 
-A topological space $$X$$ is **Hausdorff** if any two distinct points have disjoint neighbourhoods.
+Let $$X$$ and $$Y$$ be topological spaces and $$f:X\rightarrow Y$$ be a function. The function $$f$$ is a **homeomorphism** if and only if $$f$$ is a bijection and both $$f$$ and $$f^{-1}$$ are continuous. The spaces $$X$$ and $$Y$$ are **homeomorphic** if and only if there exists a homeomorphism between them. A homeomorphism induces a bijection between the topologies of $$X$$ and $$Y.$$
+
+A **topological property** is a property of topological spaces that is preserved by homeomorphisms. Being metrisable and having a countable basis are topological properties. Boundedness and completeness are not topological properties, since $$x\mapsto\tan x$$ is a homeomorphism from the bounded incomplete space $$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$$ onto $$\mathbb{R}.$$
+
+Let $$X$$ and $$Y$$ be topological spaces and $$f:X\rightarrow Y$$ be a continuous function. The function $$f$$ is an **open map** if and only if it maps open sets to open sets. The function $$f$$ is a **closed map** if and only if it maps closed sets to closed sets. A continuous bijection need not be a homeomorphism: $$t\mapsto e^{it}$$ is a continuous bijection from $$\left[0,2\pi\right)$$ onto the unit circle whose inverse is discontinuous at $$1.$$ A continuous bijection is a homeomorphism if and only if it is an open map, if and only if it is a closed map.
+
+Let $$\left(X,\mathcal{T}\right)$$ be a topological space. The space $$X$$ is **Hausdorff** if and only if any two distinct points have disjoint neighbourhoods.
 
 $$\forall\,x\neq y\in X\,\exists\,U,V\in\mathcal{T}:x\in U,\,y\in V,\,U\cap V=\varnothing$$
 
-Every metric space is Hausdorff, since $$B\left(x,\frac{r}{2}\right)$$ and $$B\left(y,\frac{r}{2}\right)$$ are disjoint when $$r=d(x,y),$$ whereas the indiscrete topology on a set with more than one point is not. Subspaces and products of Hausdorff spaces are Hausdorff. In a Hausdorff space finite sets are closed and a convergent sequence has exactly one limit; in the indiscrete topology every sequence converges to every point.
+Hausdorff spaces have the following properties:
+- every metric space is Hausdorff, since $$B\left(x,\frac{r}{2}\right)$$ and $$B\left(y,\frac{r}{2}\right)$$ are disjoint when $$r=d(x,y);$$
+- the indiscrete topology on a set with more than one point is not Hausdorff;
+- subspaces and products of Hausdorff spaces are Hausdorff;
+- in a Hausdorff space finite sets are closed and a convergent sequence has exactly one limit, whereas in the indiscrete topology every sequence converges to every point.

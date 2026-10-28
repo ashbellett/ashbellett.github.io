@@ -6,76 +6,74 @@ tags: ["linear", "algebra", "eigenvalue", "eigenvector"]
 description: "Fundamental decomposition of square matrices"
 ---
 
-Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\underline{v} \in \mathbb{F}^n$$ be a non-zero vector. $$\underline{v}$$ is an **eigenvector** of $$A$$ if and only if
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. A scalar $$\lambda\in\mathbb{F}$$ is an **eigenvalue** of $$A$$ if and only if there exists a non-zero vector $$\underline{v} \in \mathbb{F}^n$$ such that multiplication by $$A$$ scales $$\underline{v}$$ by $$\lambda.$$
 
 $$A\underline{v}=\lambda\underline{v}$$
 
-where $$\lambda\in\mathbb{F}$$ is called an **eigenvalue** of $$A$$ if $$\underline{v}$$ exists.
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\lambda$$ be an eigenvalue of $$A.$$ A non-zero vector $$\underline{v} \in \mathbb{F}^n$$ is an **eigenvector** of $$A$$ corresponding to $$\lambda$$ if and only if $$A\underline{v}=\lambda\underline{v}.$$ For an eigenvector $$\underline{v},$$ the linear transformation $$\underline{v}\mapsto A\underline{v}$$ is the scalar transformation $$\underline{v}\mapsto\lambda\underline{v}.$$
 
-The linear transformation $$A\underline{v}$$ where $$\underline{v}$$ is an eigenvector of $$A$$ is equivalent to the scalar transformation $$\lambda\underline{v}.$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The **characteristic polynomial** of $$A$$ is the polynomial of degree $$n$$ in $$\lambda$$ given by the determinant of $$A-\lambda I_n.$$
 
-Let $$\lambda_1,\ldots,\lambda_n \in \mathbb{C}$$ be the eigenvalues of $$A,$$ repeated according to their algebraic multiplicity (defined below). The eigenvalues satisfy the following properties:
+$$p_A(\lambda):=\lvert A-\lambda I_n\rvert$$
+
+The eigenvalues of $$A$$ are the roots of the characteristic polynomial, since $$A\underline{v}=\lambda\underline{v}$$ has a non-zero solution $$\underline{v}$$ if and only if $$A-\lambda I_n$$ is singular.
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The **eigen-spectrum** of $$A,$$ written $$\sigma_A,$$ is the set of distinct eigenvalues of $$A.$$
+
+$$\sigma_A:=\{\lambda : \lvert A-\lambda I_n\rvert=0\}$$
+
+The characteristic polynomial of $$A$$ has $$m$$ distinct complex roots where $$1\leq m\leq n,$$ so taking eigenvalues over $$\mathbb{C}$$ the eigen-spectrum has cardinality $$m.$$ A real matrix can have complex eigenvalues: the rotation matrix $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$ has eigenvalues $$\pm i$$ and no real eigenvalues. The statements below that count $$n$$ eigenvalues assume that all roots of the characteristic polynomial lie in $$\mathbb{F},$$ which always holds for $$\mathbb{F}=\mathbb{C}.$$
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\lambda \in \sigma_A.$$ The eigenvectors of $$A$$ corresponding to $$\lambda$$ are the non-zero solutions $$\underline{v}$$ of the equation
+
+$$\left(A-\lambda I_n\right)\underline{v}=\underline{0}.$$
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\lambda \in \sigma_A.$$ The **eigen-space** of $$A$$ with respect to $$\lambda,$$ written $$\mathcal{E}_{\lambda},$$ is the kernel of $$A-\lambda I_n.$$
+
+$$\mathcal{E}_{\lambda}:=\{\underline{v} \in \mathbb{F}^n : \left(A-\lambda I_n\right)\underline{v}=\underline{0}\}$$
+
+The eigen-space is a subspace of $$\mathbb{F}^n$$ that contains the eigenvectors of $$A$$ corresponding to $$\lambda$$ together with the zero vector, and it is spanned by those eigenvectors.
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\lambda \in \sigma_A.$$ The **algebraic multiplicity** of $$\lambda,$$ written $$\mu_A\left(\lambda\right),$$ is the number of times $$\lambda$$ appears as a root of the characteristic polynomial of $$A.$$ The sum of the algebraic multiplicities of all eigenvalues of $$A$$ is $$n.$$
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\lambda \in \sigma_A.$$ The **geometric multiplicity** of $$\lambda,$$ written $$\gamma_A\left(\lambda\right),$$ is the dimension of the eigen-space $$\mathcal{E}_{\lambda}.$$ The geometric multiplicity is the maximum number of linearly independent eigenvectors of $$A$$ corresponding to $$\lambda.$$
+
+The algebraic and geometric multiplicities have the following properties:
+
+$$1\leq\gamma_A\left(\lambda\right)\leq\mu_A\left(\lambda\right)\leq n\,\,\forall\,\lambda\in\sigma_A$$
+
+Eigenvectors corresponding to distinct eigenvalues are linearly independent. A repeated eigenvalue does not necessarily correspond to multiple linearly independent eigenvectors.
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix and $$\lambda_1,\ldots,\lambda_n \in \mathbb{F}$$ be its eigenvalues repeated according to algebraic multiplicity. The eigenvalues have the following properties:
 
 $$\sum_{i=1}^n \lambda_i = \mathrm{tr}(A)$$
 
 $$\prod_{i=1}^n \lambda_i = \lvert A\rvert$$
 
-The expression $$\lvert A-\lambda I_n\rvert$$ is a polynomial of degree $$n$$ in $$\lambda$$ called the **characteristic polynomial** of $$A.$$ The roots of $$\lvert A-\lambda I_n\rvert=0$$ are the eigenvalues of $$A.$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The matrix $$A$$ is **defective** if and only if the geometric multiplicity of some eigenvalue is strictly less than its algebraic multiplicity.
 
-The set of all distinct eigenvalues of $$A$$ is called the **eigen-spectrum** $$\sigma_A$$ of $$A.$$
+$$\gamma_A\left(\lambda\right)<\mu_A\left(\lambda\right)\,\,\mathrm{for}\,\mathrm{some}\,\,\lambda\in\sigma_A$$
 
-$$\sigma_A=\{\lambda : \lvert A-\lambda I_n\rvert=0\}$$
+A matrix is defective if and only if it has fewer than $$n$$ linearly independent eigenvectors. A matrix is **non-defective** if and only if $$\gamma_A\left(\lambda\right)=\mu_A\left(\lambda\right)$$ for every $$\lambda\in\sigma_A,$$ in which case it has $$n$$ linearly independent eigenvectors.
 
-The characteristic polynomial of $$A$$ will admit $$m$$ distinct complex roots where $$1\leq m\leq n.$$ Therefore, taking eigenvalues over $$\mathbb{C},$$ the cardinality of the eigen-spectrum $$\sigma_A$$ is $$m.$$ A real matrix can have complex eigenvalues: the rotation matrix $$\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$$ has eigenvalues $$\pm i$$ and no real eigenvalues. The results below that count $$n$$ eigenvalues assume that all roots of the characteristic polynomial lie in $$\mathbb{F},$$ which always holds for $$\mathbb{F}=\mathbb{C}.$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a non-defective matrix. An **eigen-basis** of $$A$$ is a basis of $$\mathbb{F}^n$$ consisting of $$n$$ linearly independent eigenvectors of $$A.$$
 
-For each eigenvalue $$\lambda_i\in\sigma_A,$$ any non-zero solution to
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a non-defective matrix with eigen-basis $$\underline{v}_1,\ldots,\underline{v}_n$$ and corresponding eigenvalues $$\lambda_1,\ldots,\lambda_n.$$ The **eigenvector matrix** $$P$$ is the square matrix whose columns are the eigenvectors, and the **eigenvalue matrix** $$\Lambda$$ is the diagonal matrix whose diagonal elements are the corresponding eigenvalues.
 
-$$\left(A-\lambda_i I_n\right)\underline{v_i}=\underline{0}$$
-
-is an eigenvector $$\underline{v_i}$$ of $$A$$ corresponding to $$\lambda_i.$$
-
-The **eigen-space** $$\mathcal{E}_{\lambda}$$ of $$A$$ with respect to eigenvalue $$\lambda$$ is the vector space that is spanned by all eigenvectors of $$A$$ corresponding to $$\lambda.$$ Equivalently, it is the kernel of $$A-\lambda I_n,$$ which contains these eigenvectors together with the zero vector:
-
-$$\mathcal{E}_{\lambda}=\{\underline{v} \in \mathbb{F}^n : \left(A-\lambda I_n\right)\underline{v}=\underline{0}\}$$
-
-The **algebraic multiplicity** $$\mu_A\left(\lambda\right)$$ of $$\lambda$$ with respect to the matrix $$A$$ is the number of times $$\lambda$$ appears as a root of the characteristic polynomial of $$A.$$ The sum of the algebraic multiplicities of all eigenvalues of $$A$$ is $$n.$$
-
-The **geometric multiplicity** $$\gamma_A\left(\lambda\right)$$ of $$\lambda$$ with respect to the matrix $$A$$ is the maximum number of linearly independent eigenvectors of $$A$$ corresponding to $$\lambda$$ and is equivalent to the dimension of the eigen-space of $$A$$ with respect to $$\lambda.$$
-
-The algebraic and geometric multiplicities are related by:
-
-$$1\leq\gamma_A\left(\lambda\right)\leq\mu_A\left(\lambda\right)\leq n\,\,\forall\,\lambda\in\sigma_A$$
-
-Eigenvectors corresponding to distinct eigenvalues are always linearly independent, but this inequality shows that a repeated eigenvalue does not necessarily correspond to multiple linearly independent eigenvectors.
-
-$$A$$ will admit $$n$$ linearly independent eigenvectors if and only if:
-
-$$\gamma_A\left(\lambda_i\right)=\mu_A\left(\lambda_i\right)\,\,\forall\,\lambda_i\in\sigma_A.$$
-
-$$A$$ will admit fewer than $$n$$ linearly independent eigenvectors if and only if:
-
-$$\gamma_A\left(\lambda_i\right)<\mu_A\left(\lambda_i\right)\,\,\mathrm{for}\,\mathrm{some}\,\,\lambda_i\in\sigma_A$$
-
-and $$A$$ is referred to as **defective**.
-
-For a non-defective matrix $$A,$$ the $$n$$ linearly independent eigenvectors will form a basis for $$\mathbb{F}^n$$ and is called an **eigen-basis**.
-
-Let $$A$$ be a non-defective matrix with $$n$$ linearly independent eigenvectors $$\underline{v}_1,\ldots,\underline{v}_n$$ and corresponding eigenvalues $$\lambda_1,\ldots,\lambda_n.$$ The following matrices can be constructed:
-
-$$P=\begin{bmatrix}
+$$P:=\begin{bmatrix}
   \uparrow & & \uparrow \\
   \underline{v}_1 & \ldots & \underline{v}_n \\
   \downarrow & & \downarrow
 \end{bmatrix}$$
 
-$$\Lambda=\begin{bmatrix}
+$$\Lambda:=\begin{bmatrix}
   \lambda_1 & 0 & 0 \\
   0 & \ddots & 0 \\
   0 & 0 & \lambda_n
 \end{bmatrix}$$
 
-where $$P$$ is the eigenvectors in columnar form stacked horizontally to form a square matrix and $$\Lambda$$ is a diagonal matrix with eigenvalues along the diagonal.
-
-The **diagonalisation** of $$A$$ is the decomposition:
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a non-defective matrix with eigenvector matrix $$P$$ and eigenvalue matrix $$\Lambda.$$ The **diagonalisation** of $$A$$ is the factorisation of $$A$$ into the product of $$P,$$ $$\Lambda$$ and $$P^{-1}.$$
 
 $$A=P\Lambda P^{-1}$$
+
+A matrix is **diagonalisable** if and only if it is non-defective. The diagonalisation has the property $$A^k=P\Lambda^kP^{-1}$$ for every $$k\in\mathbb{N},$$ where $$\Lambda^k$$ is the diagonal matrix with diagonal elements $$\lambda_i^k.$$

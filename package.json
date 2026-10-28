@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "description": "KaTeX renders the site's formulae when it is built. See README.md.",
+  "dependencies": {
+    "katex": "0.19.1"
+  }
+}

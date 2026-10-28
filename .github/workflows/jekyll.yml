@@ -29,6 +29,10 @@ jobs:
         uses: ruby/setup-ruby@26e5b7d197ebf60545ee9667bcbace0be11ccaec # v1.334.0
         with:
           bundler-cache: true
+      # KaTeX, which renders the formulae, comes from npm. It runs on the
+      # Node.js preinstalled on the runner.
+      - name: Install KaTeX
+        run: npm ci --no-audit --no-fund
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0

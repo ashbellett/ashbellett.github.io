@@ -4,7 +4,7 @@ lang: en-AU
 author:
   name: Ash Bellett
 include: [_pages]
-exclude: [README.md, LICENSE, bin]
+exclude: [README.md, LICENSE, package.json, package-lock.json]
 collections_dir: _posts
 baseurl: ""
 url: "https://ashbellett.com"

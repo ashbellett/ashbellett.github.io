@@ -10,10 +10,11 @@ Install [Node.js](https://nodejs.org/), e.g. `brew install node` on macOS, which
 
 ## Installation
 
-Install Ruby gems:
+Install Ruby gems and KaTeX:
 
 ```bash
 bundle install
+npm ci
 ```
 
 Run website locally at http://localhost:4000:
@@ -24,16 +25,7 @@ bundle exec jekyll serve
 
 ## Maths
 
-Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts. `_plugins/katex.rb` runs KaTeX in a single Node process for the whole build, as ExecJS would otherwise start a new one for every formula.
-
-KaTeX itself is vendored in `_vendor/katex` because the `katex` gem bundles an older release. Dependabot does not track it. To upgrade, run:
-
-```bash
-bin/update-katex          # latest release
-bin/update-katex 0.19.1   # or a given release
-```
-
-The script downloads the release from npm, checks it against the registry's integrity hash, and replaces `_vendor/katex/katex.min.js`, `assets/css/katex.css` and the woff2 fonts in `assets/css/fonts`, so all three always come from the same release.
+Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/). No JavaScript is served. KaTeX is an npm package pinned to an exact version in `package.json`, and Dependabot opens a pull request for each new release. `_plugins/katex.rb` renders every formula in one Node process, and publishes the installed release's stylesheet as `assets/css/katex.css` and its woff2 fonts in `assets/css/fonts`, so they always match the rendered HTML.
 
 A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute. CI fails the build if any page contains one; locally, search `_site` for `katex-error`.
 

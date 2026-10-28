@@ -1,4 +1,4 @@
-# Keeps the pinned GitHub Actions commits and Ruby gems current.
+# Keeps the pinned GitHub Actions commits, Ruby gems and KaTeX current.
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -6,6 +6,10 @@ updates:
     schedule:
       interval: monthly
   - package-ecosystem: bundler
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: npm
     directory: /
     schedule:
       interval: monthly

@@ -99,13 +99,6 @@ GEM
       kramdown (~> 2.0)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    libv8-node (24.12.0.1)
-    libv8-node (24.12.0.1-aarch64-linux)
-    libv8-node (24.12.0.1-aarch64-linux-musl)
-    libv8-node (24.12.0.1-arm64-darwin)
-    libv8-node (24.12.0.1-x86_64-darwin)
-    libv8-node (24.12.0.1-x86_64-linux)
-    libv8-node (24.12.0.1-x86_64-linux-musl)
     liquid (4.0.4)
     listen (3.10.1)
       logger
@@ -113,8 +106,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
-    mini_racer (0.22.2)
-      libv8-node (~> 24.12.0.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (7.0.5)
@@ -194,7 +185,6 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4.0)
   katex (~> 0.11.0)
   kramdown-math-katex (~> 1.0.1)
-  mini_racer (~> 0.22)
 
 CHECKSUMS
   addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
@@ -243,18 +233,10 @@ CHECKSUMS
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
   kramdown-math-katex (1.0.1) sha256=7119b299fed5ec49b9e2107d18e88f90acf4bbdf1b82a7568fd488790bb04cdc
   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
-  libv8-node (24.12.0.1) sha256=d93d23b861bfe5de3ba829e34a142402fb83b4c3592dd58d9ac4e027588d739a
-  libv8-node (24.12.0.1-aarch64-linux) sha256=22bd0246cde85d70c88cf772727ac3677a20ac1d169105f82efe5f1f7c39f755
-  libv8-node (24.12.0.1-aarch64-linux-musl) sha256=791b5960f79525e87d1bd1e5f2bf3715ef2a38bac6c97f297853e98a8411ba89
-  libv8-node (24.12.0.1-arm64-darwin) sha256=124904a46b4a15c01ac024b4cf537dcf199cfb49a309cc59f66315e156e48339
-  libv8-node (24.12.0.1-x86_64-darwin) sha256=5eee594393e7a27dc230a7fca5f9f72fc11ed58bce655624a683f4d027bf2d16
-  libv8-node (24.12.0.1-x86_64-linux) sha256=e1236be4765edc109bd6ecef2989cf781bdcbac6f6e2cb3236ec9568540a9cfa
-  libv8-node (24.12.0.1-x86_64-linux-musl) sha256=7563175534c40893815bfd28e8fe27e12ff1656700c7208f53de06d14001712b
   liquid (4.0.4) sha256=4fcfebb1a045e47918388dbb7a0925e7c3893e58d2bd6c3b3c73ec17a2d8fdb3
   listen (3.10.1) sha256=4c3f32855657f348747da4dd2372ff3790d90a6b1d3e4f21a3706adb2d04783c
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
-  mini_racer (0.22.2) sha256=6a5b0d1e8bfe296ce9005d7d2bdbed1709a79d071a04bcd0e6699d899bf23cca
   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589
   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
   rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701

@@ -36,6 +36,14 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      # KaTeX renders a formula it cannot parse in red rather than failing the
+      # build, so look for those in the output before anything is deployed.
+      - name: Check for TeX errors
+        run: |
+          if grep -rl --include='*.html' 'katex-error' _site; then
+            echo "::error::KaTeX could not render a formula in the pages above. Search them for katex-error."
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
 

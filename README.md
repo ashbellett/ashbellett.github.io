@@ -6,6 +6,8 @@ This is my personal website that contains notes on mathematics, science and engi
 
 Install [Ruby](https://www.ruby-lang.org/) 4.0, e.g. `brew install ruby` on macOS. CI builds with the exact version in `.ruby-version` (currently 4.0.9); any 4.0.x release works locally.
 
+Install [Node.js](https://nodejs.org/), e.g. `brew install node` on macOS, which renders the formulae. Any current LTS release works; CI uses the one preinstalled on GitHub's Ubuntu runner.
+
 ## Installation
 
 Install Ruby gems:
@@ -22,9 +24,18 @@ bundle exec jekyll serve
 
 ## Maths
 
-Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts.
+Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts. `_plugins/katex.rb` runs KaTeX in a single Node process for the whole build, as ExecJS would otherwise start a new one for every formula.
 
-KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an older release. To upgrade, download the release's npm tarball and check its `integrity` hash from `https://registry.npmjs.org/katex`, then copy `dist/katex.min.js` to `_vendor/katex/`, `dist/fonts/*.woff2` to `assets/css/fonts/`, and `dist/katex.min.css` to `assets/css/katex.css` with the `woff` and `ttf` `src` entries removed. All three must come from the same release. Dependabot does not track this. A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute, so check the build output for `katex-error`.
+KaTeX itself is vendored in `_vendor/katex` because the `katex` gem bundles an older release. Dependabot does not track it. To upgrade, run:
+
+```bash
+bin/update-katex          # latest release
+bin/update-katex 0.19.1   # or a given release
+```
+
+The script downloads the release from npm, checks it against the registry's integrity hash, and replaces `_vendor/katex/katex.min.js`, `assets/css/katex.css` and the woff2 fonts in `assets/css/fonts`, so all three always come from the same release.
+
+A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute. CI fails the build if any page contains one; locally, search `_site` for `katex-error`.
 
 ## Fonts
 

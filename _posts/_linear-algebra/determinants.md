@@ -6,32 +6,43 @@ tags: ["linear", "algebra", "determinant"]
 description: "Fundamental property of square matrices"
 ---
 
-Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. If the $$i^{\mathrm{th}}$$ row and $$j^{\mathrm{th}}$$ column is removed from $$A$$ the resulting matrix $$B_{ij} \in \mathbb{F}^{\,(n-1)\times (n-1)}$$ is called the $$(i,j)$$-**sub-matrix** of $$A.$$ The $$(i,j)$$-**minor** of $$A$$ is the determinant $$M_{ij}\in\mathbb{F}$$ of the $$(i,j)$$-sub-matrix $$B_{ij}.$$ The $$(i,j)$$-**co-factor** of $$A,$$ $$C_{ij}\in\mathbb{F},$$ is the $$(i,j)$$-minor $$M_{ij}$$ scaled by $$(-1)^{i+j}.$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix with $$n \geq 2.$$ The $$(i,j)$$-**sub-matrix** of $$A$$ is the matrix $$B_{ij} \in \mathbb{F}^{\,(n-1)\times (n-1)}$$ obtained by removing the $$i^{\mathrm{th}}$$ row and the $$j^{\mathrm{th}}$$ column from $$A.$$
 
-$$M_{ij} = \lvert B_{ij}\rvert$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix. The **determinant** of $$A,$$ written $$\mathrm{det}(A)$$ or $$\lvert A\rvert,$$ is the scalar in $$\mathbb{F}$$ defined recursively on $$n.$$ For $$n=1,$$ the determinant is the single element of $$A.$$
 
-$$C_{ij} = (-1)^{i+j}M_{ij}$$
+$$\lvert A \rvert := a_{11}$$
 
-The **determinant**, $$\mathrm{det}(A)$$ or $$\lvert A\rvert,$$ of $$A$$ is defined recursively. For $$n=1,$$ $$\lvert A \rvert = a_{11}.$$ For $$n \geq 2$$ it is defined with the **Laplace expansion** of $$A$$ along any fixed row $$i \in \{1,\ldots,n\}:$$
+For $$n \geq 2,$$ the determinant is defined through the minors and co-factors of $$A$$ below, which are determinants of $$(n-1)\times(n-1)$$ matrices.
 
-$$\lvert A \rvert = \sum_{j=1}^{n} a_{ij}C_{ij}$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix with $$n \geq 2.$$ The $$(i,j)$$-**minor** of $$A$$ is the determinant $$M_{ij}\in\mathbb{F}$$ of the $$(i,j)$$-sub-matrix of $$A.$$
 
-Every choice of row $$i$$ gives the same value.
+$$M_{ij} := \lvert B_{ij}\rvert$$
 
-For the simple case $$n=2,$$ $$\lvert A \rvert = a_{11}a_{22}-a_{12}a_{21}.$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix with $$n \geq 2.$$ The $$(i,j)$$-**co-factor** of $$A$$ is the $$(i,j)$$-minor of $$A$$ scaled by $$(-1)^{i+j}.$$
 
-The determinant of a real, square matrix $$A\in\mathbb{R}^{\,n\times n}$$ is the signed volume of the parallelepiped formed by taking each row of $$A$$ as a vector in $$\mathbb{R}^n.$$ The volume itself is $$\lvert \mathrm{det}(A) \rvert$$ and the sign records whether the rows have the same orientation as the standard basis.
+$$C_{ij} := (-1)^{i+j}M_{ij}$$
 
-The determinant of square matrices $$A,B\in\mathbb{F}^{\,n\times n}$$ satisfies the following properties:
-- Determinant of transpose: $$\lvert A \rvert\,= \lvert A^\intercal \rvert$$
-- Determinant of scalar multiplication: $$\lvert \lambda A \rvert\,= \lambda^n\lvert A \rvert\,\,\forall\,\lambda\in\mathbb{F}$$
-- Determinant of matrix multiplication: $$\lvert AB \rvert\,= \lvert A \rvert \lvert B \rvert$$
-- Determinant of matrix inverse: $$\lvert A^{-1} \rvert\,=\frac{1}{\lvert A \rvert}$$ if $$A$$ is invertible
-- Invertibility: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ is invertible
-- Full rank: $$\lvert A \rvert \,\neq 0 \Leftrightarrow A$$ has rank $$n$$
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix with $$n \geq 2$$ and $$i \in \{1,\ldots,n\}$$ be a fixed row. The **Laplace expansion** of $$A$$ along row $$i$$ is the sum of the elements of row $$i$$ weighted by their co-factors, and the determinant of $$A$$ is defined to be this sum.
 
-Let $$A\in\mathbb{F}^{\,n\times n}$$ be an invertible square matrix, so that $$\lvert A\rvert \neq 0,$$ and let $$C\in\mathbb{F}^{\,n\times n}$$ be its **co-factor matrix** whose $$(i,j)^{\mathrm{th}}$$ element is $$C_{ij}.$$ The matrix inverse $$A^{-1}$$ can be calculated from the determinant and co-factors of $$A:$$
+$$\lvert A \rvert := \sum_{j=1}^{n} a_{ij}C_{ij}$$
+
+Every choice of row $$i$$ gives the same value, and the expansion along any fixed column $$j,$$ $$\sum_{i=1}^{n} a_{ij}C_{ij},$$ also gives the same value. For $$n=2,$$ $$\lvert A \rvert = a_{11}a_{22}-a_{12}a_{21}.$$
+
+Let $$A\in\mathbb{R}^{\,n\times n}$$ be a real square matrix. The determinant of $$A$$ is the signed volume of the parallelepiped whose edges are the rows of $$A$$ taken as vectors in $$\mathbb{R}^n.$$ The volume is $$\lvert \mathrm{det}(A) \rvert$$ and the sign records whether the rows have the same orientation as the standard basis.
+
+The determinant has the following properties for square matrices $$A,B\in\mathbb{F}^{\,n\times n}:$$
+- Determinant of transpose: $$\lvert A \rvert\,= \lvert A^\intercal \rvert.$$
+- Determinant of scalar multiplication: $$\lvert \lambda A \rvert\,= \lambda^n\lvert A \rvert\,\,\forall\,\lambda\in\mathbb{F}.$$
+- Determinant of matrix multiplication: $$\lvert AB \rvert\,= \lvert A \rvert \lvert B \rvert.$$
+- Determinant of matrix inverse: $$\lvert A^{-1} \rvert\,=\frac{1}{\lvert A \rvert}$$ if $$A$$ is invertible.
+- Determinant of a triangular matrix: $$\lvert A \rvert\,=\prod_{i=1}^n a_{ii}$$ if $$A$$ is upper or lower triangular.
+- Invertibility: $$\lvert A \rvert \,\neq 0$$ if and only if $$A$$ is invertible.
+- Full rank: $$\lvert A \rvert \,\neq 0$$ if and only if $$A$$ has rank $$n.$$
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be a square matrix with $$n \geq 2.$$ The **co-factor matrix** of $$A$$ is the matrix $$C\in\mathbb{F}^{\,n\times n}$$ whose $$(i,j)^{\mathrm{th}}$$ element is the co-factor $$C_{ij}.$$
+
+Let $$A\in\mathbb{F}^{\,n\times n}$$ be an invertible square matrix with $$n \geq 2$$ and co-factor matrix $$C.$$ The inverse of $$A$$ is the transpose of the co-factor matrix divided by the determinant.
 
 $$A^{-1}=\frac{C^\intercal}{\lvert A\rvert}$$
 
-where the $$(i,j)^{\mathrm{th}}$$ element of $$A^{-1}$$ is $$\frac{C_{ji}}{\lvert A\rvert}.$$
+The $$(i,j)^{\mathrm{th}}$$ element of $$A^{-1}$$ is $$\frac{C_{ji}}{\lvert A\rvert}.$$

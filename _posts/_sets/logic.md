@@ -8,14 +8,14 @@ description: "The formal language of mathematics"
 
 A **logical statement** $$X$$ is a statement that is either true or false.
 
-A statement $$X$$ is **necessary** for a statement $$Y,$$ $$X \Leftarrow Y,$$ if $$X$$ is required to be true for $$Y$$ to be true. Necessity does not guarantee that $$Y$$ is true even if $$X$$ is true. Necessary conditions are expressed as "$$X$$ if $$Y$$".
+Let $$X$$ and $$Y$$ be logical statements. The statement $$X$$ is **necessary** for the statement $$Y,$$ written $$X \Leftarrow Y,$$ if and only if $$Y$$ can only be true when $$X$$ is true. A necessary condition is expressed as "$$X$$ if $$Y$$". Necessity does not guarantee that $$Y$$ is true when $$X$$ is true.
 
-A statement $$X$$ is **sufficient** for a statement $$Y,$$ $$X \Rightarrow Y,$$ if $$X$$ being true guarantees that $$Y$$ is true. Sufficiency does not imply that $$X$$ is necessary for $$Y.$$ Sufficient conditions are expressed as "$$X$$ only if $$Y$$".
+Let $$X$$ and $$Y$$ be logical statements. The statement $$X$$ is **sufficient** for the statement $$Y,$$ written $$X \Rightarrow Y,$$ if and only if $$Y$$ is true whenever $$X$$ is true. A sufficient condition is expressed as "$$X$$ only if $$Y$$". Sufficiency does not guarantee that $$X$$ is necessary for $$Y.$$
 
-If a statement $$X$$ is both necessary and sufficient for a statement $$Y,$$ $$X \Leftrightarrow Y,$$ then these statements are **logically equivalent**. Equivalent conditions are expressed as "$$X$$ if and only if $$Y$$".
+Let $$X$$ and $$Y$$ be logical statements. The statements $$X$$ and $$Y$$ are **logically equivalent**, written $$X \Leftrightarrow Y,$$ if and only if $$X$$ is both necessary and sufficient for $$Y.$$ An equivalence is expressed as "$$X$$ if and only if $$Y$$".
 
-The **negation** statement "$$X$$ is false" is true if and only if $$X$$ is false; otherwise the statement is false.
+Let $$X$$ be a logical statement. The **negation** of $$X$$ is the statement "$$X$$ is false". The negation of $$X$$ is true if and only if $$X$$ is false.
 
-The **conjunction** statement "$$X$$ and $$Y$$" is true if and only if the statements $$X$$ and $$Y$$ are both true; otherwise the statement is false.
+Let $$X$$ and $$Y$$ be logical statements. The **conjunction** of $$X$$ and $$Y$$ is the statement "$$X$$ and $$Y$$". The conjunction of $$X$$ and $$Y$$ is true if and only if $$X$$ is true and $$Y$$ is true.
 
-The **disjunction** statement "$$X$$ or $$Y$$" is true if either statement $$X$$ or $$Y$$ is true or both are true; otherwise the statement is false.
+Let $$X$$ and $$Y$$ be logical statements. The **disjunction** of $$X$$ and $$Y$$ is the statement "$$X$$ or $$Y$$". The disjunction of $$X$$ and $$Y$$ is true if and only if at least one of $$X$$ and $$Y$$ is true.

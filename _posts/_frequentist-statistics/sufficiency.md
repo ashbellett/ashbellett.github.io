@@ -6,22 +6,18 @@ tags: ["statistics", "sufficiency"]
 description: "Information in statistics"
 ---
 
-A statistic cannot contain more information than the random sample that it summarises. The degree to which a statistic encodes information about the distribution of a random sample is referred to as **sufficiency**.
+Let $$\underline{X}$$ be a random sample of size $$n$$ from the population $$\mathbb{P}_{X;\,\theta}$$ and $$T=t\left(\underline{X}\right)$$ be a statistic. The statistic $$T$$ is a **sufficient statistic** for $$\theta$$ if and only if the conditional distribution of the random sample given $$T$$ does not depend on $$\theta.$$
 
-Given a random sample  $$\underline{X}$$ of size $$n$$ from the population $$\mathbb{P}_{X;\,\theta},$$ a statistic $$T$$ is a **sufficient statistic** for the parameter $$\theta$$ if:
+$$\mathbb{P}\left(\underline{X}\mid T,\theta\right)=\mathbb{P}\left(\underline{X}\mid T\right)$$
 
-$$\mathbb{P}\left(\underline{X}\mid T,\theta\right)=\mathbb{P}\left(\underline{X}\mid T\right).$$
+A sufficient statistic contains all of the information in the random sample about $$\theta.$$ A statistic cannot contain more information about $$\theta$$ than the random sample that it summarises.
 
-That is, the conditional distribution of the random sample given the value of the statistic $$T$$ is independent of the parameter $$\theta.$$
-
-If the population $$\mathbb{P}_{X;\,\theta}$$ is continuous with joint pdf of the random sample given by $$f_{\underline{X}}\left(\underline{x}\mid\theta\right)$$ and the pdf of a statistic $$T=t\left(\underline{X}\right)$$ is given by $$f_T\left(t\mid\theta\right)$$ then $$T$$ is a sufficient statistic for $$\theta$$ if and only if the ratio of pdfs
+Let $$\underline{X}$$ be a random sample of size $$n$$ from a continuous population $$\mathbb{P}_{X;\,\theta}$$ with joint pdf $$f_{\underline{X}}\left(\underline{x}\mid\theta\right)$$ and $$T=t\left(\underline{X}\right)$$ be a statistic with pdf $$f_T\left(t\mid\theta\right).$$ The statistic $$T$$ is a sufficient statistic for $$\theta$$ if and only if the ratio of the joint pdf of the random sample to the pdf of the statistic does not depend on $$\theta$$ for all $$\underline{x}\in S^n.$$
 
 $$\frac{f_{\underline{X}}\left(\underline{x}\mid\theta\right)}{f_T\left(t\left(\underline{x}\right)\mid\theta\right)}$$
 
-does not depend on $$\theta$$ (it is constant as a function of $$\theta$$) $$\forall\,\underline{x}\in S^n.$$
+Let $$\underline{X}$$ be a random sample of size $$n$$ from a continuous population $$\mathbb{P}_{X;\,\theta}$$ with joint pdf $$f_{\underline{X}}\left(\underline{x}\mid\theta\right)$$ and $$T=t\left(\underline{X}\right)$$ be a statistic. The **factorisation theorem** states that $$T$$ is a sufficient statistic for $$\theta$$ if and only if there exist functions $$u\left(t\mid\theta\right)$$ and $$v\left(\underline{x}\right)$$ such that the joint pdf of the random sample factorises into a function of the statistic and the parameter and a function of the data alone.
 
-The **factorisation theorem** states that a statistic $$T=t\left(\underline{X}\right)$$ is a sufficient statistic for $$\theta$$ if and only if there exist functions $$u\left(t\mid\theta\right)$$ and $$v\left(\underline{x}\right)$$ such that the joint pdf of the random sample can be factored:
+$$f_{\underline{X}}\left(\underline{x}\mid\theta\right)=u\left(t\left(\underline{x}\right)\mid\theta\right)v\left(\underline{x}\right)\,\,\forall\,\underline{x}\in S^n,\,\theta\in\Theta$$
 
-$$f_{\underline{X}}\left(\underline{x}\mid\theta\right)=u\left(t\left(\underline{x}\right)\mid\theta\right)v\left(\underline{x}\right)\,\,\forall\,\underline{x}\in S^n,\,\theta\in\Theta.$$
-
-The tests for sufficient statistics are also true for discrete random samples using the corresponding pmfs instead.
+The ratio test and the factorisation theorem also hold for discrete populations with the corresponding pmfs in place of pdfs.

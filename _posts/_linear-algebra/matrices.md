@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "linear-algebra"
 title:  "Matrices"
-tags: ["linear", "algebra", "matrix"]
 description: "Multi-dimensional data structures"
 ---
 

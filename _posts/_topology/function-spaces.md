@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "topology"
 title:  "Function Spaces"
-tags: ["topology", "function space"]
 description: "Functions as points of a space"
 ---
 

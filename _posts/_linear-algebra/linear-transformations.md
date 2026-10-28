@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "linear-algebra"
 title:  "Linear Transformations"
-tags: ["linear", "algebra", "linear transformation"]
 description: "Mappings between vector spaces"
 ---
 

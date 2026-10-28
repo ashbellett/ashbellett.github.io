@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "sets"
 title:  "Logic"
-tags: ["sets", "logic"]
 description: "The formal language of mathematics"
 ---
 

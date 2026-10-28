@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "topology"
 title:  "Connectedness"
-tags: ["topology", "connectedness"]
 description: "Spaces that are all of a piece"
 ---
 

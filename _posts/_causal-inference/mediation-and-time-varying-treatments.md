@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Mediation and Time-Varying Treatments"
-tags: ["causal", "inference", "mediation", "g-methods"]
 description: "Effects through intermediate variables and over time"
 ---
 

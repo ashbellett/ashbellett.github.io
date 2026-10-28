@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "sets"
 title:  "Functions"
-tags: ["sets", "function"]
 description: "Mappings between sets"
 ---
 

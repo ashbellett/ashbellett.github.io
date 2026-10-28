@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "frequentist-statistics"
 title:  "Hypothesis Testing"
-tags: ["statistics", "hypothesis-testing"]
 description: "Deciding whether data supports an idea"
 ---
 

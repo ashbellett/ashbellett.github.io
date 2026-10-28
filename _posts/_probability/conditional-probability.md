@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "probability"
 title:  "Conditional Probability"
-tags: ["probability", "conditional"]
 description: "Using events that have occurred"
 ---
 

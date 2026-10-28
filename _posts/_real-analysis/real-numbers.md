@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "real-analysis"
 title:  "Real Numbers"
-tags: ["real", "analysis", "real number"]
 description: "Scalar quantities"
 ---
 

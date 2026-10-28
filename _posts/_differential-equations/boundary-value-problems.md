@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "Boundary Value Problems"
-tags: ["differential equations", "boundary value problem"]
 description: "Equations with conditions at both ends"
 ---
 

@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "real-analysis"
 title:  "Vector Calculus"
-tags: ["real", "analysis", "vector calculus"]
 description: "Calculus of fields, curves and surfaces"
 ---
 

@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "Second-Order Linear Equations"
-tags: ["differential equations", "second-order linear equation"]
 description: "Equations in a second derivative"
 ---
 

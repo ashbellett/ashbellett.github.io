@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "Series and Transform Methods"
-tags: ["differential equations", "series method", "transform method"]
 description: "Solving equations through series and integrals"
 ---
 

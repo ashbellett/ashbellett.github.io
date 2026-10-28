@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "real-analysis"
 title:  "Series"
-tags: ["real", "analysis", "series"]
 description: "Sums of numbers"
 ---
 

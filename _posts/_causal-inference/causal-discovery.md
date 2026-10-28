@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Causal Discovery"
-tags: ["causal", "inference", "causal discovery", "structure learning"]
 description: "Learning causal graphs from data"
 ---
 

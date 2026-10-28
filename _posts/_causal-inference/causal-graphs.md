@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Causal Graphs"
-tags: ["causal", "inference", "graph", "structural causal model"]
 description: "Encoding causal assumptions as directed graphs"
 ---
 

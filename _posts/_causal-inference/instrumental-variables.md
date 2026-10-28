@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Instrumental Variables"
-tags: ["causal", "inference", "instrumental variable"]
 description: "Identifying effects through variation that affects only the treatment"
 ---
 

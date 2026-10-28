@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "sets"
 title:  "Sets"
-tags: ["sets", "set"]
 description: "Collections of elements"
 ---
 

@@ -6,7 +6,7 @@ This is my personal website that contains notes on mathematics, science and engi
 
 Install [Ruby](https://www.ruby-lang.org/) 4.0, e.g. `brew install ruby` on macOS. CI builds with the exact version in `.ruby-version` (currently 4.0.9); any 4.0.x release works locally.
 
-Install [Node.js](https://nodejs.org/), e.g. `brew install node` on macOS, which renders the formulae. Any current LTS release works; CI uses the one preinstalled on GitHub's Ubuntu runner.
+Install [Node.js](https://nodejs.org/) 26, e.g. `brew install node` on macOS, which renders the formulae. CI builds with the exact version in `.node-version` (currently 26.12.1); any 26.x release works locally.
 
 ## Installation
 

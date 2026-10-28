@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Potential Outcomes"
-tags: ["causal", "inference", "potential outcome"]
 description: "Effects as comparisons of outcomes under different treatments"
 ---
 

@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "topology"
 title:  "Topological Spaces"
-tags: ["topology", "topological space"]
 description: "Nearness without distance"
 ---
 

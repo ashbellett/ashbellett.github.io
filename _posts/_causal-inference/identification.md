@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Identification"
-tags: ["causal", "inference", "identification"]
 description: "When causal effects can be computed from observed data"
 ---
 

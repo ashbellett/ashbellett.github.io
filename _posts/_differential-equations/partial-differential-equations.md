@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "Partial Differential Equations"
-tags: ["differential equations", "partial differential equation"]
 description: "Equations in several variables"
 ---
 

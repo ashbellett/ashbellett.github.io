@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "Systems of Equations"
-tags: ["differential equations", "system of equations"]
 description: "Several unknowns that evolve together"
 ---
 

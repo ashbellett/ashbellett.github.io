@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign collection = site.collections | where_exp: "item", "item.label == page.category" | first %}
+{% assign collection = site.collections | where_exp: "item", "item.label == page.collection" | first %}
 {% assign collection_index = collection.docs | where: "layout", "collection" | first %}
 
 <article class="post">

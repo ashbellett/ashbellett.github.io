@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "bayesian-statistics"
 title:  "Posterior Summaries"
-tags: ["bayesian", "statistics", "posterior", "decision"]
 description: "Estimates, intervals and decisions from the posterior"
 ---
 

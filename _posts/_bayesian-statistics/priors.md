@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "bayesian-statistics"
 title:  "Priors"
-tags: ["bayesian", "statistics", "prior"]
 description: "Representing beliefs before data are observed"
 ---
 

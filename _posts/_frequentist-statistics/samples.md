@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "frequentist-statistics"
 title:  "Samples"
-tags: ["statistics", "samples"]
 description: "Selecting observations from a population"
 ---
 

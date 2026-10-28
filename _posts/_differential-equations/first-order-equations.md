@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "First-Order Equations"
-tags: ["differential equations", "first-order equation"]
 description: "Equations in a first derivative"
 ---
 

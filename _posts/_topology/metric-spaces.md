@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "topology"
 title:  "Metric Spaces"
-tags: ["topology", "metric space"]
 description: "Sets with a notion of distance"
 ---
 

@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "probability"
 title:  "Events"
-tags: ["probability", "event"]
 description: "Sets of experiment outcomes"
 ---
 

@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "topology"
 title:  "Completeness"
-tags: ["topology", "completeness"]
 description: "Spaces without missing limits"
 ---
 

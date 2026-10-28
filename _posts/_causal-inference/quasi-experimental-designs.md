@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Quasi-Experimental Designs"
-tags: ["causal", "inference", "difference-in-differences", "regression discontinuity"]
 description: "Identification from the structure of observational data"
 ---
 

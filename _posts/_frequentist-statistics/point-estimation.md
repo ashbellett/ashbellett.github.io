@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "frequentist-statistics"
 title:  "Point Estimation"
-tags: ["statistics", "point estimation"]
 description: "Finding parameter values from data"
 ---
 

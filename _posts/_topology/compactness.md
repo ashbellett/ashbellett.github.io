@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "topology"
 title:  "Compactness"
-tags: ["topology", "compactness"]
 description: "Finiteness for infinite sets"
 ---
 

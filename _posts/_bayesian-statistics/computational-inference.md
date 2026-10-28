@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "bayesian-statistics"
 title:  "Computational Inference"
-tags: ["bayesian", "statistics", "monte carlo", "mcmc"]
 description: "Approximating posteriors that cannot be found in closed form"
 ---
 

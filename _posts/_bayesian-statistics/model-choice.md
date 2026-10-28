@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "bayesian-statistics"
 title:  "Model Choice"
-tags: ["bayesian", "statistics", "model selection", "model averaging"]
 description: "Comparing, combining and checking models"
 ---
 

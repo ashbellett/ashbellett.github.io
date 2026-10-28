@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Estimation under Ignorability"
-tags: ["causal", "inference", "estimation", "propensity score"]
 description: "Estimating effects by adjusting for observed covariates"
 ---
 

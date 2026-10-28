@@ -4,7 +4,7 @@ lang: en-AU
 author:
   name: Ash Bellett
 include: [_pages]
-exclude: [README.md, LICENSE]
+exclude: [README.md, LICENSE, package.json, package-lock.json]
 collections_dir: _posts
 baseurl: ""
 url: "https://ashbellett.com"
@@ -177,6 +177,13 @@ defaults:
         width: 400
         height: 400
         alt: Ash Bellett
+  # Every note in a topic folder. Each topic's index.md sets its own layout.
+  # The glob matters: Jekyll matches collection documents by their path inside
+  # collections_dir, and a plain "_posts" scope matches none of them.
+  - scope:
+      path: "_posts/_*"
+    values:
+      layout: post
 twitter:
   card: summary
 plugins:

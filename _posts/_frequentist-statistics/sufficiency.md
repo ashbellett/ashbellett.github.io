@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "frequentist-statistics"
 title:  "Sufficiency"
-tags: ["statistics", "sufficiency"]
 description: "Information in statistics"
 ---
 

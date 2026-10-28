@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "bayesian-statistics"
 title:  "Bayesian Inference"
-tags: ["bayesian", "statistics", "inference"]
 description: "Updating beliefs about parameters with data"
 ---
 

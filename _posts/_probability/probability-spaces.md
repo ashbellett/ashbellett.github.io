@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "probability"
 title:  "Probability Spaces"
-tags: ["probability", "probability space"]
 description: "Model for assigning probabilities to events"
 ---
 

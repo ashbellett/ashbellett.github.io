@@ -6,12 +6,15 @@ This is my personal website that contains notes on mathematics, science and engi
 
 Install [Ruby](https://www.ruby-lang.org/) 4.0, e.g. `brew install ruby` on macOS. CI builds with the exact version in `.ruby-version` (currently 4.0.9); any 4.0.x release works locally.
 
+Install [Node.js](https://nodejs.org/) 26, e.g. `brew install node` on macOS, which renders the formulae. CI builds with the exact version in `.node-version` (currently 26.12.1); any 26.x release works locally.
+
 ## Installation
 
-Install Ruby gems:
+Install Ruby gems and KaTeX:
 
 ```bash
 bundle install
+npm ci
 ```
 
 Run website locally at http://localhost:4000:
@@ -22,9 +25,9 @@ bundle exec jekyll serve
 
 ## Maths
 
-Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/) via the `kramdown-math-katex` gem. No JavaScript is served; `assets/css/katex.css` and `assets/css/fonts` hold the KaTeX stylesheet and fonts.
+Formulae are written in TeX between `$$` delimiters and converted to HTML when the site is built, using [KaTeX](https://katex.org/). No JavaScript is served. KaTeX is an npm package pinned to an exact version in `package.json`, and Dependabot opens a pull request for each new release. `_plugins/katex.rb` renders every formula in one Node process, and publishes the installed release's stylesheet as `assets/css/katex.css` and its woff2 fonts in `assets/css/fonts`, so they always match the rendered HTML.
 
-KaTeX itself is vendored (currently 0.19.0) because the `katex` gem bundles an older release. To upgrade, download the release's npm tarball and check its `integrity` hash from `https://registry.npmjs.org/katex`, then copy `dist/katex.min.js` to `_vendor/katex/`, `dist/fonts/*.woff2` to `assets/css/fonts/`, and `dist/katex.min.css` to `assets/css/katex.css` with the `woff` and `ttf` `src` entries removed. All three must come from the same release. Dependabot does not track this. A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute, so check the build output for `katex-error`.
+A formula KaTeX cannot parse is rendered as-is in red with the error in its `title` attribute. CI fails the build if any page contains one; locally, search `_site` for `katex-error`.
 
 ## Fonts
 

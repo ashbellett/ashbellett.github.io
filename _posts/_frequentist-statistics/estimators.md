@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "frequentist-statistics"
 title:  "Estimators"
-tags: ["statistics", "estimators"]
 description: "Calculating parameters from data"
 ---
 

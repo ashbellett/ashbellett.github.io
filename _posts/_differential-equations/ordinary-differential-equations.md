@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "differential-equations"
 title:  "Ordinary Differential Equations"
-tags: ["differential equations", "ordinary differential equation"]
 description: "Equations relating a function to its derivatives"
 ---
 

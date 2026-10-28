@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "causal-inference"
 title:  "Heterogeneous Effects and Sensitivity"
-tags: ["causal", "inference", "heterogeneous treatment effect", "sensitivity analysis"]
 description: "Effects that vary across units and robustness to unmeasured confounding"
 ---
 

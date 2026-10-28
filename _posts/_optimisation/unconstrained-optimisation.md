@@ -1,8 +1,5 @@
 ---
-layout: post
-category: "optimisation"
 title:  "Unconstrained Optimisation"
-tags: ["optimisation", "unconstrained optimisation"]
 description: "Finding maximum and minimum values"
 ---
 

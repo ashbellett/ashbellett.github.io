@@ -10,11 +10,11 @@
   <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
   {%- comment -%}
   GitHub Pages cannot send response headers, so the Content Security Policy
-  is a meta tag. Scripts are the site's own theme toggle and analytics:
-  Cloudflare Web Analytics (the beacon script and the endpoint it reports to)
-  and PostHog (its library, the add-ons and project settings it loads from the
-  assets host, and the API host it reports to). KaTeX output relies on style
-  attributes.
+  is a meta tag. Scripts are the site's own theme toggle and menu drawer, and
+  analytics: Cloudflare Web Analytics (the beacon script and the endpoint it
+  reports to) and PostHog (its library, the add-ons and project settings it
+  loads from the assets host, and the API host it reports to). KaTeX output
+  relies on style attributes.
   {%- endcomment -%}
   {%- capture csp -%}
     default-src 'none';
@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ build }}">
   {%- comment -%} Not deferred: it must set the saved theme before the first paint {%- endcomment %}
   <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ build }}"></script>
+  <script src="{{ '/assets/js/menu.js' | relative_url }}?v={{ build }}" defer></script>
   {%- if page.layout == 'post' %}
   <link rel="stylesheet" href="{{ '/assets/css/katex.css' | relative_url }}?v={{ build }}">
   {%- endif %}

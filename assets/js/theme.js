@@ -54,7 +54,8 @@
     root.dataset.theme = saved;
   }
   paintBars();
-  // Reveals the toggle, which does nothing without this script
+  // Reveals the toggle, which does nothing without this script, and the menu
+  // button, which swaps the header links for a drawer on phones
   root.classList.add("js");
 
   document.addEventListener("DOMContentLoaded", function () {

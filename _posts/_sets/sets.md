@@ -6,63 +6,67 @@ tags: ["sets", "set"]
 description: "Collections of elements"
 ---
 
-An **object** $$x$$ is any abstract entity that can be formally defined and assigned to a variable.
+An **object** is any abstract entity that can be formally defined and assigned to a variable.
 
-A **set** $$X$$ is an unordered collection of distinct objects. Sets are themselves objects.
+A **set** is an unordered collection of distinct objects. A set is itself an object.
 
- If an object $$x$$ lies in the set $$X$$ then $$x$$ is an **element** of $$X,$$ $$x \in X.$$ Otherwise, $$x$$ is not an element of $$X,$$ $$x \notin X.$$
+Let $$X$$ be a set and $$x$$ be an object. The object $$x$$ is an **element** of $$X,$$ written $$x \in X,$$ if and only if $$x$$ lies in the collection $$X.$$ Otherwise $$x$$ is not an element of $$X,$$ written $$x \notin X.$$
 
-Two sets $$X$$ and $$Y$$ are **equal**, $$X=Y,$$ if and only if every element of $$X$$ is an element of $$Y$$ and every element of $$Y$$ is an element of $$X.$$ Otherwise $$X$$ and $$Y$$ are not equal, $$X \neq Y.$$
+Let $$X$$ and $$Y$$ be sets. The sets $$X$$ and $$Y$$ are **equal**, written $$X=Y,$$ if and only if every element of $$X$$ is an element of $$Y$$ and every element of $$Y$$ is an element of $$X.$$ Otherwise $$X$$ and $$Y$$ are not equal, written $$X \neq Y.$$
 
-A set containing no elements is the **empty set** $$\varnothing .$$ A **singleton set** is the set $$ \{x\} $$ whose only element is $$x.$$ A **pair set** is the set $$ \{x, y\} $$ whose only elements are $$x$$ and $$y.$$
+The **empty set** $$\varnothing$$ is the set that contains no elements.
 
-A set $$X$$ is a **subset** of another set $$Y,$$ $$X \subseteq Y,$$ if and only if every element of $$X$$ is also an element of $$Y.$$ $$X$$ is a **proper subset** of $$Y,$$ $$X \subset Y$$ if and only if $$X \subseteq Y$$ and $$X \neq Y.$$
+Let $$x$$ be an object. The **singleton set** $$\{x\}$$ is the set whose only element is $$x.$$
 
-Let $$X$$ be a set. $$P(x)$$ is a **predicate** if it depends on each $$x \in X$$ and evaluates to a true or false statement.
+Let $$x$$ and $$y$$ be objects. The **pair set** $$\{x, y\}$$ is the set whose only elements are $$x$$ and $$y.$$
 
-Let $$X$$ be a set and $$P(x)$$ be a predicate depending on $$x \in X.$$ If $$P(x)$$ is true for all $$x \in X,$$ the **universal quantifier** $$\forall $$ can be used to denote "for all".
+Let $$X$$ and $$Y$$ be sets. The set $$X$$ is a **subset** of $$Y,$$ written $$X \subseteq Y,$$ if and only if every element of $$X$$ is an element of $$Y.$$ The set $$X$$ is a **proper subset** of $$Y,$$ written $$X \subset Y,$$ if and only if $$X \subseteq Y$$ and $$X \neq Y.$$
+
+Let $$X$$ be a set. A **predicate** $$P(x)$$ on $$X$$ is a logical statement that depends on an element $$x \in X.$$
+
+Let $$X$$ be a set and $$P(x)$$ be a predicate on $$X.$$ The **universal quantifier** $$\forall$$ denotes "for all". The statement
 
 $$ \forall x \in X : P(x)$$
 
-means "the predicate $$P(x)$$ is true for all elements in $$X$$".
+means "the predicate $$P(x)$$ is true for all elements $$x$$ in $$X$$".
 
-If $$P(x)$$ is true for some $$x \in X,$$ the **existential quantifier** $$\exists $$ can be used to mean "there exists some".
+Let $$X$$ be a set and $$P(x)$$ be a predicate on $$X.$$ The **existential quantifier** $$\exists$$ denotes "there exists". The statement
 
 $$\exists x \in X : P(x)$$
 
-means "there exists at least one element in $$X$$ such that the predicate $$P(x)$$ is true".
+means "there exists at least one element $$x$$ in $$X$$ such that the predicate $$P(x)$$ is true". The symbol ":" means "such that".
 
-Let $$X$$ be a set and for each element $$x \in X$$ let $$P(x)$$ be a predicate depending on $$x.$$ Then there exists a set $$ \{x \in X : P(x)\} $$ whose elements are the elements in $$X$$ for which $$P(x)$$ is true where the symbol ":" means "such that". Hence $$ \{x \in X : P(x)\} $$ means "the set of elements in $$X$$ such that the predicate $$P(x)$$ is true". Building sets from predicates is called **specification**.
+Let $$X$$ be a set and $$P(x)$$ be a predicate on $$X.$$ **Specification** is the construction of the set $$\{x \in X : P(x)\}$$ whose elements are the elements of $$X$$ for which $$P(x)$$ is true.
 
-The **union** of a set $$X$$ with another set $$Y,$$ $$X \cup Y,$$ is the set of elements in $$X,$$ $$Y$$ or both.
+Let $$X$$ and $$Y$$ be sets. The **union** of $$X$$ and $$Y,$$ written $$X \cup Y,$$ is the set of objects that are elements of $$X,$$ of $$Y$$ or of both.
 
 $$X \cup Y := \{x : x \in X \ \mathrm{or} \ x \in Y\} $$
 
-The **intersection** of a set $$X$$ with another set $$Y,$$ $$X \cap Y,$$ is the set of elements in both $$X$$ and $$Y.$$
+Let $$X$$ and $$Y$$ be sets. The **intersection** of $$X$$ and $$Y,$$ written $$X \cap Y,$$ is the set of objects that are elements of both $$X$$ and $$Y.$$
 
 $$X \cap Y := \{x : x \in X \ \mathrm{and} \ x \in Y\} $$
 
-The **relative complement** of a set $$X$$ in another set $$Y,$$ $$Y \setminus X$$ is the set of elements in $$Y$$ that are not in $$X.$$
+Let $$X$$ and $$Y$$ be sets. The **relative complement** of $$X$$ in $$Y,$$ written $$Y \setminus X,$$ is the set of elements of $$Y$$ that are not elements of $$X.$$
 
 $$Y \setminus X := \{x : x \in Y \ \mathrm{and} \ x \notin X\} $$
 
-The **symmetric difference** of a set $$X$$ with another set $$Y,$$ $$X \triangle Y$$ is the set of elements in $$X$$ or $$Y$$ but not in both $$X$$ and $$Y.$$
+Let $$X$$ and $$Y$$ be sets. The **symmetric difference** of $$X$$ and $$Y,$$ written $$X \triangle Y,$$ is the set of objects that are elements of $$X$$ or of $$Y$$ but not of both.
 
 $$X \triangle Y := \{x : x \in X \cup Y \ \mathrm{and} \ x \notin X \cap Y\} = (X \setminus Y) \cup (Y \setminus X) $$
 
-The **Cartesian product** of sets $$X$$ and $$Y,$$ $$X \times Y$$ is the set of all ordered pairs $$(x,y)$$ where $$x$$ is an element of $$X$$ and $$y$$ is an element of $$Y.$$
+Let $$X$$ and $$Y$$ be sets. The **Cartesian product** of $$X$$ and $$Y,$$ written $$X \times Y,$$ is the set of all ordered pairs $$(x,y)$$ where $$x$$ is an element of $$X$$ and $$y$$ is an element of $$Y.$$
 
 $$X \times Y := \{(x,y) : x \in X \ \mathrm{and} \ y \in Y\} $$
 
-Two sets $$X$$ and $$Y$$ are **disjoint** if and only if their intersection is the empty set.
+Let $$X$$ and $$Y$$ be sets. The sets $$X$$ and $$Y$$ are **disjoint** if and only if their intersection is the empty set.
 
 $$X\cap Y=\varnothing$$
 
-The **power set** $$\mathcal{P}(X)$$ of a set $$X$$ is the set of all subsets of $$X.$$
+Let $$X$$ be a set. The **power set** of $$X,$$ written $$\mathcal{P}(X),$$ is the set of all subsets of $$X.$$
 
 $$\mathcal{P}(X) := \{A : A \subseteq X \}$$
 
-A **partition** $$P$$ of a set $$X$$ is a set of non-empty subsets of $$X$$ such that every element $$x\in X$$ is in exactly one subset in $$P.$$ Partitions of sets have the following properties:
+Let $$X$$ be a set. A **partition** $$P$$ of $$X$$ is a set of non-empty subsets of $$X$$ such that every element of $$X$$ is an element of exactly one subset in $$P.$$ A partition $$P$$ of $$X$$ has the following properties:
 
 $$\varnothing \notin P$$
 

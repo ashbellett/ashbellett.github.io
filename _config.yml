@@ -127,6 +127,22 @@ collections:
       - posterior-summaries.md
       - computational-inference.md
       - model-choice.md
+  causal-inference:
+    key: 9
+    title: "Causal Inference"
+    description: "Effects of interventions from data"
+    output: true
+    permalink: /notes/:collection/:path
+    order:
+      - potential-outcomes.md
+      - causal-graphs.md
+      - identification.md
+      - estimation-under-ignorability.md
+      - instrumental-variables.md
+      - quasi-experimental-designs.md
+      - mediation-and-time-varying-treatments.md
+      - heterogeneous-effects-and-sensitivity.md
+      - causal-discovery.md
 socials:
   - {
     platform: github,

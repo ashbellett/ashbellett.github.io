@@ -333,9 +333,70 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Model selection and information criteria
   - Posterior predictive checking
 
+#### 10. Causal inference
+- **Potential outcomes**
+  - Units, treatments and potential outcomes
+  - Individual and average causal effects
+  - Fundamental problem of causal inference
+  - Stable unit treatment value assumption
+  - Causal estimands
+  - Association, selection bias and confounding
+- **Causal graphs**
+  - Directed acyclic graphs, paths and colliders
+  - Structural causal models
+  - Markov factorisation and d-separation
+  - Interventions and the do-operator
+  - Counterfactuals
+  - Confounders, mediators, colliders and selection
+- **Identification**
+  - Randomised experiments
+  - Ignorability, positivity and consistency
+  - Adjustment formula and the backdoor criterion
+  - Front-door criterion
+  - Do-calculus
+  - Bounds and partial identification
+- **Estimation under ignorability**
+  - Outcome regression
+  - Propensity scores and balancing
+  - Stratification and matching
+  - Inverse probability weighting
+  - Doubly robust estimation
+  - Influence functions, efficiency and double machine learning
+- **Instrumental variables**
+  - Instrument assumptions
+  - Wald estimator and two-stage least squares
+  - Compliance types and the local average treatment effect
+  - Weak instruments and overidentification
+- **Quasi-experimental designs**
+  - Fixed effects and panel data
+  - Difference-in-differences and parallel trends
+  - Event studies and staggered adoption
+  - Regression discontinuity designs
+  - Synthetic control
+- **Mediation and time-varying treatments**
+  - Direct and indirect effects
+  - Sequential ignorability and the mediation formula
+  - Time-varying confounding
+  - G-formula
+  - Marginal structural models and inverse probability of treatment weighting
+  - Structural nested models and g-estimation
+- **Heterogeneous effects and sensitivity**
+  - Conditional average treatment effects and effect modification
+  - Meta-learners, the R-learner and causal forests
+  - Policy learning
+  - Unmeasured confounding and sensitivity models
+  - Cornfield conditions and E-values
+- **Causal discovery**
+  - Markov equivalence
+  - Faithfulness and causal sufficiency
+  - Constraint-based algorithms
+  - Score-based algorithms
+  - Functional causal models
+  - Latent variables and interventional data
+
 ### Machine learning *(planned)*
 
-#### 10. Supervised learning
+#### 11. Supervised learning
 - **Linear models**
   - Linear regression
   - Logistic regression
@@ -371,7 +432,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Loss functions
   - Validation metrics
 
-#### 11. Unsupervised learning
+#### 12. Unsupervised learning
 - **Dimension reduction**
   - Principal components analysis
   - Canonical correlation analysis
@@ -411,7 +472,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Shrinkage methods
   - Minimum covariance determinant
 
-#### 12. Bayesian models
+#### 13. Bayesian models
 - **Linear models**
   - Conjugate prior
   - Reference prior
@@ -435,7 +496,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Markov networks
   - Factor graphs
 
-#### 13. Deep learning
+#### 14. Deep learning
 - **Activation functions**
   - Linear
   - Sigmoid
@@ -502,7 +563,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - MC dropout
   - Uncertainty estimation
 
-#### 14. Agent systems
+#### 15. Agent systems
 - **Multi-armed bandits**
   - Optimal arm identification
   - Regret minimisation
@@ -519,7 +580,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Deep Q-learning
   - Policy gradient methods
 
-#### 15. Structured data analysis
+#### 16. Structured data analysis
 - Data types
 - Data summaries
 - Data transformations
@@ -529,7 +590,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
 - Spatial data
 - Multivariate data
 
-#### 16. Unstructured data analysis
+#### 17. Unstructured data analysis
 - **Networks**
   - Vertices and edges
   - Adjacency and direction
@@ -560,7 +621,7 @@ Topics are in dependency order. Topics and sections marked *(planned)* have no n
   - Text clustering
   - Sequence modelling
 
-#### 17. Big data methods
+#### 18. Big data methods
 - **Optimisation**
   - Gradient descent methods
   - Distributed, stochastic gradient descent

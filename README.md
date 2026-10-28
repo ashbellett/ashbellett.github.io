@@ -35,7 +35,11 @@ Body text uses [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4
 
 ## Colour scheme
 
-Pages follow the visitor's system light/dark setting through CSS. The header toggle, `assets/js/theme.js`, overrides it: the choice is saved in `localStorage` and applied in `<head>` before the page is drawn, and switching back to the system's scheme clears it. The script is the site's only JavaScript, allowed by `script-src 'self'` in the Content Security Policy; without it the toggle is hidden and the system setting applies.
+Pages follow the visitor's system light/dark setting through CSS. The header toggle, `assets/js/theme.js`, overrides it: the choice is saved in `localStorage` and applied in `<head>` before the page is drawn, and switching back to the system's scheme clears it. The script is allowed by `script-src 'self'` in the Content Security Policy; without it the toggle is hidden and the system setting applies.
+
+## Menu
+
+On phones the header links move into a drawer that slides in from the right, opened by the menu button. The drawer is a native modal `<dialog>`, so the browser handles focus and closing with Escape; `assets/js/menu.js` opens it and closes it from its close button or the backdrop. Without JavaScript the menu button is hidden and the links stay in the header.
 
 ## Topics
 

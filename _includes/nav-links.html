@@ -1,0 +1,15 @@
+{%- comment -%}
+Header navigation links, shown in the header on wider screens and in the menu
+drawer on phones.
+{%- endcomment -%}
+{%- for link in site.data.navigation -%}
+  {%- assign section_prefix = link.url | append: "/" | replace: "//", "/" -%}
+  {%- assign url_start = page.url | slice: 0, section_prefix.size -%}
+  {%- if page.url == link.url -%}
+  <a class="page-link active" href="{{ link.url | relative_url }}" aria-current="page">{{ link.title | escape }}</a>
+  {%- elsif url_start == section_prefix -%}
+  <a class="page-link active" href="{{ link.url | relative_url }}" aria-current="true">{{ link.title | escape }}</a>
+  {%- else -%}
+  <a class="page-link" href="{{ link.url | relative_url }}">{{ link.title | escape }}</a>
+  {%- endif -%}
+{%- endfor -%}

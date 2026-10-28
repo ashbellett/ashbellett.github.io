@@ -592,9 +592,6 @@ table {
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
-  // Positioning context for the mobile navigation icon
-  position: relative;
-
   .wrapper {
     display: flex;
     align-items: center;
@@ -614,64 +611,11 @@ table {
   }
 }
 
+// The links in the header. On phones the menu drawer holds them instead,
+// unless the page has no scripts to open it.
 .site-nav {
-  position: absolute;
-  top: 9px;
-  right: calc($spacing-unit / 2);
-  background-color: $background-color;
-  border: 1px solid $border-color-01;
-  border-radius: 5px;
-  text-align: right;
-
-  // Visually hidden rather than display: none, so keyboard users can tab to
-  // it and open the menu with Space
-  .nav-trigger {
-    @extend %visually-hidden;
-
-    &:focus-visible + label {
-      outline: 2px solid $link-base-color;
-      outline-offset: 2px;
-    }
-  }
-
-  .menu-icon {
-    float: right;
-    width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
-    text-align: center;
-
-    > svg path {
-      fill: $border-color-03;
-    }
-  }
-
-  label[for="nav-trigger"] {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 36px;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  // The open menu drops below the button rather than widening it, so it
-  // leaves the theme toggle beside the button uncovered
-  input ~ .trigger {
+  .js & {
     display: none;
-    position: absolute;
-    top: calc(100% + 4px);
-    right: -1px;
-    padding: 5px 0;
-    white-space: nowrap;
-    background-color: $background-color;
-    border: 1px solid $border-color-01;
-    border-radius: 5px;
-  }
-
-  input:checked ~ .trigger {
-    display: block;
   }
 
   .page-link {
@@ -681,46 +625,41 @@ table {
     &.active {
       font-weight: 600;
     }
-    display: block;
-    padding: 5px 10px;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 0;
+      margin-right: 20px;
     }
-    margin-left: 20px;
   }
 
   @media screen and (min-width: $on-medium) {
-    position: static;
-    border: none;
-    background-color: inherit;
-
-    .nav-trigger,
-    label[for="nav-trigger"] {
-      display: none;
-    }
-
-    .menu-icon {
-      display: none;
-    }
-
-    input ~ .trigger {
+    .js & {
       display: block;
-      position: static;
-      padding: 0;
-      background-color: inherit;
-      border: none;
     }
+  }
+}
 
-    .page-link {
-      display: inline;
-      padding: 0;
+// The bordered square buttons on phones: the theme toggle, the menu button,
+// and the menu's close button, which sits where the menu button does
+%header-button {
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  margin-top: 9px;
+  padding: 0;
+  color: $border-color-03;
+  background-color: $background-color;
+  border: 1px solid $border-color-01;
+  border-radius: 5px;
+  cursor: pointer;
 
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-      margin-left: auto;
+  // Touch screens would keep the hover colour after a tap
+  @media (hover: hover) {
+    &:hover {
+      color: $link-base-color;
     }
   }
 }
@@ -729,21 +668,8 @@ table {
 // screens a bare icon after the navigation links. Hidden until
 // assets/js/theme.js runs, as it does nothing without it.
 .theme-toggle {
+  @extend %header-button;
   display: none;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  box-sizing: border-box;
-  width: 38px;
-  height: 38px;
-  // Clears the absolutely positioned 38px menu button and a 6px gap
-  margin: 9px 44px 0 0;
-  padding: 0;
-  color: $border-color-03;
-  background-color: $background-color;
-  border: 1px solid $border-color-01;
-  border-radius: 5px;
-  cursor: pointer;
 
   .js & {
     display: flex;
@@ -769,13 +695,6 @@ table {
     }
   }
 
-  // Touch screens would keep the hover colour after a tap
-  @media (hover: hover) {
-    &:hover {
-      color: $link-base-color;
-    }
-  }
-
   @media screen and (min-width: $on-medium) {
     align-self: center;
     width: 32px;
@@ -785,6 +704,128 @@ table {
     background-color: transparent;
     border: none;
   }
+}
+
+// Opens the menu drawer on phones. Hidden on wider screens, which show the
+// links in the header, and until assets/js/theme.js runs, as the drawer
+// needs assets/js/menu.js.
+.menu-button {
+  @extend %header-button;
+  display: none;
+  margin-left: 6px;
+
+  .js & {
+    display: flex;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    .js & {
+      display: none;
+    }
+  }
+}
+
+.menu-icon {
+  width: 18px;
+  height: 18px;
+}
+
+// The menu drawer, a modal <dialog>, so the browser keeps focus inside it
+// while it is open and closes it with Escape. It fills the height of the
+// screen on the right, over the dimmed page.
+.menu {
+  inset: 0 0 0 auto;
+  box-sizing: border-box;
+  width: min(80%, 320px);
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  color: $text-color;
+  background-color: $background-color;
+  border: none;
+  border-left: 1px solid $border-color-01;
+  line-height: $base-line-height;
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / 40%);
+  }
+
+  // Slides in from the right edge, and back out when closed. Holding display
+  // and overlay keeps the closing drawer on screen until it has slid away.
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      transform 0.25s ease-out,
+      overlay 0.25s allow-discrete,
+      display 0.25s allow-discrete;
+
+    &:not([open]) {
+      transform: translateX(100%);
+    }
+
+    @starting-style {
+      &[open] {
+        transform: translateX(100%);
+      }
+    }
+
+    &::backdrop {
+      transition:
+        opacity 0.25s ease-out,
+        overlay 0.25s allow-discrete,
+        display 0.25s allow-discrete;
+    }
+
+    &:not([open])::backdrop {
+      opacity: 0;
+    }
+
+    @starting-style {
+      &[open]::backdrop {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// Keeps the page behind the open menu from scrolling
+html:has(.menu[open]) {
+  overflow: hidden;
+}
+
+// Fills the drawer, so assets/js/menu.js can tell a click on the backdrop,
+// which lands on the dialog itself, from one on the drawer
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 0 calc($spacing-unit / 2) $spacing-unit;
+
+  .page-link {
+    display: block;
+    padding: 12px 0;
+    @include relative-font-size(1.25);
+    color: $text-color;
+
+    &.active {
+      font-weight: 600;
+    }
+
+    & + .page-link {
+      border-top: 1px solid $border-color-01;
+    }
+  }
+}
+
+// Where the menu button is, so the button seems to turn into a cross
+.menu-close {
+  @extend %header-button;
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 12px;
 }
 
 

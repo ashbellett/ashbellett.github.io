@@ -43,7 +43,7 @@ Jan 2018 – Jun 2019
 
 Master of Science\
 Data Science & Machine Learning\
-2021–2023
+2021 – 2023
 {: .role-text }
 
 ![][monash] Monash University
@@ -51,7 +51,7 @@ Data Science & Machine Learning\
 
 Bachelor of Engineering (with Honours)\
 Electrical & Computer Systems\
-2013–2017
+2013 – 2017
 {: .role-text }
 
 [canva]: assets/img/canva.jpg

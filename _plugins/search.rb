@@ -62,12 +62,10 @@ module Search
       {
         title: collection.metadata["title"],
         url: site.baseurl.to_s + topic_page.url,
-        description: collection.metadata["description"],
         notes: collection.docs.select { |doc| note?(doc) }.map do |doc|
           {
             title: doc.data["title"],
             url: site.baseurl.to_s + doc.url,
-            description: doc.data["description"],
             terms: doc.data["terms"].to_a.uniq { |label, _| label.downcase }
           }
         end

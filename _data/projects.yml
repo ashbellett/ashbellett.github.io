@@ -1,0 +1,6 @@
+# Projects on /projects, in display order. Each opens in a new tab. The image
+# is a screenshot in assets/img/projects, 640 by 360 pixels (16:9).
+- title: 3D World
+  url: /3d-world/
+  description: "A 3D world with objects, lighting and physics"
+  image: /assets/img/projects/3d-world.jpg

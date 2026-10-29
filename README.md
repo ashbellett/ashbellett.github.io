@@ -41,6 +41,10 @@ Pages follow the visitor's system light/dark setting through CSS. The header tog
 
 On phones the header links move into a menu card that drops in at the top of the screen, opened by the menu button. The menu is a native modal `<dialog>`, so the browser handles focus and closing with Escape; `assets/js/menu.js` opens it and closes it from its close button or the backdrop. Without JavaScript the menu button is hidden and the links stay in the header.
 
+## Projects
+
+`/projects` shows a card for each project in `_data/projects.yml`: its title, description and a screenshot. Screenshots are 640 by 360 pixel JPEGs in `assets/img/projects`. The whole card is the link, and it opens the project in a new tab.
+
 ## Search
 
 Notes are searched by topic, note and defined term. A note marks each term it defines in bold, and `_plugins/search.rb` gives every bold term an id from its text, e.g. `/notes/probability/moments#variance`, so a result opens at the definition, which is highlighted. A term defined twice in one note, as `expectation` is in Moments, keeps its first id and the repeat takes the next number, `expectation-2`. Renaming a bold term changes its id, which breaks links to the old one. The plugin publishes the topics, notes and terms as `/notes/search.json`, about 20 KB compressed.

@@ -9,6 +9,10 @@
         </nav>
       {%- endif -%}
 
+      <button class="search-button" type="button" aria-label="Search notes" aria-haspopup="dialog" aria-controls="search" aria-keyshortcuts="/ Control+K Meta+K" title="Search notes (/)">
+        {%- include icons/search.svg -%}
+      </button>
+
       <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Toggle dark mode">
         {%- include icons/moon.svg -%}
         {%- include icons/sun.svg -%}
@@ -30,5 +34,7 @@
           </div>
         </dialog>
       {%- endif -%}
+
+      {%- include search.html -%}
     </div>
   </header>

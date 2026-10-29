@@ -185,11 +185,7 @@
       });
     });
 
-    var notes = 0;
-    topics.forEach(function (topic) {
-      notes += topic.notes.length;
-    });
-    index = { topics: topics, results: results, notes: notes, terms: results.length - notes - topics.length };
+    index = { topics: topics, results: results };
     return index;
   }
 
@@ -286,15 +282,11 @@
       title.className = "search-result-title";
       highlight(title, result.title, highlights(result.name, query.words));
 
-      var kind = document.createElement("span");
-      kind.className = "search-result-kind";
-      kind.textContent = result.kind === "term" ? "Definition" : result.kind === "note" ? "Note" : "Topic";
-
       var detail = document.createElement("span");
       detail.className = "search-result-detail";
       detail.textContent = result.detail;
 
-      link.append(title, kind, detail);
+      link.append(title, detail);
       option.append(link);
       list.append(option);
     });
@@ -302,7 +294,7 @@
     setActive(shown.length ? 0 : -1, true);
 
     if (!query.words.length) {
-      status.textContent = "Search " + plural(index.notes, "note") + " and " + plural(index.terms, "definition");
+      status.textContent = "";
     } else if (!shown.length) {
       status.textContent = "Nothing matches “" + input.value.trim() + "”";
     } else {
@@ -414,7 +406,6 @@
   function termList(terms, query) {
     var paragraph = document.createElement("p");
     paragraph.className = "note-terms";
-    paragraph.append("Defines ");
     terms.slice(0, maxTerms).forEach(function (term, position) {
       if (position) {
         paragraph.append(" · ");
@@ -439,8 +430,7 @@
       });
     }
 
-    var notes = 0;
-    var terms = 0;
+    var results = 0;
     index.topics.forEach(function (topic) {
       // A topic shows all its notes only when its name matches; one matching
       // just its description, e.g. "functions", would bury the notes that do
@@ -472,8 +462,7 @@
         }
         if (show) {
           anyShown = true;
-          notes += searching ? 1 : 0;
-          terms += matching.length;
+          results += (searching ? 1 : 0) + matching.length;
         }
       });
 
@@ -496,10 +485,11 @@
 
     if (!searching) {
       fieldStatus.textContent = "";
-    } else if (!notes) {
+    } else if (!results) {
       fieldStatus.textContent = "Nothing matches “" + field.value.trim() + "”";
     } else {
-      fieldStatus.textContent = plural(notes, "note") + (terms ? " and " + plural(terms, "definition") : "");
+      // The notes shown and the definitions listed under them
+      fieldStatus.textContent = plural(results, "result");
     }
 
     // Keeps the search in the address, to share it or come back to it

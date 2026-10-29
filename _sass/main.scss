@@ -896,7 +896,7 @@ html:has(.menu[open]) {
   box-shadow: 0 12px 32px rgb(0 0 0 / 20%);
   line-height: $base-line-height;
 
-  // A column, so the results scroll between the field and the footer
+  // A column, so the results scroll between the field and the status
   &[open] {
     display: flex;
     flex-direction: column;
@@ -946,7 +946,6 @@ html:has(.search[open]) {
   align-items: center;
   gap: 10px;
   padding: 0 6px 0 14px;
-  border-bottom: 1px solid $border-color-01;
 
   .search-icon {
     flex: none;
@@ -1000,10 +999,12 @@ html:has(.search[open]) {
   }
 }
 
+// Ruled off from the field, which stands alone before a search
 .search-results {
   min-height: 0;
   margin: 0;
   padding: 6px;
+  border-top: 1px solid $border-color-01;
   overflow-y: auto;
   overscroll-behavior: contain;
   list-style: none;
@@ -1013,12 +1014,9 @@ html:has(.search[open]) {
   }
 }
 
-// What it is on the right, and where it is below
+// Its name, and where it is below
 .search-result a {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: baseline;
-  column-gap: 12px;
+  display: block;
   padding: 8px 10px;
   border-radius: 5px;
 
@@ -1036,59 +1034,34 @@ html:has(.search[open]) {
 
 .search-result-title {
   @include relative-font-size(1.0625);
+  text-transform: lowercase;
 }
 
-.search-result-kind,
 .search-result-detail {
+  display: block;
   font-size: $small-font-size;
   color: $brand-color;
-}
-
-.search-result-detail {
-  grid-column: 1 / -1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-// The number of results, or why there are none, and the keys
-.search-footer {
-  display: flex;
-  flex: none;
-  justify-content: space-between;
-  gap: calc($spacing-unit / 2);
-  padding: 8px 16px;
-  border-top: 1px solid $border-color-01;
-  font-size: $small-font-size;
-  color: $brand-color;
 }
 
 .search-status {
   margin: 0;
 }
 
-// Only for a keyboard and a mouse or trackpad
-.search-keys {
-  display: none;
-  gap: 14px;
-  margin: 0;
+// The number of results, or why there are none. Empty before a search, so
+// the palette is just the field.
+.search .search-status {
+  flex: none;
+  padding: 8px 16px;
+  border-top: 1px solid $border-color-01;
+  font-size: $small-font-size;
+  color: $brand-color;
 
-  @media (hover: hover) and (pointer: fine) {
-    display: flex;
+  &:empty {
+    display: none;
   }
-}
-
-kbd {
-  display: inline-block;
-  min-width: 1.1em;
-  margin-right: 3px;
-  padding: 0 4px;
-  font-family: $code-font-family;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  text-align: center;
-  border: 1px solid $border-color-01;
-  border-radius: 3px;
 }
 
 // The text a search matched

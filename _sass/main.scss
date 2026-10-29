@@ -39,6 +39,10 @@ $lm-table-border-color:    $lm-border-color-01;
 
 $lm-logo-backdrop-color:   transparent;
 
+// Search: the text a query matched, and the chosen result
+$lm-highlight-color:       #fff0a6;
+$lm-selected-color:        color.adjust($lm-brand-color, $lightness: 43%);
+
 // Dark mode
 
 $dm-brand-color:           #999999;
@@ -68,6 +72,9 @@ $dm-table-border-color:    $dm-border-color-01;
 // Off-white tile behind logos drawn in dark ink on a transparent background
 $dm-logo-backdrop-color:   #e6e6e6;
 
+$dm-highlight-color:       #5a4a12;
+$dm-selected-color:        color.adjust($dm-background-color, $lightness: 10%);
+
 :root {
   color-scheme: light;
 
@@ -96,6 +103,9 @@ $dm-logo-backdrop-color:   #e6e6e6;
   --table-border-color: #{$lm-table-border-color};
 
   --logo-backdrop-color: #{$lm-logo-backdrop-color};
+
+  --highlight-color: #{$lm-highlight-color};
+  --selected-color: #{$lm-selected-color};
 }
 
 // Dark mode applies when the visitor chose it with the header toggle, or when
@@ -130,6 +140,9 @@ $dm-logo-backdrop-color:   #e6e6e6;
   --table-border-color: #{$dm-table-border-color};
 
   --logo-backdrop-color: #{$dm-logo-backdrop-color};
+
+  --highlight-color: #{$dm-highlight-color};
+  --selected-color: #{$dm-selected-color};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -180,6 +193,9 @@ $table-header-border: var(--table-header-border);
 $table-border-color: var(--table-border-color);
 
 $logo-backdrop-color: var(--logo-backdrop-color);
+
+$highlight-color: var(--highlight-color);
+$selected-color: var(--selected-color);
 
 
 
@@ -828,6 +844,260 @@ html:has(.menu[open]) {
   margin-bottom: 12px;
 }
 
+// Opens the search palette, or on /notes/ goes to the field there. Like the
+// theme toggle beside it: a bordered button on phones, a bare icon on wider
+// screens, and hidden until assets/js/theme.js runs.
+.search-button {
+  @extend %header-button;
+  display: none;
+  margin-right: 6px;
+
+  .js & {
+    display: flex;
+  }
+
+  .search-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    align-self: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 -7px 0 13px;
+    color: $text-color;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+
+
+/**
+ * Search
+ */
+
+// The search palette, a modal <dialog>, so the browser keeps focus inside it
+// and closes it with Escape. Near the top of the screen, so the results have
+// room below it, and the on-screen keyboard on phones does not cover it.
+.search {
+  box-sizing: border-box;
+  width: min(100% - #{$spacing-unit}, 640px);
+  max-width: none;
+  max-height: calc(100% - 18px);
+  margin: 9px auto auto;
+  padding: 0;
+  overflow: hidden;
+  color: $text-color;
+  background-color: $background-color;
+  border: 1px solid $border-color-01;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 20%);
+  line-height: $base-line-height;
+
+  // A column, so the results scroll between the field and the footer
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / 40%);
+  }
+
+  @media screen and (min-width: $on-medium) {
+    margin-top: 12vh;
+    max-height: 76vh;
+  }
+
+  // Drops in as it opens; it closes at once
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+
+    @starting-style {
+      &[open] {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+    }
+
+    &::backdrop {
+      transition: opacity 0.15s ease-out;
+    }
+
+    @starting-style {
+      &[open]::backdrop {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// Keeps the page behind the open palette from scrolling
+html:has(.search[open]) {
+  overflow: hidden;
+}
+
+// A search input with its icon, in the palette and on /notes/
+.search-field {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+  padding: 0 6px 0 14px;
+  border-bottom: 1px solid $border-color-01;
+
+  .search-icon {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    color: $brand-color;
+  }
+}
+
+// The field around it shows focus instead
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 0;
+  font: inherit;
+  @include relative-font-size(1.125);
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: $brand-color;
+    opacity: 1;
+  }
+
+  // The palette has its own close button
+  .search &::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+.search-close {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: $border-color-03;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $link-base-color;
+    }
+  }
+}
+
+.search-results {
+  min-height: 0;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+
+  &:empty {
+    display: none;
+  }
+}
+
+// What it is on the right, and where it is below
+.search-result a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 12px;
+  padding: 8px 10px;
+  border-radius: 5px;
+
+  &,
+  &:visited,
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.search-result[aria-selected="true"] a {
+  background-color: $selected-color;
+}
+
+.search-result-title {
+  @include relative-font-size(1.0625);
+}
+
+.search-result-kind,
+.search-result-detail {
+  font-size: $small-font-size;
+  color: $brand-color;
+}
+
+.search-result-detail {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// The number of results, or why there are none, and the keys
+.search-footer {
+  display: flex;
+  flex: none;
+  justify-content: space-between;
+  gap: calc($spacing-unit / 2);
+  padding: 8px 16px;
+  border-top: 1px solid $border-color-01;
+  font-size: $small-font-size;
+  color: $brand-color;
+}
+
+.search-status {
+  margin: 0;
+}
+
+// Only for a keyboard and a mouse or trackpad
+.search-keys {
+  display: none;
+  gap: 14px;
+  margin: 0;
+
+  @media (hover: hover) and (pointer: fine) {
+    display: flex;
+  }
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.1em;
+  margin-right: 3px;
+  padding: 0 4px;
+  font-family: $code-font-family;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid $border-color-01;
+  border-radius: 3px;
+}
+
+// The text a search matched
+mark {
+  color: inherit;
+  background-color: $highlight-color;
+  border-radius: 2px;
+}
+
 
 
 /**
@@ -955,6 +1225,49 @@ html:has(.menu[open]) {
   margin-bottom: calc($spacing-unit / 2);
 }
 
+// The field on /notes/ that filters the topics below it. Hidden until
+// assets/js/theme.js runs, as it needs assets/js/search.js.
+.notes-search {
+  display: none;
+  margin-bottom: $spacing-unit;
+
+  .js & {
+    display: block;
+  }
+
+  .search-field {
+    padding: 0 14px;
+    border: 1px solid $border-color-01;
+    border-radius: 8px;
+
+    &:focus-within {
+      outline: 2px solid $link-base-color;
+      outline-offset: 2px;
+    }
+  }
+
+  .search-input {
+    padding: 10px 0;
+  }
+
+  .search-status {
+    padding: 8px 2px 0;
+    font-size: $small-font-size;
+    color: $brand-color;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+// The definitions in a note that match a search on /notes/
+.note-terms {
+  margin: 4px 0 0;
+  font-size: $small-font-size;
+  color: $brand-color;
+}
+
 
 
 /**
@@ -1003,6 +1316,33 @@ html:has(.menu[open]) {
   }
   h6 {
     @include relative-font-size(1.0625);
+  }
+
+  // Each defined term has an id, from _plugins/search.rb. One opened from
+  // search, or any link to it, stops a little below the top of the screen,
+  // to show what leads into it, and is highlighted.
+  strong[id] {
+    scroll-margin-top: 20vh;
+  }
+
+  strong:target {
+    background-color: $highlight-color;
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px $highlight-color;
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: definition-arrives 0.6s ease-out;
+    }
+  }
+}
+
+// The highlight closes in on the definition
+@keyframes definition-arrives {
+  from {
+    background-color: transparent;
+    box-shadow: 0 0 0 14px transparent;
   }
 }
 

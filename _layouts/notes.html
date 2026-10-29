@@ -4,6 +4,17 @@ layout: default
 
 <div class="home">
   {{ content }}
+  {%- comment -%}
+  Filters the topics below as you type, with assets/js/search.js. Hidden
+  without it.
+  {%- endcomment %}
+  <div class="notes-search">
+    <div class="search-field">
+      {%- include icons/search.svg -%}
+      <input class="notes-search-input search-input" type="search" placeholder="Search notes and definitions" aria-label="Search notes and definitions" aria-describedby="notes-search-status" aria-keyshortcuts="/ Control+K Meta+K" autocomplete="off" spellcheck="false" enterkeyhint="go">
+    </div>
+    <p class="search-status" id="notes-search-status" role="status"></p>
+  </div>
   {% assign collections = site.collections | where_exp: "item", "item.label != 'posts'" | sort: "key" %}
   {%- for collection in collections -%}
     <details class="collection">

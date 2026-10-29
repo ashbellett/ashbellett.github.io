@@ -10,11 +10,12 @@
   <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
   {%- comment -%}
   GitHub Pages cannot send response headers, so the Content Security Policy
-  is a meta tag. Scripts are the site's own theme toggle and menu drawer, and
-  analytics: Cloudflare Web Analytics (the beacon script and the endpoint it
-  reports to) and PostHog (its library, the add-ons and project settings it
-  loads from the assets host, and the API host it reports to). KaTeX output
-  relies on style attributes.
+  is a meta tag. Scripts are the site's own theme toggle, menu drawer and
+  search, which fetches its index from this site, and analytics: Cloudflare
+  Web Analytics (the beacon script and the endpoint it reports to) and PostHog
+  (its library, the add-ons and project settings it loads from the assets
+  host, and the API host it reports to). KaTeX output relies on style
+  attributes.
   {%- endcomment -%}
   {%- capture csp -%}
     default-src 'none';
@@ -25,7 +26,7 @@
     style-src-attr 'unsafe-inline';
     font-src 'self';
     img-src 'self';
-    connect-src https://cloudflareinsights.com {{ site.posthog.api_host }} {{ site.posthog.assets_host }}
+    connect-src 'self' https://cloudflareinsights.com {{ site.posthog.api_host }} {{ site.posthog.assets_host }}
   {%- endcapture -%}
   <meta http-equiv="Content-Security-Policy" content="{{ csp | normalize_whitespace }}">
   {%- seo -%}
@@ -48,6 +49,8 @@
   {%- comment -%} Not deferred: it must set the saved theme before the first paint {%- endcomment %}
   <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ build }}"></script>
   <script src="{{ '/assets/js/menu.js' | relative_url }}?v={{ build }}" defer></script>
+  {%- comment -%} The index is tagged like the assets, so it always matches the notes' ids {%- endcomment %}
+  <script src="{{ '/assets/js/search.js' | relative_url }}?v={{ build }}" data-index="{{ '/notes/search.json' | relative_url }}?v={{ build }}" defer></script>
   {%- if page.layout == 'post' %}
   <link rel="stylesheet" href="{{ '/assets/css/katex.css' | relative_url }}?v={{ build }}">
   {%- endif %}

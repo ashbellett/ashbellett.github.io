@@ -29,7 +29,16 @@
     connect-src 'self' https://cloudflareinsights.com {{ site.posthog.api_host }} {{ site.posthog.assets_host }}
   {%- endcapture -%}
   <meta http-equiv="Content-Security-Policy" content="{{ csp | normalize_whitespace }}">
-  {%- seo -%}
+  {%- comment -%}
+  jekyll-seo-tag titles a page without a title of its own with the site's
+  title and description, so the home page writes just the site's title.
+  {%- endcomment -%}
+  {%- if page.url == "/" -%}
+    {%- seo title=false -%}
+    <title>{{ site.title | escape }}</title>
+  {%- else -%}
+    {%- seo -%}
+  {%- endif -%}
   {%- comment -%}
   The .ico (16, 32 and 48 px) is for browsers without SVG favicons. iOS uses
   apple-touch-icon for home-screen shortcuts and rounds its corners itself.

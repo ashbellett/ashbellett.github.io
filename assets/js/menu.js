@@ -1,7 +1,7 @@
-// Menu drawer for phones, opened by the menu button in the site header. The
-// drawer is a modal <dialog>, so the browser moves focus into it, closes it
-// with Escape and hands focus back to the button. Without this script the
-// header shows the links instead.
+// Menu for phones, opened by the menu button in the site header. The menu is
+// a modal <dialog>, so the browser moves focus into it, closes it with Escape
+// and hands focus back to the button. Without this script the header shows
+// the links instead.
 (function () {
   var button = document.querySelector(".menu-button");
   var menu = document.getElementById("menu");
@@ -21,7 +21,7 @@
     menu.close();
   });
   // The panel fills the dialog, so a click that lands on the dialog itself is
-  // on the dimmed backdrop beside it, or on the drawer's scrollbar
+  // on the dimmed backdrop around it, or on the menu's scrollbar
   menu.addEventListener("click", function (event) {
     if (event.target === menu) {
       menu.close();
@@ -29,7 +29,7 @@
   });
   menu.addEventListener("close", sync);
 
-  // Closes the drawer as the page is left, so the page restored by the Back
+  // Closes the menu as the page is left, so the page restored by the Back
   // button does not show it open
   window.addEventListener("pagehide", function () {
     menu.close();

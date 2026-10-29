@@ -627,7 +627,7 @@ table {
   }
 }
 
-// The links in the header. On phones the menu drawer holds them instead,
+// The links in the header. On phones the menu holds them instead,
 // unless the page has no scripts to open it.
 .site-nav {
   .js & {
@@ -655,8 +655,7 @@ table {
   }
 }
 
-// The bordered square buttons on phones: the theme toggle, the menu button,
-// and the menu's close button, which sits where the menu button does
+// The bordered square buttons on phones: the theme toggle and the menu button
 %header-button {
   align-items: center;
   justify-content: center;
@@ -722,8 +721,8 @@ table {
   }
 }
 
-// Opens the menu drawer on phones. Hidden on wider screens, which show the
-// links in the header, and until assets/js/theme.js runs, as the drawer
+// Opens the menu on phones. Hidden on wider screens, which show the links in
+// the header, and until assets/js/theme.js runs, as the menu
 // needs assets/js/menu.js.
 .menu-button {
   @extend %header-button;
@@ -746,56 +745,42 @@ table {
   height: 18px;
 }
 
-// The menu drawer, a modal <dialog>, so the browser keeps focus inside it
-// while it is open and closes it with Escape. It fills the height of the
-// screen on the right, over the dimmed page.
+// The menu, a modal <dialog>, so the browser keeps focus inside it while it
+// is open and closes it with Escape. A card at the top of the screen over the
+// dimmed page, like the search palette.
 .menu {
-  inset: 0 0 0 auto;
   box-sizing: border-box;
-  width: min(80%, 320px);
+  width: calc(100% - #{$spacing-unit});
   max-width: none;
-  height: auto;
-  max-height: none;
-  margin: 0;
+  max-height: calc(100% - 18px);
+  margin: 9px auto auto;
   padding: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   color: $text-color;
   background-color: $background-color;
-  border: none;
-  border-left: 1px solid $border-color-01;
+  border: 1px solid $border-color-01;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 20%);
   line-height: $base-line-height;
 
   &::backdrop {
     background-color: rgb(0 0 0 / 40%);
   }
 
-  // Slides in from the right edge, and back out when closed. Holding display
-  // and overlay keeps the closing drawer on screen until it has slid away.
+  // Drops in as it opens, as the search palette does; it closes at once
   @media (prefers-reduced-motion: no-preference) {
-    transition:
-      transform 0.25s ease-out,
-      overlay 0.25s allow-discrete,
-      display 0.25s allow-discrete;
-
-    &:not([open]) {
-      transform: translateX(100%);
-    }
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
 
     @starting-style {
       &[open] {
-        transform: translateX(100%);
+        opacity: 0;
+        transform: translateY(-8px);
       }
     }
 
     &::backdrop {
-      transition:
-        opacity 0.25s ease-out,
-        overlay 0.25s allow-discrete,
-        display 0.25s allow-discrete;
-    }
-
-    &:not([open])::backdrop {
-      opacity: 0;
+      transition: opacity 0.15s ease-out;
     }
 
     @starting-style {
@@ -811,14 +796,14 @@ html:has(.menu[open]) {
   overflow: hidden;
 }
 
-// Fills the drawer, so assets/js/menu.js can tell a click on the backdrop,
-// which lands on the dialog itself, from one on the drawer
+// Fills the menu, so assets/js/menu.js can tell a click on the backdrop,
+// which lands on the dialog itself, from one on the menu
 .menu-panel {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   min-height: 100%;
-  padding: 0 calc($spacing-unit / 2) $spacing-unit;
+  padding: 6px 16px 8px;
 
   .page-link {
     display: block;
@@ -836,12 +821,11 @@ html:has(.menu[open]) {
   }
 }
 
-// Where the menu button is, so the button seems to turn into a cross
+// In the corner, like the search palette's
 .menu-close {
-  @extend %header-button;
-  display: flex;
+  @extend .search-close;
   align-self: flex-end;
-  margin-bottom: 12px;
+  margin-right: -10px;
 }
 
 // Opens the search palette, or on /notes/ goes to the field there. Like the

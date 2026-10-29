@@ -55,7 +55,7 @@
   }
   paintBars();
   // Reveals the toggle, which does nothing without this script, and the menu
-  // button, which swaps the header links for a drawer on phones
+  // button, which swaps the header links for a menu on phones
   root.classList.add("js");
 
   document.addEventListener("DOMContentLoaded", function () {

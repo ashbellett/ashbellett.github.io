@@ -39,7 +39,7 @@ Pages follow the visitor's system light/dark setting through CSS. The header tog
 
 ## Menu
 
-On phones the header links move into a drawer that slides in from the right, opened by the menu button. The drawer is a native modal `<dialog>`, so the browser handles focus and closing with Escape; `assets/js/menu.js` opens it and closes it from its close button or the backdrop. Without JavaScript the menu button is hidden and the links stay in the header.
+On phones the header links move into a menu card that drops in at the top of the screen, opened by the menu button. The menu is a native modal `<dialog>`, so the browser handles focus and closing with Escape; `assets/js/menu.js` opens it and closes it from its close button or the backdrop. Without JavaScript the menu button is hidden and the links stay in the header.
 
 ## Search
 

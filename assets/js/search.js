@@ -99,9 +99,8 @@
   // How well a result matches, or 0 for no match. Its name counts most: all
   // of it, then its start, then the query as a phrase within it, then every
   // word in it. Otherwise every word must start a word in its name or its
-  // context (a note's description and topic, or a term's note), and a term
-  // needs at least one in its name, or every term in a matching note would
-  // match.
+  // context (a note's topic, or a term's note and topic), and a term needs at
+  // least one in its name, or every term in a matching note would match.
   function score(result, query) {
     var name = result.name;
     if (name.words === query.text) {
@@ -174,10 +173,9 @@
     }
 
     topics.forEach(function (topic) {
-      topic.result = add({ kind: "topic", title: topic.title, url: topic.url, detail: topic.description }, topic.description);
+      topic.result = add({ kind: "topic", title: topic.title, url: topic.url });
       topic.notes.forEach(function (note) {
-        note.result = add({ kind: "note", title: note.title, url: note.url, detail: topic.title + " · " + note.description },
-          note.description + " " + topic.title);
+        note.result = add({ kind: "note", title: note.title, url: note.url, detail: topic.title }, topic.title);
         note.terms = note.terms.map(function (term) {
           return add({ kind: "term", title: term[0], url: note.url + "#" + term[1], detail: note.title + " · " + topic.title },
             note.title + " " + topic.title);
@@ -282,11 +280,14 @@
       title.className = "search-result-title";
       highlight(title, result.title, highlights(result.name, query.words));
 
-      var detail = document.createElement("span");
-      detail.className = "search-result-detail";
-      detail.textContent = result.detail;
-
-      link.append(title, detail);
+      link.append(title);
+      // Where it is, which a topic has none of
+      if (result.detail) {
+        var detail = document.createElement("span");
+        detail.className = "search-result-detail";
+        detail.textContent = result.detail;
+        link.append(detail);
+      }
       option.append(link);
       list.append(option);
     });
@@ -432,9 +433,8 @@
 
     var results = 0;
     index.topics.forEach(function (topic) {
-      // A topic shows all its notes only when its name matches; one matching
-      // just its description, e.g. "functions", would bury the notes that do
-      var topicMatches = searching && score(topic.result, query) >= 40;
+      // A topic whose name matches shows all its notes
+      var topicMatches = searching && score(topic.result, query) > 0;
       var collection = null;
       var anyShown = false;
 
@@ -445,7 +445,6 @@
         }
         collection = item.closest(".collection");
         var title = item.querySelector(".post-link");
-        var description = item.querySelector(".note-description");
         var old = item.querySelector(".note-terms");
         if (old) {
           old.remove();
@@ -456,7 +455,6 @@
         var show = !searching || topicMatches || noteMatches || matching.length > 0;
         item.hidden = !show;
         highlight(title, note.title, noteMatches ? highlights(note.result.name, query.words) : []);
-        highlight(description, note.description, noteMatches ? highlights(fold(note.description), query.words) : []);
         if (matching.length) {
           item.append(termList(matching, query));
         }

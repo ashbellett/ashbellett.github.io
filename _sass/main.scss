@@ -1225,6 +1225,83 @@ mark {
   color: $brand-color;
 }
 
+// The cards on /projects, as many to a row as fit, one on phones
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: $spacing-unit;
+  margin: 0;
+  list-style: none;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $border-color-01;
+  border-radius: 8px;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid $border-color-01;
+  }
+
+  &:hover {
+    border-color: $border-color-03;
+  }
+}
+
+.project-body {
+  padding: calc($spacing-unit / 2);
+}
+
+// Nested in .project-body to outrank the note headings in .post-content
+.project-body .project-title {
+  margin: 0;
+  @include relative-font-size(1.5);
+
+  a {
+    // Stretches the link over the card, so a click anywhere opens it, and
+    // rings the card rather than the title when it has keyboard focus
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      &::after {
+        outline: 2px solid $link-base-color;
+        outline-offset: -2px;
+      }
+    }
+  }
+
+  .project-card:hover & a {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+.new-tab-note {
+  @extend %visually-hidden;
+}
+
+.external-icon {
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.2em;
+  vertical-align: baseline;
+}
+
+.project-description {
+  margin: 4px 0 0;
+}
+
 
 
 /**

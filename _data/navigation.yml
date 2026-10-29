@@ -2,5 +2,7 @@
 # on any page beneath it, e.g. /notes/ is active on /notes/sets/logic.
 - title: Notes
   url: /notes/
+- title: Projects
+  url: /projects
 - title: Résumé
   url: /resume

@@ -1,0 +1,28 @@
+---
+layout: page
+title: Projects
+description: "Things I've built."
+permalink: /projects
+---
+
+{%- comment -%}
+A card per project in _data/projects.yml. The title's link covers the whole
+card, so the screenshot is clickable too, and it opens in a new tab.
+{%- endcomment %}
+<ul class="project-list">
+  {%- for project in site.data.projects %}
+  <li class="project-card">
+    <img src="{{ project.image | relative_url }}" alt="" width="640" height="360">
+    <div class="project-body">
+      <h2 class="project-title">
+        <a href="{{ project.url | relative_url }}" target="_blank" rel="noopener">
+          {{- project.title | escape -}}
+          <span class="new-tab-note"> (opens in a new tab)</span>
+          {%- include icons/external.svg -%}
+        </a>
+      </h2>
+      <p class="project-description">{{ project.description | escape }}</p>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

@@ -11,7 +11,7 @@ redirect_from: /about
 {: .brand-text }
 
 Senior Data Scientist\
-Aug 2023 – present
+Aug 2023 – Nov 2026
 {: .role-text }
 
 ![][deloitte] Deloitte

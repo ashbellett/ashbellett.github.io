@@ -45,6 +45,8 @@ On phones the header links move into a menu card that drops in at the top of the
 
 `/projects` shows a card for each project in `_data/projects.yml`: its title, description and a screenshot. Screenshots are 640 by 360 pixel JPEGs in `assets/img/projects`. The whole card is the link, and it opens the project in a new tab.
 
+Wand and Wit's card links to its page on this site, `/projects/wand-and-wit` (`_pages/wand-and-wit.html`), until wandandwit.com is up; then point its `url` there. Its screenshots are 1280 by 720 pixel JPEGs in `assets/img/projects/wand-and-wit`, taken from the game's headless captures.
+
 ## Search
 
 Notes are searched by topic, note and defined term. A note marks each term it defines in bold, and `_plugins/search.rb` gives every bold term an id from its text, e.g. `/notes/probability/moments#variance`, so a result opens at the definition, which is highlighted. A term defined twice in one note, as `expectation` is in Moments, keeps its first id and the repeat takes the next number, `expectation-2`. Renaming a bold term changes its id, which breaks links to the old one. The plugin publishes the topics, notes and terms as `/notes/search.json`, about 20 KB compressed.

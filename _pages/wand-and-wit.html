@@ -1,0 +1,107 @@
+---
+layout: page
+title: Wand and Wit
+description: "A third-person multiplayer spell duel with anime-style impact frames."
+permalink: /projects/wand-and-wit
+---
+
+{%- comment -%}
+The Wand and Wit project page until wandandwit.com is up. The screenshots are
+1280 by 720 pixel JPEGs in assets/img/projects/wand-and-wit, captured with the
+game's headless screenshot mode.
+{%- endcomment %}
+<h1>Wand and Wit</h1>
+
+<p>
+  Wand and Wit is a spell duelling game I'm building: a third-person 3D
+  multiplayer magic duel for 2 to 10 players in a cel-shaded fantasy forest.
+  Players lock on to each other and trade spells, and every spell has a
+  visible wind-up and travel, so the defender can read it and answer with a
+  block or a dodge. Land a hit and your screen plays an anime-style impact
+  frame. The last player standing wins.
+</p>
+
+<p>
+  It's written in Rust, rendered with wgpu, and runs in the browser on WebGPU.
+  The server is authoritative, and clients predict their own movement and
+  smooth everyone else's over WebRTC. It's still in development.
+</p>
+
+<h2>Impact frames</h2>
+
+<p>
+  A hit freezes the caster's view for a few frames while the duel carries on:
+  the world drops to a stark, tinted silhouette, with speed lines converging
+  on the point of impact.
+</p>
+
+<div class="shot-gallery">
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-fire-bolt.jpg' | relative_url }}" alt="A fire bolt hit: the forest drops to a sepia silhouette with speed lines converging on the burst" width="1280" height="720" loading="lazy">
+    <figcaption>Fire bolt</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-ice-spear.jpg' | relative_url }}" alt="An ice spear hit: a black and white silhouette frame with an icy flash at the centre" width="1280" height="720" loading="lazy">
+    <figcaption>Ice spear</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-black-hole.jpg' | relative_url }}" alt="A black hole hit: the scene turns purple and black as the target is lifted toward the hole" width="1280" height="720" loading="lazy">
+    <figcaption>Black hole</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-lightning-strike.jpg' | relative_url }}" alt="A lightning strike hit: the colours invert as a bolt lands on a witch" width="1280" height="720" loading="lazy">
+    <figcaption>Lightning strike</figcaption>
+  </figure>
+</div>
+
+<h2>Casting</h2>
+
+<p>
+  Seven spells, three to a player, picked in the lobby: fire bolt, ice spear,
+  lightning strike, black hole, light beam, time change and teleport behind.
+</p>
+
+<div class="shot-gallery">
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/lightning-strike.jpg' | relative_url }}" alt="A lightning bolt lands on a witch inside a glowing ring as a wizard watches" width="1280" height="720" loading="lazy">
+    <figcaption>A lightning strike lands</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/ice-spear.jpg' | relative_url }}" alt="Ice shards erupt around the target at the end of a glowing crack in the grass" width="1280" height="720" loading="lazy">
+    <figcaption>An ice spear erupts under the target</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/casting-lightning.jpg' | relative_url }}" alt="A witch in a purple robe charges a spell, sparks crackling round her wand" width="1280" height="720" loading="lazy">
+    <figcaption>Winding up a lightning strike</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/casting-time-change.jpg' | relative_url }}" alt="A wizard raises both arms inside a glowing clock face as the sky turns to dusk" width="1280" height="720" loading="lazy">
+    <figcaption>Casting time change</figcaption>
+  </figure>
+</div>
+
+<h2>Day and night</h2>
+
+<p>
+  Matches start at golden hour. Time change moves the time of day for
+  everyone while it's sustained, so a duel can carry on into the night.
+</p>
+
+<div class="shot-gallery">
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/golden-hour.jpg' | relative_url }}" alt="A wizard in a blue robe faces an opponent among trees at golden hour" width="1280" height="720" loading="lazy">
+    <figcaption>Golden hour</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/night-time-change.jpg' | relative_url }}" alt="At night, a wizard stands in a ring of light under a starry blue sky" width="1280" height="720" loading="lazy">
+    <figcaption>Time change at night</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/day.jpg' | relative_url }}" alt="Midday in the arena: bright grass, pine trees and a clear sky" width="1280" height="720" loading="lazy">
+    <figcaption>Midday</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/night.jpg' | relative_url }}" alt="The same arena at night under a dark blue, starry sky" width="1280" height="720" loading="lazy">
+    <figcaption>The same spot at night</figcaption>
+  </figure>
+</div>

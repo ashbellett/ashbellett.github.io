@@ -4,3 +4,7 @@
   url: /3d-world/
   description: "A 3D world with objects, lighting and physics"
   image: /assets/img/projects/3d-world.jpg
+- title: Wand and Wit
+  url: /projects/wand-and-wit
+  description: "A multiplayer spell duelling game with anime-style impact frames"
+  image: /assets/img/projects/wand-and-wit.jpg

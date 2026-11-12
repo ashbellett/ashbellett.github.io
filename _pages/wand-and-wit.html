@@ -7,8 +7,9 @@ permalink: /projects/wand-and-wit
 
 {%- comment -%}
 The Wand and Wit project page until wandandwit.com is up. The screenshots are
-1280 by 720 pixel JPEGs in assets/img/projects/wand-and-wit, captured with the
-game's headless screenshot mode.
+JPEGs in assets/img/projects/wand-and-wit, taken from the game's headless
+captures: 1280 by 720 where the capture was that size or larger, 960 by 540 for
+the weather captures, and 400 by 225 for single frames of the spell strips.
 {%- endcomment %}
 <h1>Wand and Wit</h1>
 
@@ -22,17 +23,108 @@ game's headless screenshot mode.
 </p>
 
 <p>
-  It's written in Rust, rendered with wgpu, and runs in the browser on WebGPU.
-  The server is authoritative, and clients predict their own movement and
-  smooth everyone else's over WebRTC. It's still in development.
+  It's written from scratch in Rust, with no game engine: about 100,000 lines
+  across a shared simulation, an authoritative server, a client that renders
+  with wgpu natively and on WebGPU in Chrome, and a headless test harness. It's
+  still in development.
 </p>
+
+<h2>Readable duels</h2>
+
+<p>
+  Every attack is decided at the moment it lands, by what the defender did:
+  dodged while it flew, it misses; blocking as it lands, it's blocked;
+  otherwise it hits. Block and dodge are resources that recover slowly, and
+  emptying a player's guard breaks it and staggers them. A spell's cooldown
+  starts short and only grows to its full length if the server confirms a hit,
+  so a whiffed spell comes back sooner. Players can jump and fly, and the whole
+  fight works in the air.
+</p>
+
+<h2>Spells</h2>
+
+<p>
+  There are 23 spells in four classes. Each player picks three primaries for
+  Q, E and R, a secondary for F and a signature for Tab in the lobby, and keeps
+  them for the match.
+</p>
+
+<ul>
+  <li><strong>Primaries:</strong> fire bolt, ice shard, lightning strike,
+    light beam, black hole, boulder throw, brandish weapon (a flaming sword
+    with a three-hit combo), raise skeleton (a minion that hunts the nearest
+    enemy) and heal.</li>
+  <li><strong>Secondaries:</strong> teleport behind (always out of the
+    target's sight), go invisible, fling (a giant finger flicks the target
+    25&nbsp;m), mirror spell (sends spells back at their caster) and transform
+    enemy (into a frog, chicken, sheep or pig).</li>
+  <li><strong>Signatures:</strong> summon meteor, earthquake, volcanic
+    eruption, time stop, thunderstorm and tidal wave. Each has a minute's
+    cooldown and isn't ready for the first 30 seconds.</li>
+  <li><strong>Cosmetic:</strong> every minute the server grants a random
+    living player change time, change light or change weather, which reshapes
+    the world for everyone while it's held.</li>
+</ul>
+
+<p>
+  Spells are data: their timings, damage, knockback and cooldowns live in a
+  data file, and the native client reloads it while the game runs, so a spell
+  can be tuned mid-duel. Some of the stranger ones are built on small tricks.
+  Time stop freezes every other player by moving all of their timers forward
+  by the length of the stop, so nothing else in the simulation has to know
+  about it, and spells aimed at a frozen player hang in the air until it ends.
+  The volcano's lava bombs are generated from the cast's id, so the server and
+  every client agree on where each one lands without a message per bomb.
+</p>
+
+<div class="shot-gallery">
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/summon-meteor.jpg' | relative_url }}" alt="A blazing meteor lands at the end of a rainbow trail across the sky" width="400" height="225" loading="lazy">
+    <figcaption>Summon meteor</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/volcanic-eruption.jpg' | relative_url }}" alt="A volcano rises in the arena, lava bombs landing in glowing rings around it" width="400" height="225" loading="lazy">
+    <figcaption>Volcanic eruption</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/tidal-wave.jpg' | relative_url }}" alt="A towering cel-shaded wave with a foam crest rolls into the arena" width="400" height="225" loading="lazy">
+    <figcaption>Tidal wave</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/thunderstorm.jpg' | relative_url }}" alt="Under a dark storm sky, a branching bolt strikes a witch" width="400" height="225" loading="lazy">
+    <figcaption>Thunderstorm</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/fling.jpg' | relative_url }}" alt="A giant black finger curls up out of the ground beside a witch" width="400" height="225" loading="lazy">
+    <figcaption>Fling</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/mirror-spell.jpg' | relative_url }}" alt="A wizard stands inside a glassy, reflective bubble" width="400" height="225" loading="lazy">
+    <figcaption>Mirror spell</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/lightning-strike.jpg' | relative_url }}" alt="A lightning bolt lands on a witch inside a glowing ring as a wizard watches" width="1280" height="720" loading="lazy">
+    <figcaption>Lightning strike</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/ice-spear.jpg' | relative_url }}" alt="Ice shards erupt around the target at the end of a glowing crack in the grass" width="1280" height="720" loading="lazy">
+    <figcaption>Ice shard</figcaption>
+  </figure>
+</div>
 
 <h2>Impact frames</h2>
 
 <p>
-  A hit freezes the caster's view for a few frames while the duel carries on:
-  the world drops to a stark, tinted silhouette, with speed lines converging
-  on the point of impact.
+  A hit freezes the caster's view while the duel carries on. The renderer
+  holds the last finished image for a few frames and keeps compositing it
+  through the post-processing stage, so the grade, the speed lines and the HUD
+  stay live while the simulation underneath never pauses. Each spell has its
+  own sequence of frames, built from three kinds of step: a colour grade
+  (greyscale, sepia, inverted), a two-tone frame that splits every pixel into
+  one of two colours by its brightness, and a flash that washes the world
+  toward a colour. Speed lines converge on the point of impact, and the
+  caster's camera shakes and punches in. The player who was hit sees a red
+  frame of their own instead, and their camera stays still.
 </p>
 
 <div class="shot-gallery">
@@ -41,50 +133,80 @@ game's headless screenshot mode.
     <figcaption>Fire bolt</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/impact-ice-spear.jpg' | relative_url }}" alt="An ice spear hit: a black and white silhouette frame with an icy flash at the centre" width="1280" height="720" loading="lazy">
-    <figcaption>Ice spear</figcaption>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-lightning-strike.jpg' | relative_url }}" alt="A lightning strike hit: the colours invert as a bolt lands on a witch" width="1280" height="720" loading="lazy">
+    <figcaption>Lightning strike</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-brandish-weapon.jpg' | relative_url }}" alt="A sword combo finisher: the scene in red and black silhouette with purple speed lines" width="400" height="225" loading="lazy">
+    <figcaption>Brandish weapon's finisher</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-volcanic-eruption.jpg' | relative_url }}" alt="A volcanic eruption: the scene splits into flat red and yellow shapes" width="400" height="225" loading="lazy">
+    <figcaption>Volcanic eruption</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-tidal-wave.jpg' | relative_url }}" alt="A tidal wave: the forest becomes a two-tone frame in deep and pale blue" width="400" height="225" loading="lazy">
+    <figcaption>Tidal wave</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-thunderstorm.jpg' | relative_url }}" alt="A thunderstorm breaking: a stark black and white frame" width="400" height="225" loading="lazy">
+    <figcaption>Thunderstorm</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/impact-ice-spear.jpg' | relative_url }}" alt="An ice shard hit: a black and white silhouette frame with an icy flash at the centre" width="1280" height="720" loading="lazy">
+    <figcaption>Ice shard</figcaption>
   </figure>
   <figure>
     <img src="{{ '/assets/img/projects/wand-and-wit/impact-black-hole.jpg' | relative_url }}" alt="A black hole hit: the scene turns purple and black as the target is lifted toward the hole" width="1280" height="720" loading="lazy">
     <figcaption>Black hole</figcaption>
   </figure>
-  <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/impact-lightning-strike.jpg' | relative_url }}" alt="A lightning strike hit: the colours invert as a bolt lands on a witch" width="1280" height="720" loading="lazy">
-    <figcaption>Lightning strike</figcaption>
-  </figure>
 </div>
 
-<h2>Casting</h2>
+<h2>Rendering</h2>
 
 <p>
-  Seven spells, three to a player, picked in the lobby: fire bolt, ice spear,
-  lightning strike, black hole, light beam, time change and teleport behind.
+  The look is anime combat: smooth cel-shaded 3D with effects that read as
+  hand-drawn. The renderer is my own, written on wgpu with fifteen WGSL
+  shaders, and the same code runs on Metal natively and on WebGPU in the
+  browser. It renders into an HDR target and tone-maps it, with stepped cel
+  lighting, shadow maps whose edges stay hard, ambient occlusion that reads as
+  ink in the crevices, bloom, fog, god rays, anamorphic streaks and lens
+  flare. Characters and props get inked outlines from inverted hulls, and a
+  screen-space ink pass outlines what the hulls miss, such as grass and leaves.
+  Vegetation, robes and hats sway in the wind, and skirts are simulated as
+  cloth.
 </p>
 
-<div class="shot-gallery">
-  <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/lightning-strike.jpg' | relative_url }}" alt="A lightning bolt lands on a witch inside a glowing ring as a wizard watches" width="1280" height="720" loading="lazy">
-    <figcaption>A lightning strike lands</figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/ice-spear.jpg' | relative_url }}" alt="Ice shards erupt around the target at the end of a glowing crack in the grass" width="1280" height="720" loading="lazy">
-    <figcaption>An ice spear erupts under the target</figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/casting-lightning.jpg' | relative_url }}" alt="A witch in a purple robe charges a spell, sparks crackling round her wand" width="1280" height="720" loading="lazy">
-    <figcaption>Winding up a lightning strike</figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/casting-time-change.jpg' | relative_url }}" alt="A wizard raises both arms inside a glowing clock face as the sky turns to dusk" width="1280" height="720" loading="lazy">
-    <figcaption>Casting time change</figcaption>
-  </figure>
-</div>
+<p>
+  Effects are a vocabulary of reusable pieces, each a data definition
+  triggered by events from the simulation: wand trails, shockwave rings,
+  dodge afterimages, ground cracks and flying rocks, two-tone smoke puffs with
+  inked edges, flip-book explosions and hit sparks. Sprites and debris animate
+  "on twos", stepping at about 12 frames a second while the 3D scene renders
+  at the display rate, as hand-drawn animation does. Every effect and every
+  rendering feature has its own switch and its numbers in a data file, so each
+  can be judged on its own and tuned live. On the high preset a frame takes
+  about 8&nbsp;ms at 1080p on an M4 Max, and medium and low presets cover
+  weaker machines.
+</p>
 
-<h2>Day and night</h2>
+<h2>Time, light and the moon</h2>
 
 <p>
-  Matches start at golden hour. Time change moves the time of day for
-  everyone while it's sustained, so a duel can carry on into the night.
+  Matches start at golden hour, and the world clock is shared state that the
+  server sends in every snapshot. Change time runs the clock forward for
+  everyone while it's held, so a duel can carry on into the night. The sky,
+  the sun, the ambient light, the fog and the lanterns all follow the hour.
+  At night a moon rises on the sun's path, twelve hours behind it, with a
+  phase that follows where the sun lights it from. As the sun sets, the moon
+  takes over its shadows and its god rays.
+</p>
+
+<p>
+  Change light pulls the sun and the moon nearer or pushes them farther away,
+  cycling while it's held. The light falls off with the square of the
+  distance, but stays within bounds so the world is never too bright or too
+  dark to read a spell.
 </p>
 
 <div class="shot-gallery">
@@ -93,15 +215,137 @@ game's headless screenshot mode.
     <figcaption>Golden hour</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/night-time-change.jpg' | relative_url }}" alt="At night, a wizard stands in a ring of light under a starry blue sky" width="1280" height="720" loading="lazy">
-    <figcaption>Time change at night</figcaption>
+    <img src="{{ '/assets/img/projects/wand-and-wit/casting-time-change.jpg' | relative_url }}" alt="A wizard raises both arms inside a glowing clock face as the sky turns to dusk" width="1280" height="720" loading="lazy">
+    <figcaption>Casting time change</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/day.jpg' | relative_url }}" alt="Midday in the arena: bright grass, pine trees and a clear sky" width="1280" height="720" loading="lazy">
-    <figcaption>Midday</figcaption>
+    <img src="{{ '/assets/img/projects/wand-and-wit/moon-rays.jpg' | relative_url }}" alt="Moonlight streams through the pines in pale rays over a night-time duel" width="1280" height="720" loading="lazy">
+    <figcaption>God rays from the moon</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/assets/img/projects/wand-and-wit/night.jpg' | relative_url }}" alt="The same arena at night under a dark blue, starry sky" width="1280" height="720" loading="lazy">
-    <figcaption>The same spot at night</figcaption>
+    <img src="{{ '/assets/img/projects/wand-and-wit/light-near-night.jpg' | relative_url }}" alt="A large, bright full moon hangs low over the arena under a lilac sky" width="1280" height="720" loading="lazy">
+    <figcaption>Change light, the moon pulled near</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/light-near-day.jpg' | relative_url }}" alt="The arena washed in bright, warm sunlight" width="1280" height="720" loading="lazy">
+    <figcaption>Change light, the sun pulled near</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/light-far-day.jpg' | relative_url }}" alt="The same arena dimmer and cooler, the sun pushed far away" width="1280" height="720" loading="lazy">
+    <figcaption>Change light, the sun pushed far</figcaption>
+  </figure>
+</div>
+
+<h2>Weather and water</h2>
+
+<p>
+  The weather moves between sun, cloud, rain and storm, only ever to a
+  neighbouring state, so the sky builds up and clears through cloud. Like the
+  clock, it's state in every snapshot, so every player sees the same sky; the
+  wind, the rain, the wetness and the storm's lightning are all worked out on
+  each client from that state and never sent. It's cosmetic only: no rule
+  reads it.
+</p>
+
+<p>
+  Rain is thousands of strokes placed entirely in the vertex shader. A height
+  map of the level, built once when the map loads, tells each drop where it
+  lands, so no rain falls under a canopy or through a rock, and drops splash
+  on the ground, on rocks and on the players' hats. Open ground darkens as it
+  soaks and puddles spread, then dry out after the rain. The river is a fine
+  mesh with waves driven by the wind. It refracts the scene beneath it,
+  absorbs light with depth, and throws caustics on the bed. A wave equation
+  stepped on the GPU carries ripples from waders, splashes, spells and rain,
+  which cross each other and die on the bank. Two signatures drive the weather
+  too: thunderstorm turns it to a storm, and change weather steps it while
+  it's held.
+</p>
+
+<div class="shot-gallery">
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/weather-sun.jpg' | relative_url }}" alt="A wizard on a grassy hill in clear sunshine" width="960" height="540" loading="lazy">
+    <figcaption>Sun</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/weather-cloud.jpg' | relative_url }}" alt="The same spot under a sky of broken cloud" width="960" height="540" loading="lazy">
+    <figcaption>Cloud</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/weather-rain.jpg' | relative_url }}" alt="The same spot in grey rain, the ground darkened" width="960" height="540" loading="lazy">
+    <figcaption>Rain</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/weather-storm.jpg' | relative_url }}" alt="The same spot in a dark storm" width="960" height="540" loading="lazy">
+    <figcaption>Storm</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/river-sun.jpg' | relative_url }}" alt="A wizard wades in a clear turquoise river with foam along its banks" width="960" height="540" loading="lazy">
+    <figcaption>The river in the sun</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/river-rain.jpg' | relative_url }}" alt="The same river murky and green in the rain, its surface dimpled" width="960" height="540" loading="lazy">
+    <figcaption>The river in the rain</figcaption>
+  </figure>
+</div>
+
+<h2>The server and the simulation</h2>
+
+<p>
+  The rules live in one pure simulation: a fixed 30&nbsp;Hz tick, no
+  rendering, no I/O and no clock, with time measured in ticks. The same code
+  runs on the server, which decides every outcome, and in each client, which
+  predicts its own player's movement, dodges and blocks the instant they're
+  pressed. When a snapshot disagrees, the client rewinds to the server's
+  state, replays its inputs and smooths away the difference. Everyone else is
+  drawn a little in the past, interpolated between snapshots.
+</p>
+
+<p>
+  Spells aren't replicated as objects. The server sends one release event
+  with the caster, the target and the tick it lands, and every client flies
+  the spell from that. Hits favour the defender within a cap: a dodge counts
+  if it was pressed before the spell landed, even if it arrived a little late.
+  Clients reach the server through a websocket for signalling and WebRTC data
+  channels for play, so the browser and native clients play together.
+  Snapshots carry only what changed since the last one a client acknowledged,
+  quantised, which keeps a 1v1 to about 3&nbsp;KB a second per player, and a
+  ten-player match to under 9&nbsp;KB.
+</p>
+
+<p>
+  A headless harness runs bot matches through the real server and client over
+  a simulated network, at up to 300&nbsp;ms of latency with jitter and 5% packet
+  loss, and checks invariants on every tick: health never goes negative,
+  cooldowns are respected, every match ends, nothing panics. The workspace has
+  about 870 tests.
+</p>
+
+<h2>Maps and characters</h2>
+
+<p>
+  Maps are generated ahead of time in three sizes, from 120&nbsp;m across for
+  two players to 280&nbsp;m for ten, with hills, cliffs, rocks, a river to wade
+  through and bushes to hide in. The host picks one in the lobby. Players
+  build their wizard or witch in a character creator: body, build, hair, hat,
+  robe and weapon, with their colours. The bodies come from MakeHuman and are
+  fitted and baked in Blender ahead of time, and the look is purely cosmetic.
+</p>
+
+<div class="shot-gallery">
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/map-air.jpg' | relative_url }}" alt="A wizard flies high above a generated map of hills, trees and a winding river" width="1280" height="720" loading="lazy">
+    <figcaption>Flying over the medium map</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/map-wade.jpg' | relative_url }}" alt="A wizard wades across a river toward an opponent on the far bank" width="1280" height="720" loading="lazy">
+    <figcaption>Wading the river</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/creator.jpg' | relative_url }}" alt="The character creator: a panel of body, hair, robe and weapon options beside a wizard in a blue robe" width="1280" height="720" loading="lazy">
+    <figcaption>The character creator</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/assets/img/projects/wand-and-wit/creator-match.jpg' | relative_url }}" alt="The created wizard duelling a witch in the forest" width="1280" height="720" loading="lazy">
+    <figcaption>The same wizard in a match</figcaption>
   </figure>
 </div>

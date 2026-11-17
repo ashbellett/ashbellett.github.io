@@ -45,7 +45,7 @@ On phones the header links move into a menu card that drops in at the top of the
 
 `/projects` shows a card for each project in `_data/projects.yml`: its title, description and a screenshot. Screenshots are 640 by 360 pixel JPEGs in `assets/img/projects`. The whole card is the link, and it opens the project in a new tab.
 
-Wand and Wit's card links to its page on this site, `/projects/wand-and-wit` (`_pages/wand-and-wit.html`), until wandandwit.com is up; then point its `url` there. Its screenshots are JPEGs in `assets/img/projects/wand-and-wit`, taken from the game's headless captures: 1280 by 720 pixels where the capture was that size or larger, otherwise the capture's own size (960 by 540 for the weather, 400 by 225 for single frames of the spell strips).
+Wand and Wit's card links to its page on this site, `/projects/wand-and-wit` (`_pages/wand-and-wit.html`), until wandandwit.com is up; then point its `url` there. Its screenshots are JPEGs in `assets/img/projects/wand-and-wit`, rendered headless by the game's native client on the baked small map with the rigged characters, at 1920 by 1080 and scaled to 1280 by 720 (the character sheet is 1350 by 720, the animation grids 1280 by 711).
 
 ## Search
 

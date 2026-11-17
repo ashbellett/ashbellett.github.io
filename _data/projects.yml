@@ -2,5 +2,5 @@
 # is a screenshot in assets/img/projects, 640 by 360 pixels (16:9).
 - title: Wand and Wit
   url: /projects/wand-and-wit
-  description: "A multiplayer spell duelling game with anime-style impact frames"
+  description: "A spellcasting, multiplayer duelling game built in Rust"
   image: /assets/img/projects/wand-and-wit.jpg
